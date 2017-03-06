@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleIconSkin" width="64" height="64" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image verticalCenter="0" horizontalCenter="0" id="imageIcon" x="10" y="10"/>
+	<e:Label id="lblLv" text="Lv.99999" fontFamily="微软雅黑" stroke="2" bold="true" size="15" strokeColor="0x332113" horizontalCenter="0" bottom="-2" textColor="0xFFF4D8"/>
+	<e:Image id="imageStar" source="common_star_png" y="-8" x="-5"/>
+	<e:Label textColor="0x583C26" text="1" fontFamily="微软雅黑" bold="true" size="14" id="lblStar" y="0" horizontalCenter="-22"/>
+</e:Skin>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendApplySkin" width="424" height="466" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="friend_content_bg_png" y="23" horizontalCenter="0" scale9Grid="9,9,59,41" width="420" height="338" x="40"/>
+	<e:Label id="lblNoApply" size="16" bold="true" fontFamily="微软雅黑" textColor="0xFFFFFF" text="木有人加你哟，快去邀请几个好友吧！" stroke="2" strokeColor="0xA35A32" strokeColor.disabled="0x333333" verticalCenter="0" textAlign="center" horizontalCenter="0"/>
+	<e:Scroller y="49" horizontalCenter="0" width="400" height="316" scrollPolicyH="off" x="30">
+		<e:List id="applyList" width="400" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Image source="friend_title_bg_png" y="5" horizontalCenter="0" x="10"/>
+	<e:Label y="16" textColor="0x5F3A1B" lineSpacing="3" text="申请列表" fontFamily="微软雅黑" bold="true" size="20" horizontalCenter="0" x="10"/>
+	<ns1:SimpleButton id="btnAdd" y="374" source="friend_UID_add_png" x="281"/>
+	<ns1:SimpleButton id="btnMy" y="373" source="friend_UID_png" x="10"/>
+	<ns1:SimpleButton id="btnCity" y="374" source="friend_city_png" horizontalCenter="0"/>
+</e:Skin>

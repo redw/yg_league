@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveFruitSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="active_gray_png" y="18" horizontalCenter="18" x="30"/>
+	<e:Image y="16" horizontalCenter="49.5" x="20" source="active_fruit_title_png"/>
+	<e:Image y="15" source="fr_show_png"/>
+	<e:Image source="active_fruit_dec_png" x="209" y="80"/>
+	<e:Label text="品尝人参果，可恢复秘境挑战次数" x="177" y="174" size="18" fontFamily="微软雅黑" bold="true" textColor="0xC8E7E5" lineSpacing="4"/>
+	<e:Image source="fr_show2_png" bottom="0" horizontalCenter="0"/>
+	<e:Group id="mcGroup" width="164" height="208" y="347" horizontalCenter="-10"/>
+	<e:Image id="imgNotDone" source="f_show_dec2_png" x="240" y="299" scaleX="0.8" scaleY="0.8"/>
+	<e:Label id="lblMsg" text="宝宝还没熟呢TOT!宝宝还没熟呢TOT!" x="294" y="327" fontFamily="微软雅黑" size="18" bold="true" stroke="2" textColor="0xFFFFED" strokeColor="0x402E29" width="160" height="40" verticalAlign="middle" lineSpacing="5"/>
+</e:Skin>

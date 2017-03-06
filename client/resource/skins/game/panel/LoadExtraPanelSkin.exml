@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="LoadExtraPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label text="100%" textAlign="center" width="440" id="txtContent" verticalCenter="110" size="25" horizontalCenter="0"/>
+</e:Skin>

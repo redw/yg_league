@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="DefaultButtonGoSkin" states="up,down,disabled" width="149" height="62"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image  left="0" bottom="0" top="0" right="0" source="button1" source.down="button1_g" source.disabled="button1_00" scale9Grid="20,25,112,23"/>
+	<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" text="前 往" fontFamily="微软雅黑" bold="true" size="20" stroke="2" strokeColor="0x015F56" textColor="0xD7FFFC"/>
+</e:Skin>

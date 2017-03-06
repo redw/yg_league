@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleStarRiseSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="contentGroup" height="520" width="416" verticalCenter="0" horizontalCenter="0">
+		<e:Image source="alert_bg_png" scale9Grid="175,97,109,73" verticalCenter="0" height="500" horizontalCenter="0" x="10" y="10"/>
+		<e:Image y="85" x="71" id="imgJob" source="job_1_png"/>
+		<e:Label y="88" textColor="0x583C26" text="龙太子" fontFamily="微软雅黑" id="lblName" bold="true" size="20" x="107"/>
+		<e:Button id="btnRise" label="升 星" y="398" skinName="YellowBigButtonSkin" horizontalCenter="0.5"/>
+		<ns1:SimpleButton source="close2_png" y="8" x="357" id="btnClose"/>
+		<e:Image id="riseBg" source="active_box_txt_bg_png" scale9Grid="9,8,20,17" width="480" height="860" bottom="-141" horizontalCenter="0" visible="false"/>
+		<e:Image source="role_star_bg_png" y="131" horizontalCenter="0"/>
+		<e:Label id="lblNameChip" y="376" textColor="0x583C26" text="龙太子" fontFamily="微软雅黑" bold="true" size="16" horizontalCenter="-104"/>
+		<e:Image id="imgIconBg" y="161" horizontalCenter="0" source="role_icon_1_png"/>
+		<e:Image verticalCenter="-68" id="imageIcon" y="20" x="20" horizontalCenter="0"/>
+		<e:Image id="imgEnoughChip" x="75" y="180" source="role_star_left_png"/>
+		<e:Image id="imgEnoughPill" source="role_star_right_png" x="209" y="179"/>
+		<e:Image source="role_star_png" y="227" horizontalCenter="0.5"/>
+		<ns1:WeaponIcon id="chipIcon" x="72" y="291" skinName="WeaponIconSkin"/>
+		<ns1:WeaponIcon id="starIcon" y="292" skinName="WeaponIconSkin" x="278"/>
+		<e:Label id="lblFragmentNum" text="20/20" y="357" textColor="0xFFD244" bold="true" fontFamily="微软雅黑" size="16" stroke="2" strokeColor="0x5C2C08" horizontalCenter="-104"/>
+		<e:Label y="376" textColor="0x583C26" text="升星丹" fontFamily="微软雅黑" x="288" bold="true" size="16"/>
+		<e:Label id="lblStar" y="236" textColor="0x583C26" text="1" fontFamily="微软雅黑" bold="true" size="16" horizontalCenter="0"/>
+		<e:Label id="lblStarCoin" y="357" text="20/20" fontFamily="微软雅黑" stroke="2" bold="true" strokeColor="0x5C2C08" size="16" textColor="0xFFE6D2" horizontalCenter="103"/>
+		<e:Image id="riseShowStar" source="role_star_png" y="244" x="208.5" anchorOffsetX="17.5" anchorOffsetY="17" visible="false"/>
+	</e:Group>
+</e:Skin>

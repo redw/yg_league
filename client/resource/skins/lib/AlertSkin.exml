@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="AlertSkin" width="416" height="329" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	
+	<e:Image scale9Grid="9,8,49,32" source="alert_bg_png" x="0"/>	
+	
+	<e:Button id="okBtn" label="确 认" horizontalCenter="0.5" y="238" skinName="YellowButtonSkin"/>
+	<e:Button id="sureBtn" label="确 认" horizontalCenter="90.5" y="238" skinName="YellowButtonSkin"/>
+	<e:Button id="cancelBtn" label="取 消" horizontalCenter="-89.5" y="238" skinName="GreenButtonSkin"/>
+	<e:Label id="msgTxt" size="20" bold="true" fontFamily="微软雅黑" textAlign="center" verticalAlign="middle" lineSpacing="5" wordWrap="true" multiline="true" touchEnabled="false" width="312" y="71" textColor="0x3D3632" height="120" horizontalCenter="0"/>
+	
+</e:Skin>

@@ -1,0 +1,14 @@
+{"file":"rank.png","frames":{
+"rank_info_none_png":{"x":450,"y":391,"w":60,"h":60,"offX":0,"offY":0,"sourceW":60,"sourceH":60},
+"rank_info_title_png":{"x":128,"y":434,"w":92,"h":48,"offX":0,"offY":0,"sourceW":92,"sourceH":48},
+"rank_info_weapon_png":{"x":0,"y":305,"w":257,"h":41,"offX":0,"offY":0,"sourceW":257,"sourceH":41},
+"rank_pvp_png":{"x":225,"y":391,"w":223,"h":41,"offX":0,"offY":0,"sourceW":223,"sourceH":41},
+"rank_pvp_touch_png":{"x":259,"y":305,"w":223,"h":41,"offX":0,"offY":0,"sourceW":223,"sourceH":41},
+"rank_title_png":{"x":0,"y":434,"w":126,"h":47,"offX":0,"offY":0,"sourceW":126,"sourceH":47},
+"rank_top_png":{"x":0,"y":0,"w":506,"h":179,"offX":0,"offY":0,"sourceW":506,"sourceH":179},
+"rank_all_png":{"x":259,"y":348,"w":223,"h":41,"offX":0,"offY":0,"sourceW":223,"sourceH":41},
+"rank_all_touch_png":{"x":0,"y":391,"w":223,"h":41,"offX":0,"offY":0,"sourceW":223,"sourceH":41},
+"rank_bottom_png":{"x":0,"y":181,"w":480,"h":122,"offX":0,"offY":0,"sourceW":480,"sourceH":122},
+"rank_cell_mine_png":{"x":222,"y":434,"w":49,"h":73,"offX":0,"offY":0,"sourceW":49,"sourceH":73},
+"rank_icon_add_png":{"x":273,"y":434,"w":55,"h":55,"offX":0,"offY":0,"sourceW":55,"sourceH":55},
+"rank_info_friend_png":{"x":0,"y":348,"w":257,"h":41,"offX":0,"offY":0,"sourceW":257,"sourceH":41}}}

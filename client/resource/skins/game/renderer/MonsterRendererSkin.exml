@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MonsterRendererSkin" width="454" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,8,6,44" x="0"/>
+	<e:Image source="role_head_png" height="62" x="12" id="imgHead" y="5"/>
+	<e:Label y="8" textColor="0x583C26" text="奔波霸" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="90"/>
+	<e:Label id="lblMagic" y="8" text="法力：99" fontFamily="微软雅黑" bold="true" size="18" x="251" textColor="0xA25709"/>
+	<e:Image source="monster_bar_bg_png" x="89" y="29"/>
+	<e:ProgressBar id="bar" x="89" y="29" skinName="MonsterProgressSkin"/>
+	<e:Label id="lblDec" y="48" textColor="0x906C53" text="全体法术攻击提升：100%" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="14" x="90"/>
+	<e:Label id="lblBar" y="30" text="99/99" fontFamily="微软雅黑" x="189" bold="true" lineSpacing="3" size="14" textColor="0x16734D"/>
+	<e:Button id="btnCall" label="召 唤" x="348" y="7" skinName="GreenHighButtonSkin"/>
+	<e:Button id="btnLook" y="7" label="查 看" x="348" skinName="YellowHighButtonSkin"/>
+	<e:Image id="imgUnHad" source="monster_unhad_png" x="349" y="10"/>
+	<e:BitmapLabel id="lblLv" x="51" y="7" font="gold_number_fnt" text="+1"/>
+</e:Skin>

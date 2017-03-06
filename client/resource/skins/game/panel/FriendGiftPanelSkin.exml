@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendGiftPanelSkin" width="480" height="700" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="friend_bg_2_png" scale9Grid="59,163,357,16" height="690" verticalCenter="0" horizontalCenter="0"/>
+	<ns1:SimpleButton source="close2_png" id="btnClose" x="424"/>
+	<e:Image source="friend_special_gift2_png" x="36" y="59"/>
+	<e:Image source="friend_special_gift2_png" y="59" x="256"/>
+	<ns1:YellowCoinButton id="btnBuy1" label="按钮" x="81" y="273" skinName="YellowCoinButtonSkin"/>
+	<ns1:YellowCoinButton id="btnBuy2" y="273" label="按钮" skinName="YellowCoinButtonSkin" x="311"/>
+	<e:Image source="friend_special_gift3_png" x="18" y="397"/>
+	<e:Label lineSpacing="3" y="363" textColor="0x5F3A1B" text="每日只能向一人赠送一种礼物" fontFamily="微软雅黑" bold="true" size="18" horizontalCenter="0"/>
+	<ns1:SimpleButton id="btnSpecial" x="204" y="600" source="friend_gift_png"/>
+</e:Skin>

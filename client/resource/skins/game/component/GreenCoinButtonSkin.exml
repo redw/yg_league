@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GreenCoinButtonSkin" states="up,down,disabled"  width="101" height="43" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="auto_button_png" source.down="auto_button_touch_png" source.disabled="auto_button_gray_png"/>
+	<e:Label id="labelDisplay" size="18" bold="true" fontFamily="微软雅黑" textColor="0xFFFFFF" textAlign="center" text="300" stroke="2" strokeColor="0x27824F" y="13" x="37" textColor.disabled="0xFFFCED" strokeColor.disabled="0x816758"/>
+	<e:Image id="imgType" x="6" y="9" source="reward_3_s_png" width="26" height="26"/>
+</e:Skin>

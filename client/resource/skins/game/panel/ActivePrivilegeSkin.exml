@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActivePrivilegeSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="active_gray_png" y="18" horizontalCenter="0.5" x="10"/>
+	<e:Image y="28" horizontalCenter="0" source="active_privilege_title_png"/>
+	<e:Image source="p_show_dec_png" x="170" y="99"/>
+	<e:Image source="p_show_png" x="-9" y="38"/>
+	<e:Image source="active_sign_down_png" scale9Grid="50,48,6,295" width="480" horizontalCenter="0" x="20" bottom="0"/>
+</e:Skin>

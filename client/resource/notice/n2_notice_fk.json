@@ -1,0 +1,82 @@
+{
+	"1": {
+		"title": "109A75",
+		"version": 1488502800,
+		"circle_jade": "※3.3女神节版本更新※",
+		"size": 18,
+		"qq_id": 114776249,
+		"id": 1
+	},
+	"2": {
+		"title": "7A5132",
+		"version": null,
+		"circle_jade": "※",
+		"size": 17,
+		"qq_id": null,
+		"id": 2
+	},
+	"3": {
+		"title": "C04E21",
+		"version": null,
+		"circle_jade": "※一、战斗平衡性调整",
+		"size": 18,
+		"qq_id": null,
+		"id": 3
+	},
+	"4": {
+		"title": "7A5132",
+		"version": null,
+		"circle_jade": "1.增加2位全新伙伴，观音菩萨和托塔天王，新伙伴将在寻仙、商店福袋和节日活动中获得\r\n观音菩萨：战斗中无限强化己方，攻击并削弱敌方最强者\r\n托塔天王：降低全体敌方防御，一旦连发极其可怕\r\n2.出手慢的伙伴具有先天性劣势，因此我们全面加强了后手伙伴的属性和技能参数\r\n3.加强了部分伙伴终极技能的触发概率\r\n4.治疗技能普遍得到加强\r\n5.白无常技能得到加强，我们希望她能成为与黑无常相提并论的肉盾\r\n6.公布竞技场内属性规则：1星彩将=4星红将=7星橙将=10星紫将，此规则将在后续版本的各种PVP玩法中通用\r\n7.修正了装备加成的暴击伤害在小怪关失效的问题，现在暴击伤害与面板值一致\r\n※",
+		"size": 17,
+		"qq_id": null,
+		"id": 4
+	},
+	"5": {
+		"title": "C04E21",
+		"version": null,
+		"circle_jade": "※二、灵矿更新",
+		"size": 18,
+		"qq_id": null,
+		"id": 5
+	},
+	"6": {
+		"title": "7A5132",
+		"version": null,
+		"circle_jade": "1、洞天矿区中，可升级各矿区的灵矿存储上限\r\n2、升仙池，大大提升升仙池的效果\r\n3、降魔塔，大大提升降魔塔的效果\r\n※",
+		"size": 17,
+		"qq_id": null,
+		"id": 6
+	},
+	"7": {
+		"title": "C04E21",
+		"version": null,
+		"circle_jade": "※三、好友互送升星丹保留机制",
+		"size": 18,
+		"qq_id": null,
+		"id": 7
+	},
+	"8": {
+		"title": "7A5132",
+		"version": null,
+		"circle_jade": "之前的每日好友赠送的升星丹会在0点清空\r\n现在将为大家保留，直到领取为止\r\n※",
+		"size": 17,
+		"qq_id": null,
+		"id": 8
+	},
+	"9": {
+		"title": "C04E21",
+		"version": null,
+		"circle_jade": "※四、女神节活动",
+		"size": 18,
+		"qq_id": null,
+		"id": 9
+	},
+	"10": {
+		"title": "7A5132",
+		"version": null,
+		"circle_jade": "欢乐集字\r\n节日红利\r\n每日充值\r\n※",
+		"size": 17,
+		"qq_id": null,
+		"id": 10
+	}
+}

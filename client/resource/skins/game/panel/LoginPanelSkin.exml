@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="LoginPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="bg_login_jpg" x="0" bottom="0"/>
+	<ns1:SimpleButton id="btnLogin" y="600" source="login_go_png" horizontalCenter="-100"/>
+	<ns1:SimpleButton id="btnSwitch" y="600" source="login_change_png" horizontalCenter="100"/>
+</e:Skin>

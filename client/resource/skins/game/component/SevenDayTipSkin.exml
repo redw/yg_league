@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SevenDayTipSkin"
+        states="up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected" width="159" height="44" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="seven_day_tip2_png" includeIn="up,down"/>
+	<e:Image source="seven_day_tip1_png" includeIn="upAndSelected,downAndSelected"/>
+	<e:Label id="labelDisplay" size="18" fontFamily="微软雅黑" textAlign="center" verticalAlign="middle" text="每日福利" horizontalCenter="0" bold="true" verticalCenter="0" textColor="0xCBB299" textColor.upAndSelected = "0xF4D761" stroke="2" strokeColor="0x9C3A1C"/>
+</e:Skin>

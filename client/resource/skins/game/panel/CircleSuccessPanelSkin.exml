@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CircleSuccessPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image id="imgWhite" source="circle_white_png" horizontalCenter="0" bottom="0" visible="false"/>
+	<e:Group id="completeGroup" height="100%" width="100%" x="0" y="0">
+		<e:Image source="circle_point_png" x="55" y="49" name="star0"/>
+		<e:Image source="circle_point_png" y="112" x="165" name="star1"/>
+		<e:Image source="circle_point_png" y="55" x="329" name="star2"/>
+		<e:Image source="circle_point_png" y="193" x="402" name="star3"/>
+		<e:Image source="circle_point_png" y="186" x="48" name="star4"/>
+		<e:Image source="circle_point_png" y="352" x="418" name="star5"/>
+		<e:Image source="circle_point_png" y="409" x="85" name="star6"/>
+		<e:Image source="circle_point_png" y="560" x="393" name="star7"/>
+		<e:Image source="circle_point_png" y="525" x="149" name="star8"/>
+		<e:Image source="circle_point_png" y="423" x="284" name="star9"/>
+		<e:Image source="circle_point_png" y="696" x="27" name="star10"/>
+		<e:Image source="circle_point_png" y="688" x="377" name="star11"/>
+		<e:Image source="circle_title_png" horizontalCenter="0" y="223"/>
+		<ns1:WeaponIcon id="awardIcon" x="201" y="355" skinName="WeaponIconSkin"/>
+		<e:Label id="lblNum" text="x99" y="423" fontFamily="微软雅黑" bold="true" size="25" textColor="0x6FFDFF" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendSendTogetherRendererSkin" width="400" height="73"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group id="contentGroup" height="100%" width="100%" x="0" y="0">
+		<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,37,6,11" x="0"/>
+		<e:Image id="imgHead" source="friend_invite_head_png" verticalCenter="1" y="30" x="16" width="55" height="55"/>
+		<e:Image id="imgLove" x="0" verticalCenter="-20" source="friend_love_png"/>
+		<e:Label id="lblName" lineSpacing="3" y="13" textColor="0x5F3A1B" text="名字" fontFamily="微软雅黑" bold="true" size="18" x="76"/>
+		<e:Label id="lblLuck" lineSpacing="3" y="41" textColor="0xAA5432" text="缘分：500" fontFamily="微软雅黑" bold="true" size="16" x="75"/>
+		<e:Label id="lblLevel" lineSpacing="3" y="40" textColor="0x8F6B51" text="最高关数：100" fontFamily="微软雅黑" bold="true" size="16" x="186"/>
+		<e:Label id="lblLeaveTime" y="15" textColor="0x8F6B51" lineSpacing="3" text="上次在线：3天前" fontFamily="微软雅黑" bold="true" size="16" x="186"/>
+		<e:Image id="imgPower" source="friend_no_power_png" x="329" y="3"/>
+	</e:Group>
+</e:Skin>

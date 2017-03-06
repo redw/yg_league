@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleChangePanelSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg_add_png" y="50" scale9Grid="64,55,35,8" width="480" height="630" x="0"/>
+	<e:Image id="imgSell" y="57" x="5" source="role_draw_sell_png"/>
+	<e:Image id="imgBuy" y="57" x="239" source="role_draw_change_png"/>
+	<e:Label id="lblShow" y="632" textColor="0x8F6B51" lineSpacing="10" text="若熔炼装备，可获得" fontFamily="微软雅黑" bold="true" size="18" horizontalCenter="0"/>
+	<e:Scroller y="110" scrollPolicyH="off" width="440" height="507" horizontalCenter="0">
+		<e:List id="list" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Image source="common_titie_bg_png" scale9Grid="66,6,19,37" width="480" y="5" x="0"/>
+	<ns1:SimpleButton source="close_png" y="-3" x="425" id="btnClose"/>
+	<e:Group y="16" id="weaponGroup" width="354" height="26" x="63">
+		<e:Image source="coin_bg_png" width="354" y="0" scale9Grid="13,11,53,4" horizontalCenter="-5"/>
+		<e:Image y="1" x="110" source="reward_26_s_png"/>
+		<e:Image y="1" x="30" source="reward_25_s_png"/>
+		<e:Image y="1" x="270" source="reward_28_s_png"/>
+		<e:Image y="1" x="190" source="reward_27_s_png"/>
+		<e:Label horizontalCenter="-160" y="8" textColor="0xFFE9D4" text="神魂" fontFamily="微软雅黑" bold="true" size="14" x="10"/>
+		<e:Label id="lblSoulCoin1" horizontalCenter="-104" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14"/>
+		<e:Label id="lblSoulCoin2" horizontalCenter="-24" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14"/>
+		<e:Label id="lblSoulCoin4" horizontalCenter="136" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14"/>
+		<e:Label id="lblSoulCoin3" horizontalCenter="56" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14"/>
+	</e:Group>
+</e:Skin>

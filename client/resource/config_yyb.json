@@ -1,0 +1,10 @@
+{
+	"DEBUG":true,
+	"GAME_ID":143,
+	"TEST_TOKEN":"d99e4e054cde5d4413ec0c93e0b4b8c7",
+	"TEST_SERVER":"http://182.254.159.190:3101",
+	"PAY_ENABLED":false,
+	"FOCUS_ENABLED":false,
+	"SOUND_ENABLED":false,
+	"SHARE_ENABLED":false
+}

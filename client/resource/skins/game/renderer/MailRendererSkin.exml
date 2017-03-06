@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MailRendererSkin" width="454" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,14,7,36" x="0"/>
+	<e:Image id="imgType" x="5" verticalCenter="-0.5" source="mail_notice_png"/>
+	<e:Label y="10" textColor="0x6B4F38" text="邮件名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="98"/>
+	<e:Label id="lblTime" y="43" textColor="0x906C53" text="2016-10-24 10:10:10" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="16" x="98"/>
+	<e:Button id="btnShow" label="领 取" x="339" y="11" skinName="YellowButtonSkin"/>
+	<e:Button id="btnGet" x="339" y="12" label="已领取" skinName="GreenButtonSkin"/>
+</e:Skin>

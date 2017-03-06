@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="WeaponBuyPanelSkin" width="480" height="676" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="main_bg_png" y="0" horizontalCenter="0" scale9Grid="209,112,211,9" width="100%" height="100%"/>
+	<e:Image source="task_bg_png" y="619" horizontalCenter="0.5" x="20"/>
+	<e:Image source="line_png" y="614" horizontalCenter="0" x="30"/>
+	<e:Scroller y="111" width="454" height="496" scrollPolicyH="off" horizontalCenter="0">
+		<e:List id="buyList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Label text="装备栏" x="30" y="71" fontFamily="微软雅黑" size="18" bold="true" textColor="0x583C26"/>
+	<e:Label id="weaponCell" y="71" text="(2/3)" fontFamily="微软雅黑" bold="true" size="18" x="91" textColor="0x34E5C1" stroke="2" strokeColor="0x966536"/>
+	<e:Button id="btnRefresh" x="348" y="56" label="刷新" skinName="GreenButtonSkin"/>
+	<e:Label id="lblTime" y="70" text="(00:00)" fontFamily="微软雅黑" size="16" textColor="0x047136" right="31" touchEnabled="false" bold="true"/>
+	<ns1:SimpleButton id="btnClose" x="425" y="-10" source="close_png"/>
+	<e:Group y="11" width="354" height="26" id="weaponGroup" horizontalCenter="0">
+		<e:Image source="coin_bg_png" width="354" y="0" scale9Grid="13,11,53,4" horizontalCenter="0"/>
+		<e:Image y="1" x="75" source="reward_10_s_png"/>
+		<e:Image y="1" x="5" source="reward_9_s_png"/>
+		<e:Image y="1" x="220" source="reward_12_s_png"/>
+		<e:Image y="1" x="145" source="reward_11_s_png"/>
+		<e:Image y="1" horizontalCenter="120" source="reward_13_s_png"/>
+		<e:Label id="lblWeaponCoin4" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14" horizontalCenter="151"/>
+		<e:Label id="lblWeaponCoin0" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14" horizontalCenter="-129"/>
+		<e:Label id="lblWeaponCoin1" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14" horizontalCenter="-59"/>
+		<e:Label id="lblWeaponCoin2" y="8" textColor="0xFFE9D4" text="1111" fontFamily="微软雅黑" bold="true" size="14" horizontalCenter="11"/>
+		<e:Label id="lblWeaponCoin3" y="8" textColor="0xFFE9D4" horizontalCenter="86" fontFamily="微软雅黑" bold="true" size="14" text="1111"/>
+	</e:Group>
+</e:Skin>

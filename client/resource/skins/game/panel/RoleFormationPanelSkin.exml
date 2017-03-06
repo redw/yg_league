@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleFormationPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="role_Battle_change_bg_png" horizontalCenter="0"/>
+	<e:Image source="common_bg2_png" scale9Grid="8,7,34,18" width="100%" x="0" height="450" bottom="0"/>
+	<e:Image source="common_titie_bg_png" scale9Grid="66,5,14,37" width="480" verticalCenter="-72.5" y="10" horizontalCenter="0"/>
+	<e:Image source="common_bg1_png" horizontalCenter="0" scale9Grid="10,9,31,14" width="480" height="450" x="20" bottom="0"/>
+	<e:Image source="task_bg_png" y="353" horizontalCenter="-0.5" height="50" x="30"/>
+	<e:Group id="txtBg" height="26" width="160" x="59" y="314">
+		<e:Image source="coin_bg_png" y="0" horizontalCenter="0" width="160" scale9Grid="12,3,55,20"/>
+		<e:Label text="伙伴收藏" x="6" y="4" fontFamily="微软雅黑" size="16" bold="true" textColor="0xFFE6DC"/>
+		<e:Label id="lblHadHero" y="4" textColor="0xFFE6DC" text="30/30" fontFamily="微软雅黑" bold="true" size="16" right="15"/>
+		<e:Label id="lblHelp" bold="true" y="4" text="选择需要上阵的伙伴" fontFamily="微软雅黑" right="-196" size="16" x="10" textColor="0xFFE6DC" stroke="2" strokeColor="0x7C451B"/>
+	</e:Group>
+	<e:Label id="lblSecretDesc" y="317" textColor="0xFFE6DC" text="伙伴收藏" fontFamily="微软雅黑" bold="true" size="16" horizontalCenter="0" visible="false"/>
+	<ns1:SimpleButton id="btnClose" x="422" y="297" source="close_png"/>
+	<e:Scroller id="scroll" y="390" width="454" scrollPolicyH="off" height="396" x="13">
+		<e:List id="upList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Group id="posGroup0" height="80" width="130" y="60" horizontalCenter="70">
+		<e:Image source="role_up_none_png" name="imgPos" bottom="0" x="0"/>
+	</e:Group>
+	<e:Group id="posGroup1" width="130" y="140" height="80" horizontalCenter="70">
+		<e:Image source="role_up_none_png" x="0" name="imgPos" bottom="0"/>
+	</e:Group>
+	<e:Group id="posGroup2" width="130" y="220" height="80" horizontalCenter="70">
+		<e:Image source="role_up_none_png" x="0" name="imgPos" bottom="0"/>
+	</e:Group>
+	<e:Group id="posGroup3" width="130" y="60" height="80" horizontalCenter="-70">
+		<e:Image source="role_up_none_png" x="0" name="imgPos" bottom="0"/>
+	</e:Group>
+	<e:Group id="posGroup4" width="130" y="140" height="80" horizontalCenter="-70">
+		<e:Image source="role_up_none_png" x="0" name="imgPos" bottom="0"/>
+	</e:Group>
+	<e:Group id="posGroup5" width="130" y="220" height="80" horizontalCenter="-70">
+		<e:Image source="role_up_none_png" x="0" name="imgPos" bottom="0"/>
+	</e:Group>
+	<e:Group height="69" width="111" x="2" y="33" name="battleGroup3" touchEnabled="false">
+		<e:Image source="role_battle_bg_png" x="0" y="0"/>
+		<e:Label text="Lv.9" x="48" y="10" fontFamily="微软雅黑" size="16" bold="true" name="lv"/>
+		<e:Image source="common_star_png" y="3" x="12"/>
+		<e:Label y="10" textColor="0x583C26" horizontalCenter="-29" text="1" fontFamily="微软雅黑" bold="true" size="14" x="10" name="star"/>
+		<e:Image y="36" x="13" name="type" source="job_1_png"/>
+		<e:BitmapLabel x="43" y="38" text="+999" font="gold_number_fnt" letterSpacing="-10" name="strength"/>
+		<e:Group height="90" width="90" x="122" y="12" name="mcGroup" touchEnabled="false"/>
+		<e:Image source="seven_day_discount_png" x="49" y="9" width="44" name="imgLvMis"/>
+	</e:Group>
+	<e:Group width="111" y="113" height="69" x="2" name="battleGroup4" touchEnabled="false">
+		<e:Image source="role_battle_bg_png" y="0" x="0"/>
+		<e:Label y="10" text="Lv.9" fontFamily="微软雅黑" bold="true" size="16" name="lv" x="50"/>
+		<e:Image source="common_star_png" y="3" x="12"/>
+		<e:Label y="10" textColor="0x583C26" horizontalCenter="-29" text="1" fontFamily="微软雅黑" bold="true" size="14" name="star" x="10"/>
+		<e:Image y="36" name="type" x="13" source="job_1_png"/>
+		<e:BitmapLabel y="38" text="+999" font="gold_number_fnt" letterSpacing="-10" name="strength" x="43"/>
+		<e:Group width="90" y="12" height="90" x="122" name="mcGroup" touchEnabled="false"/>
+		<e:Image source="seven_day_discount_png" width="44" y="9" name="imgLvMis" x="49"/>
+	</e:Group>
+	<e:Group width="111" y="193" height="69" x="2" name="battleGroup5" touchEnabled="false">
+		<e:Image source="role_battle_bg_png" y="0" x="0"/>
+		<e:Label y="10" text="Lv.9" fontFamily="微软雅黑" bold="true" size="16" name="lv" x="48"/>
+		<e:Image source="common_star_png" y="3" x="12"/>
+		<e:Label y="10" textColor="0x583C26" horizontalCenter="-29" text="1" fontFamily="微软雅黑" bold="true" size="14" name="star" x="10"/>
+		<e:Image y="36" name="type" x="13" source="job_1_png"/>
+		<e:BitmapLabel y="38" text="+999" font="gold_number_fnt" letterSpacing="-10" name="strength" x="43"/>
+		<e:Group width="90" y="12" height="90" x="122" name="mcGroup" touchEnabled="false"/>
+		<e:Image source="seven_day_discount_png" width="44" y="9" name="imgLvMis" x="49"/>
+	</e:Group>
+	<e:Group width="111" y="33" height="69" x="368" name="battleGroup0" touchEnabled="false">
+		<e:Image source="role_battle_bg_png" y="0" x="0"/>
+		<e:Label y="10" text="Lv.9" fontFamily="微软雅黑" bold="true" size="16" name="lv" x="48"/>
+		<e:Image source="common_star_png" y="3" x="12"/>
+		<e:Label y="10" textColor="0x583C26" horizontalCenter="-29" text="1" fontFamily="微软雅黑" bold="true" size="14" name="star" x="10"/>
+		<e:Image y="36" name="type" x="13" source="job_1_png"/>
+		<e:BitmapLabel y="38" text="+999" font="gold_number_fnt" letterSpacing="-10" name="strength" x="43"/>
+		<e:Group width="90" y="12" height="90" x="-104" name="mcGroup" touchEnabled="false"/>
+		<e:Image source="seven_day_discount_png" width="44" y="9" name="imgLvMis" x="49"/>
+	</e:Group>
+	<e:Group width="111" y="113" height="69" x="368" name="battleGroup1" touchEnabled="false">
+		<e:Image source="role_battle_bg_png" y="0" x="0"/>
+		<e:Label y="10" text="Lv.9999" fontFamily="微软雅黑" bold="true" size="16" name="lv" x="48"/>
+		<e:Image source="common_star_png" y="3" x="12"/>
+		<e:Label y="10" textColor="0x583C26" horizontalCenter="-29" text="1" fontFamily="微软雅黑" bold="true" size="14" name="star" x="10"/>
+		<e:Image y="36" name="type" x="13" source="job_1_png"/>
+		<e:BitmapLabel y="38" text="+999" font="gold_number_fnt" letterSpacing="-10" name="strength" x="43"/>
+		<e:Group width="90" y="12" height="90" x="-104" name="mcGroup" touchEnabled="false"/>
+		<e:Image source="seven_day_discount_png" width="44" y="9" name="imgLvMis" x="49"/>
+	</e:Group>
+	<e:Group width="111" y="193" height="69" x="368" name="battleGroup2" touchEnabled="false">
+		<e:Image source="role_battle_bg_png" y="0" x="0"/>
+		<e:Label y="10" text="Lv.9" fontFamily="微软雅黑" bold="true" size="16" name="lv" x="48"/>
+		<e:Image source="common_star_png" y="3" x="12"/>
+		<e:Label y="10" textColor="0x583C26" horizontalCenter="-29" text="1" fontFamily="微软雅黑" bold="true" size="14" name="star" x="10"/>
+		<e:Image y="36" name="type" x="13" source="job_1_png"/>
+		<e:BitmapLabel y="38" text="+999" font="gold_number_fnt" letterSpacing="-10" name="strength" x="43"/>
+		<e:Group width="90" y="12" height="90" x="-104" name="mcGroup" touchEnabled="false"/>
+		<e:Image source="seven_day_discount_png" width="44" y="9" name="imgLvMis" x="49"/>
+	</e:Group>
+	<e:Button id="btnInto" label="进 入" y="741" horizontalCenter="0.5" skinName="YellowButtonSkin"/>
+	<e:Image source="role_formation_arrow_png" x="154" y="75" name="arrow3" touchEnabled="false" visible="false"/>
+	<e:Image source="role_formation_arrow_png" y="75" name="arrow0" x="295" touchEnabled="false" visible="false"/>
+	<e:Image source="role_formation_arrow_png" y="155" name="arrow4" x="154" touchEnabled="false" visible="false"/>
+	<e:Image source="role_formation_arrow_png" y="155" name="arrow1" x="295" touchEnabled="false" visible="false"/>
+	<e:Image source="role_formation_arrow_png" y="235" name="arrow5" x="154" touchEnabled="false" visible="false"/>
+	<e:Image source="role_formation_arrow_png" y="235" name="arrow2" x="295" touchEnabled="false" visible="false"/>
+</e:Skin>

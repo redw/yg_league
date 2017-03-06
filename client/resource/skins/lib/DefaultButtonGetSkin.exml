@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="DefaultButtonGetSkin" states="up,down,disabled" width="149" height="62"
+        xmlns:e="http://ns.egret.com/eui">
+	<e:Image left="0" bottom="0" top="0" right="0" source="button5" source.down="button5_g" source.disabled="button1_00" scale9Grid="20,25,112,23"/>
+	<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" text="领 取" fontFamily="微软雅黑" bold="true" size="20" textColor="0xFFD494" stroke="2" strokeColor="0x661D00"/>
+</e:Skin>

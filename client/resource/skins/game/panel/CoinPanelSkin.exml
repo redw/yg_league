@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CoinPanelSkin" width="480" height="49" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_titie_bg_png" scale9Grid="66,5,14,37" width="480" verticalCenter="0" horizontalCenter="0"/>
+	<e:Group y="0" x="0" width="480" height="49" id="weaponGroup">
+		<e:Group verticalCenter="0.5" y="10" width="78" height="26" x="0">
+			<e:Image source="coin_bg_png" y="0" x="0"/>
+			<e:Image y="1" x="2" source="ic_wp_metal_s_png"/>
+			<e:Label y="5" text="1111" fontFamily="微软雅黑" id="lblWeaponCoin0" bold="true" size="16" horizontalCenter="9"/>
+		</e:Group>
+		<e:Group verticalCenter="0.5" y="20" width="78" height="26" x="80">
+			<e:Image source="coin_bg_png" y="0" x="0"/>
+			<e:Image y="1" x="2" source="ic_wp_wood_s_png"/>
+			<e:Label y="5" text="1111" fontFamily="微软雅黑" bold="true" size="16" id="lblWeaponCoin1" horizontalCenter="10"/>
+		</e:Group>
+		<e:Group verticalCenter="0.5" y="30" width="78" height="26" x="160">
+			<e:Image source="coin_bg_png" y="0" x="0"/>
+			<e:Image y="1" x="2" source="ic_wp_water_s_png"/>
+			<e:Label y="5" text="1111" fontFamily="微软雅黑" id="lblWeaponCoin2" bold="true" size="16" horizontalCenter="10"/>
+		</e:Group>
+		<e:Group verticalCenter="0.5" y="40" width="78" height="26" x="240">
+			<e:Image source="coin_bg_png" y="0" x="0"/>
+			<e:Image y="1" x="2" source="ic_wp_fire_s_png"/>
+			<e:Label y="5" text="1111" fontFamily="微软雅黑" bold="true" size="16" id="lblWeaponCoin3" horizontalCenter="10"/>
+		</e:Group>
+		<e:Group verticalCenter="0.5" y="50" width="78" height="26" x="320">
+			<e:Image source="coin_bg_png" y="0" x="0"/>
+			<e:Image y="1" x="2" source="ic_wp_soil_s_png"/>
+			<e:Label y="5" text="1111" fontFamily="微软雅黑" id="lblWeaponCoin4" bold="true" size="16" horizontalCenter="10"/>
+		</e:Group>
+		<e:Group verticalCenter="0.5" width="78" height="26" x="400">
+			<e:Image source="coin_bg_png" y="0" x="0"/>
+			<e:Image y="2" x="3" source="ic_gold_s_png"/>
+			<e:Label id="lblDiamond1" y="5" text="1111" fontFamily="微软雅黑" bold="true" size="16" horizontalCenter="10"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="commonGroup" height="49" width="480" x="0" y="0" visible="false">
+		<e:Image source="coin_bg_png" x="78" y="13"/>
+		<e:Image source="coin_bg_png" y="13" x="198"/>
+		<e:Image source="coin_bg_png" y="13" x="318"/>
+		<e:Image x="199" y="14" source="ic_jade_s_png"/>
+		<e:Image x="81" y="15" source="ic_gold_s_png"/>
+		<e:Image x="320" y="14" source="ic_coin_s_png"/>
+		<e:Label id="lblGold" text="111" fontFamily="微软雅黑" size="16" bold="true" y="18" horizontalCenter="127"/>
+		<e:Label id="lblDiamond" y="18" horizontalCenter="-113" text="111" fontFamily="微软雅黑" bold="true" size="16" x="10"/>
+		<e:Label id="lblMedal" y="18" horizontalCenter="7" text="111" fontFamily="微软雅黑" bold="true" size="16" x="20"/>
+	</e:Group>
+	<ns1:SimpleButton id="btnClose" source="close_png" y="-15" x="424"/>
+</e:Skin>

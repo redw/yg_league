@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPRankRendererSkin" width="460" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="imgBg" verticalCenter="0" horizontalCenter="0" width="100%" scale9Grid="19,10,13,47" source="common_cell_png"/>
+	<e:Image id="imgRank" source="pvp_rank_1_png" verticalCenter="0"/>
+	<e:Image source="common_head_png" y="12" x="85" width="50" height="50" id="imgHead"/>
+	<e:Label id="lblName" bold="true" y="28" textColor="0xA74E2B" text="游戏玩家" fontFamily="微软雅黑" size="18" left="158"/>
+	<e:Label text="20" fontFamily="微软雅黑" horizontalCenter="-191" bold="true" size="24" id="lblRank" x="10" verticalCenter="-2.5" stroke="2" strokeColor="0x683615" textColor="0xFFFDEC"/>
+	<e:Image source="pvp_level_1_png" id="imgMyLevel" x="308" verticalCenter="0"/>
+	<e:Image source="pvp_level_star_png" x="379" id="myStar1" verticalCenter="0"/>
+	<e:Image source="pvp_level_star_png" id="myStar2" x="402" verticalCenter="0"/>
+	<e:Image source="pvp_level_star_png" id="myStar3" x="425" verticalCenter="0"/>
+</e:Skin>

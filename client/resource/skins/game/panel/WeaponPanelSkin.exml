@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="WeaponPanelSkin" width="480" height="282" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing" xmlns:n="*">
+	<e:Image source="main_bg_png" y="0" horizontalCenter="0" scale9Grid="209,112,211,9" width="100%" height="100%"/>
+	<e:Label y="71" textColor="0x583C26" text="装备栏" fontFamily="微软雅黑" bold="true" size="18" x="30"/>
+	<e:Label id="weaponCell" y="71" textColor="0x34E5C1" text="(2/3)" fontFamily="微软雅黑" strokeColor="0x966536" bold="true" size="18" stroke="2" x="91"/>
+	<e:Button id="btnWeaponShop" label="装备商店" y="56" skinName="GreenButtonSkin" x="348"/>
+	<e:Scroller id="weaponScroller" y="111" width="454" height="150" scrollPolicyH="off" horizontalCenter="0">
+		<e:List id="weaponList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout gap="1"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<n:SimpleButton source="menu_up_png" y="0" id="btnUp" x="428"/>
+	<e:Group y="11" width="354" height="26" id="weaponGroup" x="63">
+		<e:Image source="coin_bg_png" y="0" width="354" scale9Grid="13,11,53,4" horizontalCenter="0"/>
+		<e:Image y="1" x="75" source="reward_10_s_png"/>
+		<e:Image y="1" x="5" source="reward_9_s_png"/>
+		<e:Image y="1" x="220" source="reward_12_s_png"/>
+		<e:Image y="1" x="145" source="reward_11_s_png"/>
+		<e:Image y="1" horizontalCenter="120" source="reward_13_s_png"/>
+		<e:Label id="lblWeaponCoin4" y="8" horizontalCenter="151" fontFamily="微软雅黑" bold="true" size="14" text="1111" textColor="0xFFE9D4"/>
+		<e:Label fontFamily="微软雅黑" bold="true" size="14" text="1111" id="lblWeaponCoin0" textColor="0xFFE9D4" y="8" horizontalCenter="-129"/>
+		<e:Label y="8" horizontalCenter="-59" fontFamily="微软雅黑" bold="true" size="14" text="1111" id="lblWeaponCoin1" textColor="0xFFE9D4"/>
+		<e:Label id="lblWeaponCoin3" y="8" fontFamily="微软雅黑" bold="true" size="14" text="1111" textColor="0xFFE9D4" horizontalCenter="86"/>
+		<e:Label id="lblWeaponCoin2" y="8" fontFamily="微软雅黑" bold="true" size="14" text="1111" textColor="0xFFE9D4" horizontalCenter="11"/>
+	</e:Group>
+	<ns1:SimpleButton source="menu_help_png" y="0" id="btnHelp"/>
+</e:Skin>

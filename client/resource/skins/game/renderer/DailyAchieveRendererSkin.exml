@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="DailyAchieveRendererSkin" width="440" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,8,6,44" x="0"/>
+	<e:Image y="3" x="10" id="imgIcon"/>
+	<e:Label y="8" textColor="0x583C26" text="名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="90"/>
+	<e:Image source="monster_bar_bg_png" y="29" x="89"/>
+	<e:ProgressBar x="89" y="29" skinName="MonsterProgressSkin" id="bar"/>
+	<e:Label id="lblBar" textColor="0xFFFFFF" verticalCenter="0" text="999/999" fontFamily="微软雅黑" textAlign="center" bold="true" horizontalCenter="-19.5" stroke="2" size="14" strokeColor="0xA35A32" x="10" y="10"/>
+	<e:Label y="47" textColor="0x926E56" text="奖励：" fontFamily="微软雅黑" bold="true" left="82" size="16" x="20"/>
+	<e:Label y="48" textColor="0x926E56" text="x100" fontFamily="微软雅黑" id="lblAwardNum" bold="true" left="159" size="16" x="30"/>
+	<e:Image x="129" id="imgType" width="24" height="24" source="reward_5_s_png" y="43"/>
+	<e:Button x="337" y="6" label="前 往" skinName="GreenHighButtonSkin" id="btnGo"/>
+	<e:Button id="btnGet" y="6" label="领 取" skinName="YellowHighButtonSkin" x="337"/>
+	<e:Image id="imgHadGot" x="333" y="3" source="active_had_got_png"/>
+</e:Skin>

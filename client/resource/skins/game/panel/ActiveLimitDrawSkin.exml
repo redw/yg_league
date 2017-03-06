@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveLimitDrawSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="active_gray_png" y="28" horizontalCenter="0"/>
+	<e:Image source="limit_pos_png" y="37" horizontalCenter="0" x="20"/>
+	<e:Image source="active_sign_down_png" width="480" y="30" scale9Grid="50,48,6,295" bottom="0" horizontalCenter="0" x="70"/>
+	<e:Scroller y="243" horizontalCenter="0" width="454" scrollPolicyH="off" height="322" x="50">
+		<e:List id="awardList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Label y="90" textColor="0xFFF1E6" text="只要在线，即有机会掉落字" fontFamily="微软雅黑" bold="true" strokeColor="0x985006" stroke="2" size="18" x="192"/>
+	<e:Label y="130" textColor="0xFFF1E6" text="集齐指定字组即可兑换奖励" fontFamily="微软雅黑" bold="true" strokeColor="0x985006" stroke="2" size="18" x="227"/>
+	<e:Label y="207" textColor="0xFFF1E6" horizontalCenter="0" text="活动时间" fontFamily="微软雅黑" id="lblActTime" bold="true" strokeColor="0x985006" stroke="2" size="15" x="20"/>
+	<e:Label y="585" textColor="0xE9E043" horizontalCenter="-12" text="截止时间" fontFamily="微软雅黑" id="lblEndTime" bold="true" stroke="2" strokeColor="0x985006" size="18" x="30"/>
+</e:Skin>

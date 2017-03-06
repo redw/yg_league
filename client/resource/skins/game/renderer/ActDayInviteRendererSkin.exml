@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActDayInviteRendererSkin" width="454" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" y="0" scale9Grid="21,35,6,14" width="100%" height="100" x="0"/>
+	<e:Image source="active_cell_mask_png" y="-6" x="15"/>
+	<e:Label id="lblTitle" y="3" textColor="0xF4E7D2" text="累计邀请" fontFamily="微软雅黑" bold="true" size="18" horizontalCenter="-133" x="10"/>
+	<e:Label id="lblName" y="3" text="1天" fontFamily="微软雅黑" bold="true" size="18" left="132" textColor="0xF4AB32" stroke="2" strokeColor="0x902110"/>
+	<e:Button x="339" verticalCenter="10.5" label="领 取" skinName="YellowHighButtonSkin" id="btnGet" y="10"/>
+	<e:Image source="active_had_got_png" y="31" x="338" id="imgGot" visible="false"/>
+	<e:Group y="40" scaleX="0.85" width="64" scaleY="0.85" height="64" name="awardGroup1" x="14">
+		<ns1:WeaponIcon skinName="WeaponIconSkin" y="0" name="awardIcon" x="0" xmlns:ns1="*"/>
+		<e:Label bold="true" y="41" text="*3" fontFamily="微软雅黑" right="4" size="16" name="awardNum" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08"/>
+	</e:Group>
+	<e:Group y="40" scaleX="0.85" width="64" scaleY="0.85" height="64" name="awardGroup2" x="84">
+		<ns1:WeaponIcon skinName="WeaponIconSkin" y="0" name="awardIcon" x="0" xmlns:ns1="*"/>
+		<e:Label bold="true" y="41" text="*3" fontFamily="微软雅黑" right="4" size="16" name="awardNum" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08"/>
+	</e:Group>
+	<e:Group y="40" scaleX="0.85" width="64" scaleY="0.85" height="64" name="awardGroup3" x="154">
+		<ns1:WeaponIcon skinName="WeaponIconSkin" y="0" name="awardIcon" x="0" xmlns:ns1="*"/>
+		<e:Label right="4" y="41" text="*3" fontFamily="微软雅黑" bold="true" size="16" name="awardNum" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08"/>
+	</e:Group>
+	<e:Group y="39" scaleX="0.85" width="64" scaleY="0.85" height="64" name="awardGroup4" x="224">
+		<ns1:WeaponIcon skinName="WeaponIconSkin" y="0" name="awardIcon" x="0" xmlns:ns1="*"/>
+		<e:Label bold="true" y="41" text="*3" fontFamily="微软雅黑" right="4" size="16" name="awardNum" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08"/>
+	</e:Group>
+	<e:Label y="8" textColor="0x906C53" size="16" fontFamily="微软雅黑" lineSpacing="3" x="337" text="进度：" bold="true"/>
+	<e:Label id="lblEnd" y="8" textColor="0x906C53" text="/ 101" fontFamily="微软雅黑" bold="true" size="16" lineSpacing="3" x="410"/>
+	<e:Label id="lblNowInvite" y="8" text="10" fontFamily="微软雅黑" bold="true" size="16" lineSpacing="3" textColor="0xD6883F" horizontalCenter="167"/>
+</e:Skin>

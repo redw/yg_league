@@ -1,0 +1,18 @@
+{"mc":{
+	"132_attack_missle1":{
+		"frameRate":12,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"EDC2436C",
+			"x":-43,
+			"y":-7
+			}
+			]
+}},
+	"res":{
+		"EDC2436C":{"x":0,"y":0,"w":87,"h":14}
+	}}

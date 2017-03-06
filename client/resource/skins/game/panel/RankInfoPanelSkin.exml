@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RankInfoPanelSkin" width="480" height="535" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg_add3_png" scale9Grid="37,38,382,302" width="460" horizontalCenter="0" height="520" verticalCenter="0"/>
+	<e:Image source="title_bg_png" horizontalCenter="0" x="10" y="0"/>
+	<e:Image source="rank_info_title_png" y="-26" horizontalCenter="0"/>
+	<e:Image source="rank_info_friend_png" y="57" horizontalCenter="0.5"/>
+	<e:Image source="rank_info_weapon_png" y="264" horizontalCenter="0"/>
+</e:Skin>

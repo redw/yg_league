@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendInviteRendererSkin" width="400" height="137" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="contentGroup" height="100%" width="100%" x="0" y="0">
+		<e:Group height="137" width="117" y="0" name="group0" x="10">
+			<e:Image source="friend_invite_bg_png" x="0" y="0"/>
+			<e:Image source="friend_invite_head_png" x="30" y="25" name="head" width="55" height="55"/>
+			<e:Image x="11" name="type" width="36" height="36" source="reward_3_s_png" bottom="-2"/>
+			<e:Image source="friend_invite_got_png" y="-2" horizontalCenter="0" name="got"/>
+			<e:Label y="113" text="300" fontFamily="微软雅黑" bold="true" size="18" lineSpacing="3" x="58" textColor="0xFFE6D0" name="awardNum"/>
+			<e:Label y="86" lineSpacing="3" text="300" fontFamily="微软雅黑" bold="true" size="18" name="lblName" textColor="0x6A4B33" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group y="0" width="117" height="137" name="group1" x="142">
+			<e:Image source="friend_invite_bg_png" y="0" x="0"/>
+			<e:Image source="friend_invite_head_png" y="24" name="head" x="30" width="55" height="55"/>
+			<e:Image name="type" x="13" width="36" height="36" source="reward_3_s_png" bottom="-2"/>
+			<e:Image source="friend_invite_got_png" horizontalCenter="0" y="-2" name="got"/>
+			<e:Label y="113" textColor="0xFFE6D0" size="18" text="300" fontFamily="微软雅黑" bold="true" lineSpacing="3" name="awardNum" x="58"/>
+			<e:Label y="86" textColor="0x6A4B33" lineSpacing="3" text="300" fontFamily="微软雅黑" bold="true" size="18" name="lblName" horizontalCenter="0" x="10"/>
+		</e:Group>
+		<e:Group y="0" width="117" height="137" name="group2" x="273">
+			<e:Image source="friend_invite_bg_png" y="0" x="0"/>
+			<e:Image source="friend_invite_head_png" y="24" name="head" x="30" width="55" height="55"/>
+			<e:Image name="type" x="15" width="36" height="36" source="reward_3_s_png" bottom="-2"/>
+			<e:Image source="friend_invite_got_png" horizontalCenter="0" y="-2" name="got"/>
+			<e:Label y="113" textColor="0xFFE6D0" lineSpacing="3" text="300" fontFamily="微软雅黑" bold="true" size="18" name="awardNum" x="58"/>
+			<e:Label y="86" textColor="0x6A4B33" lineSpacing="3" text="300" fontFamily="微软雅黑" bold="true" size="18" name="lblName" horizontalCenter="0" x="20"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

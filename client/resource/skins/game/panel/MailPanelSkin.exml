@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MailPanelSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg_add_png" scale9Grid="68,57,24,5" width="480" horizontalCenter="0" height="630" bottom="0"/>
+	<e:Image source="mail_title_bg_png" x="6" width="466" y="50"/>
+	<e:Label y="62" textColor="0x583C26" text="邮 件" fontFamily="微软雅黑" bold="true" size="22" horizontalCenter="0.5"/>
+	<e:Scroller y="100" scrollPolicyH="off" width="454" height="516" horizontalCenter="0">
+		<e:List id="mailList" width="100%" height="516">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Label y="630" text="邮件最多保存7天，请及时领取" fontFamily="微软雅黑" bold="true" size="16" textColor="0x9B613D" textAlign="center" horizontalCenter="0"/>
+	<ns1:CoinShowPanel x="0" y="5" skinName="CoinShowPanelSkin" id="coinShow"/>
+	<ns1:SimpleButton source="close_png" y="-3" x="425" id="btnClose"/>
+</e:Skin>

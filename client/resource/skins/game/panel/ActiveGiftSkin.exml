@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveGiftSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="active_gray_png" y="18" horizontalCenter="0"/>
+	<e:Image source="active_gift_title_png" x="194" y="28"/>
+	<e:Image source="g_show_png" y="40" x="6"/>
+	<e:Image source="g_putin_png" y="128" horizontalCenter="4.5"/>
+	<e:Label y="86" textColor="0xFFECE1" stroke="2" text="点击下方输入礼品吗" fontFamily="微软雅黑" strokeColor="0x653605" bold="true" size="18" horizontalCenter="0"/>
+	<e:Button id="btnSure" y="183" label="确 认" horizontalCenter="0" skinName="YellowButtonSkin"/>
+	<e:EditableText id="editText" x="160" y="135" size="18" fontFamily="微软雅黑" bold="true" prompt="请输入礼品码" height="20" textAlign="left" verticalAlign="middle" width="164"/>
+</e:Skin>

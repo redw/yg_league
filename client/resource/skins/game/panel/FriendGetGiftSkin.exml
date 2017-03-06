@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendGetGiftSkin" width="424" height="466" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="friend_gift1_png" y="1" horizontalCenter="0.5" x="30"/>
+	<e:Image source="friend_content_bg_png" y="106" horizontalCenter="0" scale9Grid="9,9,59,41" width="420" height="317" x="20"/>
+	<e:Label id="lblGetTimes" y="433" textColor="0x36C488" text="今日还能收取：（100/1000) 礼物将在7日后过期" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="16" horizontalCenter="0"/>
+	<e:Scroller y="114" horizontalCenter="0" width="400" height="301" scrollPolicyH="off" x="10">
+		<e:List id="giftList" width="400" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

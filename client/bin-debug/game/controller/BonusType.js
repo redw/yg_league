@@ -1,0 +1,28 @@
+var BonusType;
+(function (BonusType) {
+    BonusType.COIN = 1;
+    BonusType.COIN_TIME = 2;
+    BonusType.GOLD = 3;
+    BonusType.JADE = 4;
+    BonusType.PASS_JADE = 5;
+    BonusType.HERO = 6;
+    BonusType.HERO_CHIP = 7;
+    BonusType.WEAPON = 8;
+    BonusType.METAL = 9;
+    BonusType.WOOD = 10;
+    BonusType.WATER = 11;
+    BonusType.FIRE = 12;
+    BonusType.SOIL = 13;
+    BonusType.HERO_DRAW = 14;
+    BonusType.WEAPON_BOX = 15;
+    BonusType.WEAPON_FB = 16;
+    BonusType.STAR_PILL = 22;
+    BonusType.PVP_COIN = 23;
+    BonusType.CIRCLE_TIMES = 24;
+    BonusType.SOUL_1 = 25;
+    BonusType.SOUL_2 = 26;
+    BonusType.SOUL_3 = 27;
+    BonusType.SOUL_4 = 28;
+    BonusType.ORE = 29;
+    BonusType.WORD = 101;
+})(BonusType || (BonusType = {}));

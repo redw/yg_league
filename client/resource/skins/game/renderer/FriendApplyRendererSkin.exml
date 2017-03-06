@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendApplyRendererSkin" width="400" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,37,6,11" x="0"/>
+	<e:Label y="41" textColor="0x8F6B51" text="刚刚" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="16" x="84"/>
+	<e:Image id="imgIcon" source="friend_invite_head_png" verticalCenter="0.5" y="20" x="15" width="55" height="55"/>
+	<e:Label y="9" textColor="0x5F3A1B" text="《名字》申请成为你的好友" fontFamily="微软雅黑" id="lblName" bold="true" lineSpacing="3" size="18" x="75"/>
+	<e:Button id="btnNo" label="拒 绝" x="218" y="30" skinName="YellowButtonSkin" scaleX="0.8" scaleY="0.8"/>
+	<e:Button id="btnYes" y="30" scaleX="0.8" label="接 受" scaleY="0.8" x="313" skinName="GreenButtonSkin"/>
+</e:Skin>

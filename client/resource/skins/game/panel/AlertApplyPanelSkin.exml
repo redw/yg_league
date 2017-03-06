@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="AlertApplyPanelSkin" width="416" height="329" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image scale9Grid="9,8,49,32" source="alert_bg_png" x="0" y="0"/>
+	<ns1:SimpleButton id="btnClose" source="close2_png" x="336"/>
+	<e:Image source="friend_invite_head_png" y="30" verticalCenter="-37.5" x="65"/>
+	<e:Label lineSpacing="3" y="86" textColor="0x5F3A1B" text="名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="139"/>
+	<e:Label lineSpacing="3" y="74" textColor="0xAA5432" text="缘分：500" fontFamily="微软雅黑" id="lblLuck" bold="true" size="16" x="231"/>
+	<e:Label lineSpacing="3" y="96" textColor="0x8F6B51" text="最高关数：100" fontFamily="微软雅黑" id="lblLevel" bold="true" size="16" x="230"/>
+	<e:Button id="btnYellow" label="删 除" y="187" horizontalCenter="-75.5" skinName="YellowButtonSkin" x="10"/>
+	<e:Button id="btnGreen" label="返 回" y="187" skinName="GreenButtonSkin" horizontalCenter="90.5"/>
+</e:Skin>

@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPFormationSkin" width="480" height="240" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg1_png" verticalCenter="0" horizontalCenter="0" width="480" height="235" scale9Grid="10,9,31,14" x="10" y="10"/>
+	<e:Image source="task_bg_png" horizontalCenter="0.5" y="10" height="50" x="20"/>
+	<e:Image source="line_png" horizontalCenter="0" y="59" x="20"/>
+	<e:Label y="22" textColor="0x583C26" text="布 阵" fontFamily="微软雅黑" bold="true" size="22" horizontalCenter="0"/>
+	<e:Scroller width="454" height="161" y="64" horizontalCenter="0">
+		<e:Group id="mainRoleGroup" height="158">
+			<e:Group width="64" y="0" height="64" x="375" name="role1" visible="false">
+				<e:Group y="31" width="64" height="64" name="group" x="31" anchorOffsetX="31" anchorOffsetY="31">
+					<ns1:RoleIcon x="0" y="0" skinName="RoleIconSkin" name="roleIcon"/>
+					<e:Image source="pvp_battle_up_png" right="0" y="31" name="battled"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="10" width="64" height="64" name="role2" x="385" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" right="0" name="battled" x="10" bottom="0"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="20" width="64" height="64" name="role3" x="395" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" right="0" bottom="0" name="battled" x="20" y="10"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="30" width="64" height="64" name="role4" x="405" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="20" right="0" bottom="0" name="battled" x="30"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="40" width="64" height="64" name="role5" x="415" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="30" right="0" bottom="0" name="battled" x="40"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="50" width="64" height="64" name="role6" x="425" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="40" right="0" bottom="0" name="battled" x="50"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="60" width="64" height="64" name="role7" x="435" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="50" right="0" bottom="0" name="battled" x="60"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="70" width="64" height="64" name="role8" x="445" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="60" right="0" bottom="0" name="battled" x="70"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="80" width="64" height="64" name="role9" x="455" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="70" right="0" bottom="0" name="battled" x="80"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="90" width="64" height="64" name="role10" x="465" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="80" right="0" bottom="0" name="battled" x="90"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="100" width="64" height="64" name="role11" x="475" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="90" right="0" bottom="0" name="battled" x="100"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="110" width="64" height="64" name="role12" x="485" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="100" right="0" bottom="0" name="battled" x="110"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="120" width="64" height="64" name="role13" x="495" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="110" right="0" bottom="0" name="battled" x="120"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="130" width="64" height="64" name="role14" x="505" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="120" right="0" bottom="0" name="battled" x="130"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="140" width="64" height="64" name="role15" x="515" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="130" right="0" bottom="0" name="battled" x="140"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="150" width="64" height="64" name="role16" x="525" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="140" right="0" bottom="0" name="battled" x="150"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="160" width="64" height="64" name="role17" x="535" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="150" right="0" bottom="0" name="battled" x="160"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="170" width="64" height="64" name="role18" x="545" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="160" right="0" bottom="0" name="battled" x="170"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="180" width="64" height="64" name="role19" x="555" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="170" right="0" bottom="0" name="battled" x="180"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="190" width="64" height="64" name="role20" x="565" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="180" right="0" bottom="0" name="battled" x="190"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="200" width="64" height="64" name="role21" x="575" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="190" right="0" bottom="0" name="battled" x="200"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="210" width="64" height="64" name="role22" x="585" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="200" right="0" bottom="0" name="battled" x="210"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="220" width="64" height="64" name="role23" x="595" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="210" right="0" bottom="0" name="battled" x="220"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="230" width="64" height="64" name="role24" x="605" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="220" right="0" bottom="0" name="battled" x="230"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="240" width="64" height="64" name="role25" x="615" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="230" right="0" bottom="0" name="battled" x="240"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="250" width="64" height="64" name="role26" x="625" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="240" right="0" bottom="0" name="battled" x="250"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="260" width="64" height="64" name="role27" x="635" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="250" right="0" bottom="0" name="battled" x="260"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="270" width="64" height="64" name="role28" x="645" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="260" right="0" bottom="0" name="battled" x="270"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="280" width="64" height="64" name="role29" x="655" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" skinName="RoleIconSkin" name="roleIcon" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="270" right="0" bottom="0" name="battled" x="280"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="290" width="64" height="64" name="role30" x="665" visible="false">
+				<e:Group y="31" anchorOffsetX="31" width="64" anchorOffsetY="31" height="64" name="group" x="31">
+					<ns1:RoleIcon y="0" name="roleIcon" skinName="RoleIconSkin" x="0" xmlns:ns1="*"/>
+					<e:Image source="pvp_battle_up_png" y="280" right="0" bottom="0" name="battled" x="290"/>
+				</e:Group>
+			</e:Group>
+			<e:layout>
+				<e:TileLayout orientation="rows" requestedColumnCount="6" paddingTop="5" paddingLeft="10" horizontalGap="10" horizontalAlign="center" verticalAlign="middle" requestedRowCount="5"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

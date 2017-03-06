@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SmallMonsterCatchSkin" width="480" height="670" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" width="100%" height="100%" x="0" scale9Grid="8,7,34,18"/>
+	<e:Image source="common_bg_add3_png" y="11" scale9Grid="37,44,382,251" width="470" horizontalCenter="0" height="656"/>
+	<e:Image source="title_bg_png" y="0" horizontalCenter="0"/>
+	<e:Image source="title_add_bg_png" y="-10" horizontalCenter="0"/>
+	<e:Image source="monster_title_png" y="-5" horizontalCenter="0"/>
+	<ns1:SimpleButton source="close_png" y="-17" x="422" id="btnClose"/>
+	<e:Image source="bg_decorate_left_png" x="9" y="563"/>
+	<e:Image source="bg_decorate_right_png" x="239" y="564"/>
+	<e:Image source="monster_coin_bg_png" y="72" x="74"/>
+	<e:Image source="ic_herochip_png" y="69" x="60"/>
+	<e:Label id="lblVitality" y="77" textColor="0xF0D8B7" text="9999" fontFamily="微软雅黑" bold="true" size="18" horizontalCenter="-119" x="10"/>
+	<e:Label id="lblRecoverTime" y="77" textColor="0x583C26" text="06:10后恢复1点体力" fontFamily="微软雅黑" bold="true" size="20" x="238"/>
+	<e:Scroller y="111" width="453" scrollPolicyH="off" height="460" horizontalCenter="0">
+		<e:List id="catchMonsterList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Button id="btnBack" label="返 回" y="579" skinName="YellowBigButtonSkin" horizontalCenter="0.5"/>
+</e:Skin>

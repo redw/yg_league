@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveLimitCostSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="active_gray_png" y="28" horizontalCenter="0" x="10"/>
+	<e:Image y="23" x="20" horizontalCenter="0" source="limit_cost_pos_png"/>
+	<e:Image source="active_sign_down_png" width="480" y="30" horizontalCenter="0" scale9Grid="50,48,6,295" bottom="0" x="70"/>
+	<e:Scroller scrollPolicyH="off" y="243" horizontalCenter="0" width="454" height="322" x="50">
+		<e:List id="awardList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Label bold="true" y="97" textColor="0xFFF1E6" text="累计消费达到指定金额" fontFamily="微软雅黑" stroke="2" strokeColor="0x985006" size="18" x="229"/>
+	<e:Label bold="true" y="60" textColor="0xFFF1E6" text="活动期间" fontFamily="微软雅黑" stroke="2" strokeColor="0x985006" size="18" x="285"/>
+	<e:Label bold="true" y="127" textColor="0xFFF1E6" text="即可领取对应奖励" fontFamily="微软雅黑" stroke="2" strokeColor="0x985006" size="18" x="245"/>
+	<e:Label bold="true" y="207" textColor="0xFFF1E6" text="活动时间" fontFamily="微软雅黑" horizontalCenter="0" stroke="2" id="lblActTime" strokeColor="0x985006" size="15" x="20"/>
+	<e:Label stroke="2" y="585" strokeColor="0x985006" text="截止时间" fontFamily="微软雅黑" horizontalCenter="-12" bold="true" id="lblEndTime" textColor="0xE9E043" size="18" x="30"/>
+	<e:Image y="5" horizontalCenter="0" x="10" source="limit_cost_title_png"/>
+</e:Skin>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="TabButtonSkin" width="142" height="43" xmlns:e="http://ns.egret.com/eui">
+	<e:Image id="imageDown" source="tab_select_png" />
+	<e:Image id="imageUp" source="tab_unSelect_png" />
+	<e:Label id="labelDisplay" size="22" fontFamily="微软雅黑" textAlign="center" verticalAlign="middle" text="技能" horizontalCenter="0" textColor="0x694D35" bold="true" verticalCenter="0"/>
+</e:Skin>

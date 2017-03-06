@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="StarButtonSkin" states="up,down,disabled"  width="104" height="47" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="yellow_small_button_png" source.down="yellow_small_touch_png" source.disabled="auto_button_gray_png"/>
+	<e:Label id="labelTxt" size="14" bold="true" fontFamily="微软雅黑" textColor="0xFFFFFF" textAlign="center" text="300" stroke="2" strokeColor="0x27824F" y="15" x="22" textColor.disabled="0xFFFCED" strokeColor.disabled="0x816758" anchorOffsetX="0" width="73"/>
+	<e:Image id="imgType" x="7" y="9" source="common_star_png" width="26" height="26"/>
+</e:Skin>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActivePanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="cloud_bg_png" horizontalCenter="0" bottom="0"/>
+	<ns1:CoinShowPanel id="coinShow" skinName="CoinShowPanelSkin" x="0"/>
+	<e:Image id="imgCloud1" source="cloud_3_png" x="-212" y="616"/>
+	<e:Image id="imgCloud2" source="cloud_1_png" x="282" y="518"/>
+	<e:Image id="imgCloud3" source="cloud_2_png" x="-50" y="640"/>
+	<e:Image source="active_title_bg_png" y="75" scale9Grid="1,11,11,69" width="480" horizontalCenter="0" height="100"/>
+	<e:Scroller width="400" height="100" y="74" horizontalCenter="0">
+		<e:Group id="contentGroup">
+			<e:Group x="72" y="234" width="100" height="100">
+				<ns1:SimpleButton id="btnSign" source="active_sign_png" x="0" y="0" name="btn0"/>
+			</e:Group>
+			<e:Group y="274" x="112" width="100" height="100">
+				<ns1:SimpleButton id="btnDayInvite" y="0" x="0" source="active_day_invite_png" name="btn1"/>
+			</e:Group>
+			<e:Group y="284" x="122" width="100" height="100">
+				<ns1:SimpleButton id="btnFund" y="0" x="0" source="active_fund_png" name="btn2"/>
+			</e:Group>
+			<e:Group x="142" y="304" width="100" height="100">
+				<ns1:SimpleButton id="btnTree" y="0" name="btn3" x="0" source="active_tree_png"/>
+			</e:Group>
+			<e:Group y="294" x="132" width="100" height="100">
+				<ns1:SimpleButton id="btnFruit" y="0" x="0" source="active_fruit_png" name="btn4"/>
+			</e:Group>
+			<e:Group y="244" x="82" width="100" height="100">
+				<ns1:SimpleButton id="btnGift" y="0" x="0" xmlns:ns1="*" source="active_gift_code_png" name="btn5"/>
+			</e:Group>
+			<e:layout>
+				<e:HorizontalLayout gap="0" horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<ns1:SimpleButton id="btnRight" y="97" source="active_right_png" x="450"/>
+	<ns1:SimpleButton id="btnLeft" y="99" source="active_left_png" x="7"/>
+	<e:Group id="activeGroup" height="620" width="480" bottom="0">
+	</e:Group>
+	<ns1:SimpleButton source="close_png" x="425" id="btnClose" top="-9"/>
+</e:Skin>

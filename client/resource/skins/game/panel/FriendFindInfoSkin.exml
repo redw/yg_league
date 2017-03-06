@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendFindInfoSkin" width="416" height="329" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="alert_bg_png" scale9Grid="314,8,50,32" y="0" x="0"/>
+	<e:Image source="friend_invite_head_png" y="50" verticalCenter="-42" width="55" id="imgHead" height="55" x="101"/>
+	<e:Label y="94" textColor="0x5F3A1B" text="名字" fontFamily="微软雅黑" id="lblName" bold="true" lineSpacing="3" size="20" x="179"/>
+	<e:Label id="lblUID" y="127" textColor="0xAA5432" text="UID:123" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="18" x="179"/>
+	<ns1:SimpleButton id="btnClose" x="358" y="0" source="close2_png"/>
+	<e:Button id="btnAdd" y="238" label="添 加" skinName="YellowButtonSkin" horizontalCenter="0.5" x="10"/>
+</e:Skin>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveTreeSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="treeMcGroup" height="326" width="328" y="74" horizontalCenter="0">
+	</e:Group>
+	<e:Image source="active_box_txt_bg_png" y="68" height="72" scale9Grid="7,7,23,20" width="320" horizontalCenter="0" visible="false"/>
+	<e:Image source="active_tree_title_png" y="20" horizontalCenter="0.5"/>
+	<e:Label y="536" stroke="2" text="当天已累计摇钱：" fontFamily="微软雅黑" x="119" bold="true" size="18" strokeColor="0x653605" textColor="0xF6E6DA"/>
+	<e:Label y="566" textColor="0xF6E6DA" text="开启自动巡山可提高摇钱树产量" fontFamily="微软雅黑" bold="true" strokeColor="0x653605" size="18" stroke="2" horizontalCenter="0"/>
+	<e:Label y="536" textColor="0xF6E6DA" text="（0点重置）" fontFamily="微软雅黑" bold="true" strokeColor="0x653605" size="18" stroke="2" x="301"/>
+	<e:Label y="84" textColor="0xF6E6DA" text="下次可打开次数：" fontFamily="微软雅黑" bold="true" strokeColor="0x653605" stroke="2" size="18" x="189" visible="false"/>
+	<e:Label y="418" textColor="0xF6E6DA" stroke="2" text="本次可获得铜钱：" fontFamily="微软雅黑" x="137" bold="true" size="18" strokeColor="0x653605"/>
+	<e:Label id="lblTreeNum" y="536" stroke="2" text="3次" fontFamily="微软雅黑" bold="true" size="18" strokeColor="0x653605" textColor="0xFEE244" horizontalCenter="38.5"/>
+	<e:Label id="lblOpenNum" y="84" textColor="0xFEE244" text="(3/10)" fontFamily="微软雅黑" x="329" bold="true" strokeColor="0x653605" stroke="2" size="18" visible="false"/>
+	<e:Label id="lblNowGetCoin" strokeColor="0x653605" y="419" textColor="0xFEE244" stroke="2" text="123ab" fontFamily="微软雅黑" x="301" bold="true" size="18"/>
+	<e:Image y="414" x="274" source="reward_1_s_png"/>
+	<e:Image id="imgLight" y="102" x="104" anchorOffsetX="83" anchorOffsetY="83" source="active_box_light_png" visible="false"/>
+	<e:Image id="imgBox" x="104" y="96" anchorOffsetX="50" anchorOffsetY="43.5" rotation="0" source="active_tree_box_close_png" visible="false"/>
+	<ns1:YellowBigBtn id="btnShake" label="按钮" y="447" skinName="YellowBigBtnSkin" horizontalCenter="0.5"/>
+</e:Skin>

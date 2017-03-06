@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendAddUIDSkin" width="416" height="329" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="alert_bg_png" scale9Grid="314,8,50,32" y="0" x="0"/>
+	<e:Button id="btnFind" y="238" skinName="YellowButtonSkin" label="查 询" horizontalCenter="0.5"/>
+	<e:Image source="g_putin_png" y="138" horizontalCenter="0"/>
+	<e:EditableText id="editText" y="145" textAlign="left" verticalAlign="middle" fontFamily="微软雅黑" prompt="请输入UID" bold="true" width="164" height="20" size="18" horizontalCenter="0" textColor="0xFFFFFF" promptColor="0xD3D1D1"/>
+	<ns1:SimpleButton id="btnClose" source="close2_png" y="0" x="358"/>
+</e:Skin>

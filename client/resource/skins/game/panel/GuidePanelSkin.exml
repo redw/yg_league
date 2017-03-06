@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GuidePanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="guide_gray_png" id="imgRect0" y="0" x="0" alpha="0.6"/>
+	<e:Image id="imgRect1" source="guide_gray_png" x="60" y="0" alpha="0.6"/>
+	<e:Image source="guide_gray_png" y="0" id="imgRect2" x="120" alpha="0.6"/>
+	<e:Image source="guide_gray_png" y="0" x="190" id="imgRect3" alpha="0.6"/>
+	<e:Image id="imgDialog" source="guide_say_png" y="236" x="114" scale9Grid="17,14,24,11" width="350" height="100"/>
+	<e:Label id="lblGuide1" text="好了我要休息了，有缘再见" x="202" y="276" size="18" bold="true" fontFamily="微软雅黑" lineSpacing="5" textAlign="left" verticalAlign="middle" textColor="0xFFF6D8" stroke="2" strokeColor="0x9A4125"/>
+	<e:Label id="lblGuide2" textColor="0xFFF6D8" text="可提高铜钱产量" fontFamily="微软雅黑" bold="true" size="18" x="200" y="475" strokeColor="0x9A4125" stroke="2" textAlign="left" lineSpacing="5" verticalAlign="middle"/>
+	<e:Image id="imgMask" source="guide_add_png" x="261" y="18" scale9Grid="16,14,24,26"/>
+	<e:Image id="imgGirl" source="guide_girl_png" x="103" y="167" anchorOffsetX="101" scaleX="1"/>
+	<e:Image id="imgType" x="32" y="434" source="deblocking_xunshan_png"/>
+</e:Skin>

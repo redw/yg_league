@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FeedBackPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_add3_png" x="14" y="185"/>
+	<e:Image source="common_bg_add2_png" y="229" width="380" height="260" horizontalCenter="0" scale9Grid="25,18,11,9"/>
+	<e:Button id="btnUp" label="提 交" y="507" skinName="GreenButtonSkin" horizontalCenter="0.5"/>
+	<e:Label id="lblCommun" text="官方交流群：604749732" x="58" y="462" textColor="0xCC641F" bold="true" fontFamily="微软雅黑" size="20"/>
+	<e:EditableText id="editText" fontFamily="微软雅黑" textColor="0x875D33" size="22" bold="true" lineSpacing="4" prompt="请输入您要提交的问题！" promptColor="0x875D33" verticalAlign="top" right="60" left="60" top="246" bottom="391" multiline="true"/>
+	<ns1:SimpleButton id="btnClose" x="413" y="168" source="close_png"/>
+</e:Skin>

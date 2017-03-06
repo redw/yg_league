@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SettingHeadPanelSkin" width="480" height="569" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="alert_bg_png" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" scale9Grid="256,94,31,64"/>
+	<e:Scroller y="270" horizontalCenter="3" width="426" height="196" scrollPolicyH="off" x="20">
+		<e:List id="roleList" width="100%" height="374">
+			<e:layout>
+				<e:VerticalLayout paddingTop="6" gap="6"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Image id="img_select" source="setting_select_png" x="33" y="96"/>
+	<e:Image width="64" y="99" height="64" name="head6" x="387"/>
+	<e:Image width="64" y="99" height="64" name="head5" x="317"/>
+	<e:Image width="64" y="99" height="64" name="head4" x="247"/>
+	<e:Image width="64" y="99" height="64" name="head3" x="177"/>
+	<e:Image width="64" y="99" height="64" name="head2" x="107"/>
+	<e:Image y="99" x="37" width="64" height="64" name="head1"/>
+	<e:Image width="64" y="174" height="64" name="head12" x="387"/>
+	<e:Image width="64" y="174" height="64" name="head11" x="317"/>
+	<e:Image width="64" y="174" height="64" name="head10" x="247"/>
+	<e:Image width="64" y="174" height="64" name="head9" x="177"/>
+	<e:Image width="64" y="174" height="64" name="head8" x="107"/>
+	<e:Image width="64" y="174" height="64" name="head7" x="37"/>
+	<e:Image source="setting_base_png" y="70" horizontalCenter="0.5"/>
+	<e:Image source="setting_had_png" y="243" horizontalCenter="0.5"/>
+	<e:Label text="选择头像" y="14" size="24" fontFamily="微软雅黑" textColor="0x5C401A" stroke="2" strokeColor="0xF0E4D4" bold="true" horizontalCenter="0"/>
+	<e:Label stroke="2" y="476" textColor="0x5C401A" text="伙伴达到3星，即可使用伙伴头像" fontFamily="微软雅黑" bold="true" strokeColor="0xF0E4D4" size="18" horizontalCenter="0"/>
+	<e:Label stroke="2" y="501" textColor="0x5C401A" text="点击要展示的头像" fontFamily="微软雅黑" horizontalCenter="0" bold="true" strokeColor="0xF0E4D4" size="18" x="10"/>
+	<ns1:SimpleButton id="btnClose" source="close2_png" right="0"/>
+</e:Skin>

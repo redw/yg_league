@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="BounsPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="imgLight" source="light_rotate_png" anchorOffsetX="214.5" anchorOffsetY="215" x="240" y="398"/>
+	<e:Label id="awardName" textColor="0xFFFFFF" text="金币*100" fontFamily="微软雅黑" bold="true" size="18" x="0" y="470" stroke="2" textAlign="center" width="480" strokeColor="0x000000"/>
+	<e:Group id="groupIcon" y="400" x="240">
+		<e:Image id="imgIcon" x="-34" width="60" y="-31" height="60"/>
+	</e:Group>
+</e:Skin>

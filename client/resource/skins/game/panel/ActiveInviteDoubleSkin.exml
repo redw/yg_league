@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveInviteDoubleSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="active_gray_png" y="28" horizontalCenter="0" x="10"/>
+	<e:Image y="23" horizontalCenter="0" x="20" source="limit_share_pos_png"/>
+	<e:Label id="lblInvite" y="97" textColor="0xFFF1E6" text="每日3次的邀请好友" fontFamily="微软雅黑" bold="true" strokeColor="0x985006" stroke="2" size="18" x="242"/>
+	<e:Label y="127" textColor="0xFFF1E6" text="获得双倍的元宝奖励" fontFamily="微软雅黑" bold="true" strokeColor="0x985006" stroke="2" size="18" x="239"/>
+	<e:Label y="218" textColor="0xFFF1E6" horizontalCenter="0" text="活动时间" fontFamily="微软雅黑" id="lblActTime" bold="true" strokeColor="0x985006" stroke="2" size="15" x="20"/>
+	<e:Button id="btnGo" label="前往邀请" y="243" skinName="YellowBigButtonSkin" horizontalCenter="0.5"/>
+	<e:Image id="imgInviteTitle" y="5" horizontalCenter="0.5" x="20" source="limit_invite_double_title_png"/>
+	<e:Label bold="true" y="60" textColor="0xFFF1E6" stroke="2" text="活动期间" fontFamily="微软雅黑" strokeColor="0x985006" size="18" x="285"/>
+</e:Skin>

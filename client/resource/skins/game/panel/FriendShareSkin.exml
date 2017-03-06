@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendShareSkin" width="424" height="466" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="friend_content_bg_png" y="23" width="420" height="116" scale9Grid="9,9,59,41" horizontalCenter="0"/>
+	<e:Label id="lblDayShare" text="每日邀请给朋友或微信群，即可获得元宝奖励" y="150" size="16" fontFamily="微软雅黑" bold="true" lineSpacing="3" textColor="0x36C488" horizontalCenter="5"/>
+	<e:Label id="lblShare" y="54" text="每日邀请奖励" fontFamily="微软雅黑" bold="true" size="20" lineSpacing="3" x="106" textColor="0xF4E7D2"/>
+	<e:Label y="85" textColor="0xF4E7D2" text="奖励：" fontFamily="微软雅黑" bold="true" size="18" lineSpacing="3" x="106"/>
+	<e:Label id="lblShowClear" y="108" text="奖励冷却： " fontFamily="微软雅黑" bold="true" size="17" lineSpacing="3" textColor="0x5F3A1B" right="228"/>
+	<e:Label id="lblFrozeTime" y="108" textColor="0x5F3A1B" text="10:20" fontFamily="微软雅黑" bold="true" size="17" lineSpacing="3" x="196"/>
+	<e:Label id="lblReward" y="85" text="300" fontFamily="微软雅黑" x="30" bold="true" size="18" horizontalCenter="-5.5" lineSpacing="3" textColor="0xF4F43C"/>
+	<e:Label id="lblShareTimes" y="54" text="（3/3）" fontFamily="微软雅黑" bold="true" horizontalCenter="52.5" size="20" lineSpacing="3" x="20" textColor="0x94301C"/>
+	<e:Image source="friend_share_tree_png" x="6" y="32"/>
+	<e:Image x="159" y="80" source="reward_3_s_png"/>
+	<ns1:SimpleButton id="btnShare" x="315" y="49" source="friend_share_button_png"/>
+	<e:Image source="friend_title_bg_png" y="5" horizontalCenter="0"/>
+	<e:Label id="lblShareTitle" y="16" textColor="0x5F3A1B" lineSpacing="3" text="邀请奖励" fontFamily="微软雅黑" bold="true" size="20" horizontalCenter="0"/>
+	<e:Image id="imgShare" y="189" horizontalCenter="0.5" source="firend_wukong_png"/>
+	<ns1:SimpleButton source="friend_invite_button_png" y="399" horizontalCenter="0" id="btnInvite" x="20"/>
+</e:Skin>

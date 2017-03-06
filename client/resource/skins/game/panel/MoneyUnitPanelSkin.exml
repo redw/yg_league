@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MoneyUnitPanelSkin" width="480" height="569" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="alert_bg_png" height="569" width="480" horizontalCenter="0" verticalCenter="0" scale9Grid="233,129,40,49"/>
+	<ns1:SimpleButton source="close2_png" y="0" id="btnClose" x="424"/>
+	<e:Label text="货币单位" y="14" fontFamily="微软雅黑" textColor="0x5C401A" bold="true" stroke="2" strokeColor="0xF0E4D4" size="24" horizontalCenter="0"/>
+	<e:Scroller y="70" width="390" height="389" scrollPolicyH="off" horizontalCenter="4">
+		<e:List id="unitList" width="100%" height="516">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

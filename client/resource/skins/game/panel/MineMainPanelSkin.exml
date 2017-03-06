@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MineMainPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image x="0" y="98" source="mine_bg_jpg"/>
+	<e:Image source="mine_top_bg_png" x="0" y="0"/>
+	<e:Image source="mine_title_bg_png" y="51" horizontalCenter="0"/>
+	<e:Image source="bg_back_png" y="13" scale9Grid="10,8,2,13" width="124" height="28" x="15"/>
+	<e:Image y="14" x="19" source="reward_29_s_png"/>
+	<e:Label horizontalCenter="-158" y="20" stroke="2" text="111" fontFamily="微软雅黑" id="lblStone" bold="true" strokeColor="0x513819" touchEnabled="false" size="16" x="20"/>
+	<e:Image y="58" source="mine_out_title_png" horizontalCenter="0"/>
+	<ns1:SimpleButton source="close_png" y="93" x="424" id="btnClose"/>
+	<e:Image source="mine_accredit_top_png" scale9Grid="60,117,360,12" bottom="1" height="223" horizontalCenter="0" x="10" y="10"/>
+	<e:Group id="dingGroup" height="222" width="249" y="387" x="215">
+		<e:Image source="mine_ding_png" x="0" y="0"/>
+	</e:Group>
+	<e:Group id="poolGroup" height="174" width="244" x="0" y="368"/>
+	<e:Group id="towerGroup" height="243" width="233" x="27" y="125">
+		<e:Image source="mine_tower_png"/>
+	</e:Group>
+	<e:Image id="imgTitle" source="mine_pool_title_png" x="130" y="616"/>
+	<e:Label id="lblLv" text="Lv.10" x="237" y="626" fontFamily="微软雅黑" size="20" bold="true" textColor="0x56FFDB" strokeColor="0x08151B" stroke="2"/>
+	<e:Label id="lblNow" y="662" fontFamily="微软雅黑" bold="true" size="20" text="当前：伙伴升级铜钱减少10倍" textColor="0x56FFDB" stroke="2" strokeColor="0x08151B" x="108"/>
+	<e:Label id="lblNext" y="692" size="20" text="下级：伙伴升级铜钱减少10倍" fontFamily="微软雅黑" bold="true" stroke="2" strokeColor="0x08151B" x="108" textColor="0xC6DFFF"/>
+	<e:Button id="btnUp" label="升 级" x="349" y="727" skinName="YellowButtonSkin"/>
+	<e:Image source="mine_bar_bg_png" x="65" y="737"/>
+	<e:Image id="imgBar" source="mine_bar_png" x="65" y="737" scale9Grid="34,7,204,12"/>
+	<e:Image y="737" x="128" source="reward_29_s_png"/>
+	<e:Label id="lblBar" y="742" size="16" text="1200/1200" fontFamily="微软雅黑" bold="true" stroke="2" strokeColor="0x7D4817" textColor="0xFFF43F" left="161"/>
+	<ns1:SimpleButton id="btnGoIn" y="10" x="388" source="mine_go_in_png"/>
+</e:Skin>

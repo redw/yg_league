@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="YellowTwoCoinBtnSkin" states="up,down,disabled" width="98" height="57" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="lv_up_button_png" source.down="lv_up_button_touch_png" source.disabled="lv_up_button_gray_png"/>
+	<e:Image id="imageType" y="4" x="12" source="reward_3_s_png" width="26" height="26"/>
+	<e:Image id="imageType1" y="26" x="12" source="reward_3_s_png" width="26" height="26"/>
+	<e:Label id="labelDisplay" strokeColor="0xA85F37" textColor="0xFFFFFF" text="300" fontFamily="微软雅黑" textAlign="center" bold="true" y="11" size="14" stroke="2" x="42" strokeColor.disabled="0x816758" textColor.disabled="0xFFFCED"/>
+	<e:Label id="labelDisplay1" x="42" strokeColor="0xA85F37" textColor="0xFFFFFF" text="300" fontFamily="微软雅黑" textAlign="center" bold="true" y="33" size="14" stroke="2" strokeColor.disabled="0x816758" textColor.disabled="0xFFFCED"/>
+</e:Skin>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="DeleteFriendPanelSkin" width="416" height="329" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="alert_bg_png" x="0" y="0" scale9Grid="314,8,50,32"/>
+	<e:Button id="btnDelete" label="删 除" y="238" skinName="YellowButtonSkin" x="77"/>
+	<e:Button id="btnClose" label="取 消" y="238" skinName="GreenButtonSkin" x="237"/>
+	<e:Image source="friend_invite_head_png" y="40" verticalCenter="-42" width="55" id="imgHead" height="55" x="81"/>
+	<e:Label y="88" textColor="0x5F3A1B" text="名字" fontFamily="微软雅黑" id="lblName" bold="true" lineSpacing="3" size="18" x="159"/>
+	<e:Label y="116" textColor="0xAA5432" text="缘分：500" fontFamily="微软雅黑" id="lblLuck" bold="true" lineSpacing="3" size="16" x="159"/>
+	<e:Label y="142" textColor="0x8F6B51" text="最高关数：100" fontFamily="微软雅黑" id="lblLevel" bold="true" lineSpacing="3" size="16" x="159"/>
+</e:Skin>

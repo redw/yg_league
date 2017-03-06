@@ -1,0 +1,30 @@
+{
+	"native": {
+		"path_ignore": [
+			"./release"
+		]
+	},
+	"publish": {
+		"web": 0,
+		"native": 1,
+		"path": "../release"
+	},
+	"egret_version": "3.2.3",
+	"modules": [
+		{
+			"name": "egret"
+		},
+		{
+			"name": "game"
+		},
+		{
+			"name": "tween"
+		},
+		{
+			"name": "eui"
+		},
+		{
+			"name": "res"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ItemShowSkin" width="416" height="329" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image scale9Grid="9,8,49,32" source="alert_bg_png" x="0" y="0"/>
+	<e:Button id="btnSure" label="确 认" y="236" skinName="YellowButtonSkin" horizontalCenter="4.5"/>
+	<e:Label text="详 情" y="13" fontFamily="微软雅黑" textColor="0x5C401A" bold="true" horizontalCenter="0" size="26"/>
+	<e:Image source="common_bg_add2_png" y="80" scale9Grid="9,8,48,32" width="350" x="37" height="120"/>
+	<ns1:WeaponIcon id="icon" x="48" y="101" skinName="WeaponIconSkin"/>
+	<e:Label id="lblName" y="92" text="物品详情" fontFamily="微软雅黑" bold="true" size="18" textColor="0xA8502D" left="126"/>
+	<e:Scroller width="240" height="70" x="125" y="118">
+		<e:Group>
+			<e:Label id="lblDesc" text="物品详情物品详情物品详情物品详情物品详情" fontFamily="微软雅黑" bold="true" size="16" textColor="0x7C5334" textAlign="left" lineSpacing="6" y="0" verticalAlign="top" width="240" x="0"/>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

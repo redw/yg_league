@@ -1,0 +1,15 @@
+{"file":"weapon_img.png","frames":{
+"task_bar_png":{"x":233,"y":112,"w":239,"h":18,"offX":2,"offY":2,"sourceW":243,"sourceH":22},
+"task_bar_bg_png":{"x":233,"y":88,"w":243,"h":22,"offX":0,"offY":0,"sourceW":243,"sourceH":22},
+"task_bg_png":{"x":0,"y":0,"w":467,"h":54,"offX":0,"offY":0,"sourceW":467,"sourceH":54},
+"task_click_png":{"x":450,"y":56,"w":60,"h":16,"offX":1,"offY":0,"sourceW":61,"sourceH":16},
+"task_gray_png":{"x":391,"y":132,"w":76,"h":18,"offX":0,"offY":0,"sourceW":76,"sourceH":18},
+"weapon_get_btn_png":{"x":0,"y":56,"w":231,"h":70,"offX":0,"offY":0,"sourceW":231,"sourceH":70},
+"weapon_icon_1_png":{"x":131,"y":128,"w":63,"h":62,"offX":1,"offY":1,"sourceW":64,"sourceH":64},
+"weapon_icon_2_png":{"x":261,"y":132,"w":63,"h":62,"offX":1,"offY":1,"sourceW":64,"sourceH":64},
+"weapon_icon_3_png":{"x":196,"y":132,"w":63,"h":62,"offX":1,"offY":1,"sourceW":64,"sourceH":64},
+"weapon_icon_4_png":{"x":0,"y":128,"w":64,"h":64,"offX":0,"offY":0,"sourceW":64,"sourceH":64},
+"weapon_icon_5_png":{"x":326,"y":132,"w":63,"h":62,"offX":1,"offY":1,"sourceW":64,"sourceH":64},
+"weapon_icon_6_png":{"x":66,"y":128,"w":63,"h":62,"offX":1,"offY":1,"sourceW":64,"sourceH":64},
+"weapon_star_png":{"x":469,"y":0,"w":13,"h":14,"offX":0,"offY":0,"sourceW":13,"sourceH":14},
+"weapon_title_bg_png":{"x":233,"y":56,"w":215,"h":30,"offX":0,"offY":0,"sourceW":215,"sourceH":30}}}

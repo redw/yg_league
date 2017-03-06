@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="WeaponBuyRendererSkin" width="454" height="70" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="100%" height="100%" id="contentGroup">
+		<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,14,7,36" x="0"/>
+		<ns1:WeaponIcon id="icon" x="13" y="4" skinName="WeaponIconSkin" xmlns:ns1="*"/>
+		<e:Label id="lblName" y="8" textColor="0x583C26" text="装备名字" fontFamily="微软雅黑" bold="true" size="18" x="96"/>
+		<e:Label id="lblDec" y="31" textColor="0x906C53" size="16" text="装备效果描述装备效果描述装备效果描述装备效果" fontFamily="微软雅黑" x="97" bold="true" width="234" height="35" lineSpacing="3" verticalAlign="middle"/>
+	</e:Group>
+	<ns1:YellowTwoCoinBtn id="btnBuy" x="347" y="6" label="111" skinName="YellowTwoCoinBtnSkin"/>
+	<e:Image id="imgBuy" source="common_had_buy_png" x="350" y="8" visible="false"/>
+</e:Skin>

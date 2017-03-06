@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="WeaponInfoPanelSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_add_png" y="50" scale9Grid="64,55,35,8" width="480" height="630" x="0"/>
+	<ns1:WeaponIcon id="icon" x="34" y="81" skinName="WeaponIconSkin"/>
+	<e:Label y="87" textColor="0xFFE100" text="+9" fontFamily="微软雅黑" bold="true" strokeColor="0x926E56" size="15" stroke="1" horizontalCenter="-157" id="lblLv" x="10"/>
+	<e:Label y="89" textColor="0x583C26" text="装备名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="112"/>
+	<e:Label id="lblMaxLv" y="119" text="最高等级：20" fontFamily="微软雅黑" x="112" bold="true" size="18" textColor="0x8F6B51"/>
+	<e:Image source="weapon_title_bg_png" x="34" y="171"/>
+	<e:Image source="common_txt_bg_png" y="218" scale9Grid="65,4,8,7" width="415" height="84" x="33"/>
+	<e:Label y="176" textColor="0x583C26" text="装备效果" fontFamily="微软雅黑" bold="true" size="20" x="53"/>
+	<e:Label id="lblDec" y="240" textColor="0x8F6B51" fontFamily="微软雅黑" x="53" bold="true" size="18" width="376" text="11111111111111111111111111111111111111" lineSpacing="10"/>
+	<e:Group id="suitGroup" x="31" y="317">
+		<e:Image source="weapon_title_bg_png" y="1" x="4"/>
+		<e:Image source="common_txt_bg_png" y="48" scale9Grid="65,4,8,7" width="415" height="100" x="3"/>
+		<e:Scroller y="57" width="376" height="85" scrollPolicyH="off" x="22">
+			<e:List id="weaponEffectList" width="100%" height="100%">
+				<e:layout>
+					<e:VerticalLayout gap="10"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Label id="lblSuitName" y="7" textColor="0x583C26" text="装备套装效果" fontFamily="微软雅黑" bold="true" size="20" x="23"/>
+		<e:Group id="groupGroup" y="154" x="2">
+			<ns1:WeaponIcon y="0" skinName="WeaponIconSkin" x="0" name="weapon0"/>
+			<ns1:WeaponIcon y="0" skinName="WeaponIconSkin" x="70" name="weapon1"/>
+			<ns1:WeaponIcon y="0" skinName="WeaponIconSkin" x="140" name="weapon2" visible="false"/>
+			<ns1:WeaponIcon y="0" skinName="WeaponIconSkin" x="210" name="weapon3" visible="false"/>
+			<ns1:WeaponIcon y="0" skinName="WeaponIconSkin" x="280" name="weapon4" visible="false"/>
+			<ns1:WeaponIcon y="0" skinName="WeaponIconSkin" x="350" name="weapon5" visible="false"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="btnGroup" x="31" y="542" height="121">
+		<e:Image source="line_png" width="422" y="0" horizontalCenter="0"/>
+		<e:Label y="6" textColor="0x8F6B51" text="若熔炼装备，可获得" fontFamily="微软雅黑" bold="true" lineSpacing="10" size="16" x="5"/>
+		<e:Label id="lblBack" bold="true" y="6" textColor="0x8F6B51" text="100" fontFamily="微软雅黑" lineSpacing="10" size="16" x="184"/>
+		<e:Image id="imgBack1" y="1" x="150" source="reward_9_s_png"/>
+		<e:Label id="lblBackDes2" bold="true" y="28" textColor="0x8F6B51" text="获得" fontFamily="微软雅黑" lineSpacing="10" size="16" x="5"/>
+		<e:Label id="lblBack2" lineSpacing="10" y="28" textColor="0x8F6B51" text="100" fontFamily="微软雅黑" x="80" bold="true" size="16"/>
+		<e:Image id="imgBack2" y="23" x="48" source="reward_9_s_png"/>
+		<ns1:YellowBigBtn id="btnRecover" label="按钮" x="145" y="43" skinName="YellowBigBtnSkin"/>
+	</e:Group>
+	<ns1:CoinShowPanel x="0" y="5" skinName="CoinShowPanelSkin" id="coinShow"/>
+	<ns1:SimpleButton source="close_png" y="-3" x="425" id="btnClose"/>
+</e:Skin>

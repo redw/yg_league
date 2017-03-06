@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SmallMonsterPanelSkin" width="480" height="570" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" width="100%" height="100%" x="0" scale9Grid="9,8,32,17"/>
+	<e:Image source="common_bg1_png" scale9Grid="10,9,31,14" width="474" height="564" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="task_bg_png" y="8" height="80" horizontalCenter="0.5"/>
+	<e:Image source="line_png" y="86" horizontalCenter="0" x="20"/>
+	<e:Label id="lblAllLv" y="33" textColor="0x583C26" text="Lv.11 法力" fontFamily="微软雅黑" bold="true" size="18" x="23"/>
+	<e:Image source="monster_all_bar_bg_png" x="123" y="30"/>
+	<e:Label id="lblUpNature" y="59" textColor="0x34E5C1" stroke="2" text="全体全属性提升：1000……%" fontFamily="微软雅黑" bold="true" strokeColor="0x966536" size="16" horizontalCenter="0.5"/>
+	<e:ProgressBar id="allProgress" x="126" y="33" skinName="MonsetAllProgressSkin"/>
+	<e:Label id="lblProgress" y="34" textColor="0x583C26" text="300/300" fontFamily="微软雅黑" bold="true" size="16" horizontalCenter="0.5"/>
+	<ns1:SimpleButton id="btnGoCatch" x="377" y="8" source="monster_catch_png"/>
+	<e:Scroller y="97" scrollPolicyH="off" width="454" height="445" horizontalCenter="0">
+		<e:List id="monsterList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

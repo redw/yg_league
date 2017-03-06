@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPRuleSkin" width="480" height="580" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg1_png" scale9Grid="10,9,31,14" width="480" height="570" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="common_bg_add3_png" scale9Grid="37,38,382,302" height="500" width="480" verticalCenter="17" horizontalCenter="0"/>
+	<e:Image source="task_bg_png" y="10" height="50" horizontalCenter="0.5" x="10"/>
+	<e:Image source="line_png" y="59" horizontalCenter="0" x="10"/>
+	<e:Scroller width="420" y="68" height="152" horizontalCenter="0" x="10">
+		<e:Group>
+			<e:Label id="lblDesc" textColor="0x906C53" text="1 竞技场每周为一个赛季，每周二中午12点结束赛季并颁发奖励，奖励通过邮件颁发2 随着挑战的胜利，您的段位会不断提升，段位越高，赛季奖励越高3 每场比赛后您都会获得一定竞技币，段位越高获得的竞技币越多，与胜负无关4 新赛季开始后，您的段位会进行一定幅度的回退" fontFamily="微软雅黑" bold="true" width="420" lineSpacing="15" size="18" horizontalCenter="0"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Scroller y="228" horizontalCenter="0" width="420" height="282" x="20">
+		<e:Group>
+			<e:Image source="pvp_rule_img_png" y="4" horizontalCenter="0"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Label y="22" textColor="0x583C26" text="规 则" fontFamily="微软雅黑" bold="true" size="22" horizontalCenter="0"/>
+</e:Skin>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="HpProgressBarSkin" width="61" height="9" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image x="0" y="0" source="pvp_blood_white_png"/>
+	<e:Image id="thumb"  source="pvp_blood_png"/>
+	<e:Label id="labelDisplay" text="2222" x="17" y="-1" fontFamily="微软雅黑" size="12" bold="true" textColor="0xFFFFFF"/>
+</e:Skin>

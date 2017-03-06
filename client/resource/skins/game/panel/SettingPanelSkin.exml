@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SettingPanelSkin" width="480" height="415" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg_add3_png" y="21" horizontalCenter="0" scale9Grid="37,44,382,251" width="470" height="380" x="10"/>
+	<e:Image source="title_bg_png" y="0" horizontalCenter="0" x="10"/>
+	<e:Image source="common_txt_bg_png" y="67" scale9Grid="63,4,9,8" width="418" height="185" horizontalCenter="0"/>
+	<e:Image id="imgHead" source="common_head_png" y="108" horizontalCenter="-116"/>
+	<e:Label id="lblName" text="游戏玩家" y="117" textColor="0x9A6D3B" bold="true" fontFamily="微软雅黑" size="20" x="191"/>
+	<e:Label id="lblUID" y="148" textColor="0x9A6D3B" text="UID：" fontFamily="微软雅黑" bold="true" size="20" x="192"/>
+	<e:Label id="lblVersion" y="228" text="版本号：" fontFamily="微软雅黑" bold="true" size="20" textColor="0x674B2D" horizontalCenter="0"/>
+	<e:Label y="287" text="关闭消费提示" fontFamily="微软雅黑" bold="true" size="18" x="64" textColor="0xCC641F"/>
+	<e:Label y="287" textColor="0xCC641F" text="关闭背景音乐" fontFamily="微软雅黑" bold="true" size="18" x="224"/>
+	<e:Label y="287" textColor="0xCC641F" text="关闭音效" fontFamily="微软雅黑" bold="true" size="18" x="384"/>
+	<e:Button id="btnCopy" label="复制UID" y="329" skinName="YellowButtonSkin" horizontalCenter="-99.5"/>
+	<e:Button id="btnClose" y="329" label="确 定" horizontalCenter="100.5" skinName="GreenButtonSkin"/>
+	<ns1:SimpleButton id="btnSound" x="346" y="283" source="select_bg_png"/>
+	<ns1:SimpleButton id="btnMusic" source="select_bg_png" y="283" x="186"/>
+	<ns1:SimpleButton id="btnPaySure" source="select_bg_png" y="283" x="26"/>
+	<e:Image id="imgSound" y="276" x="345" touchEnabled="false" source="select_arrow_png"/>
+	<e:Image id="imgMusic" source="select_arrow_png" y="279" x="185" touchEnabled="false"/>
+	<e:Image id="imgPaySure" source="select_arrow_png" x="25" y="279" touchEnabled="false"/>
+	<e:Image y="-16" horizontalCenter="0.5" source="settint_title_png"/>
+	<ns1:SimpleButton id="btnChange" y="179" source="setting_change_png" horizontalCenter="0"/>
+</e:Skin>

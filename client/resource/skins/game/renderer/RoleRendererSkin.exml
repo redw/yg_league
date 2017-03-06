@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleRendererSkin" width="454" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:n="*">
+	<e:Image id="imgCellBg" source="common_cell_png" y="0" x="0" scale9Grid="21,8,6,44" width="454"/>
+	<e:Group id="contentGroup" height="100%" width="345" x="0" y="0">
+		<e:Image id="imgAtk" source="common_atk_png" x="90" y="40"/>
+		<e:Image id="imgAtkType" x="85" y="6" source="job_1_png"/>
+		<e:Image source="common_life_png" x="200" y="40"/>
+		<e:Label id="lblAtk" y="43" text="1234" fontFamily="微软雅黑" bold="true" size="15" left="130" textColor="0x926E56"/>
+		<e:Label id="lblHp" y="43" textColor="0x926E56" text="1234" fontFamily="微软雅黑" bold="true" left="241" size="15" x="10"/>
+		<e:Label id="lblName" text="龙太子" x="114" y="10" fontFamily="微软雅黑" size="18" textColor="0x583C26" bold="true"/>
+		<e:BitmapLabel id="bitLbl" x="182" y="6" font="gold_number_fnt" text="+999" letterSpacing="-6"/>
+		<n:RoleIcon id="roleIcon" x="11" skinName="RoleIconSkin" verticalCenter="0"/>
+		<e:Image id="imgBattle" source="role_had_battled_png" x="284"/>
+	</e:Group>
+	<e:Group id="btnUpGroup" width="206" y="6" x="130" visible="false">
+		<n:YellowCoinButton id="btnUpThree" label="123" skinName="YellowCoinButtonSkin" x="0"/>
+		<n:YellowCoinButton id="btnUpTwo" x="110" y="0" label="123" skinName="YellowCoinButtonSkin"/>
+	</e:Group>
+	<n:YellowCoinButton skinName="YellowCoinButtonSkin" y="6" label="123" x="350" id="btnUp"/>
+	<e:Image id="imgLine" source="role_unhad_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+	<n:GreenCoinButton id="btnCall" label="按钮" x="349" y="13" skinName="GreenCoinButtonSkin"/>
+</e:Skin>

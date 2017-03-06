@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MailInfoPanelSkin" width="480" height="500" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg_add3_png" scale9Grid="37,38,382,302" y="21" x="12" height="468"/>
+	<e:Image source="common_txt_bg_png" y="80" horizontalCenter="0" scale9Grid="65,5,8,6" width="382" height="225" x="10"/>
+	<e:Image source="title_bg_png" y="0" horizontalCenter="0"/>
+	<e:Image y="-13" horizontalCenter="0" x="10" source="mail_title_png"/>
+	<ns1:SimpleButton source="close_png" y="-14" x="425" id="btnClose"/>
+	<e:Button id="btnGet" label="领 取" y="425" horizontalCenter="0.5" skinName="GreenButtonSkin"/>
+	<e:Scroller width="360" height="200" y="90" horizontalCenter="0">
+		<e:Group>
+			<e:Label id="lblName" text="亲爱的大王：" x="7" y="1" fontFamily="微软雅黑" size="18" textColor="0x906C53" bold="true"/>
+			<e:Label id="lblDesc" y="31" textColor="0x906C53" text="亲爱的大王亲爱的大王亲爱的大王亲爱的大王亲爱的大王亲爱的大王" fontFamily="微软雅黑" x="9" bold="true" size="18" width="340" lineSpacing="15"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Group name="awardGroup0" y="319" width="64" height="82" x="258">
+		<ns1:WeaponIcon y="0" width="64" height="64" name="icon" skinName="WeaponIconSkin" x="0"/>
+		<e:Label bold="true" y="43" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08" text="x100" fontFamily="微软雅黑" size="14" name="num" right="7"/>
+		<e:Label y="66" textColor="0x6B4F38" text="巡山名称" fontFamily="微软雅黑" bold="true" size="16" name="awardName" horizontalCenter="-1"/>
+	</e:Group>
+	<e:Group y="319" name="awardGroup1" width="64" height="82" x="348">
+		<ns1:WeaponIcon y="0" width="64" height="64" name="icon" skinName="WeaponIconSkin" x="0" xmlns:ns1="*"/>
+		<e:Label y="43" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08" text="x100" fontFamily="微软雅黑" bold="true" size="14" name="num" right="7"/>
+		<e:Label y="66" textColor="0x6B4F38" text="巡山名称" fontFamily="微软雅黑" bold="true" size="16" name="awardName" horizontalCenter="-1"/>
+	</e:Group>
+	<e:Group y="319" width="64" height="82" name="awardGroup2" x="168">
+		<ns1:WeaponIcon y="0" width="64" height="64" name="icon" skinName="WeaponIconSkin" x="0" xmlns:ns1="*"/>
+		<e:Label y="43" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08" text="x100" fontFamily="微软雅黑" bold="true" size="14" name="num" right="7"/>
+		<e:Label y="66" textColor="0x6B4F38" text="巡山名称" fontFamily="微软雅黑" bold="true" size="16" name="awardName" horizontalCenter="-1"/>
+	</e:Group>
+	<e:Group y="319" width="64" height="82" name="awardGroup3" x="78">
+		<ns1:WeaponIcon y="0" width="64" height="64" name="icon" skinName="WeaponIconSkin" xmlns:ns1="*" horizontalCenter="0"/>
+		<e:Label y="43" text="x100" fontFamily="微软雅黑" bold="true" size="14" name="num" right="7" textColor="0xFFFCEB" stroke="2" strokeColor="0x5C2C08"/>
+		<e:Label y="66" textColor="0x6B4F38" text="巡山名称" fontFamily="微软雅黑" bold="true" size="16" name="awardName" horizontalCenter="-1"/>
+	</e:Group>
+	<e:Image id="imgHadGot" source="active_had_got_png" y="252" scaleX="1.1" scaleY="1.1" name="imgGot" horizontalCenter="156.3" x="10"/>
+</e:Skin>

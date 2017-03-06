@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PVPPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<e:Image source="pvp_bg_png" x="0" bottom="0"/>
+	<e:Image y="0" x="0" source="pvp_top_gray_png"/>
+	<e:Image id="imgMyHead" source="common_head_png" x="8" y="52" width="55" height="55"/>
+	<e:Image id="imgEnemyHead" source="common_head_png" y="52" x="283" width="55" height="55"/>
+	<e:Image id="imgMyIconBg" source="pvp_icon_1_png" x="0" y="51"/>
+	<e:Image id="imgEnemyIconBg" source="pvp_icon_1_png" y="51" x="274"/>
+	<e:Image source="pvp_fight_point_png" x="8" y="9"/>
+	<e:Image source="pvp_fight_point_png" y="12" x="283"/>
+	<e:BitmapLabel id="lblMyPoint" x="82" y="13" font="gold_number_fnt" letterSpacing="-10" text="333"/>
+	<e:Image id="imgMyLevel" source="pvp_level_1_png" y="69" x="59" scaleX="0.8" scaleY="0.8"/>
+	<e:BitmapLabel id="lblEnemyPoint" x="361" y="13" text="333" font="gold_number_fnt" letterSpacing="-10"/>
+	<e:Image id="imgEnemyLevel" source="pvp_level_1_png" y="70" right="94" scaleY="0.8" scaleX="0.8"/>
+	<e:Label id="lblName" text="名字" y="112" fontFamily="微软雅黑" bold="true" size="15" textColor="0x91E4C0" horizontalCenter="-137"/>
+	<e:Label id="lblRank" y="56" text="第99名" fontFamily="微软雅黑" bold="true" size="16" textColor="0xFFF0FF" stroke="2" strokeColor="0x653605" horizontalCenter="-111"/>
+	<e:Label id="lblEnemyName" y="112" text="名字名字名字名字" fontFamily="微软雅黑" bold="true" size="15" textColor="0xD25855" horizontalCenter="136"/>
+	<e:Group id="positionGroup" height="322" width="199" x="1" y="165">
+		<e:Group height="80" width="70" x="15" y="21" name="pos3">
+			<e:Image source="pvp_select_position_png" x="0" bottom="0"/>
+		</e:Group>
+		<e:Group y="21" width="70" height="80" name="pos0" x="135">
+			<e:Image source="pvp_select_position_png" bottom="0" x="0"/>
+		</e:Group>
+		<e:Group y="121" width="70" height="80" name="pos1" x="135">
+			<e:Image source="pvp_select_position_png" bottom="0" x="0"/>
+		</e:Group>
+		<e:Group y="121" width="70" height="80" name="pos4" x="15">
+			<e:Image source="pvp_select_position_png" bottom="0" x="0"/>
+		</e:Group>
+		<e:Group y="221" width="70" height="80" name="pos5" x="15">
+			<e:Image source="pvp_select_position_png" bottom="0" x="0"/>
+		</e:Group>
+		<e:Group y="221" width="70" height="80" name="pos2" x="135">
+			<e:Image source="pvp_select_position_png" bottom="0" x="0"/>
+		</e:Group>
+	</e:Group>
+	<e:Group height="90" width="90" x="1" y="169" name="myGroup3" visible="false">
+		<e:Image source="common_star_png" y="0" x="0"/>
+		<e:Image source="pvp_stay_shadow_png" x="20" y="64"/>
+		<e:Label y="8" textColor="0x583C26" text="12" fontFamily="微软雅黑" bold="true" size="14" horizontalCenter="-31" name="starNum"/>
+	</e:Group>
+	<e:Group width="90" y="169" height="90" x="121" name="myGroup0" visible="false">
+		<e:Image source="common_star_png" y="0" x="0"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="-31" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="269" height="90" x="1" name="myGroup4" visible="false">
+		<e:Image source="common_star_png" y="0" x="0"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="-31" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="269" height="90" x="121" name="myGroup1" visible="false">
+		<e:Image source="common_star_png" y="0" x="0"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="-31" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="369" height="90" x="1" name="myGroup5" visible="false">
+		<e:Image source="common_star_png" y="0" x="0"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="-31" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="369" height="90" x="121" name="myGroup2" visible="false">
+		<e:Image source="common_star_png" y="0" x="0"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="-31" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="169" height="90" x="261" name="enemyGroup0">
+		<e:Image source="common_star_png" y="0" x="70"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="39" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="169" height="90" x="381" name="enemyGroup3">
+		<e:Image source="common_star_png" y="0" x="70"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="39" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="269" height="90" x="261" name="enemyGroup1">
+		<e:Image source="common_star_png" y="0" x="70"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="39" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="269" height="90" x="381" name="enemyGroup4">
+		<e:Image source="common_star_png" y="0" x="70"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="39" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="369" height="90" x="261" name="enemyGroup2">
+		<e:Image source="common_star_png" y="0" x="70"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="39" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Group width="90" y="369" height="90" x="381" name="enemyGroup5">
+		<e:Image source="common_star_png" y="0" x="70"/>
+		<e:Label y="8" textColor="0x583C26" text="12" horizontalCenter="39" bold="true" size="14" fontFamily="微软雅黑" name="starNum"/>
+		<e:Image source="pvp_stay_shadow_png" y="64" x="20"/>
+	</e:Group>
+	<e:Label id="lblSeason" text="第一赛季：2016.1.2~2017.1.5" y="509" fontFamily="微软雅黑" bold="true" size="18" textColor="0xFFEBE0" stroke="2" strokeColor="0x653605" horizontalCenter="0"/>
+	<e:Label id="lblChangeTimes" y="627" textColor="0xFFEBE0" text="次数：20" fontFamily="微软雅黑" bold="true" strokeColor="0x653605" size="18" horizontalCenter="-119" stroke="2" x="10"/>
+	<e:Label id="lblFightTimes" y="627" textColor="0xFFEBE0" text="次数：20" fontFamily="微软雅黑" bold="true" stroke="2" strokeColor="0x653605" size="18" horizontalCenter="121" x="20"/>
+	<e:Button id="btnChange" label="更换对手" y="544" skinName="YellowBigButtonSkin" horizontalCenter="-119.5"/>
+	<e:Button id="btnFight" y="544" label="挑 战" skinName="YellowBigButtonSkin" horizontalCenter="120.5"/>
+	<ns1:SimpleButton id="btnBack" x="407" y="483" source="pvp_back_png"/>
+	<e:Group id="layerGroup" height="0" width="0" x="0" y="730"/>
+	<e:Image source="common_bg2_png" width="490" height="65" scale9Grid="8,7,34,18" horizontalCenter="0" bottom="0"/>
+	<e:Group id="btnGroup" height="77" width="480" bottom="0" horizontalCenter="0">
+		<ns1:SimpleButton y="-1" x="-9" name="btn1" source="pvp_formation_png"/>
+		<ns1:SimpleButton y="-1" x="71" source="pvp_rule_png" name="btn2"/>
+		<ns1:SimpleButton y="-1" x="151" source="pvp_rank_png" name="btn3"/>
+		<ns1:SimpleButton y="-1" x="231" source="pvp_honor_png" name="btn4"/>
+		<ns1:SimpleButton y="-1" x="310" source="pvp_report_png" name="btn5"/>
+		<ns1:SimpleButton y="-1" x="389" source="pvp_shop_png" name="btn6"/>
+		<e:Image source="deblocking_png" y="6" scaleX="0.7" scaleY="0.7" touchEnabled="false" x="326"/>
+	</e:Group>
+	<e:Image id="imgTop" source="pvp_top_png" y="675" horizontalCenter="0"/>
+	<ns1:SimpleButton id="btnClose" x="426" y="690" source="pvp_down_png"/>
+	<e:Image id="myStar1" source="pvp_level_star_png" x="113" y="80"/>
+	<e:Image id="myStar2" source="pvp_level_star_png" y="80" x="136"/>
+	<e:Image id="myStar3" source="pvp_level_star_png" y="80" x="159"/>
+	<e:Image id="enemyStar1" source="pvp_level_star_png" y="80" x="386"/>
+	<e:Image id="enemyStar2" source="pvp_level_star_png" y="80" x="409"/>
+	<e:Image id="enemyStar3" source="pvp_level_star_png" y="80" x="432"/>
+	
+	
+
+
+
+
+
+
+
+
+</e:Skin>

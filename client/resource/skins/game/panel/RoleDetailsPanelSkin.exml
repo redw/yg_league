@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleDetailsPanelSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg_add_png" width="480" height="630" y="50" scale9Grid="64,55,35,8" x="0"/>
+	<e:Group x="25" y="70" width="437" height="77">
+		<e:Image id="imgAtk" source="common_atk_png" y="26" x="94"/>
+		<e:Image y="26" x="199" source="common_def_png"/>
+		<e:Image y="52" x="199" source="common_mgDef_png"/>
+		<e:Image source="common_life_png" y="52" x="94"/>
+		<e:Label y="30" textColor="0x926E56" text="1234" fontFamily="微软雅黑" bold="true" left="135" size="15" id="lblAtk" x="10"/>
+		<e:Label id="lblDef" y="30" textColor="0x926E56" text="1234" fontFamily="微软雅黑" bold="true" left="240" size="15" x="20"/>
+		<e:Image y="52" x="310" source="common_crit_png"/>
+		<e:Label id="lblCrit" y="55" textColor="0x926E56" text="1234" fontFamily="微软雅黑" bold="true" left="350" size="15" x="30"/>
+		<e:Label y="55" textColor="0x926E56" text="1234" fontFamily="微软雅黑" id="lblHp" bold="true" left="136" size="15" x="20"/>
+		<e:Label id="lblMgDef" y="55" textColor="0x926E56" text="1234" fontFamily="微软雅黑" bold="true" left="240" size="15" x="40"/>
+		<e:Label y="0" textColor="0x583C26" text="龙太子" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="131"/>
+		<e:BitmapLabel x="200" y="-3" text="+999" font="gold_number_fnt" id="bitLbl" letterSpacing="-6"/>
+		<ns1:RoleIcon id="roleIcon" x="12" y="6" skinName="RoleIconSkin"/>
+		<e:Image id="imgSex" x="375" y="-5" source="sex_1_png"/>
+		<e:Image id="imgJob" x="102" y="-5" source="job_1_png"/>
+		<e:Image id="imgRace" x="345" y="-5" source="race_3_png"/>
+		<e:Image id="imgRange" source="rang_1_png" x="315" y="-4"/>
+	</e:Group>
+	<e:ToggleButton id="tabTalent" label="天  赋" y="164" x="27" skinName="ToggleBtnSkin"/>
+	<e:ToggleButton id="tabSkill" label="技  能" y="164" x="169" skinName="ToggleBtnSkin">
+	</e:ToggleButton>
+	<e:ToggleButton id="tabShip" x="311" label="情  缘" y="164" skinName="ToggleBtnSkin"/>
+	<e:Image y="205" width="448" height="380" x="16" source="common_bg_add2_png" scale9Grid="10,9,46,30"/>
+	<e:Scroller id="skillShip" y="210" width="422" scrollPolicyH="off" height="365" horizontalCenter="0">
+		<e:List id="changeList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Group id="talentGroup" height="440" width="448" x="16" y="204">
+		<e:Image source="common_bg_add2_png" y="1" width="448" height="40" x="0" scale9Grid="10,9,31,30"/>
+		<e:Scroller scrollPolicyH="off" y="43" width="422" height="322" horizontalCenter="0" x="10">
+			<e:List id="talentList" width="100%" height="100%">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Label y="12" text="*等级达到激活效果，强化等级达到效果x3" fontFamily="微软雅黑" bold="true" size="16" x="14" textColor="0x2CA87B"/>
+	</e:Group>
+	<e:Group id="hideGroup" y="438" height="150" horizontalCenter="-149.5" width="133" visible="false">
+		<ns1:YellowBigBtn id="btnUpTen" skinName="YellowBigBtnSkin" label="按钮" y="75" x="0"/>
+		<ns1:YellowBigBtn id="btnUpNext" x="0" skinName="YellowBigBtnSkin" y="0" label="按钮"/>
+	</e:Group>
+	<e:Button id="btnBack" label="强化初始化" y="588" horizontalCenter="150.5" skinName="YellowBigButtonSkin"/>
+	<e:Button id="btnUpStar" label="升 星" y="588" skinName="YellowBigButtonSkin" x="174"/>
+	<ns1:YellowBigBtn id="btnUp" label="按钮" y="588" skinName="YellowBigBtnSkin" horizontalCenter="-149.5"/>
+	<ns1:CoinShowPanel skinName="CoinShowPanelSkin" id="coinShow" x="0" y="5"/>
+	<ns1:SimpleButton source="close_png" y="-3" x="425" id="btnClose"/>
+	<ns1:SimpleButton id="btnLeft" y="300" x="20" source="role_turn_png" anchorOffsetX="21"/>
+	<ns1:SimpleButton id="btnRight" y="300" x="459" source="role_turn_png" scaleX="-1" anchorOffsetX="21"/>
+</e:Skin>

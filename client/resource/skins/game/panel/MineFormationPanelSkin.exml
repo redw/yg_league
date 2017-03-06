@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MineFormationPanelSkin" width="480" height="583" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="mine_accredit_top_png" x="0" scale9Grid="60,117,360,12" height="583"/>
+	<e:Image source="mine_accredit_bg_png" x="0" y="33" scale9Grid="60,89,366,23" height="163"/>
+	<e:Button skinName="YellowButtonSkin" y="50" label="确认更改" x="365" id="btnBack"/>
+	<e:Label id="lblProduct" y="62" textColor="0x56FFDB" text="9999" fontFamily="微软雅黑" bold="true" size="16" x="160"/>
+	<e:Label y="62" text="每分钟产出：" fontFamily="微软雅黑" bold="true" size="16" x="66" textColor="0xFFFFFF"/>
+	<e:Image y="55" x="23" source="reward_29_s_png"/>
+	<ns1:SimpleButton x="8" y="101" source="mine_add_png" name="btnPos0"/>
+	<ns1:SimpleButton source="mine_add_png" y="101" name="btnPos1" x="88"/>
+	<ns1:SimpleButton source="mine_add_png" y="101" name="btnPos2" x="168"/>
+	<ns1:SimpleButton source="mine_add_png" y="101" name="btnPos3" x="248"/>
+	<ns1:SimpleButton source="mine_add_png" y="101" name="btnPos4" x="328"/>
+	<ns1:SimpleButton source="mine_add_png" y="101" name="btnPos5" x="408"/>
+	<e:Group height="85" width="62" x="8" y="101" name="role0">
+		<ns1:RoleIcon x="-2" y="0" skinName="RoleIconSkin" name="icon"/>
+		<e:Image y="63" x="1" scaleX="0.9" scaleY="0.9" source="reward_29_s_png"/>
+		<e:Label y="68" textColor="0x56FFDB" text="999" fontFamily="微软雅黑" bold="true" size="14" name="produce" x="27"/>
+	</e:Group>
+	<e:Group y="101" width="62" height="85" name="role1" x="88">
+		<ns1:RoleIcon skinName="RoleIconSkin" y="0" name="icon" x="-2" xmlns:ns1="*"/>
+		<e:Image y="63" scaleY="0.9" x="1" scaleX="0.9" source="reward_29_s_png"/>
+		<e:Label y="68" textColor="0x56FFDB" text="999" fontFamily="微软雅黑" bold="true" size="14" name="produce" x="25"/>
+	</e:Group>
+	<e:Group y="101" width="62" height="85" name="role2" x="168">
+		<ns1:RoleIcon x="-2" y="0" name="icon" skinName="RoleIconSkin" xmlns:ns1="*"/>
+		<e:Image y="63" scaleY="0.9" scaleX="0.9" x="1" source="reward_29_s_png"/>
+		<e:Label y="68" textColor="0x56FFDB" text="9999" fontFamily="微软雅黑" bold="true" size="14" name="produce" x="25"/>
+	</e:Group>
+	<e:Group y="101" width="62" height="85" name="role3" x="248">
+		<ns1:RoleIcon skinName="RoleIconSkin" y="0" name="icon" x="-2" xmlns:ns1="*"/>
+		<e:Image y="63" scaleY="0.9" x="1" scaleX="0.9" source="reward_29_s_png"/>
+		<e:Label y="68" textColor="0x56FFDB" text="9999" fontFamily="微软雅黑" bold="true" size="14" name="produce" x="25"/>
+	</e:Group>
+	<e:Group y="101" width="62" height="85" name="role4" x="328">
+		<ns1:RoleIcon x="-2" y="0" name="icon" skinName="RoleIconSkin" xmlns:ns1="*"/>
+		<e:Image y="63" scaleY="0.9" scaleX="0.9" x="1" source="reward_29_s_png"/>
+		<e:Label y="68" textColor="0x56FFDB" text="9999" fontFamily="微软雅黑" bold="true" size="14" name="produce" x="25"/>
+	</e:Group>
+	<e:Group y="101" width="62" height="85" name="role5" x="408">
+		<ns1:RoleIcon skinName="RoleIconSkin" y="0" name="icon" x="-2" xmlns:ns1="*"/>
+		<e:Image y="63" scaleY="0.9" x="1" scaleX="0.9" source="reward_29_s_png"/>
+		<e:Label y="68" textColor="0x56FFDB" text="9999" fontFamily="微软雅黑" bold="true" size="14" name="produce" x="25"/>
+	</e:Group>
+	<e:Scroller y="196" horizontalCenter="0" width="480" scrollPolicyH="off" height="377" x="10">
+		<e:List id="roleList" width="100%" height="374">
+			<e:layout>
+				<e:VerticalLayout gap="6" paddingTop="6"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="TaskProgressSkin" width="243" height="22" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="thumb" x="0" y="0" width="100%" source="task_bar_png" scale9Grid="29,8,179,6"/>
+</e:Skin>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendMainPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="800" width="480" x="0" bottom="0">
+		<e:Image source="friend_bg_png" y="64" height="710" horizontalCenter="0.5" scale9Grid="58,39,355,14"/>
+		<e:Image source="friend_title_png" y="55" horizontalCenter="0"/>
+		<e:Image source="friend_top_bg_png" y="105" scale9Grid="8,6,49,41" width="460" horizontalCenter="0" height="103"/>
+		<e:Image source="friend_btn_bg_png" y="113" width="434" height="81" scale9Grid="8,8,45,33" horizontalCenter="0"/>
+		<e:Image source="friend_bg_2_png" y="213" horizontalCenter="0.5" scale9Grid="59,163,357,16" height="550"/>
+		<e:Image source="friend_link_png" x="20" y="195"/>
+		<e:Image source="friend_link_png" y="195" x="453"/>
+		<e:Image id="imgSelect" source="friend_select_png" x="47" y="111"/>
+		<ns1:SimpleButton id="btnShare" y="111" source="friend_share_png" x="47"/>
+		<ns1:SimpleButton id="btnInvite" source="friend_invite_png" y="111" x="147"/>
+		<ns1:SimpleButton id="btnSend" y="111" source="friend_send_together_png" x="247"/>
+		<ns1:SimpleButton id="btnApply" y="111" source="friend_apply_png" x="347"/>
+		<ns1:SimpleButton id="btnClose" y="52" source="close2_png" x="424"/>
+		<e:Group id="contentGroup" height="466" width="424" y="251" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

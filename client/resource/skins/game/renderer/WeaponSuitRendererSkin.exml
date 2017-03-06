@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="WeaponSuitRendererSkin" width="376" height="16" xmlns:e="http://ns.egret.com/eui">
+	<e:Label y="0" textColor="0x906C53" size="16" text="装备效果描述装备效果描述装备效果描述装备效果" fontFamily="微软雅黑" x="0" bold="true" width="376" lineSpacing="3" id="lblDec"/>
+</e:Skin>

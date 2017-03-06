@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CheckBoxSkin" width="100" height="24" xmlns:e="http://ns.egret.com/eui">
+	
+	<e:Image id="imageBg" source="checkbox_bg_png"/>
+	<e:Image id="imageGrayBg" source="checkbox_bg_png"/>
+	<e:Image id="imageSelect" source="checkbox_select_png" x="-2" y="0"/>
+	<e:Image id="imageGraySelect" source="checkbox_select_png" x="-2" y="0"/>
+	<e:Label id="labelText" text="无须确认" fontFamily="微软雅黑" textAlign="left" bold="true" size="16" x="30" y="5" textColor="0xF8F6C4" stroke="2" strokeColor="0x6b2407"/>
+	<e:Image source="color_000000_png" width="100%" height="100%" alpha="0"/>
+	
+</e:Skin>

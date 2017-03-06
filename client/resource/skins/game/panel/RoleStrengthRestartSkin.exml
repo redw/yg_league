@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleStrengthRestartSkin" width="416" height="520" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="alert_bg_png" scale9Grid="175,97,109,73" height="500" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="role_strength_title_bg_png" y="69" horizontalCenter="0"/>
+	<e:Label y="75" textColor="0x583C26" text="强化重置" fontFamily="微软雅黑" bold="true" size="20" horizontalCenter="0"/>
+	<e:Label y="358" textColor="0x583C26" text="可获得:" fontFamily="微软雅黑" horizontalCenter="-48" bold="true" size="20" x="10"/>
+	<e:Label id="lblGetJade" y="358" text="123" fontFamily="微软雅黑" bold="true" size="20" x="224" textColor="0x1DA773"/>
+	<ns1:RoleIcon id="roleIcon" y="142" skinName="RoleIconSkin" horizontalCenter="0"/>
+	<e:BitmapLabel id="lblStrength" x="221" y="136" text="+999" font="gold_number_fnt" letterSpacing="-2" height="11"/>
+	<e:Label id="lblShow" y="228" textColor="0x926E56" text="初始化可100%返还用于强化的灵玉；被初始化的伙伴，其强化等级重置为0" fontFamily="微软雅黑" bold="true" size="18" width="320" horizontalCenter="0" lineSpacing="15"/>
+	<e:Label y="308" textColor="0x926E56" text="确认要重置麽" fontFamily="微软雅黑" bold="true" size="18" lineSpacing="15" horizontalCenter="0"/>
+	<e:Image y="353" horizontalCenter="0" source="reward_4_s_png"/>
+	<ns1:YellowBigBtn id="btnRestart" label="按钮" y="389" skinName="YellowBigBtnSkin" horizontalCenter="0.5"/>
+	<ns1:SimpleButton id="btnClose" x="357" y="8" source="close2_png"/>
+</e:Skin>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendInviteSkin" width="424" height="466" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="friend_content_bg_png" y="23" scale9Grid="9,9,59,41" width="420" height="322" horizontalCenter="0" x="10"/>
+	<ns1:SimpleButton source="friend_invite_button_png" y="341" horizontalCenter="0" id="btnInvite" x="10"/>
+	<e:Label y="405" textColor="0x7A5132" text="点击“我的专属海报”，保存到相册。" fontFamily="微软雅黑" bold="true" width="350" size="16" lineSpacing="3" horizontalCenter="0" x="10"/>
+	<e:Label y="425" textColor="0x7A5132" horizontalCenter="0" text="将相册中的海报发送给朋友群或朋友。" fontFamily="微软雅黑" bold="true" width="350" lineSpacing="3" size="16" x="20"/>
+	<e:Label y="445" textColor="0x7A5132" horizontalCenter="0" text="新玩家通过您的海报进入游戏，您将获得奖励。" fontFamily="微软雅黑" bold="true" width="350" lineSpacing="3" size="16" x="30"/>
+	<e:Scroller y="48" scrollPolicyH="off" width="400" height="291" horizontalCenter="0">
+		<e:List id="inviteList" width="400" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Image source="friend_title_bg_png" y="5" horizontalCenter="0" x="10"/>
+	<e:Label y="16" textColor="0x5F3A1B" lineSpacing="3" text="邀请列表" fontFamily="微软雅黑" bold="true" size="20" horizontalCenter="0" x="10"/>
+</e:Skin>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveRichSignSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="active_gray_png" y="18" horizontalCenter="0"/>
+	<e:Image source="r_show_png" x="-68" y="1"/>
+	<e:Image y="28" horizontalCenter="0.5" source="active_rich_sign_title_png"/>
+	<e:Image source="r_show_dec_png" x="192" y="83"/>
+	<e:Button id="btnBuy" label="购 买" skinName="YellowButtonSkin" horizontalCenter="134.5" y="169" x="10"/>
+	<e:Image source="bg_decorate_left_png" x="0" y="136"/>
+	<e:Image source="active_sign_down_png" width="480" horizontalCenter="0" scale9Grid="50,48,6,295" x="10" bottom="0"/>
+</e:Skin>

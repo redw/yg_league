@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="DailyAchievePanelSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg_add_png" y="50" scale9Grid="64,55,35,8" width="480" height="630" x="0"/>
+	<ns1:CoinShowPanel x="0" y="5" skinName="CoinShowPanelSkin" id="coinShow"/>
+	<e:Image y="57" width="454" height="591" scale9Grid="9,9,31,14" source="common_bg3_png" horizontalCenter="0"/>
+	<e:Image id="imgDaily" source="daily_normal_png" y="57" x="14"/>
+	<e:Image id="imgAchieve" source="achieve_normal_png" y="57" x="238"/>
+	<e:Scroller scrollPolicyH="off" y="110" width="440" height="521" horizontalCenter="0">
+		<e:List id="list" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<ns1:SimpleButton source="close_png" y="-3" x="425" id="btnClose"/>
+</e:Skin>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="TargetPanelSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg_add_png" y="50" scale9Grid="64,55,35,8" width="480" height="630" x="0"/>
+	<e:Image source="common_bg3_png" y="296" scale9Grid="9,9,31,14" width="450" height="330" horizontalCenter="0"/>
+	<e:Image source="mail_title_bg_png" y="50" horizontalCenter="-0.5"/>
+	<e:Label y="62" textColor="0x583C26" text="目 标" fontFamily="微软雅黑" bold="true" horizontalCenter="1.5" size="22" x="20"/>
+	<e:Image source="target_show_png" y="62" horizontalCenter="0"/>
+	<e:Image source="draw_say_bg_png" x="176" y="116" scale9Grid="84,11,37,68" width="287"/>
+	<e:Label size="18" bold="true" fontFamily="微软雅黑" text="完成4个任务，领取目标大奖！" stroke="2" strokeColor="0xB1573A" verticalCenter="-193" textAlign="center" horizontalCenter="83" textColor="0xFFE9D8"/>
+	<e:Image id="imgLight" source="active_box_light_png" x="296" y="239" anchorOffsetX="83" anchorOffsetY="83"/>
+	<ns1:WeaponIcon id="imgAwardType" x="262" y="214" skinName="WeaponIconSkin"/>
+	<e:Label id="lblAwardNum" stroke="2" text="999" fontFamily="微软雅黑" strokeColor="0xB1573A" bold="true" size="16" textColor="0xFFE9D8" textAlign="center" y="258" right="153"/>
+	<e:Button id="btnTotalEnd" label="0/4" x="350" y="218" skinName="YellowHighButtonSkin"/>
+	<e:Group height="72" width="440" x="20" y="305" name="targetGroup0">
+		<e:Image source="common_cell_png" x="0" y="0" scale9Grid="21,9,6,54" width="440"/>
+		<e:Image x="13" verticalCenter="0" name="icon"/>
+		<e:Label y="7" textColor="0x583C26" text="名字" fontFamily="微软雅黑" bold="true" size="18" x="90" name="name"/>
+		<e:Label y="48" textColor="0x926E56" text="奖励：" fontFamily="微软雅黑" bold="true" size="16" x="88"/>
+		<e:Button skinName="YellowHighButtonSkin" label="领 取" x="333" verticalCenter="0.5" name="btnGet"/>
+		<e:Label y="49" text="x100" fontFamily="微软雅黑" bold="true" left="166" size="16" x="40" name="awardNum" textColor="0x926E56"/>
+		<e:Image y="44" x="136" name="awardType" source="reward_1_s_png"/>
+		<e:Image source="monster_bar_bg_png" y="29" x="89"/>
+		<e:ProgressBar x="89" y="29" skinName="MonsterProgressSkin" name="bar"/>
+		<e:Label textColor="0xFFFFFF" verticalCenter="0" text="999/999" fontFamily="微软雅黑" strokeColor="0xA35A32" bold="true" stroke="2" size="14" x="20" y="20" textAlign="center" horizontalCenter="-19.5" name="lblBar"/>
+		<e:Image source="active_had_got_png" x="329" verticalCenter="0" name="imgGot"/>
+		<e:Button x="333" y="8" label="前 往" skinName="GreenHighButtonSkin" name="btnGo"/>
+	</e:Group>
+	<e:Group y="385" width="440" height="72" name="targetGroup1" x="20">
+		<e:Image source="common_cell_png" scale9Grid="21,9,6,54" y="0" width="440" x="0"/>
+		<e:Image verticalCenter="0" name="icon" x="13"/>
+		<e:Label y="7" textColor="0x583C26" text="名字" fontFamily="微软雅黑" bold="true" size="18" name="name" x="90"/>
+		<e:Label y="48" textColor="0x926E56" text="奖励：" fontFamily="微软雅黑" bold="true" size="16" x="88"/>
+		<e:Button skinName="YellowHighButtonSkin" label="领 取" verticalCenter="0.5" name="btnGet" x="333"/>
+		<e:Label y="49" textColor="0x926E56" text="x100" fontFamily="微软雅黑" bold="true" left="166" size="16" name="awardNum" x="40"/>
+		<e:Image y="44" name="awardType" x="137" source="reward_1_s_png"/>
+		<e:Image source="monster_bar_bg_png" y="29" x="89"/>
+		<e:ProgressBar skinName="MonsterProgressSkin" y="29" name="bar" x="89"/>
+		<e:Label textColor="0xFFFFFF" verticalCenter="0" text="999/999" fontFamily="微软雅黑" strokeColor="0xA35A32" bold="true" stroke="2" size="14" x="20" y="20" textAlign="center" horizontalCenter="-19.5" name="lblBar"/>
+		<e:Image source="active_had_got_png" verticalCenter="0" name="imgGot" x="329" y="10"/>
+		<e:Button label="前 往" y="8" skinName="GreenHighButtonSkin" name="btnGo" x="333"/>
+	</e:Group>
+	<e:Group y="465" width="440" height="72" name="targetGroup2" x="20">
+		<e:Image source="common_cell_png" scale9Grid="21,9,6,54" y="0" width="440" x="0"/>
+		<e:Image verticalCenter="0" name="icon" x="13"/>
+		<e:Label y="7" textColor="0x583C26" text="名字" fontFamily="微软雅黑" bold="true" size="18" name="name" x="90"/>
+		<e:Label y="48" textColor="0x926E56" text="奖励：" fontFamily="微软雅黑" bold="true" size="16" x="88"/>
+		<e:Button skinName="YellowHighButtonSkin" label="领 取" verticalCenter="0.5" name="btnGet" x="333"/>
+		<e:Label y="49" textColor="0x926E56" text="x100" fontFamily="微软雅黑" bold="true" left="166" size="16" name="awardNum" x="40"/>
+		<e:Image y="44" name="awardType" x="137" source="reward_1_s_png"/>
+		<e:Image source="monster_bar_bg_png" y="29" x="89"/>
+		<e:ProgressBar skinName="MonsterProgressSkin" y="29" name="bar" x="89"/>
+		<e:Label textColor="0xFFFFFF" verticalCenter="0" text="999/999" fontFamily="微软雅黑" strokeColor="0xA35A32" bold="true" stroke="2" size="14" x="20" y="20" textAlign="center" horizontalCenter="-19.5" name="lblBar"/>
+		<e:Image source="active_had_got_png" y="20" verticalCenter="0" name="imgGot" x="329"/>
+		<e:Button label="前 往" y="8" skinName="GreenHighButtonSkin" name="btnGo" x="333"/>
+	</e:Group>
+	<e:Group y="545" width="440" height="72" name="targetGroup3" x="20">
+		<e:Image source="common_cell_png" scale9Grid="21,9,6,54" y="0" width="440" x="0"/>
+		<e:Image verticalCenter="0" name="icon" x="13"/>
+		<e:Label y="7" textColor="0x583C26" text="名字" fontFamily="微软雅黑" bold="true" size="18" name="name" x="90"/>
+		<e:Label y="48" textColor="0x926E56" text="奖励：" fontFamily="微软雅黑" bold="true" size="16" x="88"/>
+		<e:Button skinName="YellowHighButtonSkin" label="领 取" verticalCenter="0.5" name="btnGet" x="333"/>
+		<e:Label y="49" textColor="0x926E56" text="x100" fontFamily="微软雅黑" bold="true" left="166" size="16" name="awardNum" x="40"/>
+		<e:Image y="44" name="awardType" x="137" source="reward_1_s_png"/>
+		<e:Image source="monster_bar_bg_png" y="29" x="89"/>
+		<e:ProgressBar skinName="MonsterProgressSkin" y="29" name="bar" x="89"/>
+		<e:Label textColor="0xFFFFFF" verticalCenter="0" text="999/999" fontFamily="微软雅黑" strokeColor="0xA35A32" bold="true" stroke="2" size="14" x="20" y="20" textAlign="center" horizontalCenter="-19.5" name="lblBar"/>
+		<e:Image source="active_had_got_png" y="30" verticalCenter="0" name="imgGot" x="329"/>
+		<e:Button label="前 往" y="8" skinName="GreenHighButtonSkin" name="btnGo" x="333"/>
+	</e:Group>
+	<ns1:CoinShowPanel x="0" y="5" skinName="CoinShowPanelSkin" id="coinShow"/>
+	<ns1:SimpleButton source="close_png" y="-3" x="425" id="btnClose"/>
+</e:Skin>

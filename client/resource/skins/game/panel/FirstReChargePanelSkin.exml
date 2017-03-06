@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FirstReChargePanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="first_bg_png" horizontalCenter="0" verticalCenter="0"/>
+	<ns1:WeaponIcon x="87" y="527" skinName="WeaponIconSkin" name="award1"/>
+	<ns1:WeaponIcon y="527" skinName="WeaponIconSkin" x="167" name="award2"/>
+	<ns1:WeaponIcon y="527" skinName="WeaponIconSkin" x="247" name="award3"/>
+	<ns1:WeaponIcon y="527" skinName="WeaponIconSkin" x="327" name="award4"/>
+	<e:Button id="btnBuy" label="充 值" y="616" skinName="YellowBigButtonSkin" horizontalCenter="0.5"/>
+	<e:Label bold="true" y="571" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" textAlign="right" right="332" stroke="2" size="16" strokeColor="0x583C26" name="awardNum1" x="10"/>
+	<e:Label stroke="2" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" right="252" size="16" x="20" bold="true" strokeColor="0x583C26" textAlign="right" y="571" name="awardNum2"/>
+	<e:Label textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" bold="true" size="16" y="571" x="30" right="172" strokeColor="0x583C26" textAlign="right" stroke="2" name="awardNum3"/>
+	<e:Label stroke="2" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" right="92" size="16" x="40" bold="true" y="571" textAlign="right" strokeColor="0x583C26" name="awardNum4"/>
+	<ns1:SimpleButton id="btnClose" x="372" y="163" source="close2_png"/>
+</e:Skin>

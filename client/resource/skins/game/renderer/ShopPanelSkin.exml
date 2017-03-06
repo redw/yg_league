@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ShopPanelSkin" width="480" height="303" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="9,7,32,18" width="480" height="305" horizontalCenter="0"/>
+	<e:Image source="common_bg1_png" y="0" scale9Grid="10,9,31,14" width="474" height="300" horizontalCenter="0"/>
+	<e:Image source="task_bg_png" width="459" y="7" height="50" horizontalCenter="0"/>
+	<e:Image source="line_png" y="56" horizontalCenter="0"/>
+	<e:Scroller scrollPolicyH="off" y="60" width="454" height="225" x="13">
+		<e:List id="shopList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

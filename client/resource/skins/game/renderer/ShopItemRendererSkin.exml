@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ShopItemRendererSkin" width="454" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,14,7,36" x="0"/>
+	<e:Image y="0" x="2" id="imgIcon"/>
+	<e:Label y="9" textColor="0x6B4F38" text="名字~" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="92"/>
+	<e:Label id="lblDesc" y="36" textColor="0x926E56" text="123" fontFamily="微软雅黑" bold="true" size="16" lineSpacing="15" x="94"/>
+	<e:Label id="lblBuyTimes" y="10" text="(每日限购一次)" fontFamily="微软雅黑" bold="true" strokeColor="0x966536" size="16" x="162" textColor="0x34B984"/>
+	<ns1:YellowCoinButton id="btnBuy" label="按钮" x="343" skinName="YellowCoinButtonSkin" verticalCenter="0"/>
+	<e:Image id="imgHadBuy" source="common_had_buy_png" x="344" y="11"/>
+	<e:Button x="344" y="6" label="前 往" skinName="GreenHighButtonSkin" id="btnGo"/>
+</e:Skin>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="XunShanPanelSkin" width="480" height="282" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:n="*" xmlns:ns1="*">
+	<e:Image width="100%" height="100%" horizontalCenter="0" y="0" source="main_bg_png" scale9Grid="209,112,211,9"/>
+	<e:Image id="imgIcon" x="56" y="58" scaleX="0.75" scaleY="0.75"/>
+	<e:Label id="lblName" text="巡山名称" y="61" fontFamily="微软雅黑" bold="true" size="16" horizontalCenter="-89" textColor="0x583C26"/>
+	<e:Label y="85" text="自动领钱" fontFamily="微软雅黑" bold="true" size="18" x="116" textColor="0x34E5C1" stroke="2" strokeColor="0x996D4C"/>
+	<e:Label bold="true" y="73" textColor="0x34E5C1" size="16" text="开启" fontFamily="微软雅黑" stroke="2" strokeColor="0x996D4C" x="18"/>
+	<n:GreenCoinButton id="btnGoldAuto" label="333" x="360" y="58" skinName="GreenCoinButtonSkin"/>
+	<n:GreenCoinButton id="btnDiamondAuto" y="58" label="333" x="251" skinName="GreenCoinButtonSkin"/>
+	<e:Scroller id="taskScroller" width="454" y="111" scrollPolicyH="off" height="150" horizontalCenter="0">
+		<e:List id="taskList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout gap="1"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<n:CoinShowPanel x="0" y="0" skinName="CoinShowPanelSkin" id="coinShow"/>
+	<n:SimpleButton id="btnUp" y="0" source="menu_up_png" x="428"/>
+	<ns1:SimpleButton source="menu_help_png" y="0" id="btnHelp"/>
+</e:Skin>

@@ -1,0 +1,40 @@
+{"mc":{
+	"ding_fire":{
+		"frameRate":24,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"913DADB8",
+			"x":1,
+			"y":7,
+			"duration":4
+			},
+			{
+			"res":"ACBBCD33",
+			"x":0,
+			"y":2,
+			"duration":4
+			},
+			{
+			"res":"D52D585B",
+			"x":1,
+			"y":0,
+			"duration":4
+			},
+			{
+			"res":"F0D2EA7A",
+			"x":0,
+			"y":3,
+			"duration":4
+			}
+			]
+}},
+	"res":{
+		"F0D2EA7A":{"x":0,"y":72,"w":54,"h":68},
+		"913DADB8":{"x":56,"y":74,"w":53,"h":64},
+		"D52D585B":{"x":57,"y":0,"w":53,"h":72},
+		"ACBBCD33":{"x":0,"y":0,"w":55,"h":70}
+	}}

@@ -1,0 +1,52 @@
+{
+	"8": {
+		"value": 5,
+		"resource": "item_pill_effect",
+		"cd": 60,
+		"tip": "随机获得value枚升星丹",
+		"name": "升星丹",
+		"id": 8,
+		"times": 2,
+		"chance": 0.01
+	},
+	"4": {
+		"value": 1,
+		"resource": "item_reborn_effect",
+		"cd": 4320,
+		"tip": "获得value次转生次数",
+		"name": "月光宝盒",
+		"id": 4,
+		"times": 1,
+		"chance": 0.005
+	},
+	"5": {
+		"value": 0.016,
+		"resource": "item_gold_effect",
+		"cd": 1,
+		"tip": "获得value小时铜钱产出",
+		"name": "小财神",
+		"id": 5,
+		"times": 9999,
+		"chance": 0.25
+	},
+	"6": {
+		"value": 35,
+		"resource": "item_diamond_effect",
+		"cd": 3,
+		"tip": "随机获得5~value的元宝",
+		"name": "大财神",
+		"id": 6,
+		"times": 20,
+		"chance": 0.1
+	},
+	"7": {
+		"value": 0.5,
+		"resource": "item_jade_effect",
+		"cd": 10,
+		"tip": "获得转生灵玉*value的灵玉",
+		"name": "闯关灵玉",
+		"id": 7,
+		"times": 12,
+		"chance": 0.1
+	}
+}

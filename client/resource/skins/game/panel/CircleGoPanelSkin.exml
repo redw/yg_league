@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CircleGoPanelSkin" width="480" height="400" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg_add3_png" y="20" verticalCenter="7" scale9Grid="37,38,382,302" height="380" horizontalCenter="1" x="20"/>
+	<e:Image source="title_bg_png" y="0" horizontalCenter="1" x="30"/>
+	<e:Image y="-23" horizontalCenter="0.5" x="10" source="circle_go_title_png"/>
+	<e:Image source="common_txt_bg_png" y="66" scale9Grid="63,5,8,6" width="417" height="174" horizontalCenter="0.5" x="10"/>
+	<e:Label id="lblGoCondition" y="103" textColor="0xFFECD2" text="600关以上的轮回，可使用突进" fontFamily="微软雅黑" bold="true" stroke="2" size="20" horizontalCenter="0" strokeColor="0x7F5235" x="10"/>
+	<ns1:SimpleButton id="btnClose" x="424" y="-6" source="close_png"/>
+	<e:Label y="172" textColor="0x6B4F38" text="本次突进可立即到达：" fontFamily="微软雅黑" bold="true" size="18" x="125"/>
+	<e:Label id="lblMission" y="172" text="N关" fontFamily="微软雅黑" bold="true" size="18" left="315" textColor="0xA74E2B"/>
+	<e:Label y="142" textColor="0x6B4F38" text="当前关卡数：" fontFamily="微软雅黑" bold="true" size="18" x="197"/>
+	<e:Label id="lblNowArea" y="142" textColor="0xA74E2B" text="N关" fontFamily="微软雅黑" bold="true" left="315" size="18" x="10"/>
+	<e:Label id="lblTimes" y="202" textColor="0xA74E2B" text="N次" fontFamily="微软雅黑" bold="true" left="315" size="18" x="10"/>
+	<e:Label y="202" textColor="0x6B4F38" text="本次突进还将获得闯关转盘：" fontFamily="微软雅黑" bold="true" size="18" x="71"/>
+	<e:Label y="352" textColor="0x6B4F38" text="持有终身卡，享免费突进" fontFamily="微软雅黑" bold="true" size="18" x="49"/>
+	<e:Label id="lblGetCard" y="352" text="获取终身卡&gt;&gt;" fontFamily="微软雅黑" bold="true" size="18" x="318" textColor="0x16B676"/>
+	<ns1:YellowCoinButton id="btnGo" label="按钮" y="261" skinName="YellowBigBtnSkin" horizontalCenter="0.5"/>
+</e:Skin>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveSignSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="active_sign_down_png" y="55" width="480" horizontalCenter="0" scale9Grid="50,48,6,295"/>
+	<e:Image source="active_sign_title_png" y="12" horizontalCenter="0"/>
+	<e:Button id="btnSign" label="签 到" y="525" horizontalCenter="0.5" skinName="YellowButtonSkin"/>
+	<e:Label text="连续签到，享丰厚奖励" y="580" textColor="0xFFECE1" bold="true" stroke="2" strokeColor="0x653605" fontFamily="微软雅黑" size="16" horizontalCenter="1"/>
+	<e:Label horizontalCenter="1" y="601" textColor="0xFFECE1" strokeColor="0x653605" text="中断签到，将从头开始" fontFamily="微软雅黑" stroke="2" bold="true" size="16" x="10"/>
+	<e:Group y="77" x="27" name="dayGroup1" width="127" height="144">
+		<e:Image source="active_sign_bg_png"/>
+		<e:Label y="83" textColor="0x583C26" text="第一天" fontFamily="微软雅黑" bold="true" size="18" x="37"/>
+		<e:Label y="117" text="奖励物品名字" fontFamily="微软雅黑" bold="true" size="16" textColor="0xF4E7D2" name="name" horizontalCenter="0.5"/>
+		<ns1:WeaponIcon skinName="WeaponIconSkin" horizontalCenter="0.5" verticalCenter="-24" name="icon"/>
+		<e:Label y="58" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" bold="true" size="16" stroke="2" strokeColor="0x583C26" right="37" textAlign="right" name="awardNum"/>
+		<e:Image source="active_sign_mask_png" y="0" horizontalCenter="0" name="mask" visible="false"/>
+		<e:Image x="-3" y="-6" name="imgDouble" source="s_first_double_png" visible="false"/>
+		<e:Image name="imgGot" scaleX="1.1" scaleY="1.1" source="active_sign_had_got_png" x="53" y="70" visible="false"/>
+	</e:Group>
+	<e:Group y="77" width="127" height="144" name="dayGroup2" x="177">
+		<e:Image source="active_sign_bg_png"/>
+		<e:Label y="83" textColor="0x583C26" text="第二天" fontFamily="微软雅黑" bold="true" size="18" x="37"/>
+		<e:Label y="117" textColor="0xF4E7D2" horizontalCenter="0.5" text="奖励物品名字" fontFamily="微软雅黑" bold="true" size="16" name="name"/>
+		<ns1:WeaponIcon skinName="WeaponIconSkin" horizontalCenter="0.5" verticalCenter="-24" name="icon" xmlns:ns1="*"/>
+		<e:Label strokeColor="0x583C26" y="58" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" textAlign="right" bold="true" right="37" stroke="2" size="16" name="awardNum"/>
+		<e:Image source="active_sign_mask_png" y="0" horizontalCenter="0" visible="false" name="mask"/>
+		<e:Image source="s_first_double_png" y="-6" visible="false" name="imgDouble" x="-3"/>
+		<e:Image source="active_sign_had_got_png" y="70" visible="false" scaleX="1.1" scaleY="1.1" name="imgGot" x="53"/>
+	</e:Group>
+	<e:Group y="77" width="127" height="144" name="dayGroup3" x="327">
+		<e:Image source="active_sign_bg_png"/>
+		<e:Label y="83" textColor="0x583C26" text="第三天" fontFamily="微软雅黑" bold="true" size="18" x="37"/>
+		<e:Label y="117" textColor="0xF4E7D2" horizontalCenter="0.5" text="奖励物品名字" fontFamily="微软雅黑" bold="true" size="16" name="name"/>
+		<ns1:WeaponIcon skinName="WeaponIconSkin" horizontalCenter="0.5" verticalCenter="-24" name="icon" xmlns:ns1="*"/>
+		<e:Label strokeColor="0x583C26" y="58" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" textAlign="right" bold="true" right="37" stroke="2" size="16" name="awardNum"/>
+		<e:Image source="active_sign_mask_png" y="0" horizontalCenter="0" visible="false" name="mask"/>
+		<e:Image source="s_first_double_png" y="-6" visible="false" name="imgDouble" x="-3"/>
+		<e:Image source="active_sign_had_got_png" y="70" visible="false" scaleX="1.1" scaleY="1.1" name="imgGot" x="53"/>
+	</e:Group>
+	<e:Group y="228" width="127" height="144" name="dayGroup4" x="27">
+		<e:Image source="active_sign_bg_png"/>
+		<e:Label y="83" textColor="0x583C26" text="第四天" fontFamily="微软雅黑" bold="true" size="18" x="37"/>
+		<e:Label y="117" textColor="0xF4E7D2" horizontalCenter="0.5" text="奖励物品名字" fontFamily="微软雅黑" bold="true" size="16" name="name"/>
+		<ns1:WeaponIcon skinName="WeaponIconSkin" horizontalCenter="0.5" verticalCenter="-24" name="icon" xmlns:ns1="*"/>
+		<e:Label strokeColor="0x583C26" y="58" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" textAlign="right" bold="true" right="37" stroke="2" size="16" name="awardNum"/>
+		<e:Image source="active_sign_mask_png" y="0" horizontalCenter="0" visible="false" name="mask"/>
+		<e:Image source="s_first_double_png" y="-6" visible="false" name="imgDouble" x="-3"/>
+		<e:Image source="active_sign_had_got_png" y="70" visible="false" scaleX="1.1" scaleY="1.1" name="imgGot" x="53"/>
+	</e:Group>
+	<e:Group y="228" width="127" height="144" name="dayGroup5" x="177">
+		<e:Image source="active_sign_bg_png"/>
+		<e:Label y="83" textColor="0x583C26" text="第五天" fontFamily="微软雅黑" bold="true" size="18" x="37"/>
+		<e:Label y="117" textColor="0xF4E7D2" horizontalCenter="0.5" text="奖励物品名字" fontFamily="微软雅黑" bold="true" size="16" name="name"/>
+		<ns1:WeaponIcon skinName="WeaponIconSkin" horizontalCenter="0.5" verticalCenter="-24" name="icon" xmlns:ns1="*"/>
+		<e:Label strokeColor="0x583C26" y="58" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" textAlign="right" bold="true" right="37" stroke="2" size="16" name="awardNum"/>
+		<e:Image source="active_sign_mask_png" y="0" horizontalCenter="0" visible="false" name="mask"/>
+		<e:Image source="s_first_double_png" y="-6" visible="false" name="imgDouble" x="-3"/>
+		<e:Image source="active_sign_had_got_png" y="70" visible="false" scaleX="1.1" scaleY="1.1" name="imgGot" x="53"/>
+	</e:Group>
+	<e:Group y="228" width="127" height="144" name="dayGroup6" x="327">
+		<e:Image source="active_sign_bg_png"/>
+		<e:Label y="83" textColor="0x583C26" text="第六天" fontFamily="微软雅黑" bold="true" size="18" x="37"/>
+		<e:Label y="117" textColor="0xF4E7D2" horizontalCenter="0.5" text="奖励物品名字" fontFamily="微软雅黑" bold="true" size="16" name="name"/>
+		<ns1:WeaponIcon skinName="WeaponIconSkin" horizontalCenter="0.5" verticalCenter="-24" name="icon"/>
+		<e:Label strokeColor="0x583C26" y="58" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" textAlign="right" bold="true" right="37" stroke="2" size="16" name="awardNum"/>
+		<e:Image source="active_sign_mask_png" y="0" horizontalCenter="0" visible="false" name="mask"/>
+		<e:Image source="s_first_double_png" y="-6" visible="false" name="imgDouble" x="-3"/>
+		<e:Image source="active_sign_had_got_png" y="70" visible="false" scaleX="1.1" scaleY="1.1" name="imgGot" x="53"/>
+	</e:Group>
+	<e:Group y="378" width="127" height="144" name="dayGroup7" x="27">
+		<e:Image source="active_sign_bg_png"/>
+		<e:Label y="83" textColor="0x583C26" text="第七天" fontFamily="微软雅黑" bold="true" size="18" x="37"/>
+		<e:Label y="117" textColor="0xF4E7D2" horizontalCenter="0.5" text="奖励物品名字" fontFamily="微软雅黑" bold="true" size="16" name="name"/>
+		<ns1:WeaponIcon skinName="WeaponIconSkin" horizontalCenter="0.5" verticalCenter="-24" name="icon" xmlns:ns1="*"/>
+		<e:Label strokeColor="0x583C26" y="58" textColor="0xF4E7D2" text="12" fontFamily="微软雅黑" textAlign="right" bold="true" right="37" stroke="2" size="16" name="awardNum"/>
+		<e:Image source="active_sign_mask_png" y="0" horizontalCenter="0" visible="false" name="mask"/>
+		<e:Image source="s_first_double_png" y="-6" visible="false" name="imgDouble" x="-3"/>
+		<e:Image source="active_sign_had_got_png" y="70" visible="false" scaleX="1.1" scaleY="1.1" name="imgGot" x="53"/>
+	</e:Group>
+</e:Skin>

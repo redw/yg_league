@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FriendGetGiftRendererSkin" width="400" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,37,6,11" x="0"/>
+	<e:Image source="friend_invite_head_png" x="28" verticalCenter="0" width="55" height="55"/>
+	<e:Image source="friend_gift_sign_png"/>
+	<e:Label id="lblName" y="7" textColor="0x5F3A1B" text="名字" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="18" x="93"/>
+	<e:Label id="lblLuck" y="30" textColor="0xAA5432" text="缘分：500" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="16" x="93"/>
+	<e:Label id="lblTime" y="50" text="201612/24 22:33:44" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="16" x="93" textColor="0x8F6B51"/>
+	<e:Button x="286" y="13" label="领 取" skinName="YellowButtonSkin" id="btnGet"/>
+	<e:Image source="active_had_got_png" verticalCenter="0" x="288" id="imgGot" y="10"/>
+
+</e:Skin>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SevenDayRendererSkin" width="440" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_cell_png" width="100%" y="0" x="0" height="73" scale9Grid="21,23,6,26"/>
+	<e:Label id="lblName" text="奖励条件" y="26" fontFamily="微软雅黑" size="16" bold="true" textColor="0x583C26" x="78"/>
+	<e:Group x="10" width="64" height="64" name="awardGroup1" verticalCenter="-1.5">
+		<ns1:WeaponIcon id="awardIcon" x="0" y="0" skinName="WeaponIconSkin"/>
+		<e:Label id="lblNum" text="*3" y="41" fontFamily="微软雅黑" size="18" bold="true" right="5" name="awardNum" stroke="2" strokeColor="0x583C26"/>
+	</e:Group>
+	<e:Button id="btnGet" label="领 取" x="329" skinName="YellowHighButtonSkin" verticalCenter="0"/>
+	<e:Image id="imgGot" source="active_had_got_png" x="328" verticalCenter="0"/>
+	<e:Button x="327" label="前 往" skinName="GreenHighButtonSkin" id="btnGo" verticalCenter="0"/>
+	<e:Label id="lblTimes" stroke="2" textColor="0xFFFFFF" text="(999/999)" fontFamily="微软雅黑" bold="true" size="14" x="161" y="20" verticalCenter="-1.5" strokeColor="0xA35A32" textAlign="center"/>
+</e:Skin>

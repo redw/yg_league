@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RankRendererSkin" width="426" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="imgBg" verticalCenter="0" width="100%" horizontalCenter="0" scale9Grid="13,8,20,50" source="common_cell_png"/>
+	<e:Image id="imgRank" source="pvp_rank_1_png" verticalCenter="0"/>
+	<e:Image id="imgHead" x="81" y="13" width="50" height="50" source="common_head_png"/>
+	<e:Label y="18" textColor="0x583C26" text="名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="150"/>
+	<e:Label id="lblType" y="43" text="积分：" fontFamily="微软雅黑" bold="true" size="18" textColor="0xA74E2B" right="175"/>
+	<e:Label id="lblScore" y="44" text="9999" fontFamily="微软雅黑" bold="true" size="18" x="249" textColor="0xA74E2B"/>
+	<e:Button id="btnShow" label="法宝一览" x="342" skinName="YellowHighButtonSkin" verticalCenter="0.5" visible="false"/>
+	<e:Label id="lblRank" textColor="0xFFFDEC" horizontalCenter="-177" text="20" fontFamily="微软雅黑" stroke="2" bold="true" verticalCenter="-2.5" size="24" strokeColor="0x683615" x="20" y="10"/>
+</e:Skin>

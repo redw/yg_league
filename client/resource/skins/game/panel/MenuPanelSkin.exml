@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MenuPanelSkin" width="480" height="77" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group id="contentGroup" height="100%" width="100%" x="0" y="0">
+		<ns1:SimpleButton x="-3" y="0" name="btn1" source="menu_xunshan_png"/>
+		<ns1:SimpleButton y="0" x="74" name="btn2" source="menu_friend_close_png"/>
+		<ns1:SimpleButton y="0" x="151" name="btn3" source="menu_mijing_close_png"/>
+		<ns1:SimpleButton y="0" x="228" name="btn4" source="menu_lingshou_close_png"/>
+		<ns1:SimpleButton y="0" x="305" name="btn5" source="menu_doufa_close_png"/>
+		<ns1:SimpleButton y="0" x="382" name="btn6" source="menu_shop_close_png"/>
+		<e:Image id="secretLock" source="deblocking_png" x="168" y="3" scaleX="0.7" scaleY="0.7" touchEnabled="false" visible="false"/>
+		<e:Image id="weaponLock" source="deblocking_png" y="3" scaleY="0.7" x="245" scaleX="0.7" touchEnabled="false" visible="false"/>
+		<e:Image id="pvpLock" source="deblocking_png" y="3" scaleY="0.7" scaleX="0.7" x="323" touchEnabled="false" visible="false"/>
+		<e:Image id="moneyLock" source="deblocking_png" y="3" x="13" scaleX="0.7" scaleY="0.7" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

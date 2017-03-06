@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleFormationRendererSkin" width="454" height="117" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="117" width="104" x="59" name="group1" rotation="0" anchorOffsetX="49" anchorOffsetY="60" y="60">
+		<e:Image source="role_battle_select_png" bottom="0" name="select" horizontalCenter="0"/>
+		<e:Image name="bg" source="role_unbattle_bg_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image y="85" x="7" name="atkType" source="job_1_png"/>
+		<e:Label y="91" textColor="0x583C26" text="龙太子" fontFamily="微软雅黑" bold="true" size="15" horizontalCenter="11.5" name="name"/>
+		<ns1:RoleIcon y="14" skinName="RoleIconSkin" horizontalCenter="0" name="roleIcon"/>
+		<e:BitmapLabel y="7" text="+1000" font="gold_number_fnt" letterSpacing="-10" name="strength" right="-8.5" scaleX="0.9" scaleY="0.9"/>
+	</e:Group>
+	<e:Group y="60" anchorOffsetX="49" width="104" rotation="0" height="117" name="group2" anchorOffsetY="60" x="169">
+		<e:Image source="role_battle_select_png" bottom="0" name="select" horizontalCenter="0"/>
+		<e:Image source="role_unbattle_bg_png" verticalCenter="0" name="bg" horizontalCenter="0"/>
+		<e:Image y="85" name="atkType" x="7" source="job_1_png"/>
+		<e:Label y="91" textColor="0x583C26" text="龙太子" fontFamily="微软雅黑" horizontalCenter="11.5" bold="true" size="15" name="name"/>
+		<ns1:RoleIcon y="14" name="roleIcon" skinName="RoleIconSkin" horizontalCenter="0" xmlns:ns1="*"/>
+		<e:BitmapLabel y="7" text="+1000" font="gold_number_fnt" letterSpacing="-10" name="strength" scaleX="0.9" scaleY="0.9" right="-7.5"/>
+	</e:Group>
+	<e:Group y="60" anchorOffsetX="49" width="104" rotation="0" height="117" name="group3" anchorOffsetY="60" x="279">
+		<e:Image source="role_battle_select_png" bottom="0" name="select" horizontalCenter="0"/>
+		<e:Image source="role_unbattle_bg_png" verticalCenter="0" name="bg" horizontalCenter="0"/>
+		<e:Image source="job_1_png" y="85" name="atkType" x="7"/>
+		<e:Label y="91" textColor="0x583C26" text="龙太子" fontFamily="微软雅黑" horizontalCenter="11.5" bold="true" size="15" name="name"/>
+		<ns1:RoleIcon y="14" name="roleIcon" skinName="RoleIconSkin" horizontalCenter="0" xmlns:ns1="*"/>
+		<e:BitmapLabel y="7" text="+1000" font="gold_number_fnt" letterSpacing="-10" name="strength" scaleY="0.9" scaleX="0.9" right="-8.5"/>
+	</e:Group>
+	<e:Group y="60" anchorOffsetX="49" width="104" rotation="0" height="117" name="group4" anchorOffsetY="60" x="389">
+		<e:Image source="role_battle_select_png" bottom="0" name="select" horizontalCenter="0"/>
+		<e:Image source="role_unbattle_bg_png" verticalCenter="0" name="bg" horizontalCenter="0"/>
+		<e:Image source="job_1_png" y="85" name="atkType" x="7"/>
+		<e:Label y="91" textColor="0x583C26" text="龙太子" fontFamily="微软雅黑" horizontalCenter="11.5" bold="true" size="15" name="name"/>
+		<ns1:RoleIcon y="14" name="roleIcon" skinName="RoleIconSkin" horizontalCenter="0" xmlns:ns1="*"/>
+		<e:BitmapLabel y="7" text="+1000" font="gold_number_fnt" letterSpacing="-10" name="strength" scaleX="0.9" scaleY="0.9" right="-7"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActLimitWordRendererSkin" width="454" height="100" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="common_cell_png" y="0" width="100%" height="100" x="0" scale9Grid="21,30,8,19"/>
+	<e:Label y="11" textColor="0x926E56" text="奖励：" fontFamily="微软雅黑" bold="true" left="23" size="16" x="30"/>
+	<e:Label y="12" textColor="0x926E56" text="x100" fontFamily="微软雅黑" id="lblAwardNum" bold="true" left="100" size="16" x="40"/>
+	<e:Image source="reward_5_s_png" y="7" id="imgType" width="24" height="24" x="70"/>
+	<e:Button x="349" skinName="YellowHighButtonSkin" label="兑换奖励" id="btnGet" verticalCenter="0"/>
+	<e:Group height="64" width="64" x="19" y="36" name="group0" scaleX="0.85" scaleY="0.85">
+		<e:Image source="role_icon_3_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image verticalCenter="0" horizontalCenter="0" name="word" source="piece_1_png"/>
+		<e:Label bold="true" textColor="0xFFFCEB" size="14" text="x100" fontFamily="微软雅黑" stroke="2" strokeColor="0x5C2C08" name="num" right="5" bottom="3"/>
+	</e:Group>
+	<e:Group y="36" scaleX="0.85" width="64" scaleY="0.85" height="64" name="group1" x="79">
+		<e:Image horizontalCenter="0" verticalCenter="0" x="10" y="10" source="role_icon_3_png"/>
+		<e:Image source="piece_1_png" horizontalCenter="0" verticalCenter="0" name="word"/>
+		<e:Label bold="true" strokeColor="0x5C2C08" stroke="2" text="x100" fontFamily="微软雅黑" right="5" bottom="3" textColor="0xFFFCEB" size="14" name="num"/>
+	</e:Group>
+	<e:Group y="36" scaleX="0.85" width="64" scaleY="0.85" height="64" name="group2" x="139">
+		<e:Image source="role_icon_3_png" y="20" horizontalCenter="0" verticalCenter="0" x="20"/>
+		<e:Image source="piece_1_png" horizontalCenter="0" verticalCenter="0" name="word"/>
+		<e:Label right="5" strokeColor="0x5C2C08" stroke="2" text="x100" fontFamily="微软雅黑" bold="true" bottom="3" textColor="0xFFFCEB" size="14" name="num"/>
+	</e:Group>
+	<e:Group y="35" scaleX="0.85" width="64" scaleY="0.85" height="64" name="group3" x="199">
+		<e:Image source="role_icon_3_png" y="30" horizontalCenter="0" x="30" verticalCenter="0"/>
+		<e:Image source="piece_1_png" horizontalCenter="0" verticalCenter="0" name="word"/>
+		<e:Label bold="true" strokeColor="0x5C2C08" stroke="2" text="x100" fontFamily="微软雅黑" right="5" bottom="3" textColor="0xFFFCEB" size="14" name="num"/>
+	</e:Group>
+	<e:Group y="35" scaleX="0.85" width="64" scaleY="0.85" height="64" name="group4" x="259">
+		<e:Image source="role_icon_3_png" y="40" horizontalCenter="0" verticalCenter="0" x="40"/>
+		<e:Image source="piece_1_png" horizontalCenter="0" verticalCenter="0" name="word"/>
+		<e:Label right="5" strokeColor="0x5C2C08" stroke="2" text="x100" fontFamily="微软雅黑" bold="true" bottom="3" textColor="0xFFFCEB" size="14" name="num"/>
+	</e:Group>
+</e:Skin>

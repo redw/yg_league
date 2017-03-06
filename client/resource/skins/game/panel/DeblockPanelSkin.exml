@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="DeblockPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="contantGroup" height="100%" width="100%" x="0" y="0">
+		<e:Image id="imgSecret" x="151" bottom="0" source="deblocking_secret_png"/>
+		<e:Image id="imgMoney" bottom="3" x="-2" y="10" source="deblocking_xunshan_png"/>
+		<e:Image id="imgWeapon" x="228" bottom="0" source="deblocking_weapon_png"/>
+		<e:Image id="imgPVP" source="deblocking_pvp_png" x="305" bottom="0"/>
+		<e:Image source="deblocking_png" y="724" x="203" scaleX="0.7" scaleY="0.7" touchEnabled="false" id="secretLock" alpha="48" anchorOffsetX="50.5"/>
+		<e:Image id="weaponLock" source="deblocking_png" y="724" touchEnabled="false" scaleX="0.7" anchorOffsetX="50.5" scaleY="0.7" alpha="48" x="282"/>
+		<e:Image id="pvpLock" source="deblocking_png" x="359" y="724" scaleY="0.7" scaleX="0.7" anchorOffsetX="50.5" touchEnabled="false" alpha="48"/>
+		<e:Image id="imgLight" source="deblocking_light_png" y="236" rotation="0" x="207" visible="false"/>
+		<e:Image source="deblocking_png" y="726" x="55" scaleX="0.7" scaleY="0.7" touchEnabled="false" id="moneyLock" alpha="48" anchorOffsetX="50.5"/>
+	</e:Group>
+</e:Skin>

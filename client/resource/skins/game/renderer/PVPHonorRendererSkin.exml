@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPHonorRendererSkin" width="460" height="70" xmlns:e="http://ns.egret.com/eui">
+	<e:Image verticalCenter="0" horizontalCenter="0" width="100%" source="common_cell_png" scale9Grid="19,8,12,50"/>
+	<e:Image source="common_head_png" y="10" x="152" width="50" height="50" id="imgHead"/>
+	<e:Image source="pvp_rank_1_png" verticalCenter="0" x="0" y="10"/>
+	<e:Label y="26" textColor="0xA74E2B" text="游戏玩家" fontFamily="微软雅黑" bold="true" left="255" size="18" id="lblName" x="10"/>
+	<e:Label verticalCenter="19" id="lblRank" text="第一届" fontFamily="微软雅黑" bold="true" stroke="2" strokeColor="0x683615" size="22" y="10" textColor="0xFFFF58" left="54"/>
+</e:Skin>

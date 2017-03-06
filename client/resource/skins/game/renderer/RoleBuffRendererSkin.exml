@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleBuffRendererSkin" width="422" height="64" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="imgIcon" x="3" y="7"/>
+	<e:Label id="lblDec" y="36" text="增加自己的攻击力:30%" fontFamily="微软雅黑" bold="true" size="16" x="70" textColor="0x583C26"/>
+	<e:Label id="lblExterAdd" y="36" text="(+18%)" fontFamily="微软雅黑" bold="true" size="16" x="262" textColor="0x2CA87B"/>
+	<e:Label id="lblOpenLv" y="10" text="Lv.25" fontFamily="微软雅黑" bold="true" size="16" x="70" textColor="0xA74E0D"/>
+	<e:Label id="lblOpen" y="10" textColor="0xA74E0D" text="激活" fontFamily="微软雅黑" bold="true" size="14" x="131"/>
+	<e:Image id="imgMask" source="role_mask_png" x="3" y="7"/>
+	<e:Image width="422" y="62" x="0" source="common_line_png"/>
+</e:Skin>

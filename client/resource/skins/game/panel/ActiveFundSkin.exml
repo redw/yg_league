@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveFundSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="active_gray_png" y="18" horizontalCenter="0.5" x="40"/>
+	<e:Image y="28" horizontalCenter="1.5" x="30" source="active_fund_title_png"/>
+	<e:Image source="fu_show_png" y="11" x="-25"/>
+	<e:Image source="fu_show_dec_png" x="202" y="88"/>
+	<e:Image source="bg_decorate_left_png" y="140"/>
+	<e:Image source="active_sign_down_png" scale9Grid="50,48,6,295" width="480" horizontalCenter="0" x="40" bottom="0"/>
+	<e:Button id="btnBuy" y="171" label="购 买" horizontalCenter="139.5" skinName="YellowButtonSkin" x="30"/>
+	<e:Scroller y="244" width="454" scrollPolicyH="off" height="368" horizontalCenter="0" x="20">
+		<e:List id="awardList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

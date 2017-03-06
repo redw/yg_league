@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActFundRendererSkin" width="454" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,8,6,44" x="0"/>
+	<e:Image id="imgIcon" source="achieve_icon_1_png" x="4" verticalCenter="0.5"/>
+	<e:Label id="lblAward" y="13" textColor="0x583C26" text="元宝 x200" fontFamily="微软雅黑" bold="true" size="18" x="90"/>
+	<e:Label y="42" textColor="0x926E56" text="通过" fontFamily="微软雅黑" bold="true" left="90" size="16" x="10"/>
+	<e:Label id="lblArea" y="42" text="1000关" fontFamily="微软雅黑" bold="true" size="16" textColor="0x39B986" horizontalCenter="-76"/>
+	<e:Label y="42" textColor="0x926E56" text="即可领取" fontFamily="微软雅黑" bold="true" left="180" size="16" x="20"/>
+	<e:Button id="btnGet" label="领 取" x="345" skinName="YellowHighButtonSkin" verticalCenter="0"/>
+	<e:Image source="active_had_got_png" x="342" id="imgGot" verticalCenter="0"/>
+</e:Skin>

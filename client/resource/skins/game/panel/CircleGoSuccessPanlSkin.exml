@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CircleGoSuccessPanlSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*">
+	<e:Image source="circle_white_png" horizontalCenter="0" bottom="0" id="imgWhite" x="10" y="10" visible="false"/>
+	<e:Group y="0" id="completeGroup" width="100%" height="100%" x="0">
+		<e:Image source="circle_point_png" y="49" name="star0" x="55"/>
+		<e:Image source="circle_point_png" y="112" name="star1" x="165"/>
+		<e:Image source="circle_point_png" y="78" name="star2" x="341"/>
+		<e:Image source="circle_point_png" y="201" name="star3" x="253"/>
+		<e:Image source="circle_point_png" y="186" name="star4" x="48"/>
+		<e:Image source="circle_point_png" y="452" name="star5" x="320"/>
+		<e:Image source="circle_point_png" y="414" name="star6" x="102"/>
+		<e:Image source="circle_point_png" y="349" name="star7" x="381"/>
+		<e:Image source="circle_point_png" y="551" name="star8" x="156"/>
+		<e:Image source="circle_point_png" y="331" name="star9" x="218"/>
+		<e:Image source="circle_point_png" y="469" name="star10" x="45"/>
+		<e:Image source="circle_point_png" y="603" name="star11" x="260"/>
+		<e:Image source="circle_point_png" y="534" name="star12" x="380"/>
+		<e:Image source="circle_point_png" y="418" name="star13" x="219"/>
+		<e:Image source="circle_point_png" y="294" name="star14" x="297"/>
+		<e:Image source="circle_point_png" y="293" name="star15" x="96"/>
+		<e:Image source="circle_point_png" y="633" name="star16" x="72"/>
+		<e:Image source="circle_point_png" y="199" name="star17" x="383"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SevenDayPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="seven_day_bg_png" x="0" y="0"/>
+	<e:Image source="seven_day_title_bg_png" y="0" horizontalCenter="0"/>
+	<e:Image source="seven_day_title_png" y="52" horizontalCenter="0"/>
+	<ns1:CoinShowPanel x="0" y="0" skinName="CoinShowPanelSkin" id="coinShow"/>
+	<e:ToggleButton id="togBtnDaily" label="每日福利" y="289" skinName="SevenDayTipSkin" horizontalCenter="-89.5"/>
+	<e:ToggleButton id="togBtnBuy" skinName="SevenDayTipSkin" y="289" label="半价抢购" horizontalCenter="90.5" x="10"/>
+	<e:Image source="active_sign_down_png" scale9Grid="50,48,6,295" horizontalCenter="0" width="480" x="40" bottom="80"/>
+	<e:Image y="152" width="450" height="102" horizontalCenter="0" source="seven_day_gray_bg_png" scale9Grid="8,9,92,46"/>
+	<e:Group id="btnGroup" y="156" horizontalCenter="0" width="440">
+		<ns1:SevenDayButton x="5" y="5" skinName="SevenDayButtonSkin" name="btnDay1"/>
+		<ns1:SevenDayButton skinName="SevenDayButtonSkin" y="5" x="115" name="btnDay2"/>
+		<ns1:SevenDayButton skinName="SevenDayButtonSkin" y="5" x="225" name="btnDay3"/>
+		<ns1:SevenDayButton skinName="SevenDayButtonSkin" y="5" x="335" name="btnDay4"/>
+		<ns1:SevenDayButton skinName="SevenDayButtonSkin" y="50" x="5" name="btnDay5"/>
+		<ns1:SevenDayButton skinName="SevenDayButtonSkin" y="50" x="115" name="btnDay6"/>
+		<ns1:SevenDayButton skinName="SevenDayButtonSkin" y="50" x="225" name="btnDay7"/>
+		<e:Image id="imgSevenSelect" source="seven_day_select_png" x="3" y="3" touchEnabled="false"/>
+	</e:Group>
+	<e:Label y="102" textColor="0xFFDF7F" text="活动到期" fontFamily="微软雅黑" bold="true" stroke="2" size="16" strokeColor="0x9A4C13" x="38"/>
+	<e:Label id="lblEndTime" y="122" textColor="0xFFDF7F" text="2017年1月1日" fontFamily="微软雅黑" bold="true" stroke="2" size="16" strokeColor="0x9A4C13" horizontalCenter="-170"/>
+	<e:Label y="102" textColor="0xFFDF7F" text="结束领取" fontFamily="微软雅黑" bold="true" stroke="2" size="16" strokeColor="0x9A4C13" x="380"/>
+	<e:Label id="lblEndGetTime" y="122" textColor="0xFFDF7F" horizontalCenter="170" fontFamily="微软雅黑" bold="true" stroke="2" size="16" text="2017年1月1日" strokeColor="0x9A4C13" x="10"/>
+	<e:Scroller id="dayScroll" y="340" width="454" scrollPolicyH="off" height="450" horizontalCenter="0">
+		<e:List id="dayList" width="100%" height="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Group id="discountGroup" y="513" horizontalCenter="0">
+		<e:Image source="seven_day_discount_table_png" y="0" horizontalCenter="5"/>
+		<e:Label text="原价" x="12" y="110" fontFamily="微软雅黑" size="18" bold="true" textColor="0xF0C8A3"/>
+		<e:Label id="lblName" y="-31" text="货品名字" fontFamily="微软雅黑" bold="true" size="18" horizontalCenter="0" textColor="0xFFFFFF"/>
+		<e:Image x="49" y="105" source="reward_3_s_png"/>
+		<e:Label id="lblOldCost" text="4100" x="81" y="110" size="16" fontFamily="微软雅黑" bold="true" stroke="2" strokeColor="0x4C040F"/>
+		<e:Label y="110" textColor="0xF0C8A3" text="现价" fontFamily="微软雅黑" bold="true" size="18" x="152"/>
+		<e:Image y="105" x="189" source="reward_3_s_png"/>
+		<e:Label id="lblNowCost" y="110" text="4100" fontFamily="微软雅黑" x="217" bold="true" size="16" stroke="2" strokeColor="0x552109" textColor="0xF1D27A"/>
+		<e:Image source="seven_day_discount_png" x="0" y="110"/>
+		<e:Button id="btnBuy" label="买买买" y="146" horizontalCenter="0.5" skinName="YellowButtonSkin"/>
+		<e:Image id="imgBox" source="sevenDay_box_1_png" x="74" y="-11"/>
+		<e:Image source="common_had_buy_png" y="31" id="imgHadBuy" horizontalCenter="72.5"/>
+	</e:Group>
+	<ns1:SimpleButton source="close_png" y="-5" x="425" id="btnClose"/>
+</e:Skin>

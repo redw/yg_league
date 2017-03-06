@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="XunShanRendererSkin" width="454" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:n="*">
+	<e:Group id="contentGroup" height="100%" width="100%" x="0" y="0">
+		<e:Image id="imgCellBg" source="common_cell_png" width="100%" x="0" y="0" scale9Grid="21,14,7,36"/>
+		<e:Image source="task_bar_bg_png" x="93" y="41" scale9Grid="29,2,181,14"/>
+		<e:ProgressBar id="progressBar" x="95" y="41" skinName="TaskProgressSkin" direction="ltr" slideDuration="0"/>
+		<e:Image x="90" y="38" source="reward_1_s_png"/>
+		<e:Label id="lblName" y="10" textColor="0x6B4F38" text="巡山名称" fontFamily="微软雅黑" bold="true" size="18" x="92"/>
+		<e:Label id="lblUpGold" y="45" text="123" fontFamily="微软雅黑" bold="true" size="14" x="117" textColor="0xFFEDCF" stroke="2" strokeColor="0xA35A32"/>
+		<e:Label id="lblTime" y="45" text="00:00" fontFamily="微软雅黑" bold="true" size="14" right="129" textColor="0xFFEDCF" strokeColor="0xA35A32" stroke="2"/>
+		<e:Group id="headGroup" height="62" width="72" x="5" verticalCenter="-0.5">
+			<e:Image id="imgIcon" touchEnabled="false" width="72" height="62" verticalCenter="0" horizontalCenter="0"/>
+			<e:Group id="touchGroup" height="18" width="76" touchEnabled="false" touchChildren="false" x="1" y="44">
+				<e:Image source="task_gray_png" touchEnabled="false" verticalCenter="1" horizontalCenter="0"/>
+				<e:Image id="imgLabel" x="37" y="10" anchorOffsetY="8" anchorOffsetX="30.5" source="task_click_png"/>
+			</e:Group>
+		</e:Group>
+		<e:Label id="lblLv" y="2" text="Lv.123" fontFamily="微软雅黑" bold="true" size="14" horizontalCenter="-184" stroke="2" strokeColor="0x332113" textColor="0xFFF4D8"/>
+	</e:Group>
+	<n:YellowCoinButton id="btnUp" label="123" x="350" y="6" skinName="YellowCoinButtonSkin"/>
+	<e:Group id="btnUpGroup" x="130" y="6" width="206" visible="false">
+		<n:YellowCoinButton id="btnUpThree" label="123" skinName="YellowCoinButtonSkin" x="0"/>
+		<n:YellowCoinButton id="btnUpTwo" label="123" skinName="YellowCoinButtonSkin" x="110" y="0"/>
+	</e:Group>
+</e:Skin>

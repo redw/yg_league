@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPBeforePanelSkin" width="480" height="282" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="main_bg_png" y="0" horizontalCenter="0" scale9Grid="209,112,211,9" width="100%" height="100%"/>
+	<ns1:CoinShowPanel skinName="CoinShowPanelSkin" id="coinShow" horizontalCenter="0"/>
+	<e:Group height="73" width="454" x="15" y="114">
+		<e:Image source="common_cell_png" scale9Grid="21,14,7,36" width="454" verticalCenter="0" horizontalCenter="0"/>
+		<e:Label y="9" textColor="0x6B4F38" text="竞技" fontFamily="微软雅黑" bold="true" size="18" x="93"/>
+		<e:Label y="39" textColor="0x926E56" text="只比拼伙伴星级赋予的属性加成" fontFamily="微软雅黑" bold="true" size="15" x="93"/>
+		<e:Button id="btnIn" label="入 场" x="346" y="8" skinName="YellowHighButtonSkin"/>
+		<e:Image source="pvp_icon_png" x="14" y="7"/>
+	</e:Group>
+	<e:Group width="454" y="188" height="73" x="15">
+		<e:Image source="common_cell_png" scale9Grid="21,14,7,36" width="454" verticalCenter="0" horizontalCenter="0"/>
+		<e:Label y="9" textColor="0x6B4F38" text="洞天" fontFamily="微软雅黑" bold="true" size="18" x="93"/>
+		<e:Label y="39" textColor="0x926E56" text="升级建筑提升属性" fontFamily="微软雅黑" bold="true" size="15" x="93"/>
+		<e:Button id="btnInMine" x="346" y="8" label="进 入" skinName="YellowHighButtonSkin"/>
+		<e:Image x="5" source="dongtian_icon_png" y="5"/>
+	</e:Group>
+</e:Skin>

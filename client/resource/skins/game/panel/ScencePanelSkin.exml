@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BattlePanel" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group id="contentGroup" height="390" width="480" x="0" bottom="410">
+	</e:Group>
+	<e:Group id="commonGroup" height="30" width="480" x="0" bottom="342">
+		<e:Image source="guide_gray_png" width="480" height="30" alpha="0.6" y="0" x="0"/>
+		<e:Label id="lblMove" text="标签标签标签标签标签标签标签标签标签标签标签" fontFamily="微软雅黑" size="16" bold="true" x="0" textColor="0xECECAB" y="7"/>
+	</e:Group>
+	<e:Group id="newGroup" width="338" height="30" x="30" bottom="360">
+		<e:Image y="-56" source="top_help_png" scale9Grid="32,13,30,79" width="480" x="-30"/>
+		<e:Label id="lblName" y="22" text="100层开启" fontFamily="微软雅黑" bold="true" size="14" textColor="0xFFFFFF" stroke="1" strokeColor="0x962112" horizontalCenter="223.5"/>
+	</e:Group>
+	<e:Scroller id="newScr" width="330" height="30" x="30" touchEnabled="false" bottom="360">
+		<e:Group>
+			<e:Label id="lblMoveNew" text="标签标签标签标签标签标签标签标签标签" fontFamily="微软雅黑" bold="true" size="16" y="7" textColor="0xFFD822"/>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

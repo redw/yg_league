@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPRankSkin" width="480" height="580" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg1_png" verticalCenter="0" horizontalCenter="0" width="480" height="570" scale9Grid="10,9,31,14" x="10" y="10"/>
+	<e:Image source="task_bg_png" horizontalCenter="0.5" y="10" height="50" x="20"/>
+	<e:Image source="line_png" horizontalCenter="0" y="59" x="20"/>
+	<e:Label horizontalCenter="0.5" y="22" textColor="0x583C26" text="排行榜" fontFamily="微软雅黑" bold="true" size="22" x="10"/>
+	<e:Scroller horizontalCenter="0" y="64" width="460" height="400" scrollPolicyH="off" x="10">
+		<e:List id="rankList" width="100%" height="516">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Image y="456" source="rank_bottom_png" horizontalCenter="0"/>
+	<e:Group height="71" width="450" y="486" horizontalCenter="0">
+		<e:Image verticalCenter="0" horizontalCenter="0" width="100%" id="imgBg" source="rank_cell_mine_png" scale9Grid="15,8,19,50"/>
+		<e:Image id="imgRank" verticalCenter="0.5" x="0" y="10" source="pvp_rank_1_png"/>
+		<e:Image source="common_head_png" y="10" x="87" width="50" height="50" id="imgHead"/>
+		<e:Label verticalCenter="0" id="lblRank" textColor="0xFFFFEC" text="20" fontFamily="微软雅黑" horizontalCenter="-175.5" bold="true" stroke="2" strokeColor="0x683615" size="22" x="20" y="10"/>
+		<e:Label y="26" textColor="0xA74E2B" text="游戏玩家" fontFamily="微软雅黑" bold="true" left="155" size="18" id="lblName" x="10"/>
+		<e:Image source="pvp_level_1_png" id="imgMyLevel" x="304" verticalCenter="0"/>
+		<e:Image source="pvp_level_star_png" x="375" id="myStar1" verticalCenter="0.5"/>
+		<e:Image source="pvp_level_star_png" id="myStar2" x="395" verticalCenter="0.5"/>
+		<e:Image source="pvp_level_star_png" id="myStar3" x="415" verticalCenter="0.5"/>
+	</e:Group>
+	<e:Label id="lblNoRank" textColor="0xFFFFFF" text="目前没有人上榜哟！" fontFamily="微软雅黑" textAlign="center" bold="true" stroke="2" strokeColor="0xA35A32" size="26" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

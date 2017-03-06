@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RankPanelSkin" width="480" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_bg_add_png" y="96" width="460" height="563" scale9Grid="70,57,20,6" horizontalCenter="-2"/>
+	<e:Image source="rank_top_png" y="-72" right="0"/>
+	<e:Image id="imgAll" source="rank_all_png" y="85" horizontalCenter="-113.5"/>
+	<e:Image id="imgPvp" source="rank_pvp_png" y="85" horizontalCenter="108.5"/>
+	<e:Scroller y="128" height="429" width="426" scrollPolicyH="off" horizontalCenter="0">
+		<e:List id="rankList" width="100%">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Image scale9Grid="9,8,32,15" width="472" horizontalCenter="0" source="rank_bottom_png" bottom="0"/>
+	<e:Group height="73" width="426" y="587" horizontalCenter="0">
+		<e:Image horizontalCenter="0" scale9Grid="13,8,20,50" width="100%" verticalCenter="0" id="imgBg" source="rank_cell_mine_png"/>
+		<e:Image id="imgRank" x="-3" verticalCenter="-2.5" source="pvp_rank_1_png"/>
+		<e:Image source="common_head_png" x="83" width="50" height="50" id="imgHead" y="7"/>
+		<e:Label y="13" textColor="0x583C26" text="名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="158"/>
+		<e:Label bold="true" y="35" textColor="0xA74E2B" text="积分：" fontFamily="微软雅黑" right="92" size="18" id="lblType" x="10"/>
+		<e:Label y="35" textColor="0xA74E2B" text="9999" fontFamily="微软雅黑" id="lblScore" bold="true" size="18" x="333"/>
+		<e:Label textColor="0xFFFDEC" text="20" fontFamily="微软雅黑" bold="true" size="24" x="30" y="20" horizontalCenter="-174" stroke="2" verticalCenter="-2.5" strokeColor="0x683615" id="lblRank"/>
+	</e:Group>
+	<e:Label id="lblNoRank" textColor="0xFFFFFF" text="目前没有人上榜哟！" fontFamily="微软雅黑" strokeColor="0xA35A32" bold="true" stroke="2" size="26" y="322" textAlign="center" horizontalCenter="0"/>
+	<ns1:SimpleButton source="close_png" y="0" x="425" id="btnClose"/>
+	<e:Image source="rank_title_png" y="1" horizontalCenter="0"/>
+</e:Skin>

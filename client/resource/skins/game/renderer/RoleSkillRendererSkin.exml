@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleSkillRendererSkin" width="422" height="64" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="contentGroup" height="100%" width="100%" x="0" y="0">
+		<e:Image id="imgTouchShow" source="common_cell_png" width="100%" y="0" scale9Grid="21,8,6,44" x="0" height="100%"/>
+		<e:Image id="imgIcon" y="7" x="3"/>
+		<e:Label id="lblName" y="8" text="主动技能" fontFamily="微软雅黑" bold="true" size="16" x="61" textColor="0x583C26"/>
+		<e:Label id="lblDec" y="30" textColor="0x583C26" text="“金色旋风”技能得到进化，对物攻最高的敌人造成超高的物理伤害，并使其伤害输出降为0，持续2回合" fontFamily="微软雅黑" x="58" bold="true" size="14" width="360" height="30" verticalAlign="middle"/>
+		<e:Image id="imgStar" source="common_star_png" y="2" x="344"/>
+		<e:Label y="10" textColor="0x583C26" text="12" fontFamily="微软雅黑" bold="true" size="14" horizontalCenter="147" id="lblStar" x="10"/>
+		<e:Label id="lblOpen" y="9" textColor="0x583C26" text="激活" fontFamily="微软雅黑" bold="true" size="16" x="378"/>
+		<e:Image id="imgMask" source="role_mask_png" y="0" x="0" width="100%" height="100%" scale9Grid="6,6,38,38" alpha="0.8" visible="false"/>
+		<e:Image width="422" x="0" source="common_line_png" y="61"/>
+	</e:Group>
+</e:Skin>

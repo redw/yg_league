@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveLimitFestivalSkin" width="480" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Label y="52" strokeColor="0x985006" size="15" text="活动时间" fontFamily="微软雅黑" id="lblActTime" bold="true" textColor="0xFFF1E6" stroke="2" horizontalCenter="0" x="30"/>
+	<e:Label y="592" textColor="0xE9E043" size="18" horizontalCenter="-12" fontFamily="微软雅黑" id="lblEndTime" bold="true" strokeColor="0x985006" stroke="2" text="截止时间" x="40"/>
+	<e:Image y="5" horizontalCenter="0.5" x="20" source="limit_festival_title_png"/>
+	<e:Image source="limit_festival_pos1_png" y="69" horizontalCenter="0"/>
+	<e:Image source="limit_festival_pos2_png" y="242" horizontalCenter="0"/>
+	<e:Image source="limit_festival_pos3_png" y="414" horizontalCenter="0"/>
+	<ns1:SimpleButton id="btnBuy1" y="132" source="limit_festival_buy_png" horizontalCenter="0"/>
+	<ns1:SimpleButton id="btnBuy2" source="limit_festival_buy_png" y="304" horizontalCenter="0" x="10"/>
+	<ns1:SimpleButton id="btnBuy3" y="477" horizontalCenter="0" x="20" source="limit_festival_buy_png"/>
+	<e:Image id="imgBuy1" x="53" y="171" source="limit_festival_buy_pos1_png"/>
+	<e:Image id="imgBuy2" y="347" x="53" source="limit_festival_buy_pos2_png"/>
+	<e:Image id="imgBuy3" y="518" x="53" source="limit_festival_buy_pos3_png"/>
+</e:Skin>

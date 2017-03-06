@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RoleChangeRendererSkin" width="440" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,8,6,44" x="0"/>
+	<e:Image x="10" y="3" id="imgIcon"/>
+	<e:Label y="8" textColor="0x583C26" text="回收悟空元神" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="92"/>
+	<e:Label id="lblHadNum" y="9" text="（拥有5000）" fontFamily="微软雅黑" x="196" bold="true" size="16" textColor="0xA74E2B"/>
+	<e:Label id="lblType" y="38" textColor="0xA74E2B" text="获得：" fontFamily="微软雅黑" bold="true" size="18" x="186"/>
+	<e:Label id="lblTypeNum" y="40" textColor="0xA74E2B" text="5000" fontFamily="微软雅黑" bold="true" size="18" x="264"/>
+	<e:Image id="imgType" source="reward_1_s_png" x="235" y="34" width="26" height="26"/>
+	<ns1:YellowTwoCoinBtn id="btnChange" label="按钮" x="332" skinName="YellowTwoCoinBtnSkin" verticalCenter="0"/>
+</e:Skin>

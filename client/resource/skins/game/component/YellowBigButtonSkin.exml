@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="YellowBigButtonSkin" states="up,down,disabled" width="133" height="72"
+        xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="yellow_button_png" source.down="yellow_button_touch_png" source.disabled="yellow_button_gray_png"/>
+	<e:Label id="labelDisplay" size="19" bold="true" fontFamily="微软雅黑" textColor="0xFFFFFF" textAlign="center" text="文 本" stroke="2" strokeColor="0xA85F37" strokeColor.disabled="0x816758" textColor.disabled="0xFFFCED" verticalCenter="0" horizontalCenter="0"/>
+
+	</e:Skin>

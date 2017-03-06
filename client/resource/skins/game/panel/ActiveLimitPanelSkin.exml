@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ActiveLimitPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="cloud_bg_png" bottom="10" horizontalCenter="0" x="10" y="10"/>
+	<ns1:CoinShowPanel id="coinShow" skinName="CoinShowPanelSkin" x="0"/>
+	<e:Image source="cloud_3_png" y="616" x="-202" id="imgCloud1"/>
+	<e:Image source="cloud_1_png" y="518" x="292" id="imgCloud2"/>
+	<e:Image source="cloud_2_png" y="640" x="-40" id="imgCloud3"/>
+	<e:Image source="active_title_bg_png" y="75" horizontalCenter="0" scale9Grid="1,11,11,69" width="480" height="100" x="10"/>
+	<e:Scroller width="400" y="74" height="100" horizontalCenter="-10" x="10">
+		<e:Group id="contentGroup">
+			<e:layout>
+				<e:HorizontalLayout gap="0" verticalAlign="middle" horizontalAlign="left"/>
+			</e:layout>
+			<e:Group y="234" x="72" width="100" height="100" name="group1">
+				<ns1:SimpleButton id="btnWord" y="0" x="0" xmlns:ns1="*" source="limit_word_png"/>
+			</e:Group>
+			<e:Group y="274" x="112" width="100" height="100" name="group2">
+				<ns1:SimpleButton id="btnRecharge" y="0" x="0" xmlns:ns1="*" source="limit_recharge_png"/>
+			</e:Group>
+			<e:Group y="284" width="100" height="100" name="group2" x="122">
+				<ns1:SimpleButton id="btnCost" y="0" x="0" xmlns:ns1="*" source="limit_cost_png"/>
+			</e:Group>
+			<e:Group y="294" width="100" height="100" name="group3" x="132">
+				<ns1:SimpleButton id="btnOnePay" y="0" x="0" xmlns:ns1="*" source="limit_one_pay_png"/>
+			</e:Group>
+			<e:Group y="304" width="100" height="100" name="group4" x="142">
+				<ns1:SimpleButton id="btnShareDouble" y="0" x="0" xmlns:ns1="*" source="limit_doubel_invite_png"/>
+			</e:Group>
+			<e:Group y="314" width="100" height="100" name="group4" x="152">
+				<ns1:SimpleButton id="btnFestival" y="0" x="0" xmlns:ns1="*" source="limit_festival_png"/>
+			</e:Group>
+		</e:Group>
+	</e:Scroller>
+	<ns1:SimpleButton source="active_right_png" y="97" id="btnRight" x="450"/>
+	<ns1:SimpleButton source="active_left_png" y="99" id="btnLeft" x="7"/>
+	<e:Group bottom="0" width="480" height="620" id="activeGroup" x="0" y="10"/>
+	<ns1:SimpleButton source="close_png" id="btnClose" x="426" y="-11"/>
+</e:Skin>

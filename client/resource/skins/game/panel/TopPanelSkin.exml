@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="TopPanelSkin" width="480" height="200" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="contentGroup" height="172" width="480" horizontalCenter="0" y="0">
+		<e:Image id="imgBg" source="top_icon_bg_png" horizontalCenter="0" height="162"/>
+		<ns1:SimpleButton id="btnMail" source="top_mail_png" y="10" x="419"/>
+		<ns1:SimpleButton id="btnInvite" y="75" source="top_invite_png" x="419"/>
+		<ns1:SimpleButton id="btnDayTask" y="75" x="361" source="top_day_task_png"/>
+		<ns1:SimpleButton id="btnPrivilege" y="75" x="303" source="top_privilege_png"/>
+		<ns1:SimpleButton id="btnActive" y="75" x="245" source="top_active_png"/>
+		<ns1:SimpleButton id="btnRank" y="10" x="361" source="top_rank_png"/>
+		<ns1:SimpleButton id="btnPoster" y="10" x="303" source="top_poster_png"/>
+		<ns1:SimpleButton id="btnTarget" y="75" x="187" source="top_target_png"/>
+		<ns1:SimpleButton id="btnSevenDay" y="75" x="126" source="top_seven_day_png"/>
+		<ns1:SimpleButton id="btnFriend" source="top_friend_png" y="10" x="245"/>
+		<ns1:SimpleButton id="btnNotice" y="10" x="187" source="top_notice_png"/>
+		<ns1:SimpleButton id="btnSetting" x="129" source="top_setting_png" y="10"/>
+		<ns1:SimpleButton id="btnAttention" y="75" x="68" source="top_attention_png"/>
+		<ns1:SimpleButton id="btnFirstRecharge" y="75" x="10" source="top_first_recharge_png"/>
+		<ns1:SimpleButton id="btnTurnLeft" source="top_hide_png" y="167" anchorOffsetY="25.5" anchorOffsetX="25.5" x="448" rotation="0"/>
+		<ns1:SimpleButton id="btnLimitActive" y="140" x="361" source="top_limit_png"/>
+		<ns1:SimpleButton id="btnCircleBack" y="140" x="68" source="top_circle_go_png"/>
+		<ns1:SimpleButton id="btnDial" y="140" x="10" source="top_dial_png"/>
+		<ns1:SimpleButton id="btnFormation" y="190" source="role_can_formation_png" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group id="newGroup" height="120" width="480" horizontalCenter="0" visible="false">
+		<e:Image source="top_icon_bg_png" horizontalCenter="0" height="31" x="10" y="0" scale9Grid="60,133,360,18"/>
+		<ns1:SimpleButton id="btnFirstRechargeNew" source="top_first_recharge_png" y="10" x="10"/>
+		<ns1:SimpleButton id="btnAttentionNew" source="top_attention_png" y="10" x="68"/>
+		<ns1:SimpleButton id="btnTargetNew" source="top_target_png" y="10" x="361"/>
+		<ns1:SimpleButton id="btnInviteNew" source="top_invite_png" y="10" x="419"/>
+	</e:Group>
+	<ns1:SimpleButton id="btnFeed" y="205" x="10" source="top_feed_png"/>
+</e:Skin>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SmallMonsterInfoSkin" width="480" height="418" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" x="0" y="0" width="100%" height="100%" scale9Grid="8,7,34,18"/>
+	<e:Image source="common_bg_add3_png" x="12" y="21" scale9Grid="37,38,382,302"/>
+	<e:Image source="common_txt_bg_png" y="70" scale9Grid="65,5,8,6" width="382" height="252" horizontalCenter="0"/>
+	<e:Image source="title_bg_png" horizontalCenter="0"/>
+	<e:Image source="monster_info_title_png" y="-23" horizontalCenter="0"/>
+	<e:Button id="btnLvUp" label="升 级" y="333" skinName="GreenHighButtonSkin" horizontalCenter="0"/>
+	<e:Label y="83" textColor="0x583C26" text="奔波霸" fontFamily="微软雅黑" id="lblName" bold="true" size="20" horizontalCenter="3"/>
+	<e:Label y="263" textColor="0x583C26" text="使用万能碎片" fontFamily="微软雅黑" bold="true" size="18" x="118"/>
+	<e:Image source="role_head_png" y="112" height="62" x="82" id="imgHead"/>
+	<e:Label y="122" textColor="0xA25709" text="法力：99" fontFamily="微软雅黑" id="lblMagic" bold="true" size="18" x="153"/>
+	<e:Label y="149" textColor="0x906C53" text="全体法术攻击提升：100%" fontFamily="微软雅黑" id="lblDec" bold="true" lineSpacing="3" size="16" x="153"/>
+	<e:Image source="monster_bar_bg_png" y="204" x="111"/>
+	<e:Image id="imgAddBar" x="111" y="204" scale9Grid="8,3,224,8" source="monster_add_bar_png"/>
+	<e:Image id="imgBar" source="monster_bar_png" scale9Grid="8,3,224,8" y="204" x="111"/>
+	<e:Label y="205" textColor="0x16734D" text="99/99" fontFamily="微软雅黑" bold="true" lineSpacing="3" size="14" id="lblBar" horizontalCenter="-9.5"/>
+	<e:Image source="ic_hero_png" x="86" y="195"/>
+	<ns1:SimpleButton id="btnAdd" x="349" y="191" source="monster_add_png"/>
+	<ns1:SimpleButton id="btnSelect" y="259" x="84" source="select_bg_png"/>
+	<e:Image id="imgSelect" source="select_arrow_png" x="83" y="252" touchEnabled="false"/>
+	<e:Image source="monster_coin_bg_png" x="286" y="259"/>
+	<e:Image source="ic_herochip_png" x="272" y="256"/>
+	<e:Label id="lblAllPiece" y="264" text="9999" fontFamily="微软雅黑" bold="true" size="18" textColor="0xF0D8B7" horizontalCenter="103"/>
+	<ns1:SimpleButton source="close_png" y="-14" x="425" id="btnClose"/>
+	<e:BitmapLabel x="118" y="114" text="+1" font="gold_number_fnt" id="lblLv"/>
+</e:Skin>

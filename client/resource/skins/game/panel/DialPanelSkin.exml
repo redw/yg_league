@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="DialPanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image horizontalCenter="0" verticalCenter="0" source="dial_bg_png"/>
+	<e:Group id="rotationGroup" height="347" width="347" x="240" anchorOffsetX="174" anchorOffsetY="174" y="351">
+		<e:Image source="dial_rotate_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image source="dial_touch_png" x="146" y="24" name="award1"/>
+		<e:Image source="dial_touch_png" y="44" x="204" name="award2"/>
+		<e:Image source="dial_touch_png" y="82" x="255" name="award3"/>
+		<e:Image source="dial_touch_png" y="147" x="277" name="award4"/>
+		<e:Image source="dial_touch_png" y="204" x="254" name="award5"/>
+		<e:Image source="dial_touch_png" y="255" x="212" name="award6"/>
+		<e:Image source="dial_touch_png" y="275" x="151" name="award7"/>
+		<e:Image source="dial_touch_png" y="252" x="93" name="award8"/>
+		<e:Image source="dial_touch_png" y="211" x="50" name="award9"/>
+		<e:Image source="dial_touch_png" y="153" x="33" name="award10"/>
+		<e:Image source="dial_touch_png" y="95" x="43" name="award11"/>
+		<e:Image source="dial_touch_png" y="44" x="84" name="award12"/>
+	</e:Group>
+	<e:Image source="dial_rotate_circle_png" verticalCenter="-50" horizontalCenter="-1" touchEnabled="false"/>
+	<e:Image source="dial_rotate_point_png" horizontalCenter="-1" verticalCenter="-50"/>
+	<e:Image x="207" y="322" source="dial_box_png"/>
+	<e:Image id="imgPoint" source="dial_point_png" x="255" y="123" anchorOffsetX="40.5"/>
+	<ns1:SimpleButton source="close2_png" y="97" id="btnClose" x="386"/>
+	<e:Label id="lblTimes" y="312" textColor="0xFFBE25" text="0次" fontFamily="微软雅黑" bold="true" strokeColor="0x583C26" stroke="2" size="18" right="200"/>
+	<e:Group id="helpGroup" height="184" width="134" x="264" y="197" visible="false">
+		<e:Image source="dial_arrow_png" x="0" y="0"/>
+		<e:Image id="helpHand" source="dial_hand_png" x="0" y="0"/>
+	</e:Group>
+	<ns1:SimpleButton id="btnTurnOne" y="645" source="dial_one_png" horizontalCenter="-110"/>
+	<ns1:SimpleButton id="btnTurnTen" y="645" horizontalCenter="110" source="dial_ten_png"/>
+</e:Skin>

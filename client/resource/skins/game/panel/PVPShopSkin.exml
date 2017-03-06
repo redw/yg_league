@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPShopSkin" width="480" height="400" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg2_png" y="0" scale9Grid="8,7,34,18" width="100%" height="100%" x="0"/>
+	<e:Image source="common_bg1_png" y="20" verticalCenter="0" horizontalCenter="0" width="480" height="390" scale9Grid="10,9,31,14" x="20"/>
+	<e:Image source="task_bg_png" horizontalCenter="0.5" y="10" height="50" x="30"/>
+	<e:Image source="line_png" horizontalCenter="0" y="59" x="30"/>
+	<e:Label horizontalCenter="0.5" y="22" textColor="0x583C26" text="商 店" fontFamily="微软雅黑" bold="true" size="22" x="10"/>
+	<e:Scroller horizontalCenter="0" y="65" width="454" height="315" scrollPolicyH="off" x="20">
+		<e:List id="shopList" width="100%" height="516">
+			<e:layout>
+				<e:VerticalLayout gap="0"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Label y="25" textColor="0x583C26" text="竞技币：" fontFamily="微软雅黑" bold="true" size="18" x="25"/>
+	<e:Button x="312" label="刷新" y="12" skinName="GreenButtonSkin" id="btnRefresh"/>
+	<e:Label right="7" y="26" textColor="0x047136" size="16" text="(00:00)" fontFamily="微软雅黑" bold="true" touchEnabled="false" id="lblTime" x="10"/>
+	<e:Label id="lblPVPCoin" y="25" strokeColor="0x653605" text="999" fontFamily="微软雅黑" x="126" bold="true" stroke="2" textColor="0xFEE244" size="18"/>
+	<e:Image source="reward_23_s_png" x="94" y="20"/>
+</e:Skin>

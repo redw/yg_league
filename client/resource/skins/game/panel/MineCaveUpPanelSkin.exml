@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MineCaveUpPanelSkin" width="416" height="329" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="alert_bg_png" scale9Grid="314,8,50,32" y="0" x="0"/>
+	<e:Image y="60" verticalCenter="-44.5" x="48" source="mine_btn_up_png"/>
+	<e:Button id="btnLvUp" y="238" horizontalCenter="0.5" label="升 级" skinName="YellowButtonSkin" x="20"/>
+	<ns1:SimpleButton source="close2_png" y="0" x="358" id="btnClose"/>
+	<e:Image source="mine_bar_bg_png" y="169" x="76"/>
+	<e:Image source="mine_bar_png" scale9Grid="34,7,204,12" y="169" x="76" id="imgBar"/>
+	<e:Image source="reward_29_s_png" y="169" x="134"/>
+	<e:Label y="174" strokeColor="0x7D4817" text="1200/1200" fontFamily="微软雅黑" stroke="2" bold="true" left="167" textColor="0xFFF43F" size="16" id="lblBar" x="10"/>
+	<e:Label id="lblNow" textColor="0x56FFDB" text="当前：灵矿的存量上限为：120k" fontFamily="微软雅黑" stroke="2" bold="true" strokeColor="0x08151B" size="18" x="115" verticalCenter="-62.5"/>
+	<e:Label id="lblNext" strokeColor="0x08151B" text="下级：灵矿的存量上限为：130k" fontFamily="微软雅黑" stroke="2" bold="true" textColor="0xC6DFFF" size="18" x="115" verticalCenter="-29.5"/>
+	<e:Label id="lblLv" textColor="0x56FFDB" text="Lv.10" fontFamily="微软雅黑" stroke="2" bold="true" strokeColor="0x08151B" size="20" x="220" verticalCenter="-138.5"/>
+	<e:Image source="mine_up_title_png" x="149" y="9"/>
+</e:Skin>

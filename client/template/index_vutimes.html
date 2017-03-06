@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>#{project}</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        div, canvas {
+            display: block;
+            padding: 0;
+            border: 0;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+
+        .container1 > div, .container2 > div, .container3 > div {
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 100%;
+            position: absolute;
+            -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+            animation: bouncedelay 1.2s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .spinner .spinner-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 20px;
+            top: 20px;
+        }
+
+        .container2 {
+            -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+        }
+
+        .container3 {
+            -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+        }
+
+        .circle1 {
+            top: 0;
+            left: 0;
+        }
+
+        .circle2 {
+            top: 0;
+            right: 0;
+        }
+
+        .circle3 {
+            right: 0;
+            bottom: 0;
+        }
+
+        .circle4 {
+            left: 0;
+            bottom: 0;
+        }
+
+        .container2 .circle1 {
+            -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+        }
+
+        .container3 .circle1 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        .container1 .circle2 {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+        }
+
+        .container2 .circle2 {
+            -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+        }
+
+        .container3 .circle2 {
+            -webkit-animation-delay: -0.7s;
+            animation-delay: -0.7s;
+        }
+
+        .container1 .circle3 {
+            -webkit-animation-delay: -0.6s;
+            animation-delay: -0.6s;
+        }
+
+        .container2 .circle3 {
+            -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+
+        .container3 .circle3 {
+            -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+        }
+
+        .container1 .circle4 {
+            -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+        }
+
+        .container2 .circle4 {
+            -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+        }
+
+        .container3 .circle4 {
+            -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+        }
+
+        @-webkit-keyframes bouncedelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0.0)
+            }
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes bouncedelay {
+            0%, 80%, 100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+
+        .reload-btn {
+            display: none;
+            background-color: #999999;
+            margin: 200px auto;
+            width: 40%;
+            line-height: 25px;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+    <script>
+        var platform = "#{platform}"
+        var engine_version = "#{e_version}";
+        var game_version = "#{g_version}";
+        var game_id = "#{game_id}";
+    </script>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件-->
+    <!--modules_files_start
+    -->
+    <script egret="lib" src="resource/libs/lib.js?v=#{e_version}"></script>
+    <!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+
+    <script type="text/javascript"
+            src="http://cdn.11h5.com/static/js/zepto.min.js?v=#{e_version}"></script>
+    <script type="text/javascript"
+            src="http://cdn.11h5.com/static/js/sdk.min.js?v=#{e_version}"></script>
+    <!--
+    新方式
+    -->
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件-->
+    <!--game_files_start-->
+    <!--
+    <script src="main.min.js?v=#{g_version}"></script>
+    -->
+    <!--game_files_end-->
+</head>
+<body>
+<div style="margin: auto;width: 100%;height: 100%;"
+     class="egret-player"
+     data-entry-class="Main"
+     data-orientation="auto"
+     data-scale-mode="fixedWidth"
+     data-resolution-mode="retina"
+     data-frame-rate="30"
+     data-content-width="480"
+     data-content-height="800"
+     data-show-paint-rect="false"
+     data-multi-fingered="2"
+     data-show-fps="false"
+     data-show-log="false"
+     data-log-filter=""
+     data-show-fps-style="x:0,y:0,size:30,textColor:0x00c200,bgAlpha:0.9">
+</div>
+<div id="preloadDiv" style="width: 100%; position: fixed; right: 0px;">
+    <div class="spinner" style="position: fixed; right: 50%; bottom: 50%;">
+        <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+    <a id="reloadBtn" onclick="reload()" class="reload-btn">点我重新加载一下</a>
+</div>
+
+<script>
+
+    setTimeout(function () {
+        var reloadBtn = document.getElementById("reloadBtn");
+        reloadBtn.style.display = "block";
+    }, 5000);
+
+    window['closePreload'] = function closePreload() {
+        var preloadDiv = document.getElementById("preloadDiv");
+        preloadDiv.style.display = "none";
+    }
+    //
+    function reload() {
+        GC.setItem("gameVer", Date.now());
+        location.reload();
+    }
+    //
+    var gameVer = window["AWY_SDK"].getItem("gameVer");
+    window["AWY_SDK"].loadSingleScript("main.min.js?v=#{g_version}" + (gameVer ? gameVer : ""), function () {
+//      egret.runEgret({renderMode:"webgl"});
+        egret.runEgret({renderMode: "canvas", audioType: 2});
+    });
+
+
+</script>
+
+</body>
+</html>

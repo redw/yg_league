@@ -1,0 +1,12 @@
+{"file":"dial.png","frames":{
+"dial_rotate_png":{"x":482,"y":356,"w":341,"h":341,"offX":3,"offY":3,"sourceW":346,"sourceH":346},
+"dial_rotate_circle_png":{"x":482,"y":0,"w":354,"h":354,"offX":0,"offY":0,"sourceW":354,"sourceH":354},
+"dial_rotate_point_png":{"x":838,"y":186,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"dial_ten_png":{"x":838,"y":347,"w":132,"h":57,"offX":0,"offY":0,"sourceW":132,"sourceH":57},
+"dial_touch_png":{"x":972,"y":252,"w":49,"h":49,"offX":0,"offY":0,"sourceW":49,"sourceH":49},
+"dial_arrow_png":{"x":838,"y":0,"w":134,"h":184,"offX":0,"offY":0,"sourceW":134,"sourceH":184},
+"dial_bg_png":{"x":0,"y":0,"w":480,"h":655,"offX":0,"offY":0,"sourceW":480,"sourceH":655},
+"dial_box_png":{"x":825,"y":406,"w":68,"h":63,"offX":0,"offY":0,"sourceW":68,"sourceH":63},
+"dial_hand_png":{"x":940,"y":186,"w":67,"h":64,"offX":7,"offY":0,"sourceW":74,"sourceH":64},
+"dial_one_png":{"x":838,"y":288,"w":132,"h":57,"offX":0,"offY":0,"sourceW":132,"sourceH":57},
+"dial_point_png":{"x":895,"y":406,"w":51,"h":81,"offX":0,"offY":0,"sourceW":51,"sourceH":81}}}

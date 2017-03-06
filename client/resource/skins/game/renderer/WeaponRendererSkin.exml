@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="WeaponRendererSkin" width="454" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,14,7,36" x="0"/>
+	<ns1:SimpleGroup y="0" id="weaponUnlockGroup" width="454" height="70" x="0" visible="false">
+		<e:Image source="weapon_get_btn_png" scale9Grid="108,8,11,54" y="0" width="454" horizontalCenter="0"/>
+		<e:Image y="10" x="170" source="reward_3_s_png"/>
+		<e:Label y="14" text="60" fontFamily="微软雅黑" id="lblUnlockCost1" bold="true" strokeColor="0xA35A32" size="20" stroke="2" x="202"/>
+		<e:Label y="40" textColor="0xA35A32" text="添加装备栏" fontFamily="微软雅黑" bold="true" size="20" x="172"/>
+	</ns1:SimpleGroup>
+	<e:Group id="contentGroup" height="100%" width="346">
+		<ns1:WeaponIcon id="icon" x="13" skinName="WeaponIconSkin" y="4"/>
+		<e:Label y="8" textColor="0x583C26" text="装备名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="86"/>
+		<e:Label y="31" text="装备效果描述装备效果描述装备效果描述装备效果" fontFamily="微软雅黑" x="87" bold="true" size="16" id="lblDec" lineSpacing="3" width="260" height="35" textColor="0x906C53" verticalAlign="middle"/>
+		<e:Label y="9" text="+9" fontFamily="微软雅黑" bold="true" strokeColor="0x926E56" size="15" stroke="1" id="lblLv" horizontalCenter="-109" textColor="0xFFE100"/>
+	</e:Group>
+	<ns1:YellowTwoCoinBtn id="btnUp" label="111" x="350" y="6" skinName="YellowTwoCoinBtnSkin"/>
+</e:Skin>

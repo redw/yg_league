@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PVPShopRendererSkin" width="454" height="72" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_cell_png" width="100%" y="0" scale9Grid="21,8,6,44" x="0"/>
+	<ns1:WeaponIcon id="weaponIcon" x="10" skinName="WeaponIconSkin" verticalCenter="0"/>
+	<e:Label y="8" textColor="0x583C26" text="名字" fontFamily="微软雅黑" id="lblName" bold="true" size="18" x="90"/>
+	<e:Label id="lblDesc" y="35" textColor="0x8F6B51" text="描述" fontFamily="微软雅黑" x="89" bold="true" size="16" lineSpacing="3"/>
+	<ns1:YellowCoinButton id="btnBuy" label="按钮" x="345" y="6" skinName="YellowCoinButtonSkin"/>
+	<e:Label id="lblNum" bold="true" y="49" textColor="0xFFD945" text="x100" fontFamily="微软雅黑" right="384" size="14" name="num" x="10"/>
+	<e:Image source="active_had_got_png" verticalCenter="0" id="imgGot" x="340" y="10" visible="false"/>
+</e:Skin>

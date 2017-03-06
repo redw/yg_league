@@ -1,0 +1,26 @@
+{"mc":{
+	"pool_select":{
+		"frameRate":24,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"5A656DD6",
+			"x":0,
+			"y":5,
+			"duration":6
+			},
+			{
+			"res":"B2E1BC6F",
+			"x":0,
+			"y":0,
+			"duration":6
+			}
+			]
+}},
+	"res":{
+		"B2E1BC6F":{"x":0,"y":0,"w":244,"h":174},
+		"5A656DD6":{"x":246,"y":0,"w":239,"h":164}
+	}}

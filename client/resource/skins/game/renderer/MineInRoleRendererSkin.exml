@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MineInRoleRendererSkin" width="480" height="64" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*">
+	<ns1:RoleIcon x="19" y="0" skinName="RoleIconSkin" name="role0"/>
+	<ns1:RoleIcon x="94" y="0" skinName="RoleIconSkin" name="role1"/>
+	<ns1:RoleIcon x="169" y="0" skinName="RoleIconSkin" name="role2"/>
+	<ns1:RoleIcon x="244" y="0" skinName="RoleIconSkin" name="role3"/>
+	<ns1:RoleIcon x="319" y="0" skinName="RoleIconSkin" name="role4"/>
+	<ns1:RoleIcon x="394" y="0" skinName="RoleIconSkin" name="role5"/>
+</e:Skin>
