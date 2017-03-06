@@ -111,23 +111,24 @@ module fight {
      * @param skill
      * @returns {Point}
      */
-    export function getNearFightPoint(role:{pos:number, side:number}, targets:{side:number, pos:number}[], skill:SkillConfig) {
+    export function getNearFightPoint(pos:number, targets:{pos:number}[], skill:SkillConfig) {
         let point = new egret.Point();
         let offPoint = (skill && skill.move_position) || [0, 0];
         if (skill.action_type == fight.ATTACK_ACTION_ROW || skill.target_cond == "row") {
-            point = getRoleInitPoint({side: 3 - role.side, pos: targets[0].pos % 3});
+            let newPos = (3 - Math.floor(pos / 10)) * 10 + targets[0].pos % 10 % 3;
+            point = getRoleInitPoint(newPos);
         } else {
             let curRole = targets[0];
-            let minValue = Math.abs(role.pos - curRole.pos);
+            let minValue = Math.abs(pos - curRole.pos);
             for (let i = 1; i < targets.length; i++) {
-                let curValue = Math.abs(role.pos - targets[i].pos);
+                let curValue = Math.abs(pos - targets[i].pos);
                 if (curValue < minValue) {
                     curRole = targets[i];
                 }
             }
-            point = getRoleInitPoint(curRole);
+            point = getRoleInitPoint(curRole.pos);
         }
-        if (role.side == FightSideEnum.RIGHT_SIDE) {
+        if (fight.getSideByPos(pos) == FightSideEnum.RIGHT_SIDE) {
             point.x += (MOVE_ATTACK_OFF + (+offPoint[0]));
         } else {
             point.x -= (MOVE_ATTACK_OFF + (+offPoint[0]));
@@ -138,13 +139,13 @@ module fight {
 
     /**
      * 得到角色出生位置
-     * @param role  角色数据
+     * @param pos  角色数据
      * @returns {Point}
      */
-    export function getRoleInitPoint(role:{side:number, pos:number}) {
-        let side = role.side - 1;
-        let pos = role.pos;
-        return POS_MAP[side][pos].clone();
+    export function getRoleInitPoint(pos:number) {
+        let side = fight.getSideByPos(pos) - 1;
+        let index = fight.getPosIndexByPos(pos);
+        return POS_MAP[side][index].clone();
     }
 
     /**
@@ -348,5 +349,35 @@ module fight {
             }
         }
         return result;
+    }
+
+    export function getSideByPos(pos:number){
+        return Math.floor(pos / 10);
+    }
+
+    export function getPosIndexByPos(pos:number){
+        return pos % 10;
+    }
+
+    export function needFlipped(pos:number) {
+        return getSideByPos(pos) == FightSideEnum.LEFT_SIDE;
+    }
+
+    export function getRoleHeight(id:number) {
+        return (Config.HeroData[id] || Config.EnemyData).modle_height;
+    }
+
+    export function checkFrameEquip(curFrame:number, triggerFrame:number, range:number=0) {
+        let off = curFrame - triggerFrame;
+        return off >= 0 && off <= range;
+    }
+
+    let mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory();
+    export function createMovieClip(name:string):egret.MovieClip {
+        let dataRes:any = RES.getRes(name + "_json");
+        let textureRes:any = RES.getRes(name + "_png");
+        mcFactory.mcDataSet = dataRes;
+        mcFactory.texture = textureRes;
+        return new egret.MovieClip(mcFactory.generateMovieClipData(name));
     }
 }

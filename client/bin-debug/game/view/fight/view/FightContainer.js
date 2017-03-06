@@ -438,10 +438,10 @@ var FightContainer = (function (_super) {
         delete this.roles[side][pos];
         role.dispose();
     };
-    p.getRoleByPos = function (str) {
-        var side = +str.substr(0, 1) - 1;
-        var pos = +str.substr(2, 1);
-        return this.roles[side][pos];
+    p.getRoleByPos = function (pos) {
+        var side = fight.getSideByPos(pos) - 1;
+        var index = fight.getPosIndexByPos(pos);
+        return this.roles[side][index];
     };
     p.getRole = function (value) {
         var side = value.side;

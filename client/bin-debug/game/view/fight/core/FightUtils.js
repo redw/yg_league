@@ -114,24 +114,25 @@ var fight;
      * @param skill
      * @returns {Point}
      */
-    function getNearFightPoint(role, targets, skill) {
+    function getNearFightPoint(pos, targets, skill) {
         var point = new egret.Point();
         var offPoint = (skill && skill.move_position) || [0, 0];
         if (skill.action_type == fight.ATTACK_ACTION_ROW || skill.target_cond == "row") {
-            point = getRoleInitPoint({ side: 3 - role.side, pos: targets[0].pos % 3 });
+            var newPos = (3 - Math.floor(pos / 10)) * 10 + targets[0].pos % 10 % 3;
+            point = getRoleInitPoint(newPos);
         }
         else {
             var curRole = targets[0];
-            var minValue = Math.abs(role.pos - curRole.pos);
+            var minValue = Math.abs(pos - curRole.pos);
             for (var i = 1; i < targets.length; i++) {
-                var curValue = Math.abs(role.pos - targets[i].pos);
+                var curValue = Math.abs(pos - targets[i].pos);
                 if (curValue < minValue) {
                     curRole = targets[i];
                 }
             }
-            point = getRoleInitPoint(curRole);
+            point = getRoleInitPoint(curRole.pos);
         }
-        if (role.side == FightSideEnum.RIGHT_SIDE) {
+        if (fight.getSideByPos(pos) == FightSideEnum.RIGHT_SIDE) {
             point.x += (fight.MOVE_ATTACK_OFF + (+offPoint[0]));
         }
         else {
@@ -143,13 +144,13 @@ var fight;
     fight.getNearFightPoint = getNearFightPoint;
     /**
      * 得到角色出生位置
-     * @param role  角色数据
+     * @param pos  角色数据
      * @returns {Point}
      */
-    function getRoleInitPoint(role) {
-        var side = role.side - 1;
-        var pos = role.pos;
-        return fight.POS_MAP[side][pos].clone();
+    function getRoleInitPoint(pos) {
+        var side = fight.getSideByPos(pos) - 1;
+        var index = fight.getPosIndexByPos(pos);
+        return fight.POS_MAP[side][index].clone();
     }
     fight.getRoleInitPoint = getRoleInitPoint;
     /**
@@ -362,4 +363,35 @@ var fight;
         return result;
     }
     fight.isOverRound = isOverRound;
+    function getSideByPos(pos) {
+        return Math.floor(pos / 10);
+    }
+    fight.getSideByPos = getSideByPos;
+    function getPosIndexByPos(pos) {
+        return pos % 10;
+    }
+    fight.getPosIndexByPos = getPosIndexByPos;
+    function needFlipped(pos) {
+        return getSideByPos(pos) == FightSideEnum.LEFT_SIDE;
+    }
+    fight.needFlipped = needFlipped;
+    function getRoleHeight(id) {
+        return (Config.HeroData[id] || Config.EnemyData).modle_height;
+    }
+    fight.getRoleHeight = getRoleHeight;
+    function checkFrameEquip(curFrame, triggerFrame, range) {
+        if (range === void 0) { range = 0; }
+        var off = curFrame - triggerFrame;
+        return off >= 0 && off <= range;
+    }
+    fight.checkFrameEquip = checkFrameEquip;
+    var mcFactory = new egret.MovieClipDataFactory();
+    function createMovieClip(name) {
+        var dataRes = RES.getRes(name + "_json");
+        var textureRes = RES.getRes(name + "_png");
+        mcFactory.mcDataSet = dataRes;
+        mcFactory.texture = textureRes;
+        return new egret.MovieClip(mcFactory.generateMovieClipData(name));
+    }
+    fight.createMovieClip = createMovieClip;
 })(fight || (fight = {}));
