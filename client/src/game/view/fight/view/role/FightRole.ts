@@ -3,20 +3,10 @@
  * Created by hh on 2017/2/7.
  */
 class FightRole extends egret.DisplayObjectContainer {
-    // 角色的zIndex,处理角色在角色容器中的顺序
-    private _zIndex:number = 0;
-
-    // buff效果map
-    private buffEffMap:any = {};
-    private buffIdArr:number[] = [];
-    private oldBuffIdArr:number[] = [];
-
     // 攻击或伤害时使用的技能
     private curSkill:SkillConfig = null;
     // 战斗信息
     private reportItem:FightReportItem = null;
-    // 技能动作
-    private skillAction:SkillAction;
     // 目标对象
     private targets:{id:number, pos:number}[] = null;
 
@@ -29,6 +19,11 @@ class FightRole extends egret.DisplayObjectContainer {
     private _pos:number;
     // 角色所在的容器
     private fightContainer:FightContainer = null;
+
+    // buff动作
+    private buffAction:BuffAction;
+    // 技能动作
+    private skillAction:SkillAction;
 
     // 血条
     private lifeBar:RoleHPBar = null;
@@ -81,6 +76,9 @@ class FightRole extends egret.DisplayObjectContainer {
         this.lifeBar = new RoleHPBar(fight.needFlipped((roleData.pos)));
         this.addChild(this.lifeBar);
 
+        this.skillAction = new SkillAction(this);
+        this.buffAction = new BuffAction(this);
+
         this.active(fightContainer, roleData);
     }
 
@@ -95,6 +93,7 @@ class FightRole extends egret.DisplayObjectContainer {
     private updateRoleUI() {
         this.body.reset();
         this.skillAction.reset();
+        this.buffAction.reset();
         this.isPlayingDie = false;
         this.isPlayingExtraEff = false;
 
@@ -124,19 +123,24 @@ class FightRole extends egret.DisplayObjectContainer {
         this.lifeBar.active(fight.needFlipped(this.pos));
     }
 
+    /**
+     * 攻击目标
+     * @param data  战斗报告
+     * @param delay 延迟
+     */
     public fight(data:FightReportItem, delay:number) {
-        egret.setTimeout(()=>{
+        egret.setTimeout(()=> {
             this.reportItem = data;
             let items = data.target;
             this.updateRoleHP(BigNum.add(data.hp, data.damage || 0), data.maxhp);
-            this.addBuff(data);
+            this.buffAction.addBuff(data);
             this.targets = [];
-            this.checkBuff(data.buff);
+            this.buffAction.checkBuff(data.buff);
             this.body.reset();
             for (let i = 0; i < items.length; i++) {
                 let role = this.fightContainer.getRoleByPos(items[i].pos);
                 if (role)
-                    role.checkBuff(items[i].buff);
+                    role.buffAction.checkBuff(items[i].buff);
                 let id = items[i].id;
                 let pos = +items[i].pos;
                 this.targets.push({id: id, pos: pos});
@@ -148,37 +152,10 @@ class FightRole extends egret.DisplayObjectContainer {
         }, this, delay);
     }
 
-    public showSkillEff() {
-        if (this.curSkill.skill_name) {
-            this.fightContainer.showSkillFlyTxt(`skillname_${this.curSkill.skill_name}`);
-        }
-
-        let showInfo = (this.curSkill.skill_free_effect || "").split(",");
-        let needMode = !!showInfo[1];
-        let source = showInfo[0];
-        if (source && source != "0") {
-            let eff = new MCEff(source);
-            eff.registerBack(0, this.doAction, this, null);
-            eff.y = (this.config.modle_height) * -0.5;
-            this.fightContainer.showFreeSkillEff(this, eff, needMode);
-        } else {
-            this.doAction();
-        }
-    }
-
-    public doAction() {
-        if (this.reportItem) {
-            this.once("skill_action_complete", this.skillAttackComplete, this);
-            this.skillAction.attack(this.curSkill, this.targets);
-        } else {
-            fight.recordLog(`战斗步骤提前跳过了`, fight.LOG_FIGHT_WARN);
-        }
-    }
-
     /**
      * 射击目标
      */
-    public fireTargets(targets:{id:number, pos:number}[], cur:number=1,total:number=1){
+    public fireTargets(targets:{id:number, pos:number}[], cur:number = 1, total:number = 1) {
         let len = this.targets.length;
         let damageEffSource = this.curSkill.scource_effect;
         let index:number = 0;
@@ -192,7 +169,7 @@ class FightRole extends egret.DisplayObjectContainer {
             let tox = point.x;
             let toy = point.y - fight.getRoleHeight(target.id) * 0.5;
             let scaleX = fight.needFlipped(target.pos) ? -1 : 1;
-            let rotate = Math.atan2(toy - initY, tox - initX) * 180 / Math.PI + ((scaleX == 1) ? 180:0);
+            let rotate = Math.atan2(toy - initY, tox - initX) * 180 / Math.PI + ((scaleX == 1) ? 180 : 0);
             let damageEff = new MCEff(damageEffSource, false, scaleX);
             damageEff.rotation = rotate;
             damageEff.x = initX;
@@ -263,72 +240,6 @@ class FightRole extends egret.DisplayObjectContainer {
         }
     }
 
-    public addBuff(item:FightReportItem|FightReportTargetItem, force:boolean = false) {
-        let isSelf = "target" in item;
-        let canAdd = isSelf || force;
-        if (canAdd) {
-            this.buffIdArr = item.buff.filter((value) => {
-                if (value && Config.BuffData[value])
-                    return Config.BuffData[value].id;
-            });
-            let buffArr = this.buffIdArr || [];
-            let keys = Object.keys(this.buffEffMap);
-            for (let i = 0; i < buffArr.length; i++) {
-                let buffConfig = Config.BuffData[buffArr[i]];
-                if (buffConfig) {
-                    let type = buffConfig.effect + "";
-                    if (!this.buffEffMap[type]) {
-                        if (keys.indexOf(type) < 0 && buffConfig.resource && fight.isMCResourceLoaded(buffConfig.resource) && !this.buffEffMap[type]) {
-                            let eff = new MCEff(buffConfig.resource, false);
-                            let container = this["buffContainer" + buffConfig.point];
-                            container.addChild(eff);
-                            this.buffEffMap[type] = eff;
-                        }
-                    }
-                }
-            }
-
-            let nowBuffIdArr = this.buffIdArr.concat();
-            for (let i = 0; i < this.oldBuffIdArr.length; i++) {
-                if (this.oldBuffIdArr.indexOf(nowBuffIdArr[i]) >= 0) {
-                    nowBuffIdArr.splice(i, 1);
-                    i--;
-                }
-            }
-            for (let i = 0; i < nowBuffIdArr.length; i++) {
-                let buffConfig:BuffConfig = Config.BuffData[nowBuffIdArr[i]];
-                if (buffConfig && buffConfig.word && this.fightContainer) {
-                    this.fightContainer.flyTxt({
-                        str: buffConfig.word,
-                        x: this.x,
-                        y: this.y + this.config.modle_height * -1
-                    }, fight.FONT_SYSTEM)
-                }
-            }
-            this.oldBuffIdArr = this.buffIdArr.concat()
-        }
-    }
-
-    public enterAddBuffs(buffs:number[]){
-        this.buffIdArr = buffs.concat();
-        let buffArr = this.buffIdArr || [];
-        let keys = Object.keys(this.buffEffMap);
-        for (let i = 0; i < buffArr.length; i++) {
-            let buffConfig = Config.BuffData[buffArr[i]];
-            if (buffConfig) {
-                let type = buffConfig.effect + "";
-                if (!this.buffEffMap[type]) {
-                    if (keys.indexOf(type) < 0 && buffConfig.resource && fight.isMCResourceLoaded(buffConfig.resource) && !this.buffEffMap[type]) {
-                        let eff = new MCEff(buffConfig.resource, false);
-                        let container = this["buffContainer" + buffConfig.point];
-                        container.addChild(eff);
-                        this.buffEffMap[type] = eff;
-                    }
-                }
-            }
-        }
-    }
-
     public updateRoleHP(cur:string, max:string) {
         this.maxHP = max;
         this.curHP = cur;
@@ -338,7 +249,7 @@ class FightRole extends egret.DisplayObjectContainer {
 
     public updateTargets() {
         if (this.reportItem) {
-            let len = this.targets ? this.targets.length:0;
+            let len = this.targets ? this.targets.length : 0;
             for (let i = 0; i < len; i++) {
                 let role = this.fightContainer.getRoleByPos(this.targets[i].pos);
                 let hitInfo = this.reportItem.target[i];
@@ -360,15 +271,19 @@ class FightRole extends egret.DisplayObjectContainer {
         this.addChild(dis);
     }
 
-    public addAreaEff(mc:egret.MovieClip, flip:boolean){
+    public addAreaEff(mc:egret.MovieClip, flip:boolean) {
 
     }
 
-    public addContainerEff(mc:egret.MovieClip, flip:boolean){
+    public addContainerEff(mc:egret.MovieClip, flip:boolean) {
 
     }
 
-    public startDamage(index:number = 1, total:number = 1, role:any=null, ratio:number=1) {
+    public flyTxt(){
+
+    }
+
+    public startDamage(index:number = 1, total:number = 1, role:any = null, ratio:number = 1) {
         if (this.targets.length > 0) {
             fight.playSound(this.curSkill.target_sound);
         }
@@ -412,14 +327,14 @@ class FightRole extends egret.DisplayObjectContainer {
                                     str: damageNum,
                                     x: point.x,
                                     y: point.y + model_height * -1,
-                                    scale: this.reportItem.cri ? 1.5:1
+                                    scale: this.reportItem.cri ? 1.5 : 1
                                 }, fight.FONT_PHYSICAL_DAMAGE);
                             } else {
                                 this.fightContainer.flyTxt({
                                     str: damageNum,
                                     x: point.x,
                                     y: point.y + model_height * -1,
-                                    scale: this.reportItem.cri ? 1.5:1
+                                    scale: this.reportItem.cri ? 1.5 : 1
                                 }, fight.FONT_MAGICAL_DAMAGE);
                             }
                         } else {
@@ -449,7 +364,7 @@ class FightRole extends egret.DisplayObjectContainer {
                                         str: damageNum,
                                         x: point.x,
                                         y: point.y + model_height * -1,
-                                        scale: this.reportItem.cri ? 1.5:1
+                                        scale: this.reportItem.cri ? 1.5 : 1
                                     }, fight.FONT_PHYSICAL_DAMAGE);
                                 } else {
                                     damage = BigNum.max(BigNum.div(this.reportItem.magAtk, 1000), 1);
@@ -478,36 +393,8 @@ class FightRole extends egret.DisplayObjectContainer {
         if (this.curSkill) {
             this.checkNextStep();
         }
-        this.checkBuff();
+        this.buffAction.checkBuff();
         this.checkDie();
-    }
-
-    private checkBuff(buffs?:number[]) {
-        let keys = Object.keys(this.buffEffMap);
-        let len = keys.length;
-        for (let i = 0; i < len; i++) {
-            let type = keys[i];
-            let exist = false;
-            let __buffs = buffs || this.buffIdArr;
-            for (let j = 0; j < __buffs.length; j++) {
-                let buffConfig = Config.BuffData[__buffs[j]];
-                if (buffConfig.effect == type) {
-                    exist = true;
-                    break;
-                }
-            }
-            if (!exist) {
-                let eff:MCEff = this.buffEffMap[type];
-                if (eff) {
-                    eff.dispose();
-                } else {
-                    fight.recordLog("buff可能出错了", fight.LOG_FIGHT_WARN);
-                }
-                delete this.buffEffMap[type];
-                len--;
-                i--;
-            }
-        }
     }
 
     private checkDie() {
@@ -516,7 +403,7 @@ class FightRole extends egret.DisplayObjectContainer {
                 this.isPlayingDie = true;
                 let dieEff = new RoleDieEff();
                 this.lifeBar.setProgress(0);
-                dieEff.scaleX = this.side == FightSideEnum.RIGHT_SIDE ? -1:1;
+                dieEff.scaleX = this.side == FightSideEnum.RIGHT_SIDE ? -1 : 1;
                 dieEff.x = this.x;
                 dieEff.y = this.y;
                 this.fightContainer.showDamageEff(dieEff);
@@ -561,10 +448,6 @@ class FightRole extends egret.DisplayObjectContainer {
     }
 
     public dispose() {
-        this.buffIdArr = [];
-        this.buffEffMap = {};
-        this.oldBuffIdArr = [];
-
         while (this.effContainer.numChildren) {
             let mcEff:any = this.effContainer.removeChildAt(0);
             if ("dispose" in mcEff) {
@@ -600,7 +483,7 @@ class FightRole extends egret.DisplayObjectContainer {
         this.body.idle();
     }
 
-    public attack(skill:SkillConfig){
+    public attack(skill:SkillConfig) {
         this.body.attack(skill);
     }
 
@@ -613,11 +496,11 @@ class FightRole extends egret.DisplayObjectContainer {
     }
 
     //------------------------------------------------------------------------------------------------------
-    public getScaleX(){
-        return fight.needFlipped(this.pos) ? -1: 1;
+    public getScaleX() {
+        return fight.needFlipped(this.pos) ? -1 : 1;
     }
 
-    private getRoleByPos(info:any){
+    private getRoleByPos(info:any) {
         let pos:number;
         if (typeof info == "number" || typeof info == "string") {
             pos = Number(info);
@@ -631,32 +514,32 @@ class FightRole extends egret.DisplayObjectContainer {
         return this._config.id;
     }
 
-    public get config(){
+    public get config() {
         return this._config;
     }
 
-    public get pos(){
+    public get pos() {
         return this._pos;
     }
 
-    public get side(){
+    public get side() {
         return Math.floor(this.pos / 10);
     }
 
-    public get posIndex(){
+    public get posIndex() {
         return this.pos % 10;
     }
 
-    public get flipped(){
+    public get flipped() {
         return Math.floor(this.pos / 10) == FightSideEnum.LEFT_SIDE;
     }
 
     // 角色初始位置
-    public get initPoint(){
+    public get initPoint() {
         return fight.getRoleInitPoint(this.pos);
     }
 
-    public get frameRate(){
+    public get frameRate() {
         return this.body.frameRate;
     }
 
