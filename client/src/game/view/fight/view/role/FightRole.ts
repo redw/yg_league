@@ -5,8 +5,6 @@
 class FightRole extends egret.DisplayObjectContainer {
     // 角色的zIndex,处理角色在角色容器中的顺序
     private _zIndex:number = 0;
-    private firedHitMap:any = {};
-    private firedBulletCount = 0;
 
     // buff效果map
     private buffEffMap:any = {};
@@ -146,19 +144,11 @@ class FightRole extends egret.DisplayObjectContainer {
             let skillId = this.reportItem.skillId;
             this.curSkill = Config.SkillData[skillId];
             fight.recordLog(`第${this.reportItem.index}步 角色:${this.reportItem.id} 位置:${this.reportItem.pos} 开始${this.curSkill.action_type}`, fight.LOG_FIGHT_INFO);
-            if (!FightRoleVO.canAction(data.buff)) {
-                this.skillAttackComplete();
-            } else {
-                if (this.targets.length == 0) {
-                    this.nextStep();
-                } else {
-                    this.showSkillEff();
-                }
-            }
+            this.skillAction.preAttack(this.curSkill, this.targets, this.reportItem.buff, this.reportItem.damage);
         }, this, delay);
     }
 
-    private showSkillEff() {
+    public showSkillEff() {
         if (this.curSkill.skill_name) {
             this.fightContainer.showSkillFlyTxt(`skillname_${this.curSkill.skill_name}`);
         }
@@ -176,23 +166,12 @@ class FightRole extends egret.DisplayObjectContainer {
         }
     }
 
-    private doAction() {
-        fight.verifyActiveSkill(this.curSkill);
+    public doAction() {
         if (this.reportItem) {
             this.once("skill_action_complete", this.skillAttackComplete, this);
             this.skillAction.attack(this.curSkill, this.targets);
         } else {
             fight.recordLog(`战斗步骤提前跳过了`, fight.LOG_FIGHT_WARN);
-        }
-    }
-
-    private skillAttackComplete(){
-        if (BigNum.greater(this.reportItem.damage || 0, 0)) {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.hit();
-        } else {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.idle();
         }
     }
 

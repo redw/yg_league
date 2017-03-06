@@ -11,7 +11,7 @@ var RoleBody = (function (_super) {
         this.frameDisArr = [];
         this.config = Config.HeroData[id] || Config.EnemyData[id];
         var resourceArr = String(this.config.resource).split(",");
-        this.mainMc = FightRole.createMovieClip(resourceArr[0]);
+        this.mainMc = fight.createMovieClip(resourceArr[0]);
         this.addChild(this.mainMc);
         this.active();
         if (this.mainMc.totalFrames <= 0) {
@@ -44,7 +44,7 @@ var RoleBody = (function (_super) {
         if (isSkillAttack) {
             if (this.hasSkillMC() && !this.skillMc) {
                 var resourceArr = String(this.config.resource).split(",");
-                this.skillMc = FightRole.createMovieClip(resourceArr[0] + "_s");
+                this.skillMc = fight.createMovieClip(resourceArr[0] + "_s");
                 this.addChild(this.skillMc);
                 if (this.skillMc.scaleX != this.mainMc.scaleX)
                     this.skillMc.scaleX = this.mainMc.scaleX;

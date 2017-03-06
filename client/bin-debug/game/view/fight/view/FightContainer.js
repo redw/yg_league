@@ -223,7 +223,7 @@ var FightContainer = (function (_super) {
                 this.roleLayer.addChild(this.leftAreaCont);
             }
             if (this.roles[0][index]) {
-                this.roles[0][index].zIndex = zIndex;
+                // this.roles[0][index].zIndex = zIndex;
                 this.roleLayer.addChild(this.roles[0][index]);
                 zIndex++;
             }
@@ -240,7 +240,7 @@ var FightContainer = (function (_super) {
                 this.roleLayer.addChild(this.rightAreaCont);
             }
             if (this.roles[1][index]) {
-                this.roles[1][index].zIndex = zIndex;
+                // this.roles[1][index].zIndex = zIndex;
                 this.roleLayer.addChild(this.roles[1][index]);
                 zIndex++;
             }
@@ -443,15 +443,6 @@ var FightContainer = (function (_super) {
         var index = fight.getPosIndexByPos(pos);
         return this.roles[side][index];
     };
-    p.getRole = function (value) {
-        var side = value.side;
-        var pos = value.pos;
-        if (side < 1 || side > 2 || pos < 0 || pos > 8) {
-            fight.recordLog("获取角色参数不对", fight.LOG_FIGHT_WARN);
-            return null;
-        }
-        return this.roles[side - 1][pos];
-    };
     p.getPlayingCount = function () {
         var result = 1;
         if (this.type != FightTypeEnum.PVE) {
@@ -568,8 +559,9 @@ var FightContainer = (function (_super) {
                 egret.setTimeout(function (index) {
                     var eff = new MCEff("role_born");
                     _this.bornRole(roleArr[index]);
-                    eff.x = fight.getRoleInitPoint(roleArr[index]).x;
-                    eff.y = fight.getRoleInitPoint(roleArr[index]).y;
+                    var point = fight.getRoleInitPoint(roleArr[index].pos);
+                    eff.x = point.x;
+                    eff.y = point.y;
                     _this.damageEffLayer.addChild(eff);
                 }, this, i * 200, i);
             }

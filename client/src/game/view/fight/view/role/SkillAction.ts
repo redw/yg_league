@@ -1,10 +1,13 @@
 /**
- * 技能行为
+ * 处理技能攻击行为,包括被眩晕和没有target等
  * Created by hh on 17/2/20.
  */
 class SkillAction {
     private fightRole:FightRole;
+
     private curSkill:SkillConfig;
+    private buffs:number[];
+    private damage:string;
     private targets:{id:number, pos:number}[];
 
     private _isActionComplete:boolean = false;
@@ -28,24 +31,67 @@ class SkillAction {
     }
 
     /**
-     * 攻击目标
-     * @param skill 技能
-     * @param targets 攻击目标
+     * 预攻击目标
+     * @param skill     技能信息
+     * @param targets   攻击目标
+     * @param buffs     所有buff
+     * @param damage    自身所受伤害
      */
-    public attack(skill:SkillConfig, targets:{id:number, pos:number}[]) {
+    public preAttack(skill:SkillConfig, targets:{id:number, pos:number}[], buffs:number[], damage:string){
         if (this._isActionComplete) {
             this._isActionComplete = false;
             console.error("攻击时,ActionComplete应该为false");
         }
         this.curSkill = skill;
         this.targets = targets;
-        let action = this.curSkill.action_type;
-        if (fight.needMoveAttack(action)) {
-            this.moveAndAttack();
+        this.buffs = buffs;
+        this.damage = damage;
+        fight.verifyActiveSkill(this.curSkill);
+
+        let vertigo = false;
+        let len = buffs ? buffs.length : 0;
+        for (let i = 0; i < len; i++) {
+            let buffConfig:BuffConfig = Config.BuffData[buffs[i]];
+            if (buffConfig && buffConfig.effect == BuffTypeEnum.VERTIGO) {
+                vertigo = true;
+                break;
+            }
+        }
+
+        if (vertigo) {
+            this.postAttackComplete();
         } else {
-            this.startAttackAction();
+            if (fight.needMoveAttack(action)) {
+                this.moveAndAttack();
+            } else {
+                this.startAttackAction();
+            }
         }
     }
+
+    /**
+     * 攻击目标
+     * @param skill     技能信息
+     * @param targets   攻击目标
+     * @param buffs     所有buff
+     * @param damage    自身所受伤害
+     */
+    public attack(skill:SkillConfig, targets:{id:number, pos:number}[], buffs:number[], damage:string) {
+        if (this._isActionComplete) {
+            this._isActionComplete = false;
+            console.error("攻击时,ActionComplete应该为false");
+        }
+
+        this.curSkill = skill;
+        this.targets = targets;
+        this.buffs = buffs;
+        this.damage = damage;
+
+        let action = this.curSkill.action_type;
+
+    }
+
+
 
     // 移动和攻击
     private moveAndAttack() {
@@ -111,6 +157,10 @@ class SkillAction {
         } else if (!this.extraEffCount) {
             this.actionComplete();
         }
+    }
+
+    private postAttackComplete(){
+
     }
 
     // 触发跳跃
@@ -210,6 +260,16 @@ class SkillAction {
     private checkComplete(){
         if (this.isAttackComplete && (this.extraEffCount <= 0)) {
             this.actionComplete();
+        }
+    }
+
+    private skillAttackComplete(){
+        if (BigNum.greater(this.reportItem.damage || 0, 0)) {
+            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
+            this.hit();
+        } else {
+            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
+            this.idle();
         }
     }
 

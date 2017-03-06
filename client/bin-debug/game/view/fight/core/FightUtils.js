@@ -7,32 +7,6 @@ var fight;
     var curSoundPath = "";
     var TEST_UID_ARR = ["300667664", "309782584", "292758853", "287057268", "307276412", "296705951", "287127041"];
     /**
-     * 得到角色的描述信息
-     * @param role RoleData或FightRole
-     * @returns {string}
-     */
-    function getRolePosDes(role) {
-        var result = "";
-        var arr = [];
-        if (role.length >= 1) {
-            arr = role.concat();
-        }
-        else {
-            arr = [role];
-        }
-        var len = arr.length;
-        for (var i = 0; i < len; i++) {
-            if (arr[i].roleData)
-                result += (arr[i].roleData.side + "_" + arr[i].roleData.pos);
-            else
-                result += (arr[i].side + "_" + arr[i].pos);
-            if (i < len - 1)
-                result += ",";
-        }
-        return result;
-    }
-    fight.getRolePosDes = getRolePosDes;
-    /**
      * 选取目标通用规则
      * @param value 排或列
      * @returns {[number,number,number]}
@@ -355,7 +329,7 @@ var fight;
         var result = false;
         var len = steps ? steps.length : 0;
         if (len > 1) {
-            var side = +(steps[len - 1].pos.substr(0, 1));
+            var side = getSideByPos(steps[len - 1].pos);
             if (steps[len - 1].round >= 20 && side == FightSideEnum.RIGHT_SIDE) {
                 result = true;
             }

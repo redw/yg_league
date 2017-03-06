@@ -410,7 +410,7 @@ class FightRoleVO{
         obj.magAtk = this.magAtk;
         obj.magDef = this.magDef;
         obj.id = this.config.id;
-        obj.pos = fight.getRolePosDes(this);
+        obj.pos = this.pos;
         obj.dcri = this.critChance;
         obj.dcirDom = this.critDamage;
         obj.ddodge = this.dodgeChance;

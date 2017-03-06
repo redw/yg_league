@@ -8,8 +8,6 @@ var FightRole = (function (_super) {
         _super.call(this);
         // 角色的zIndex,处理角色在角色容器中的顺序
         this._zIndex = 0;
-        this.firedHitMap = {};
-        this.firedBulletCount = 0;
         // buff效果map
         this.buffEffMap = {};
         this.buffIdArr = [];
@@ -118,17 +116,7 @@ var FightRole = (function (_super) {
             var skillId = _this.reportItem.skillId;
             _this.curSkill = Config.SkillData[skillId];
             fight.recordLog("\u7B2C" + _this.reportItem.index + "\u6B65 \u89D2\u8272:" + _this.reportItem.id + " \u4F4D\u7F6E:" + _this.reportItem.pos + " \u5F00\u59CB" + _this.curSkill.action_type, fight.LOG_FIGHT_INFO);
-            if (!FightRoleVO.canAction(data.buff)) {
-                _this.skillAttackComplete();
-            }
-            else {
-                if (_this.targets.length == 0) {
-                    _this.nextStep();
-                }
-                else {
-                    _this.showSkillEff();
-                }
-            }
+            _this.skillAction.preAttack(_this.curSkill, _this.targets, _this.reportItem.buff, _this.reportItem.damage);
         }, this, delay);
     };
     p.showSkillEff = function () {
@@ -149,23 +137,12 @@ var FightRole = (function (_super) {
         }
     };
     p.doAction = function () {
-        fight.verifyActiveSkill(this.curSkill);
         if (this.reportItem) {
             this.once("skill_action_complete", this.skillAttackComplete, this);
             this.skillAction.attack(this.curSkill, this.targets);
         }
         else {
             fight.recordLog("\u6218\u6597\u6B65\u9AA4\u63D0\u524D\u8DF3\u8FC7\u4E86", fight.LOG_FIGHT_WARN);
-        }
-    };
-    p.skillAttackComplete = function () {
-        if (BigNum.greater(this.reportItem.damage || 0, 0)) {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.hit();
-        }
-        else {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.idle();
         }
     };
     /**
@@ -235,7 +212,7 @@ var FightRole = (function (_super) {
                                 if (BigNum.greater(off, 0)) {
                                     var point = fight.getRoleInitPoint(target.pos);
                                     var model_height = fight.getRoleHeight(target.id);
-                                    _this.fightContainer.showFlyTxt({
+                                    _this.fightContainer.flyTxt({
                                         str: MathUtil.easyNumber(off),
                                         x: point.x,
                                         y: point.y + model_height * -1
@@ -306,7 +283,7 @@ var FightRole = (function (_super) {
                     this.fightContainer.flyTxt({
                         str: buffConfig.word,
                         x: this.x,
-                        y: this.y + this.roleData.config.modle_height * -1
+                        y: this.y + this.config.modle_height * -1
                     }, fight.FONT_SYSTEM);
                 }
             }
@@ -342,7 +319,7 @@ var FightRole = (function (_super) {
         if (this.reportItem) {
             var len = this.targets ? this.targets.length : 0;
             for (var i = 0; i < len; i++) {
-                var role = this.fightContainer.getRole(this.targets[i]);
+                var role = this.fightContainer.getRoleByPos(this.targets[i].pos);
                 var hitInfo = this.reportItem.target[i];
                 if (role) {
                     role.updateRoleHP(hitInfo.hp, hitInfo.maxhp);
@@ -353,7 +330,7 @@ var FightRole = (function (_super) {
     p.addEff = function (dis, part, off) {
         if (part === void 0) { part = 1; }
         if (off === void 0) { off = null; }
-        var position = new egret.Point(0, (0 - part) * this.roleData.config.modle_height * 0.5);
+        var position = new egret.Point(0, (0 - part) * this.config.modle_height * 0.5);
         if (off) {
             position.x += off.x;
             position.y += off.y;
@@ -361,6 +338,10 @@ var FightRole = (function (_super) {
         dis.x = position.x;
         dis.y = position.y;
         this.addChild(dis);
+    };
+    p.addAreaEff = function (mc, flip) {
+    };
+    p.addContainerEff = function (mc, flip) {
     };
     p.startDamage = function (index, total, role, ratio) {
         if (index === void 0) { index = 1; }
@@ -393,7 +374,7 @@ var FightRole = (function (_super) {
                         this.fightContainer.showDamageEff(eff, fightRole.side);
                     }
                     if (hitInfo.dodge) {
-                        this.fightContainer.showFlyTxt({
+                        this.fightContainer.flyTxt({
                             str: "闪避",
                             x: point.x,
                             y: point.y + model_height * -1
@@ -408,7 +389,7 @@ var FightRole = (function (_super) {
                         }
                         if (parseFloat(damageNum) > 0) {
                             if (this.curSkill.damage_type == "physical") {
-                                this.fightContainer.showFlyTxt({
+                                this.fightContainer.flyTxt({
                                     str: damageNum,
                                     x: point.x,
                                     y: point.y + model_height * -1,
@@ -416,7 +397,7 @@ var FightRole = (function (_super) {
                                 }, fight.FONT_PHYSICAL_DAMAGE);
                             }
                             else {
-                                this.fightContainer.showFlyTxt({
+                                this.fightContainer.flyTxt({
                                     str: damageNum,
                                     x: point.x,
                                     y: point.y + model_height * -1,
@@ -426,21 +407,21 @@ var FightRole = (function (_super) {
                         }
                         else {
                             if (FightRoleVO.isInvincible(hitInfo.buff)) {
-                                this.fightContainer.showFlyTxt({
+                                this.fightContainer.flyTxt({
                                     str: "免伤",
                                     x: point.x,
                                     y: point.y + model_height * -1
                                 }, fight.FONT_SYSTEM);
                             }
                             else if (FightRoleVO.freeMacAtk(hitInfo.buff)) {
-                                this.fightContainer.showFlyTxt({
+                                this.fightContainer.flyTxt({
                                     str: "魔免",
                                     x: point.x,
                                     y: point.y + model_height * -1
                                 }, fight.FONT_SYSTEM);
                             }
                             else if (FightRoleVO.freePhyAtk(hitInfo.buff)) {
-                                this.fightContainer.showFlyTxt({
+                                this.fightContainer.flyTxt({
                                     str: "物免",
                                     x: point.x,
                                     y: point.y + model_height * -1
@@ -450,7 +431,7 @@ var FightRole = (function (_super) {
                                 if (this.curSkill.damage_type == "physical") {
                                     damage = BigNum.max(BigNum.div(this.reportItem.phyAtk, 1000), 1);
                                     damageNum = MathUtil.easyNumber(damage);
-                                    this.fightContainer.showFlyTxt({
+                                    this.fightContainer.flyTxt({
                                         str: damageNum,
                                         x: point.x,
                                         y: point.y + model_height * -1,
@@ -460,7 +441,7 @@ var FightRole = (function (_super) {
                                 else {
                                     damage = BigNum.max(BigNum.div(this.reportItem.magAtk, 1000), 1);
                                     damageNum = MathUtil.easyNumber(damage);
-                                    this.fightContainer.showFlyTxt({
+                                    this.fightContainer.flyTxt({
                                         str: damageNum,
                                         x: point.x,
                                         y: point.y + model_height * -1,

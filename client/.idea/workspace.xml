@@ -31,11 +31,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkillAction.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SkillAction.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/SkillAction.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="160" column="43" lean-forward="false" selection-start-line="160" selection-start-column="43" selection-end-line="160" selection-end-column="43" />
+            <state relative-caret-position="527">
+              <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FightConst.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/view/fight/core/FightConst.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FightRoleVO.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/model/fight/FightRoleVO.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="412" column="26" lean-forward="false" selection-start-line="412" selection-start-column="26" selection-end-line="412" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -44,8 +64,8 @@
       <file leaf-file-name="FightUtils.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/view/fight/core/FightUtils.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="136" column="21" lean-forward="false" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
+            <state relative-caret-position="309">
+              <caret line="323" column="13" lean-forward="false" selection-start-line="323" selection-start-column="13" selection-end-line="323" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -54,8 +74,8 @@
       <file leaf-file-name="RoleBody.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/RoleBody.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1631">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1144">
+              <caret line="55" column="61" lean-forward="false" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -65,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/FightRole.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="879">
-              <caret line="374" column="18" lean-forward="true" selection-start-line="374" selection-start-column="18" selection-end-line="374" selection-end-column="18" />
+              <caret line="168" column="23" lean-forward="false" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
               <folding>
                 <element signature="n#!!block;n#enterAddBuffs#0;n#FightRole#0" expanded="false" />
                 <element signature="n#!!block;n#updateRoleHP#0;n#FightRole#0" expanded="false" />
@@ -84,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FightContainer.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FightContainer.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/FightContainer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="879">
-              <caret line="597" column="31" lean-forward="true" selection-start-line="597" selection-start-column="31" selection-end-line="597" selection-end-column="31" />
+            <state relative-caret-position="307">
+              <caret line="571" column="5" lean-forward="false" selection-start-line="571" selection-start-column="5" selection-end-line="571" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -108,17 +128,20 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>canA</find>
       <find>getNe</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/game/view/fight/core/FightUtils.ts" />
-        <option value="$PROJECT_DIR$/src/game/view/fight/view/role/SkillAction.ts" />
         <option value="$PROJECT_DIR$/src/game/model/fight/FightReportItem.ts" />
-        <option value="$PROJECT_DIR$/src/game/view/fight/view/role/FightRole.ts" />
         <option value="$PROJECT_DIR$/src/game/view/fight/view/FightContainer.ts" />
+        <option value="$PROJECT_DIR$/src/game/view/fight/view/role/RoleBody.ts" />
+        <option value="$PROJECT_DIR$/src/game/model/fight/FightRoleVO.ts" />
+        <option value="$PROJECT_DIR$/src/game/view/fight/core/FightUtils.ts" />
+        <option value="$PROJECT_DIR$/src/game/view/fight/view/role/FightRole.ts" />
+        <option value="$PROJECT_DIR$/src/game/view/fight/view/role/SkillAction.ts" />
       </list>
     </option>
   </component>
@@ -358,6 +381,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fight" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -445,18 +494,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488786428680</updated>
-      <workItem from="1488786431197" duration="7056000" />
+      <workItem from="1488786431197" duration="9713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7056000" />
+    <option name="totallyTimeSpent" value="9713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05685619" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21516165" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -486,42 +535,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource/config_vutimes.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/RoleBody.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1631">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/RoleHPBar.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/view/fight/core/FightUtils.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="136" column="21" lean-forward="false" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/SkillAction.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="160" column="43" lean-forward="false" selection-start-line="160" selection-start-column="43" selection-end-line="160" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -534,10 +551,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/FightContainer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="571" column="5" lean-forward="false" selection-start-line="571" selection-start-column="5" selection-end-line="571" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/model/fight/FightRoleVO.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="412" column="26" lean-forward="false" selection-start-line="412" selection-start-column="26" selection-end-line="412" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/view/fight/core/FightUtils.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="323" column="13" lean-forward="false" selection-start-line="323" selection-start-column="13" selection-end-line="323" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/view/fight/core/FightConst.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/config_vutimes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/RoleBody.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="55" column="61" lean-forward="false" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/FightRole.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="879">
-          <caret line="374" column="18" lean-forward="true" selection-start-line="374" selection-start-column="18" selection-end-line="374" selection-end-column="18" />
+          <caret line="168" column="23" lean-forward="false" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
           <folding>
             <element signature="n#!!block;n#enterAddBuffs#0;n#FightRole#0" expanded="false" />
             <element signature="n#!!block;n#updateRoleHP#0;n#FightRole#0" expanded="false" />
@@ -545,10 +610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/FightContainer.ts">
+    <entry file="file://$PROJECT_DIR$/src/game/view/fight/view/role/SkillAction.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="597" column="31" lean-forward="true" selection-start-line="597" selection-start-column="31" selection-end-line="597" selection-end-column="31" />
+        <state relative-caret-position="527">
+          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
           <folding />
         </state>
       </provider>

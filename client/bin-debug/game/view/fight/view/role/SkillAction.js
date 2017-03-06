@@ -1,5 +1,5 @@
 /**
- * 技能行为
+ * 处理技能攻击行为,包括被眩晕和没有target等
  * Created by hh on 17/2/20.
  */
 var SkillAction = (function () {
@@ -22,23 +22,59 @@ var SkillAction = (function () {
     }
     var d = __define,c=SkillAction,p=c.prototype;
     /**
-     * 攻击目标
-     * @param skill 技能
-     * @param targets 攻击目标
+     * 预攻击目标
+     * @param skill     技能信息
+     * @param targets   攻击目标
+     * @param buffs     所有buff
+     * @param damage    自身所受伤害
      */
-    p.attack = function (skill, targets) {
+    p.preAttack = function (skill, targets, buffs, damage) {
         if (this._isActionComplete) {
             this._isActionComplete = false;
             console.error("攻击时,ActionComplete应该为false");
         }
         this.curSkill = skill;
         this.targets = targets;
+        this.buffs = buffs;
+        this.damage = damage;
+        fight.verifyActiveSkill(this.curSkill);
+    };
+    /**
+     * 攻击目标
+     * @param skill     技能信息
+     * @param targets   攻击目标
+     * @param buffs     所有buff
+     * @param damage    自身所受伤害
+     */
+    p.attack = function (skill, targets, buffs, damage) {
+        if (this._isActionComplete) {
+            this._isActionComplete = false;
+            console.error("攻击时,ActionComplete应该为false");
+        }
+        this.curSkill = skill;
+        this.targets = targets;
+        this.buffs = buffs;
+        this.damage = damage;
         var action = this.curSkill.action_type;
-        if (fight.needMoveAttack(action)) {
-            this.moveAndAttack();
+        var vertigo = false;
+        var len = buffs ? buffs.length : 0;
+        for (var i = 0; i < len; i++) {
+            var buffConfig = Config.BuffData[buffs[i]];
+            if (buffConfig && buffConfig.effect == BuffTypeEnum.VERTIGO) {
+                vertigo = true;
+                break;
+            }
+        }
+        if (vertigo) {
+            this.postAttackComplete();
         }
         else {
-            this.startAttackAction();
+            if (fight.needMoveAttack(action)) {
+                this.moveAndAttack();
+            }
+            else {
+                this.startAttackAction();
+            }
         }
     };
     // 移动和攻击
@@ -104,6 +140,8 @@ var SkillAction = (function () {
             this.actionComplete();
         }
     };
+    p.postAttackComplete = function () {
+    };
     // 触发跳跃
     p.triggerJump = function () {
         this.fightRole.dispatchEventWith("start_move");
@@ -149,7 +187,7 @@ var SkillAction = (function () {
                         var side = this.fightRole.side;
                         mc.x = fight.AREA_POS[side - 1].x + (Number(offPoint[0]) || 0);
                         mc.y = fight.AREA_POS[side - 1].y + (Number(offPoint[1]) || 0);
-                        this.fightRole.addAreaEff(mc);
+                        this.fightRole.addAreaEff(mc, fight.needFlipped(this.fightRole.pos));
                     }
                     if (this.curSkill.action_type == fight.ATTACK_JUMP_ATTACK2) {
                         mc.x = this.fightRole.x;
@@ -199,6 +237,16 @@ var SkillAction = (function () {
     p.checkComplete = function () {
         if (this.isAttackComplete && (this.extraEffCount <= 0)) {
             this.actionComplete();
+        }
+    };
+    p.skillAttackComplete = function () {
+        if (BigNum.greater(this.reportItem.damage || 0, 0)) {
+            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
+            this.hit();
+        }
+        else {
+            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
+            this.idle();
         }
     };
     p.actionComplete = function () {
