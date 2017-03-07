@@ -3,16 +3,11 @@
  * @author hh
  */
 class FightProcessGenerator {
-    private leftTeam: FightRoleVO[] = Array(fight.ROLE_UP_LIMIT);
-    private rightTeam: FightRoleVO[] = Array(fight.ROLE_UP_LIMIT);
-    private allTeam: FightRoleVO[][] = [this.leftTeam, this.rightTeam];
+    private allTeam: FightRoleVO[][] = [Array(fight.ROLE_UP_LIMIT), Array(fight.ROLE_UP_LIMIT)];
     private roles: FightRoleVO[];
     private orders: FightRoleVO[];
     private index:number = 0;
     private turn:number = 0;
-    public result:number = 0;
-    private rightTotalLife:string;
-    private leftTotalLife:string;
 
     private static SkillTargetFunMap = {
         "one1":"getTarget",
@@ -36,7 +31,7 @@ class FightProcessGenerator {
      * 通过配置 添加战斗角色数据
      * @param data
      */
-    public addConfigDataArr(data: {id: number, pos: number, side: number}[]) {
+    public addConfigDataArr(data: {id: number, pos: number}[]) {
         this.reset();
         let len = data.length;
         for (let i = 0; i < len; i++) {
@@ -79,60 +74,24 @@ class FightProcessGenerator {
      * @param role
      */
     private addSceneData(role:FightRoleVO) {
-        let side = role.side - 1;
-        let pos = role.pos;
+        let side = fight.getSideByPos(role.pos) - 1;
+        let pos = fight.getPosIndexByPos(role.pos);
         this.allTeam[side][pos] = role;
         this.roles.push(role);
     }
 
     /**
      * 生成战斗报告
-     * @param bunch 串
      * @returns {FightReportItem[]}
      */
-    public generateData(bunch:string="a") {
-        for (let i = 0; i < this.roles.length; i++) {
-            this.roles[i].triggerChanceType = bunch;
-        }
+    public generateData() {
         let result:FightReportItem[] = [];
         this.index = 0;
         this.turn = 0;
         this.addBeginBuff(this.roles);
         while (!this.checkEnd() && this.turn <= fight.ROUND_LIMIT) {
             if (this.turn >= fight.ROUND_LIMIT) {
-                this.result = -1;
                 fight.recordLog("战斗步数超过了上限,数所有问题了", fight.LOG_FIGHT_WARN);
-                break;
-            }
-            if (this.orders.length == 0 && !this.checkEnd()) {
-                this.turnBegin();
-            }
-            this.generateOrder();
-            while (this.orders.length > 0 && !this.checkEnd()) {
-                this.generateItem(result);
-            }
-        }
-        return result;
-    }
-
-    /**
-     * 重新生成战报
-     * @returns {FightReportItem[]}
-     */
-    public updateGenerateData(heroArr:HeroVO[]){
-        let result:FightReportItem[] = [];
-
-        for (let i = 0; i < this.roles.length; i++) {
-            for (let j = 0; j < heroArr.length; j++) {
-                if (this.roles[i].id == heroArr[j].id) {
-                    this.roles[i].copyProp(heroArr[j]);
-                }
-            }
-        }
-
-        while (!this.checkEnd() && this.turn  <= fight.ROUND_LIMIT) {
-            if (this.index >= fight.ROUND_LIMIT) {
-                fight.recordLog("战斗步数超过了上限,数据有问题了", fight.LOG_FIGHT_WARN);
                 break;
             }
             if (this.orders.length == 0 && !this.checkEnd()) {
@@ -169,26 +128,6 @@ class FightProcessGenerator {
                         role.addBuff(buffId);
                     }
                 }
-            }
-        }
-
-        this.leftTotalLife = "0";
-        let arr = this.allTeam[FightSideEnum.LEFT_SIDE - 1];
-        let len = arr ? arr.length : 0;
-        for (let i = 0; i < len; i++) {
-            let roleData = arr[i];
-            if (roleData) {
-                this.leftTotalLife = BigNum.add(this.leftTotalLife, roleData.maxHP);
-            }
-        }
-
-        this.rightTotalLife = "0";
-        arr = this.allTeam[FightSideEnum.RIGHT_SIDE - 1];
-        len = arr ? arr.length : 0;
-        for (let i = 0; i < len; i++) {
-            let roleData = arr[i];
-            if (roleData) {
-                this.rightTotalLife = BigNum.add(this.rightTotalLife, roleData.maxHP);
             }
         }
     }
@@ -236,8 +175,7 @@ class FightProcessGenerator {
             let critDamage = cri ? (startRole.critDamage) : 1;               // 暴击配置值
             finalCritDamage = BigNum.mul(critDamage, startRole.extraCritRatio);
         }
-
-        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(startRole) + "发动攻击", fight.LOG_FIGHT_DATA);
+        fight.recordLog(`第${index}步角色${startRole.pos}发动攻击`, fight.LOG_FIGHT_DATA);
         let result:FightReportItem = <FightReportItem>{
             skillId:skillInfo.id,
             target:[],
@@ -281,28 +219,28 @@ class FightProcessGenerator {
                     target.curHP = BigNum.add(target.curHP, addHP);
                     item.hp = target.curHP;
                     item.addHP = addHP;
-                    fight.recordLog("第" + index + "步角色" +  fight.getRolePosDes(target) + "加血" + addHP, fight.LOG_FIGHT_DATA);
+                    fight.recordLog("第" + index + "步角色" +  target.pos + "加血" + addHP, fight.LOG_FIGHT_DATA);
                     if (!!skillInfo.buff_id) {
                         target.addBuff(skillInfo.buff_id, startRole);
                     }
                 } else {
                     if (item.dodge) {
                         // 如果被闪避了
-                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时闪避了", fight.LOG_FIGHT_DATA);
+                        fight.recordLog("第" + index + "步角色" + target.pos + "被攻击时闪避了", fight.LOG_FIGHT_DATA);
                     } else {
                         let ratio = 1;
                         if (target.isInvincible) {
                             ratio = 0;
                             item.invincible = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时无敌", fight.LOG_FIGHT_DATA);
+                            fight.recordLog("第" + index + "步角色" + target.pos + "被攻击时无敌", fight.LOG_FIGHT_DATA);
                         } else if (isPhyAtk && target.freePhysicalAtk) {
                             ratio = 0;
                             item.isFreePhysicalAtk = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时物免", fight.LOG_FIGHT_DATA);
+                            fight.recordLog("第" + index + "步角色" + target.pos + "被攻击时物免", fight.LOG_FIGHT_DATA);
                         } else if (isMagicAtk && target.freeMagicAtk) {
                             ratio = 0;
                             item.isFreeMagicAtk = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时魔免", fight.LOG_FIGHT_DATA);
+                            fight.recordLog("第" + index + "步角色" + target.pos + "被攻击时魔免", fight.LOG_FIGHT_DATA);
                         }
 
                         // 计算伤害
@@ -335,7 +273,7 @@ class FightProcessGenerator {
                         target.curHP = BigNum.sub(target.curHP, hurt);
                         item.damage = hurt;
                         item.hp = target.curHP;
-                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时失血" + hurt + "当前血量" + target.curHP + "最大血量" + target.maxHP, fight.LOG_FIGHT_INFO);
+                        fight.recordLog("第" + index + "步角色" + target.pos + "被攻击时失血" + hurt + "当前血量" + target.curHP + "最大血量" + target.maxHP, fight.LOG_FIGHT_INFO);
 
                         let outHurtBack = BigNum.mul(backOutHurtRatio, hurt);
                         let backHurt = BigNum.mul(backHurtRatio, hurt);
@@ -345,7 +283,7 @@ class FightProcessGenerator {
                         result.hp = startRole.curHP;
 
                         if (BigNum.greater(fight.DIE_HP, target.curHP)){
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击死亡", 1);
+                            fight.recordLog("第" + index + "步角色" + target.pos + "被攻击死亡", 1);
                             killCount++;
                             this.removeRole(target);
                         } else {
@@ -354,7 +292,7 @@ class FightProcessGenerator {
                             }
                         }
                         if (BigNum.greater(fight.DIE_HP, startRole.curHP)) {
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "反弹死亡", 1);
+                            fight.recordLog("第" + index + "步角色" + target.pos + "反弹死亡", 1);
                             this.removeRole(startRole);
                         }
                     }
@@ -376,7 +314,7 @@ class FightProcessGenerator {
         if (BigNum.greater(startRole.curHP, 0)) {
             startRole.loseBlood();
             if (BigNum.lessOrEqual(startRole.curHP, 0)) {
-                fight.recordLog("第" + index + "攻击者中毒死亡" + fight.getRolePosDes(startRole));
+                fight.recordLog("第" + index + "攻击者中毒死亡" + startRole.pos);
                 this.removeRole(startRole);
             }
         }
@@ -393,7 +331,7 @@ class FightProcessGenerator {
 
     // 角色战败后，移除角色
     private removeRole(role: FightRoleVO) {
-        let side = role.side - 1;
+        let side = fight.getSideByPos(role.pos) - 1;
         let pos = role.pos;
         for (let i = 0; i < this.roles.length; i++) {
             if (this.roles[i] == role) {
@@ -420,20 +358,12 @@ class FightProcessGenerator {
         let side = 0;
         for (let i = 0; i < len; i++) {
             if (i == 0) {
-                side = this.roles[0].side;
+                side = fight.getSideByPos(this.roles[0].pos);
             } else {
-                if (side != this.roles[i].side) {
+                if (side != fight.getSideByPos(this.roles[i].pos)) {
                     isEnd = false;
                     break;
                 }
-            }
-        }
-        if (isEnd) {
-            if (len > 0) {
-                if (this.roles[0].side == FightSideEnum.LEFT_SIDE)
-                    this.result = 1;
-                else
-                    this.result = 0;
             }
         }
         return isEnd;
@@ -694,67 +624,17 @@ class FightProcessGenerator {
         return [result];
     }
 
-    public getRightTotalLife() {
-        return this.rightTotalLife;
-    }
-
-    public getLeftTotalLife(){
-        return this.leftTotalLife;
-    }
-
-    /**
-     * 攻击力翻翻
-     * @param side
-     */
-    public doubleSideAtk(side:number) {
-        let roleArr = this.roles;
-        for (let i = 0; i < roleArr.length; i++) {
-            if (roleArr[i] && roleArr[i].side == side) {
-                roleArr[i].phyAtk = BigNum.mul(roleArr[i].phyAtk, 2);
-                roleArr[i].magAtk = BigNum.mul(roleArr[i].magAtk, 2);
-            }
-        }
-    }
-
-    /**
-     * 回复生命
-     * @param side
-     * @param ratio
-     */
-    public recoverySideBlood(side:number, ratio:number=0.5) {
-        let roleArr = this.roles;
-        for (let i = 0; i < roleArr.length; i++) {
-            if (roleArr[i] && roleArr[i].side == side) {
-                roleArr[i].curHP = BigNum.add(roleArr[i].curHP, BigNum.mul(roleArr[i].maxHP, ratio));
-                roleArr[i].curHP = BigNum.min(roleArr[i].curHP, roleArr[i].maxHP);
-            }
-        }
-    }
-
-    public doPalmHurt(side:number){
-        let roleArr = this.roles;
-        for (let i = 0; i < roleArr.length; i++) {
-            if (roleArr[i] && roleArr[i].side == side) {
-                if (roleArr[i].id <= 300) {
-                    roleArr[i].curHP = "0e0";
-                } else {
-                    roleArr[i].curHP = BigNum.sub(roleArr[i].curHP, BigNum.mul(roleArr[i].maxHP, 0.2));
-                }
-                if (BigNum.greater(fight.DIE_HP, roleArr[i].curHP)) {
-                    this.removeRole(roleArr[i]);
-                    i--;
-                }
-            }
-        }
-    }
-
     // 重置
     private reset() {
         for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
-            this.leftTeam[i] = null;
-            this.rightTeam[i] = null;
+            this.allTeam[0][i] = null;
+            this.allTeam[1][i] = null;
         }
         this.orders = [];
         this.roles = [];
+    }
+
+    public dispose() {
+
     }
 }
