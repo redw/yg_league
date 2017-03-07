@@ -237,7 +237,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                 this.roleLayer.addChild(this.leftAreaCont);
             }
             if (this.roles[0][index]) {
-                // this.roles[0][index].zIndex = zIndex;
+                this.roles[0][index].zIndex = zIndex;
                 this.roleLayer.addChild(this.roles[0][index]);
                 zIndex++;
             }
@@ -256,7 +256,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                 this.roleLayer.addChild(this.rightAreaCont);
             }
             if (this.roles[1][index]) {
-                // this.roles[1][index].zIndex = zIndex;
+                this.roles[1][index].zIndex = zIndex;
                 this.roleLayer.addChild(this.roles[1][index]);
                 zIndex++;
             }
@@ -459,10 +459,20 @@ class FightContainer extends egret.DisplayObjectContainer {
         role.dispose();
     }
 
-    public getRoleByPos(pos:number) {
-        let side = fight.getSideByPos(pos) - 1;
-        let index = fight.getPosIndexByPos(pos);
-        return this.roles[side][index];
+    public getRoleByPos(str:string) {
+        let side = +str.substr(0, 1) - 1;
+        let pos = +str.substr(2, 1);
+        return this.roles[side][pos];
+    }
+
+    public getRole(value:{side:number, pos:number}) {
+        let side = value.side;
+        let pos = value.pos;
+        if (side < 1 || side > 2 || pos < 0 || pos > 8) {
+            fight.recordLog("获取角色参数不对", fight.LOG_FIGHT_WARN);
+            return null;
+        }
+        return this.roles[side - 1][pos];
     }
 
     private getPlayingCount() {
@@ -582,9 +592,8 @@ class FightContainer extends egret.DisplayObjectContainer {
                 egret.setTimeout((index) => {
                     let eff = new MCEff("role_born");
                     this.bornRole(roleArr[index]);
-                    let point = fight.getRoleInitPoint(roleArr[index].pos);
-                    eff.x = point.x;
-                    eff.y = point.y;
+                    eff.x = fight.getRoleInitPoint(roleArr[index]).x;
+                    eff.y = fight.getRoleInitPoint(roleArr[index]).y;
                     this.damageEffLayer.addChild(eff);
                 }, this, i * 200, i);
             }

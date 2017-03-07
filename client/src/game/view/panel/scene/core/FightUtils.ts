@@ -7,6 +7,31 @@ module fight {
     const TEST_UID_ARR:string[] = ["300667664", "309782584", "292758853", "287057268", "307276412", "296705951", "287127041"];
 
     /**
+     * 得到角色的描述信息
+     * @param role RoleData或FightRole
+     * @returns {string}
+     */
+    export function getRolePosDes(role:any) {
+        let result = "";
+        let arr = [];
+        if (role.length >= 1) {
+            arr = role.concat();
+        } else {
+            arr = [role];
+        }
+        let len = arr.length;
+        for (let i = 0; i < len; i++) {
+            if (arr[i].roleData)
+                result += (arr[i].roleData.side + "_" + arr[i].roleData.pos);
+            else
+                result += (arr[i].side + "_" + arr[i].pos);
+            if (i < len - 1)
+                result += ",";
+        }
+        return result;
+    }
+
+    /**
      * 选取目标通用规则
      * @param value 排或列
      * @returns {[number,number,number]}
@@ -86,24 +111,23 @@ module fight {
      * @param skill
      * @returns {Point}
      */
-    export function getNearFightPoint(pos:number, targets:{pos:number}[], skill:SkillConfig) {
+    export function getNearFightPoint(role:{pos:number, side:number}, targets:{side:number, pos:number}[], skill:SkillConfig) {
         let point = new egret.Point();
         let offPoint = (skill && skill.move_position) || [0, 0];
         if (skill.action_type == fight.ATTACK_ACTION_ROW || skill.target_cond == "row") {
-            let newPos = (3 - Math.floor(pos / 10)) * 10 + targets[0].pos % 10 % 3;
-            point = getRoleInitPoint(newPos);
+            point = getRoleInitPoint({side: 3 - role.side, pos: targets[0].pos % 3});
         } else {
             let curRole = targets[0];
-            let minValue = Math.abs(pos - curRole.pos);
+            let minValue = Math.abs(role.pos - curRole.pos);
             for (let i = 1; i < targets.length; i++) {
-                let curValue = Math.abs(pos - targets[i].pos);
+                let curValue = Math.abs(role.pos - targets[i].pos);
                 if (curValue < minValue) {
                     curRole = targets[i];
                 }
             }
-            point = getRoleInitPoint(curRole.pos);
+            point = getRoleInitPoint(curRole);
         }
-        if (fight.getSideByPos(pos) == FightSideEnum.RIGHT_SIDE) {
+        if (role.side == FightSideEnum.RIGHT_SIDE) {
             point.x += (MOVE_ATTACK_OFF + (+offPoint[0]));
         } else {
             point.x -= (MOVE_ATTACK_OFF + (+offPoint[0]));
@@ -114,13 +138,13 @@ module fight {
 
     /**
      * 得到角色出生位置
-     * @param pos  角色数据
+     * @param role  角色数据
      * @returns {Point}
      */
-    export function getRoleInitPoint(pos:number) {
-        let side = fight.getSideByPos(pos) - 1;
-        let index = fight.getPosIndexByPos(pos);
-        return POS_MAP[side][index].clone();
+    export function getRoleInitPoint(role:{side:number, pos:number}) {
+        let side = role.side - 1;
+        let pos = role.pos;
+        return POS_MAP[side][pos].clone();
     }
 
     /**
@@ -318,41 +342,11 @@ module fight {
         let result = false;
         let len = steps ? steps.length : 0;
         if (len > 1) {
-            let side = getSideByPos(steps[len - 1].pos);
+            let side = +(steps[len - 1].pos.substr(0, 1));
             if (steps[len - 1].round >= 20 &&  side == FightSideEnum.RIGHT_SIDE) {
                 result = true;
             }
         }
         return result;
-    }
-
-    export function getSideByPos(pos:number){
-        return Math.floor(pos / 10);
-    }
-
-    export function getPosIndexByPos(pos:number){
-        return pos % 10;
-    }
-
-    export function needFlipped(pos:number) {
-        return getSideByPos(pos) == FightSideEnum.LEFT_SIDE;
-    }
-
-    export function getRoleHeight(id:number) {
-        return (Config.HeroData[id] || Config.EnemyData).modle_height;
-    }
-
-    export function checkFrameEquip(curFrame:number, triggerFrame:number, range:number=0) {
-        let off = curFrame - triggerFrame;
-        return off >= 0 && off <= range;
-    }
-
-    let mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory();
-    export function createMovieClip(name:string):egret.MovieClip {
-        let dataRes:any = RES.getRes(name + "_json");
-        let textureRes:any = RES.getRes(name + "_png");
-        mcFactory.mcDataSet = dataRes;
-        mcFactory.texture = textureRes;
-        return new egret.MovieClip(mcFactory.generateMovieClipData(name));
     }
 }

@@ -14,7 +14,7 @@ class RoleBody extends egret.DisplayObjectContainer {
         super();
         this.config = Config.HeroData[id] || Config.EnemyData[id];
         let resourceArr = String(this.config.resource).split(",");
-        this.mainMc = fight.createMovieClip(resourceArr[0]);
+        this.mainMc = FightRole.createMovieClip(resourceArr[0]);
         this.addChild(this.mainMc);
 
         this.active();
@@ -50,7 +50,7 @@ class RoleBody extends egret.DisplayObjectContainer {
         if (isSkillAttack) {
             if (this.hasSkillMC() && !this.skillMc) {
                 let resourceArr = String(this.config.resource).split(",");
-                this.skillMc = fight.createMovieClip(`${resourceArr[0]}_s`);
+                this.skillMc = FightRole.createMovieClip(`${resourceArr[0]}_s`);
                 this.addChild(this.skillMc);
                 if (this.skillMc.scaleX != this.mainMc.scaleX)
                     this.skillMc.scaleX = this.mainMc.scaleX;
