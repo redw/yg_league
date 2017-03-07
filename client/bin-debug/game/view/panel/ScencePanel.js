@@ -79,3 +79,4 @@ var ScencePanel = (function (_super) {
     return ScencePanel;
 }(BasePanel));
 egret.registerClass(ScencePanel,'ScencePanel');
+//# sourceMappingURL=ScencePanel.js.map

@@ -62,3 +62,4 @@ var Tips = (function (_super) {
     return Tips;
 }(egret.Sprite));
 egret.registerClass(Tips,'Tips');
+//# sourceMappingURL=Tips.js.map

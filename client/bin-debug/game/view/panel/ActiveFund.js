@@ -44,3 +44,4 @@ var ActiveFund = (function (_super) {
     return ActiveFund;
 }(eui.Component));
 egret.registerClass(ActiveFund,'ActiveFund');
+//# sourceMappingURL=ActiveFund.js.map

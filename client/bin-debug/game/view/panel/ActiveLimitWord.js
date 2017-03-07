@@ -39,3 +39,4 @@ var ActiveLimitWord = (function (_super) {
     return ActiveLimitWord;
 }(eui.Component));
 egret.registerClass(ActiveLimitWord,'ActiveLimitWord');
+//# sourceMappingURL=ActiveLimitWord.js.map

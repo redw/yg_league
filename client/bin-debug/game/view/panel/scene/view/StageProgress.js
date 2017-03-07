@@ -45,3 +45,4 @@ var StageProgress = (function (_super) {
     return StageProgress;
 }(egret.DisplayObjectContainer));
 egret.registerClass(StageProgress,'StageProgress');
+//# sourceMappingURL=StageProgress.js.map

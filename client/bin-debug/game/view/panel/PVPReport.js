@@ -17,3 +17,4 @@ var PVPReport = (function (_super) {
     return PVPReport;
 }(eui.Component));
 egret.registerClass(PVPReport,'PVPReport');
+//# sourceMappingURL=PVPReport.js.map

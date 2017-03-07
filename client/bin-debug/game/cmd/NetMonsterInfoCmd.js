@@ -22,3 +22,4 @@ var NetMonsterUpCmd = (function (_super) {
     return NetMonsterUpCmd;
 }(BaseCmd));
 egret.registerClass(NetMonsterUpCmd,'NetMonsterUpCmd');
+//# sourceMappingURL=NetMonsterInfoCmd.js.map

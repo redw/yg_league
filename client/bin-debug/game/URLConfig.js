@@ -98,3 +98,4 @@ var URLConfig;
     }
     URLConfig.getWorkerMCUrl = getWorkerMCUrl;
 })(URLConfig || (URLConfig = {}));
+//# sourceMappingURL=URLConfig.js.map

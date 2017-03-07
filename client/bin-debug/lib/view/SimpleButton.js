@@ -31,3 +31,4 @@ var SimpleButton = (function (_super) {
     return SimpleButton;
 }(eui.Image));
 egret.registerClass(SimpleButton,'SimpleButton');
+//# sourceMappingURL=SimpleButton.js.map

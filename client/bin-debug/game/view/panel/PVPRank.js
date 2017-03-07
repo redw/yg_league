@@ -122,3 +122,4 @@ var PVPRank = (function (_super) {
     return PVPRank;
 }(eui.Component));
 egret.registerClass(PVPRank,'PVPRank');
+//# sourceMappingURL=PVPRank.js.map

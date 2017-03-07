@@ -273,3 +273,4 @@ var CmdID = (function (_super) {
     return CmdID;
 }(egret.HashObject));
 egret.registerClass(CmdID,'CmdID');
+//# sourceMappingURL=CmdID.js.map

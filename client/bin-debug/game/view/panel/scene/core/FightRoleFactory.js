@@ -38,3 +38,4 @@ var FightRoleFactory = (function () {
     return FightRoleFactory;
 }());
 egret.registerClass(FightRoleFactory,'FightRoleFactory');
+//# sourceMappingURL=FightRoleFactory.js.map

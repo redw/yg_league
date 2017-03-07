@@ -172,3 +172,4 @@ var RankPanel = (function (_super) {
     return RankPanel;
 }(BasePanel));
 egret.registerClass(RankPanel,'RankPanel');
+//# sourceMappingURL=RankPanel.js.map

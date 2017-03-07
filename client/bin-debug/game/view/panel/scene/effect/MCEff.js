@@ -152,3 +152,4 @@ var MCEff = (function (_super) {
     return MCEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(MCEff,'MCEff');
+//# sourceMappingURL=MCEff.js.map

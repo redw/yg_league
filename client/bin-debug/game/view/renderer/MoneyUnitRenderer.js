@@ -22,3 +22,4 @@ var MoneyUnitRenderer = (function (_super) {
     return MoneyUnitRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(MoneyUnitRenderer,'MoneyUnitRenderer');
+//# sourceMappingURL=MoneyUnitRenderer.js.map

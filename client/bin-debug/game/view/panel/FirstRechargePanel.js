@@ -91,3 +91,4 @@ var FirstRechargePanel = (function (_super) {
     return FirstRechargePanel;
 }(BasePanel));
 egret.registerClass(FirstRechargePanel,'FirstRechargePanel');
+//# sourceMappingURL=FirstRechargePanel.js.map

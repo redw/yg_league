@@ -363,3 +363,4 @@ var fight;
     }
     fight.isOverRound = isOverRound;
 })(fight || (fight = {}));
+//# sourceMappingURL=FightUtils.js.map

@@ -43,3 +43,4 @@ var FriendGiftPanel = (function (_super) {
     return FriendGiftPanel;
 }(BasePanel));
 egret.registerClass(FriendGiftPanel,'FriendGiftPanel');
+//# sourceMappingURL=FriendGiftPanel.js.map

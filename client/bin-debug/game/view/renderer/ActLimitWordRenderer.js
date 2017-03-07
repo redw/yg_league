@@ -96,3 +96,4 @@ var ActLimitWordRenderer = (function (_super) {
     return ActLimitWordRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(ActLimitWordRenderer,'ActLimitWordRenderer');
+//# sourceMappingURL=ActLimitWordRenderer.js.map

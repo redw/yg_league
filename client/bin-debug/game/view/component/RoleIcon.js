@@ -55,3 +55,4 @@ var RoleIcon = (function (_super) {
     return RoleIcon;
 }(eui.Component));
 egret.registerClass(RoleIcon,'RoleIcon');
+//# sourceMappingURL=RoleIcon.js.map

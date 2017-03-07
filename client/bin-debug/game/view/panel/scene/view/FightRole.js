@@ -928,3 +928,4 @@ var FightRole = (function (_super) {
     return FightRole;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightRole,'FightRole');
+//# sourceMappingURL=FightRole.js.map

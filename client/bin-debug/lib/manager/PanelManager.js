@@ -154,3 +154,4 @@ var PanelManager = (function (_super) {
     return PanelManager;
 }(egret.HashObject));
 egret.registerClass(PanelManager,'PanelManager');
+//# sourceMappingURL=PanelManager.js.map

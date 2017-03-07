@@ -18,3 +18,4 @@ var NetDrawHeroCmd = (function (_super) {
     return NetDrawHeroCmd;
 }(BaseCmd));
 egret.registerClass(NetDrawHeroCmd,'NetDrawHeroCmd');
+//# sourceMappingURL=NetDrawHeroCmd.js.map

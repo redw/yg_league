@@ -35,3 +35,4 @@ var ActiveDayInvite = (function (_super) {
     return ActiveDayInvite;
 }(eui.Component));
 egret.registerClass(ActiveDayInvite,'ActiveDayInvite');
+//# sourceMappingURL=ActiveDayInvite.js.map

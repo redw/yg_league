@@ -77,3 +77,4 @@ var PVPShopRenderer = (function (_super) {
     return PVPShopRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(PVPShopRenderer,'PVPShopRenderer');
+//# sourceMappingURL=PVPShopRenderer.js.map

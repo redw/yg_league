@@ -114,3 +114,4 @@ var PVPFightPanel = (function (_super) {
     return PVPFightPanel;
 }(BasePanel));
 egret.registerClass(PVPFightPanel,'PVPFightPanel');
+//# sourceMappingURL=PVPFightPanel.js.map

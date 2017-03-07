@@ -179,3 +179,4 @@ var ActiveFruit = (function (_super) {
     return ActiveFruit;
 }(eui.Component));
 egret.registerClass(ActiveFruit,'ActiveFruit');
+//# sourceMappingURL=ActiveFruit.js.map

@@ -38,3 +38,4 @@ var OfflinePanel = (function (_super) {
     return OfflinePanel;
 }(BasePanel));
 egret.registerClass(OfflinePanel,'OfflinePanel');
+//# sourceMappingURL=OfflinePanel.js.map

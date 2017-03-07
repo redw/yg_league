@@ -48,3 +48,4 @@ var FightWarnEff = (function (_super) {
     return FightWarnEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightWarnEff,'FightWarnEff');
+//# sourceMappingURL=FightWarnEff.js.map

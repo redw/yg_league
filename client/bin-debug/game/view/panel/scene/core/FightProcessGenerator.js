@@ -727,3 +727,4 @@ var FightProcessGenerator = (function () {
     return FightProcessGenerator;
 }());
 egret.registerClass(FightProcessGenerator,'FightProcessGenerator');
+//# sourceMappingURL=FightProcessGenerator.js.map

@@ -261,3 +261,4 @@ var FightDataModel = (function (_super) {
     return FightDataModel;
 }(egret.HashObject));
 egret.registerClass(FightDataModel,'FightDataModel');
+//# sourceMappingURL=FightDataModel.js.map

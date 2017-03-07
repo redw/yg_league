@@ -23,3 +23,4 @@ var AlertApplyPanel = (function (_super) {
     return AlertApplyPanel;
 }(BasePanel));
 egret.registerClass(AlertApplyPanel,'AlertApplyPanel');
+//# sourceMappingURL=AlertApplyPanel.js.map

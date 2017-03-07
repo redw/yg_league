@@ -84,3 +84,4 @@ var SecretAreaPanel = (function (_super) {
     return SecretAreaPanel;
 }(BasePanel));
 egret.registerClass(SecretAreaPanel,'SecretAreaPanel');
+//# sourceMappingURL=SecretAreaPanel.js.map

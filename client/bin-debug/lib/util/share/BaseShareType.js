@@ -24,3 +24,4 @@ var BaseShareType = (function (_super) {
     return BaseShareType;
 }(egret.HashObject));
 egret.registerClass(BaseShareType,'BaseShareType');
+//# sourceMappingURL=BaseShareType.js.map

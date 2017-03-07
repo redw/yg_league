@@ -144,3 +144,4 @@ var ShareType = (function (_super) {
     return ShareType;
 }(BaseShareType));
 egret.registerClass(ShareType,'ShareType');
+//# sourceMappingURL=ShareType.js.map

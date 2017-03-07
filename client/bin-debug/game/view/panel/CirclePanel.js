@@ -109,3 +109,4 @@ var CirclePanel = (function (_super) {
     return CirclePanel;
 }(BasePanel));
 egret.registerClass(CirclePanel,'CirclePanel');
+//# sourceMappingURL=CirclePanel.js.map

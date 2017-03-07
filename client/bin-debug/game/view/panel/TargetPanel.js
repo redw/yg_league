@@ -228,3 +228,4 @@ var TargetPanel = (function (_super) {
     return TargetPanel;
 }(BasePanel));
 egret.registerClass(TargetPanel,'TargetPanel');
+//# sourceMappingURL=TargetPanel.js.map

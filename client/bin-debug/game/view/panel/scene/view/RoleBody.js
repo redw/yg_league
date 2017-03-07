@@ -156,3 +156,4 @@ var RoleBody = (function (_super) {
     return RoleBody;
 }(egret.DisplayObjectContainer));
 egret.registerClass(RoleBody,'RoleBody');
+//# sourceMappingURL=RoleBody.js.map

@@ -30,3 +30,4 @@ var BattleStartEff = (function (_super) {
     return BattleStartEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BattleStartEff,'BattleStartEff');
+//# sourceMappingURL=BattleStartEff.js.map

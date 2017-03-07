@@ -140,3 +140,4 @@ var BossFightPanel = (function (_super) {
     return BossFightPanel;
 }(BasePanel));
 egret.registerClass(BossFightPanel,'BossFightPanel');
+//# sourceMappingURL=BossFightPanel.js.map

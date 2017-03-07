@@ -55,3 +55,4 @@ var NetCircleGoBackCmd = (function (_super) {
     return NetCircleGoBackCmd;
 }(BaseCmd));
 egret.registerClass(NetCircleGoBackCmd,'NetCircleGoBackCmd');
+//# sourceMappingURL=NetCircleCmd.js.map

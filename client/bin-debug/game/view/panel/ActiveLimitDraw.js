@@ -39,3 +39,4 @@ var ActiveLimitDraw = (function (_super) {
     return ActiveLimitDraw;
 }(eui.Component));
 egret.registerClass(ActiveLimitDraw,'ActiveLimitDraw');
+//# sourceMappingURL=ActiveLimitDraw.js.map

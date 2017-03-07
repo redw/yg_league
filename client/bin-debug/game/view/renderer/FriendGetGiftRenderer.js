@@ -24,3 +24,4 @@ var FriendGetGiftRenderer = (function (_super) {
     return FriendGetGiftRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(FriendGetGiftRenderer,'FriendGetGiftRenderer');
+//# sourceMappingURL=FriendGetGiftRenderer.js.map

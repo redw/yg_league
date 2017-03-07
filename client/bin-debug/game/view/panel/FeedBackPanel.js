@@ -36,3 +36,4 @@ var FeedBackPanel = (function (_super) {
     return FeedBackPanel;
 }(BasePanel));
 egret.registerClass(FeedBackPanel,'FeedBackPanel');
+//# sourceMappingURL=FeedBackPanel.js.map

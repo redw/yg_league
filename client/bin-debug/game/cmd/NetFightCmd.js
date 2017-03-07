@@ -172,3 +172,4 @@ var NetDungeonFightCmdReq = (function (_super) {
     return NetDungeonFightCmdReq;
 }(BaseCmd));
 egret.registerClass(NetDungeonFightCmdReq,'NetDungeonFightCmdReq');
+//# sourceMappingURL=NetFightCmd.js.map

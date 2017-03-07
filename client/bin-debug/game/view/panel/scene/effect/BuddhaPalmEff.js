@@ -29,3 +29,4 @@ var BuddhaPalmEff = (function (_super) {
     return BuddhaPalmEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BuddhaPalmEff,'BuddhaPalmEff');
+//# sourceMappingURL=BuddhaPalmEff.js.map

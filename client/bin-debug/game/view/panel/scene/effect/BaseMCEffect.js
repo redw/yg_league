@@ -92,3 +92,4 @@ var BaseMCEffect = (function (_super) {
     return BaseMCEffect;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BaseMCEffect,'BaseMCEffect');
+//# sourceMappingURL=BaseMCEffect.js.map

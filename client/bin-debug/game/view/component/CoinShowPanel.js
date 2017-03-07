@@ -57,3 +57,4 @@ var CoinShowPanel = (function (_super) {
     return CoinShowPanel;
 }(eui.Component));
 egret.registerClass(CoinShowPanel,'CoinShowPanel');
+//# sourceMappingURL=CoinShowPanel.js.map

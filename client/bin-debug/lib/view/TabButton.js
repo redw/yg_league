@@ -29,3 +29,4 @@ var TabButton = (function (_super) {
     return TabButton;
 }(eui.Component));
 egret.registerClass(TabButton,'TabButton');
+//# sourceMappingURL=TabButton.js.map

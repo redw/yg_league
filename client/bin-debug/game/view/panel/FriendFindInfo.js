@@ -44,3 +44,4 @@ var FriendFindInfo = (function (_super) {
     return FriendFindInfo;
 }(BasePanel));
 egret.registerClass(FriendFindInfo,'FriendFindInfo');
+//# sourceMappingURL=FriendFindInfo.js.map

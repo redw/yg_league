@@ -22,3 +22,4 @@ var SkillNameEff = (function (_super) {
     return SkillNameEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(SkillNameEff,'SkillNameEff');
+//# sourceMappingURL=SkillNameEff.js.map

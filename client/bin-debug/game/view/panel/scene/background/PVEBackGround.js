@@ -69,3 +69,4 @@ var PVEBackGround = (function (_super) {
     return PVEBackGround;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PVEBackGround,'PVEBackGround');
+//# sourceMappingURL=PVEBackGround.js.map

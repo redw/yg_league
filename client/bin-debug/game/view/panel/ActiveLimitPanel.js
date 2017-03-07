@@ -242,3 +242,4 @@ var ActiveLimitPanel = (function (_super) {
     return ActiveLimitPanel;
 }(BasePanel));
 egret.registerClass(ActiveLimitPanel,'ActiveLimitPanel');
+//# sourceMappingURL=ActiveLimitPanel.js.map

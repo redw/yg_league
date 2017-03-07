@@ -154,3 +154,4 @@ var ActiveSign = (function (_super) {
     return ActiveSign;
 }(eui.Component));
 egret.registerClass(ActiveSign,'ActiveSign');
+//# sourceMappingURL=ActiveSign.js.map

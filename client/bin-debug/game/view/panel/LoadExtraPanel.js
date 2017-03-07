@@ -70,3 +70,4 @@ var LoadExtraPanel = (function (_super) {
     return LoadExtraPanel;
 }(BasePanel));
 egret.registerClass(LoadExtraPanel,'LoadExtraPanel');
+//# sourceMappingURL=LoadExtraPanel.js.map

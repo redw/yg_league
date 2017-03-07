@@ -298,3 +298,4 @@ var PVEScenePanel = (function (_super) {
     return PVEScenePanel;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PVEScenePanel,'PVEScenePanel');
+//# sourceMappingURL=PVEFightContainer.js.map

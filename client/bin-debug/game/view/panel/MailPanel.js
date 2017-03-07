@@ -59,3 +59,4 @@ var MailPanel = (function (_super) {
     return MailPanel;
 }(BasePanel));
 egret.registerClass(MailPanel,'MailPanel');
+//# sourceMappingURL=MailPanel.js.map
