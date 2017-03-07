@@ -30,3 +30,4 @@ var StarButton = (function (_super) {
     return StarButton;
 }(eui.Button));
 egret.registerClass(StarButton,'StarButton');
+//# sourceMappingURL=StarButton.js.map

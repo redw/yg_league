@@ -154,3 +154,4 @@ var Alert = (function (_super) {
     return Alert;
 }(BasePanel));
 egret.registerClass(Alert,'Alert');
+//# sourceMappingURL=Alert.js.map

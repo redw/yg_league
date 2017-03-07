@@ -92,3 +92,4 @@ var SmallMonsterInfo = (function (_super) {
     return SmallMonsterInfo;
 }(BasePanel));
 egret.registerClass(SmallMonsterInfo,'SmallMonsterInfo');
+//# sourceMappingURL=SmallMonsterInfo.js.map

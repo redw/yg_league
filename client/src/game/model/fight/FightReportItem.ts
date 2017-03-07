@@ -27,7 +27,7 @@ class FightReportItem{
     /** 角色id */
     id:number;
     /** 位置 side_pos */
-    pos:string;
+    pos:number;
     /** 血量 */
     hp:string;
     /** 最大血量 */
@@ -71,8 +71,8 @@ class FightReportTargetItem {
 
     /** 角色id */
     id:number;
-    /** 位置 side_pos */
-    pos:string;
+    /** 位置 */
+    pos:number;
     /** 血量 */
     hp:string;
     /** 最大血量 */

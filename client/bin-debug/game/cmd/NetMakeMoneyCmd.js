@@ -55,3 +55,4 @@ var NetAutoMoneyCmd = (function (_super) {
     return NetAutoMoneyCmd;
 }(BaseCmd));
 egret.registerClass(NetAutoMoneyCmd,'NetAutoMoneyCmd');
+//# sourceMappingURL=NetMakeMoneyCmd.js.map

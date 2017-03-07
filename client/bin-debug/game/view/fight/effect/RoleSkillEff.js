@@ -11,3 +11,4 @@ var RoleSkillEff = (function (_super) {
     return RoleSkillEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(RoleSkillEff,'RoleSkillEff');
+//# sourceMappingURL=RoleSkillEff.js.map

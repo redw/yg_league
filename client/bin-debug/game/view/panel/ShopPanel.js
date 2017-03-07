@@ -119,3 +119,4 @@ var ShopPanel = (function (_super) {
     return ShopPanel;
 }(BasePanel));
 egret.registerClass(ShopPanel,'ShopPanel');
+//# sourceMappingURL=ShopPanel.js.map

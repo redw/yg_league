@@ -43,3 +43,4 @@ var SmallMonsterCatch = (function (_super) {
     return SmallMonsterCatch;
 }(BasePanel));
 egret.registerClass(SmallMonsterCatch,'SmallMonsterCatch');
+//# sourceMappingURL=SmallMonsterCatch.js.map

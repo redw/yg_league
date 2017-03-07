@@ -130,3 +130,4 @@ var RoleHPBar = (function (_super) {
     return RoleHPBar;
 }(egret.DisplayObjectContainer));
 egret.registerClass(RoleHPBar,'RoleHPBar');
+//# sourceMappingURL=RoleHPBar.js.map

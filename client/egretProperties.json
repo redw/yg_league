@@ -25,6 +25,9 @@
 		},
 		{
 			"name": "res"
+		},
+		{
+			"name": "dragonBones"
 		}
 	]
 }

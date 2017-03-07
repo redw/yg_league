@@ -321,3 +321,4 @@ var HeroVO = (function () {
     return HeroVO;
 }());
 egret.registerClass(HeroVO,'HeroVO');
+//# sourceMappingURL=HeroVO.js.map

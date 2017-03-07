@@ -170,3 +170,4 @@ var BonusPanel = (function (_super) {
     return BonusPanel;
 }(BasePanel));
 egret.registerClass(BonusPanel,'BonusPanel');
+//# sourceMappingURL=BonusPanel.js.map

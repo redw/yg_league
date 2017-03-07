@@ -6,22 +6,17 @@ var FightRoleFactory = (function () {
     function FightRoleFactory() {
     }
     var d = __define,c=FightRoleFactory,p=c.prototype;
-    FightRoleFactory.createRole = function (fightContainer, fightRoleVO) {
-        var arr = FightRoleFactory.map[fightRoleVO.config.id];
+    FightRoleFactory.createRole = function (fightContainer, data) {
+        var arr = FightRoleFactory.map[data.id];
         var role;
         if (arr && arr.length > 0) {
             role = arr.shift();
-            role.active(fightContainer, fightRoleVO);
+            role.active(fightContainer, data);
             role.idle();
         }
         else {
-            role = new FightRole(fightContainer, fightRoleVO);
+            role = new FightRole(fightContainer, data);
         }
-        var point = fight.getRoleInitPoint(fightRoleVO);
-        role.x = point.x;
-        role.y = point.y;
-        if (!role.visible)
-            role.visible = true;
         return role;
     };
     FightRoleFactory.freeRole = function (role) {
@@ -38,3 +33,4 @@ var FightRoleFactory = (function () {
     return FightRoleFactory;
 }());
 egret.registerClass(FightRoleFactory,'FightRoleFactory');
+//# sourceMappingURL=FightRoleFactory.js.map

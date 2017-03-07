@@ -15,3 +15,4 @@ var NetAcieveCmd = (function (_super) {
     return NetAcieveCmd;
 }(BaseCmd));
 egret.registerClass(NetAcieveCmd,'NetAcieveCmd');
+//# sourceMappingURL=NetAcieveCmd.js.map

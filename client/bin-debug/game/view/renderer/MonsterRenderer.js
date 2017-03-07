@@ -79,3 +79,4 @@ var MonsterRenderer = (function (_super) {
     return MonsterRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(MonsterRenderer,'MonsterRenderer');
+//# sourceMappingURL=MonsterRenderer.js.map

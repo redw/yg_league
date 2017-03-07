@@ -29,3 +29,4 @@ var NewChapterEff = (function (_super) {
     return NewChapterEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(NewChapterEff,'NewChapterEff');
+//# sourceMappingURL=NewChapterEff.js.map

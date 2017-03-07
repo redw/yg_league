@@ -104,3 +104,4 @@ var ShareFKType = (function (_super) {
     return ShareFKType;
 }(BaseShareType));
 egret.registerClass(ShareFKType,'ShareFKType');
+//# sourceMappingURL=ShareFKType.js.map

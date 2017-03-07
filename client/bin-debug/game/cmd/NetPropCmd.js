@@ -18,3 +18,4 @@ var NetUsePropCmd = (function (_super) {
     return NetUsePropCmd;
 }(BaseCmd));
 egret.registerClass(NetUsePropCmd,'NetUsePropCmd');
+//# sourceMappingURL=NetPropCmd.js.map

@@ -1,5 +1,5 @@
 /**
- * 处理技能攻击行为,包括被眩晕和没有target等
+ * 处理角色的攻击行为,包括被眩晕和没有target等
  * Created by hh on 17/2/20.
  */
 var SkillAction = (function () {
@@ -18,9 +18,13 @@ var SkillAction = (function () {
         this.isTriggerDamage = false;
         // 是否触发过额外效果(用于校证)
         this.isTriggerExtraEff = false;
-        this.fightRole = fightRole;
+        this.setFightRole(fightRole);
     }
     var d = __define,c=SkillAction,p=c.prototype;
+    p.setFightRole = function (value) {
+        this.reset();
+        this.fightRole = value;
+    };
     /**
      * 预攻击目标
      * @param skill     技能信息
@@ -38,24 +42,6 @@ var SkillAction = (function () {
         this.buffs = buffs;
         this.damage = damage;
         fight.verifyActiveSkill(this.curSkill);
-    };
-    /**
-     * 攻击目标
-     * @param skill     技能信息
-     * @param targets   攻击目标
-     * @param buffs     所有buff
-     * @param damage    自身所受伤害
-     */
-    p.attack = function (skill, targets, buffs, damage) {
-        if (this._isActionComplete) {
-            this._isActionComplete = false;
-            console.error("攻击时,ActionComplete应该为false");
-        }
-        this.curSkill = skill;
-        this.targets = targets;
-        this.buffs = buffs;
-        this.damage = damage;
-        var action = this.curSkill.action_type;
         var vertigo = false;
         var len = buffs ? buffs.length : 0;
         for (var i = 0; i < len; i++) {
@@ -68,26 +54,43 @@ var SkillAction = (function () {
         if (vertigo) {
             this.postAttackComplete();
         }
+        else if (this.targets.length == 0) {
+            this.actionComplete();
+        }
         else {
+            // if (this.curSkill.skill_name) {
+            //     this.fightContainer.showSkillFlyTxt(`skillname_${this.curSkill.skill_name}`);
+            // }
+            //
+            // let showInfo = (this.curSkill.skill_free_effect || "").split(",");
+            // let needMode = !!showInfo[1];
+            // let source = showInfo[0];
+            // if (source && source != "0") {
+            //     let eff = new MCEff(source);
+            //     eff.registerBack(0, this.doAction, this, null);
+            //     eff.y = (this.config.modle_height) * -0.5;
+            //     this.fightContainer.showFreeSkillEff(this, eff, needMode);
+            // } else {
+            //     this.doAction();
+            // }
+            var action = skill.action_type;
             if (fight.needMoveAttack(action)) {
                 this.moveAndAttack();
             }
             else {
-                this.startAttackAction();
+                this.attack();
             }
         }
     };
     // 移动和攻击
     p.moveAndAttack = function () {
-        this.fightRole.dispatchEventWith("start_move", true, { x: this.fightRole.x, y: this.fightRole.y });
+        this.fightRole.dispatchEventWith("start_move", true, { x: this.fightRole.x, y: this.fightRole.y, scaleX: this.fightRole.getScaleX() });
         var point = fight.getNearFightPoint(this.fightRole.pos, this.targets, this.curSkill);
         var tween = egret.Tween.get(this.fightRole);
         tween.to({ x: point.x, y: point.y }, fight.MOVE_TIME);
-        tween.call(this.startAttackAction, this);
+        tween.call(this.attack, this);
     };
-    // 开始攻击
-    p.startAttackAction = function () {
-        this.isAttackComplete = false;
+    p.attack = function () {
         this.fightRole.addEventListener("attack_complete", this.onComplete, this, true);
         this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
         this.fightRole.attack(this.curSkill);
@@ -120,7 +123,7 @@ var SkillAction = (function () {
         }
     };
     // 攻击完成
-    p.onComplete = function (e) {
+    p.onComplete = function () {
         var _this = this;
         this.isAttackComplete = true;
         this.fightRole.removeEventListener("attack_complete", this.onComplete, this, true);
@@ -130,17 +133,18 @@ var SkillAction = (function () {
             var point = fight.getRoleInitPoint(this.fightRole.pos);
             tween.to({ x: point.x, y: point.y }, fight.RETREAT_TIME);
             tween.call(function () {
-                _this.actionComplete();
+                _this.postAttackComplete();
             }, this);
         }
-        else if (!this.curSkill.scource_effect) {
-            this.actionComplete();
-        }
-        else if (!this.extraEffCount) {
-            this.actionComplete();
+        else {
+            this.postAttackComplete();
         }
     };
     p.postAttackComplete = function () {
+        if (BigNum.greater(this.damage || 0, 1)) {
+            this.fightRole.hit();
+        }
+        this.checkComplete();
     };
     // 触发跳跃
     p.triggerJump = function () {
@@ -216,7 +220,7 @@ var SkillAction = (function () {
                     break;
                 }
             }
-            if (!this.isTriggerExtraEff && fight.checkFrameEquip(frame, +frames_1[len - 1]), 1) {
+            if (!this.isTriggerExtraEff && fight.checkFrameEquip(frame, +frames_1[len - 1], 1)) {
                 this.isTriggerExtraEff = true;
                 this.fightRole.startDamage(len, len);
             }
@@ -239,16 +243,6 @@ var SkillAction = (function () {
             this.actionComplete();
         }
     };
-    p.skillAttackComplete = function () {
-        if (BigNum.greater(this.reportItem.damage || 0, 0)) {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.hit();
-        }
-        else {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.idle();
-        }
-    };
     p.actionComplete = function () {
         this._isActionComplete = true;
         this.fightRole.dispatchEventWith("skill_action_complete", true);
@@ -256,14 +250,19 @@ var SkillAction = (function () {
     p.reset = function () {
         this.isTriggerDamage = false;
         this.isTriggerJump = false;
+        this.isTriggerExtraEff = false;
         this._isActionComplete = false;
-        this.isAttackComplete = false;
         this.targets = null;
         this.curSkill = null;
+        this.buffs = null;
+        this.damage = "0";
+        this.extraEffCount = 0;
     };
     p.dispose = function () {
+        this.reset();
         this.fightRole = null;
     };
     return SkillAction;
 }());
 egret.registerClass(SkillAction,'SkillAction');
+//# sourceMappingURL=SkillAction.js.map

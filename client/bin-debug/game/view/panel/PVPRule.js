@@ -18,3 +18,4 @@ var PVPRule = (function (_super) {
     return PVPRule;
 }(eui.Component));
 egret.registerClass(PVPRule,'PVPRule');
+//# sourceMappingURL=PVPRule.js.map

@@ -23,15 +23,14 @@ class FightRoleVO{
     public critDamage:number = 0;
     public extraCritRatio:string = "1";             // 额外暴击系数,(装备，情缘等级暴击的影响)
 
-    public constructor(value?:{id:number, pos:number, side:number}){
+    public constructor(value?:{id:number, pos:number}){
         this.parse(value);
     }
 
-    public parse(value:{id:number, pos:number, side:number}){
+    public parse(value:{id:number, pos:number}){
         if (value) {
             this.id = value.id;
             this.pos = value.pos;
-            this.side = value.side;
             if (fight.isHero(this.id)) {
                 this.config = Config.HeroData[this.id];
             } else {
@@ -410,7 +409,7 @@ class FightRoleVO{
         obj.magAtk = this.magAtk;
         obj.magDef = this.magDef;
         obj.id = this.config.id;
-        obj.pos = fight.getRolePosDes(this);
+        obj.pos = this.pos;
         obj.dcri = this.critChance;
         obj.dcirDom = this.critDamage;
         obj.ddodge = this.dodgeChance;

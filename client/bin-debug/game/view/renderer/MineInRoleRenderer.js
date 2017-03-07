@@ -62,3 +62,4 @@ var MineInRoleRenderer = (function (_super) {
     return MineInRoleRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(MineInRoleRenderer,'MineInRoleRenderer');
+//# sourceMappingURL=MineInRoleRenderer.js.map

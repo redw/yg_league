@@ -11,58 +11,27 @@ var RoleBody = (function (_super) {
         this.frameDisArr = [];
         this.config = Config.HeroData[id] || Config.EnemyData[id];
         var resourceArr = String(this.config.resource).split(",");
-        this.mainMc = fight.createMovieClip(resourceArr[0]);
-        this.addChild(this.mainMc);
+        this.armature = fight.createArmature(resourceArr[0]);
+        this.armatureDis = this.armature.display;
+        this.addChild(this.armatureDis);
         this.active();
-        if (this.mainMc.totalFrames <= 0) {
-            fight.recordLog("\u89D2\u8272:" + this.config.id + "\u8D44\u6E90\u6216\u547D\u540D\u6709\u95EE\u9898", fight.LOG_FIGHT_WARN);
-        }
-        if (this.skillMc && this.skillMc.totalFrames <= 1) {
-            fight.recordLog("\u89D2\u8272:" + this.config.id + "\u8D44\u6E90\u6216\u547D\u540D\u6709\u95EE\u9898", fight.LOG_FIGHT_WARN);
-        }
     }
     var d = __define,c=RoleBody,p=c.prototype;
     p.active = function () {
         this._isTriggerAtk = false;
+        dragonBones.WorldClock.clock.add(this.armature);
         this.idle();
     };
     p.idle = function () {
-        if (this.skillMc)
-            this.skillMc.visible = false;
-        this.mainMc.visible = true;
+        this.armature.animation.gotoAndPlayByTime("idle", -1);
         this.waiting = true;
-        this.mainMc.gotoAndPlay("idle", -1);
     };
     p.attack = function (skill) {
-        var isSkillAttack = skill.action == "skill_1";
-        if (this.skillMc)
-            this.skillMc.visible = isSkillAttack;
-        this.mainMc.visible = !isSkillAttack;
         this.waiting = false;
         this._isTriggerAtk = true;
-        var mc = this.mainMc;
-        if (isSkillAttack) {
-            if (this.hasSkillMC() && !this.skillMc) {
-                var resourceArr = String(this.config.resource).split(",");
-                this.skillMc = fight.createMovieClip(resourceArr[0] + "_s");
-                this.addChild(this.skillMc);
-                if (this.skillMc.scaleX != this.mainMc.scaleX)
-                    this.skillMc.scaleX = this.mainMc.scaleX;
-            }
-            if (this.skillMc) {
-                this.skillMc.gotoAndPlay(1, 1);
-                mc = this.skillMc;
-            }
-            else {
-                this.mainMc.gotoAndPlay("attack", 1);
-                fight.recordLog("\u89D2\u8272:" + this.config.id + "\u6280\u80FD\u653B\u51FB\u6709\u95EE\u9898\uFF0C\u6362\u6210\u666E\u901A\u653B\u51FB", fight.LOG_FIGHT_WARN);
-            }
-        }
-        else {
-            this.mainMc.gotoAndPlay(skill.action, 1);
-        }
-        mc.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
-        mc.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+        this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
+        this.armatureDis.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+        this.armature.animation.gotoAndPlayByTime(skill.action, -1);
     };
     p.onEnterFrame = function (e) {
         var mc = e.target;
@@ -90,15 +59,8 @@ var RoleBody = (function (_super) {
         this.dispatchEventWith("attack_complete");
     };
     p.block = function () {
+        this.armature.animation.gotoAndPlayByTime("block", -1);
         this.waiting = false;
-        if (fight.existMCLabel("block", this.mainMc)) {
-            this.mainMc.addEventListener(egret.MovieClipEvent.COMPLETE, this.blockComplete, this);
-            this.mainMc.gotoAndPlay("block", 1);
-        }
-        else {
-            fight.recordLog("\u89D2\u8272:" + this.config.id + "\u6CA1\u6709\u683C\u6863\u52A8\u4F5C", fight.LOG_FIGHT_WARN);
-            this.blockComplete(null);
-        }
     };
     p.blockComplete = function (e) {
         if (e === void 0) { e = null; }
@@ -107,9 +69,8 @@ var RoleBody = (function (_super) {
         this.idle();
     };
     p.hit = function () {
+        this.armature.animation.gotoAndPlayByTime("attacked", 1);
         this.waiting = false;
-        this.mainMc.addEventListener(egret.MovieClipEvent.COMPLETE, this.hitComplete, this);
-        this.mainMc.gotoAndPlay("attacked", 1);
     };
     p.hitComplete = function (e) {
         if (e === void 0) { e = null; }
@@ -121,9 +82,6 @@ var RoleBody = (function (_super) {
         /** 翻转 */
         ,function (value) {
             var scaleX = value ? -1 : 1;
-            this.mainMc.scaleX = scaleX;
-            if (this.skillMc)
-                this.skillMc.scaleX = scaleX;
         }
     );
     d(p, "isTriggerAtk"
@@ -133,7 +91,7 @@ var RoleBody = (function (_super) {
     );
     d(p, "frameRate"
         ,function () {
-            return this.mainMc.frameRate || 24;
+            return 24;
         }
     );
     d(p, "waiting"
@@ -144,10 +102,6 @@ var RoleBody = (function (_super) {
             this._waiting = value;
         }
     );
-    p.hasSkillMC = function () {
-        var id = this.config.id;
-        return fight.isHero(id) || id > 300;
-    };
     p.reset = function () {
         this._waiting = true;
         this._isTriggerAtk = false;
@@ -156,3 +110,4 @@ var RoleBody = (function (_super) {
     return RoleBody;
 }(egret.DisplayObjectContainer));
 egret.registerClass(RoleBody,'RoleBody');
+//# sourceMappingURL=RoleBody.js.map

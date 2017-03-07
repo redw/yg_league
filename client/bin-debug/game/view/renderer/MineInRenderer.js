@@ -128,3 +128,4 @@ var MineInRenderer = (function (_super) {
     return MineInRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(MineInRenderer,'MineInRenderer');
+//# sourceMappingURL=MineInRenderer.js.map

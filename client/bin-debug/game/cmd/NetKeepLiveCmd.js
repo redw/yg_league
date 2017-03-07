@@ -49,3 +49,4 @@ var NetKeepLiveCmd = (function (_super) {
     return NetKeepLiveCmd;
 }(BaseCmd));
 egret.registerClass(NetKeepLiveCmd,'NetKeepLiveCmd');
+//# sourceMappingURL=NetKeepLiveCmd.js.map

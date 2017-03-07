@@ -46,3 +46,4 @@ var PVEMiddleGround = (function (_super) {
     return PVEMiddleGround;
 }(PVEBackGround));
 egret.registerClass(PVEMiddleGround,'PVEMiddleGround');
+//# sourceMappingURL=PVEMiddleGround.js.map

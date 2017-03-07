@@ -54,3 +54,4 @@ var PlayerHead = (function (_super) {
     return PlayerHead;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PlayerHead,'PlayerHead');
+//# sourceMappingURL=PlayerHead.js.map

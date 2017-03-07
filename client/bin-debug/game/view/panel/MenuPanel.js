@@ -300,3 +300,4 @@ var MenuPanel = (function (_super) {
     return MenuPanel;
 }(BasePanel));
 egret.registerClass(MenuPanel,'MenuPanel');
+//# sourceMappingURL=MenuPanel.js.map

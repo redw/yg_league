@@ -32,3 +32,4 @@ var BloodWarnEff = (function (_super) {
     return BloodWarnEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BloodWarnEff,'BloodWarnEff');
+//# sourceMappingURL=BloodWarnEff.js.map

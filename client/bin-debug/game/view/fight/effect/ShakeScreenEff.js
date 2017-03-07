@@ -65,3 +65,4 @@ var ShakeScreenEff = (function () {
     return ShakeScreenEff;
 }());
 egret.registerClass(ShakeScreenEff,'ShakeScreenEff');
+//# sourceMappingURL=ShakeScreenEff.js.map

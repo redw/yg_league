@@ -85,3 +85,4 @@ var CoinPanel = (function (_super) {
     return CoinPanel;
 }(BasePanel));
 egret.registerClass(CoinPanel,'CoinPanel');
+//# sourceMappingURL=CoinPanel.js.map

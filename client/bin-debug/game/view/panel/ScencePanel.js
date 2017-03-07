@@ -23,9 +23,9 @@ var ScencePanel = (function (_super) {
     };
     p.initData = function () {
         _super.prototype.initData.call(this);
-        this.scene = new PVEScenePanel();
+        this.scene = new PVEFightContainer();
         this.contentGroup.addChild(this.scene);
-        this.scene.startLevel();
+        this.scene.startLevel(1);
         this.commonGroup.visible = false;
         this.newGroup.visible = false;
         this.newScr.visible = false;
@@ -79,3 +79,4 @@ var ScencePanel = (function (_super) {
     return ScencePanel;
 }(BasePanel));
 egret.registerClass(ScencePanel,'ScencePanel');
+//# sourceMappingURL=ScencePanel.js.map

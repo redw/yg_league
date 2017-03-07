@@ -278,3 +278,4 @@ var XunShanRenderer = (function (_super) {
     return XunShanRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(XunShanRenderer,'XunShanRenderer');
+//# sourceMappingURL=XunShanRenderer.js.map

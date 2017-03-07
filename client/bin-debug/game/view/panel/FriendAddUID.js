@@ -39,3 +39,4 @@ var FriendAddUID = (function (_super) {
     return FriendAddUID;
 }(BasePanel));
 egret.registerClass(FriendAddUID,'FriendAddUID');
+//# sourceMappingURL=FriendAddUID.js.map

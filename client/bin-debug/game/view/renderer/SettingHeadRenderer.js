@@ -67,3 +67,4 @@ var SettingHeadRenderer = (function (_super) {
     return SettingHeadRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(SettingHeadRenderer,'SettingHeadRenderer');
+//# sourceMappingURL=SettingHeadRenderer.js.map

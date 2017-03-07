@@ -32,3 +32,4 @@ var MoneyUnitPanel = (function (_super) {
     return MoneyUnitPanel;
 }(BasePanel));
 egret.registerClass(MoneyUnitPanel,'MoneyUnitPanel');
+//# sourceMappingURL=MoneyUnitPanel.js.map

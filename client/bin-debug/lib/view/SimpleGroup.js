@@ -25,3 +25,4 @@ var SimpleGroup = (function (_super) {
     return SimpleGroup;
 }(eui.Group));
 egret.registerClass(SimpleGroup,'SimpleGroup');
+//# sourceMappingURL=SimpleGroup.js.map

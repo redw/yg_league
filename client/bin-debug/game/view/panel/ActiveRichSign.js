@@ -21,3 +21,4 @@ var ActiveRichSign = (function (_super) {
     return ActiveRichSign;
 }(eui.Component));
 egret.registerClass(ActiveRichSign,'ActiveRichSign');
+//# sourceMappingURL=ActiveRichSign.js.map

@@ -93,3 +93,4 @@ var Monster = (function (_super) {
     return Monster;
 }(HeroBase));
 egret.registerClass(Monster,'Monster');
+//# sourceMappingURL=Monster.js.map

@@ -19,3 +19,4 @@ var ToggleBtn = (function (_super) {
     return ToggleBtn;
 }(eui.Component));
 egret.registerClass(ToggleBtn,'ToggleBtn');
+//# sourceMappingURL=ToggleBtn.js.map

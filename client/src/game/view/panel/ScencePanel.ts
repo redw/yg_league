@@ -5,7 +5,7 @@ class ScencePanel extends BasePanel {
     private contentGroup: eui.Group;
     // private _battleView: BattleView;
    
-    private scene:PVEScenePanel;
+    private scene:PVEFightContainer;
 
     private lblMove:eui.Label;
     private commonGroup:eui.Group;
@@ -39,9 +39,9 @@ class ScencePanel extends BasePanel {
     public initData(): void {
         super.initData();
 
-        this.scene = new PVEScenePanel();
+        this.scene = new PVEFightContainer();
         this.contentGroup.addChild(this.scene);
-        this.scene.startLevel();
+        this.scene.startLevel(1);
 
         this.commonGroup.visible = false;
         this.newGroup.visible = false;

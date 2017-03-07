@@ -26,3 +26,4 @@ var ImageLoader = (function (_super) {
     return ImageLoader;
 }(egret.HashObject));
 egret.registerClass(ImageLoader,'ImageLoader');
+//# sourceMappingURL=ImageLoader.js.map

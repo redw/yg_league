@@ -21,3 +21,4 @@ var WeaponSuitRenderer = (function (_super) {
     return WeaponSuitRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(WeaponSuitRenderer,'WeaponSuitRenderer');
+//# sourceMappingURL=WeaponSuitRenderer.js.map

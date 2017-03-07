@@ -84,3 +84,4 @@ var PVPRankRenderer = (function (_super) {
     return PVPRankRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(PVPRankRenderer,'PVPRankRenderer');
+//# sourceMappingURL=PVPRankRenderer.js.map

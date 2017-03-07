@@ -489,7 +489,7 @@
 		"name": "唐僧",
 		"sex": 1,
 		"dead_frame": 70,
-		"resource": "102_tangseng",
+		"resource": "102_bone",
 		"physical_atk": 0,
 		"magical_atk": 56,
 		"range": 2,

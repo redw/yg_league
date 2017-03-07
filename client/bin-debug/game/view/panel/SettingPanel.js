@@ -75,3 +75,4 @@ var SettingPanel = (function (_super) {
     return SettingPanel;
 }(BasePanel));
 egret.registerClass(SettingPanel,'SettingPanel');
+//# sourceMappingURL=SettingPanel.js.map

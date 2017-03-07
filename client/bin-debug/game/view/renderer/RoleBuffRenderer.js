@@ -116,3 +116,4 @@ var RoleBuffRenderer = (function (_super) {
     return RoleBuffRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(RoleBuffRenderer,'RoleBuffRenderer');
+//# sourceMappingURL=RoleBuffRenderer.js.map

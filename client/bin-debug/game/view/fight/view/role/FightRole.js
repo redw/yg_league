@@ -6,12 +6,6 @@ var FightRole = (function (_super) {
     __extends(FightRole, _super);
     function FightRole(fightContainer, roleData) {
         _super.call(this);
-        // 角色的zIndex,处理角色在角色容器中的顺序
-        this._zIndex = 0;
-        // buff效果map
-        this.buffEffMap = {};
-        this.buffIdArr = [];
-        this.oldBuffIdArr = [];
         // 攻击或伤害时使用的技能
         this.curSkill = null;
         // 战斗信息
@@ -60,10 +54,13 @@ var FightRole = (function (_super) {
         this.addChild(this.effContainer);
         this.lifeBar = new RoleHPBar(fight.needFlipped((roleData.pos)));
         this.addChild(this.lifeBar);
+        this.skillAction = new SkillAction(this);
+        this.buffAction = new BuffAction(this);
         this.active(fightContainer, roleData);
     }
     var d = __define,c=FightRole,p=c.prototype;
     p.active = function (fightContainer, roleData) {
+        this.visible = true;
         this.fightContainer = fightContainer;
         this._pos = roleData.pos;
         this._config = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
@@ -73,6 +70,7 @@ var FightRole = (function (_super) {
     p.updateRoleUI = function () {
         this.body.reset();
         this.skillAction.reset();
+        this.buffAction.reset();
         this.isPlayingDie = false;
         this.isPlayingExtraEff = false;
         var point = this.initPoint;
@@ -95,20 +93,25 @@ var FightRole = (function (_super) {
         this.lifeBar.y = -(this.config.modle_height) - hp_height - 2;
         this.lifeBar.active(fight.needFlipped(this.pos));
     };
+    /**
+     * 攻击目标
+     * @param data  战斗报告
+     * @param delay 延迟
+     */
     p.fight = function (data, delay) {
         var _this = this;
         egret.setTimeout(function () {
             _this.reportItem = data;
             var items = data.target;
             _this.updateRoleHP(BigNum.add(data.hp, data.damage || 0), data.maxhp);
-            _this.addBuff(data);
+            _this.buffAction.addBuff(data);
             _this.targets = [];
-            _this.checkBuff(data.buff);
+            _this.buffAction.checkBuff(data.buff);
             _this.body.reset();
             for (var i = 0; i < items.length; i++) {
                 var role = _this.fightContainer.getRoleByPos(items[i].pos);
                 if (role)
-                    role.checkBuff(items[i].buff);
+                    role.buffAction.checkBuff(items[i].buff);
                 var id = items[i].id;
                 var pos = +items[i].pos;
                 _this.targets.push({ id: id, pos: pos });
@@ -118,32 +121,6 @@ var FightRole = (function (_super) {
             fight.recordLog("\u7B2C" + _this.reportItem.index + "\u6B65 \u89D2\u8272:" + _this.reportItem.id + " \u4F4D\u7F6E:" + _this.reportItem.pos + " \u5F00\u59CB" + _this.curSkill.action_type, fight.LOG_FIGHT_INFO);
             _this.skillAction.preAttack(_this.curSkill, _this.targets, _this.reportItem.buff, _this.reportItem.damage);
         }, this, delay);
-    };
-    p.showSkillEff = function () {
-        if (this.curSkill.skill_name) {
-            this.fightContainer.showSkillFlyTxt("skillname_" + this.curSkill.skill_name);
-        }
-        var showInfo = (this.curSkill.skill_free_effect || "").split(",");
-        var needMode = !!showInfo[1];
-        var source = showInfo[0];
-        if (source && source != "0") {
-            var eff = new MCEff(source);
-            eff.registerBack(0, this.doAction, this, null);
-            eff.y = (this.config.modle_height) * -0.5;
-            this.fightContainer.showFreeSkillEff(this, eff, needMode);
-        }
-        else {
-            this.doAction();
-        }
-    };
-    p.doAction = function () {
-        if (this.reportItem) {
-            this.once("skill_action_complete", this.skillAttackComplete, this);
-            this.skillAction.attack(this.curSkill, this.targets);
-        }
-        else {
-            fight.recordLog("\u6218\u6597\u6B65\u9AA4\u63D0\u524D\u8DF3\u8FC7\u4E86", fight.LOG_FIGHT_WARN);
-        }
     };
     /**
      * 射击目标
@@ -245,70 +222,6 @@ var FightRole = (function (_super) {
             fight.recordLog("\u8FD0\u884CshowAddHP\u65F6curSkill\u4E3Anull", fight.LOG_FIGHT_WARN);
         }
     };
-    p.addBuff = function (item, force) {
-        if (force === void 0) { force = false; }
-        var isSelf = "target" in item;
-        var canAdd = isSelf || force;
-        if (canAdd) {
-            this.buffIdArr = item.buff.filter(function (value) {
-                if (value && Config.BuffData[value])
-                    return Config.BuffData[value].id;
-            });
-            var buffArr = this.buffIdArr || [];
-            var keys = Object.keys(this.buffEffMap);
-            for (var i = 0; i < buffArr.length; i++) {
-                var buffConfig = Config.BuffData[buffArr[i]];
-                if (buffConfig) {
-                    var type = buffConfig.effect + "";
-                    if (!this.buffEffMap[type]) {
-                        if (keys.indexOf(type) < 0 && buffConfig.resource && fight.isMCResourceLoaded(buffConfig.resource) && !this.buffEffMap[type]) {
-                            var eff = new MCEff(buffConfig.resource, false);
-                            var container = this["buffContainer" + buffConfig.point];
-                            container.addChild(eff);
-                            this.buffEffMap[type] = eff;
-                        }
-                    }
-                }
-            }
-            var nowBuffIdArr = this.buffIdArr.concat();
-            for (var i = 0; i < this.oldBuffIdArr.length; i++) {
-                if (this.oldBuffIdArr.indexOf(nowBuffIdArr[i]) >= 0) {
-                    nowBuffIdArr.splice(i, 1);
-                    i--;
-                }
-            }
-            for (var i = 0; i < nowBuffIdArr.length; i++) {
-                var buffConfig = Config.BuffData[nowBuffIdArr[i]];
-                if (buffConfig && buffConfig.word && this.fightContainer) {
-                    this.fightContainer.flyTxt({
-                        str: buffConfig.word,
-                        x: this.x,
-                        y: this.y + this.config.modle_height * -1
-                    }, fight.FONT_SYSTEM);
-                }
-            }
-            this.oldBuffIdArr = this.buffIdArr.concat();
-        }
-    };
-    p.enterAddBuffs = function (buffs) {
-        this.buffIdArr = buffs.concat();
-        var buffArr = this.buffIdArr || [];
-        var keys = Object.keys(this.buffEffMap);
-        for (var i = 0; i < buffArr.length; i++) {
-            var buffConfig = Config.BuffData[buffArr[i]];
-            if (buffConfig) {
-                var type = buffConfig.effect + "";
-                if (!this.buffEffMap[type]) {
-                    if (keys.indexOf(type) < 0 && buffConfig.resource && fight.isMCResourceLoaded(buffConfig.resource) && !this.buffEffMap[type]) {
-                        var eff = new MCEff(buffConfig.resource, false);
-                        var container = this["buffContainer" + buffConfig.point];
-                        container.addChild(eff);
-                        this.buffEffMap[type] = eff;
-                    }
-                }
-            }
-        }
-    };
     p.updateRoleHP = function (cur, max) {
         this.maxHP = max;
         this.curHP = cur;
@@ -343,6 +256,8 @@ var FightRole = (function (_super) {
     };
     p.addContainerEff = function (mc, flip) {
     };
+    p.flyTxt = function (str, name) {
+    };
     p.startDamage = function (index, total, role, ratio) {
         if (index === void 0) { index = 1; }
         if (total === void 0) { total = 1; }
@@ -365,13 +280,15 @@ var FightRole = (function (_super) {
                         var eff = new MCEff("hit_normal");
                         eff.y = point.y + (model_height) * -0.5;
                         eff.x = point.x;
-                        this.fightContainer.showDamageEff(eff, fightRole.side);
+                        eff.scaleX = this.getScaleX();
+                        this.fightContainer.showDamageEff(eff);
                     }
                     if (this.curSkill.target_effect) {
                         var eff = new MCEff(this.curSkill.target_effect);
                         eff.y = point.y + (model_height) * -0.5;
                         eff.x = point.x;
-                        this.fightContainer.showDamageEff(eff, fightRole.side);
+                        eff.scaleX = this.getScaleX();
+                        this.fightContainer.showDamageEff(eff);
                     }
                     if (hitInfo.dodge) {
                         this.fightContainer.flyTxt({
@@ -465,36 +382,8 @@ var FightRole = (function (_super) {
         if (this.curSkill) {
             this.checkNextStep();
         }
-        this.checkBuff();
+        this.buffAction.checkBuff();
         this.checkDie();
-    };
-    p.checkBuff = function (buffs) {
-        var keys = Object.keys(this.buffEffMap);
-        var len = keys.length;
-        for (var i = 0; i < len; i++) {
-            var type = keys[i];
-            var exist = false;
-            var __buffs = buffs || this.buffIdArr;
-            for (var j = 0; j < __buffs.length; j++) {
-                var buffConfig = Config.BuffData[__buffs[j]];
-                if (buffConfig.effect == type) {
-                    exist = true;
-                    break;
-                }
-            }
-            if (!exist) {
-                var eff = this.buffEffMap[type];
-                if (eff) {
-                    eff.dispose();
-                }
-                else {
-                    fight.recordLog("buff可能出错了", fight.LOG_FIGHT_WARN);
-                }
-                delete this.buffEffMap[type];
-                len--;
-                i--;
-            }
-        }
     };
     p.checkDie = function () {
         if (this.parent && !this.isPlayingDie && this.curHP) {
@@ -545,9 +434,6 @@ var FightRole = (function (_super) {
         this.dispatchEventWith("role_one_step_complete", true, round);
     };
     p.dispose = function () {
-        this.buffIdArr = [];
-        this.buffEffMap = {};
-        this.oldBuffIdArr = [];
         while (this.effContainer.numChildren) {
             var mcEff = this.effContainer.removeChildAt(0);
             if ("dispose" in mcEff) {
@@ -669,3 +555,4 @@ var FightRole = (function (_super) {
     return FightRole;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightRole,'FightRole');
+//# sourceMappingURL=FightRole.js.map

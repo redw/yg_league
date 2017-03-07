@@ -72,13 +72,7 @@ var fight;
             var roleData = roleArr[i];
             var roleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
             var resourceArr = roleConfig.resource.split(",");
-            pushResToArr(resourceArr[0], rolePathArr);
-            if (resourceArr[1])
-                pushResToArr(resourceArr[1], rolePathArr);
-            // 如果不在新手阶段,则不加载角色技能部分
-            if (!UserProxy.inst.isNoviceLevel()) {
-                pushResToArr(resourceArr[0] + "_s", rolePathArr);
-            }
+            pushRoleResToArr(resourceArr[0], rolePathArr);
         }
         return rolePathArr;
     }
@@ -232,6 +226,13 @@ var fight;
             }
         }
     }
+    function pushRoleResToArr(value, arr) {
+        if (arr.indexOf(value + "_tex_png") < 0) {
+            arr.push(value + "_tex_png");
+            arr.push(value + "_tex_json");
+            arr.push(value + "_ske_json");
+        }
+    }
     /**
      * 返回是否mc资源加载完成
      * @param value
@@ -246,3 +247,4 @@ var fight;
     }
     fight.needAddRes = needAddRes;
 })(fight || (fight = {}));
+//# sourceMappingURL=FightResStrategy.js.map

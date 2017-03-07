@@ -372,3 +372,4 @@ var GuidePanel = (function (_super) {
     return GuidePanel;
 }(BasePanel));
 egret.registerClass(GuidePanel,'GuidePanel');
+//# sourceMappingURL=GuidePanel.js.map

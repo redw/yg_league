@@ -56,3 +56,4 @@ var RoleSkillRenderer = (function (_super) {
     return RoleSkillRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(RoleSkillRenderer,'RoleSkillRenderer');
+//# sourceMappingURL=RoleSkillRenderer.js.map

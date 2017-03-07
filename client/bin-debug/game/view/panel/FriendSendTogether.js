@@ -72,3 +72,4 @@ var FriendSendTogether = (function (_super) {
     return FriendSendTogether;
 }(eui.Component));
 egret.registerClass(FriendSendTogether,'FriendSendTogether');
+//# sourceMappingURL=FriendSendTogether.js.map

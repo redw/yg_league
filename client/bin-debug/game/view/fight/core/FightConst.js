@@ -159,3 +159,4 @@ var fight;
         ]
     ];
 })(fight || (fight = {}));
+//# sourceMappingURL=FightConst.js.map

@@ -16,3 +16,4 @@ var NetMailCmd = (function (_super) {
     return NetMailCmd;
 }(BaseCmd));
 egret.registerClass(NetMailCmd,'NetMailCmd');
+//# sourceMappingURL=NetMailCmd.js.map

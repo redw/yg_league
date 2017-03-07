@@ -171,3 +171,4 @@ var SevenDayPanel = (function (_super) {
     return SevenDayPanel;
 }(BasePanel));
 egret.registerClass(SevenDayPanel,'SevenDayPanel');
+//# sourceMappingURL=SevenDayPanel.js.map

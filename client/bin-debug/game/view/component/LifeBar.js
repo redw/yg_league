@@ -29,3 +29,4 @@ var LifeBar = (function (_super) {
     return LifeBar;
 }(egret.DisplayObjectContainer));
 egret.registerClass(LifeBar,'LifeBar');
+//# sourceMappingURL=LifeBar.js.map

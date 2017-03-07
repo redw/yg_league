@@ -59,3 +59,4 @@ var MineCaveUpPanel = (function (_super) {
     return MineCaveUpPanel;
 }(BasePanel));
 egret.registerClass(MineCaveUpPanel,'MineCaveUpPanel');
+//# sourceMappingURL=MineCaveUpPanel.js.map

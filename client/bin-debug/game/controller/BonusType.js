@@ -26,3 +26,4 @@ var BonusType;
     BonusType.ORE = 29;
     BonusType.WORD = 101;
 })(BonusType || (BonusType = {}));
+//# sourceMappingURL=BonusType.js.map

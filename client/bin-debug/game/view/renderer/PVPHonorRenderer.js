@@ -23,3 +23,4 @@ var PVPHonorRenderer = (function (_super) {
     return PVPHonorRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(PVPHonorRenderer,'PVPHonorRenderer');
+//# sourceMappingURL=PVPHonorRenderer.js.map

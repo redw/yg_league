@@ -11,3 +11,4 @@ var MoveDustEff = (function (_super) {
     return MoveDustEff;
 }(MCEff));
 egret.registerClass(MoveDustEff,'MoveDustEff');
+//# sourceMappingURL=MoveDustEff.js.map

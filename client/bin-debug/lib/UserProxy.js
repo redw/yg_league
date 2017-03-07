@@ -428,3 +428,4 @@ var UserProxy = (function (_super) {
     return UserProxy;
 }(egret.HashObject));
 egret.registerClass(UserProxy,'UserProxy');
+//# sourceMappingURL=UserProxy.js.map

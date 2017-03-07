@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c7d40077-a094-4d23-928e-594c623d433c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/container/FightContainer.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/container/PVPFightContainer.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/container/pve/PVEFightContainer.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/role/BuffAction.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/role/FightRole.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/role/RoleHPBar.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/role/SkillAction.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/BossFightPanel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/PVEFightContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/PVPFightPanel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BaseMCEffect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BuddhaPalmEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/FightContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/RoundProgress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/StageProgress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/BossFightPanel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/PVEFightContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/PVPFightPanel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/background/PVEBackGround.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/background/PVEForeground.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/background/PVEMiddleGround.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/background/PVEProspect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/background/PVETransitionEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/background/PVPBackGround.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/core/BattleCheck.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/core/FightConst.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/core/FightProcessGenerator.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/core/FightResStrategy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/core/FightRoleFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/core/FightUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/core/PriorityImage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/BaseMCEffect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/BattleStartEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/BloodWarnEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/BossIncomingEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/BuddhaPalmEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/FightWarnEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/FontEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/MCEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/MoveDustEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/NewChapterEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/PVEFailEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/RoleDieEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/RoleSkillEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/ShakeScreenEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/effect/SkillNameEff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/BossStageProgress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/DropItem.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/FightContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/FightRole.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/PlayerHead.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/RoleBody.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/RoleHPBar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/RoundProgress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/scene/view/StageProgress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/BossFightPanel.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/PVEFightContainer.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/PVPFightPanel.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/BaseMCEffect.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/BuddhaPalmEff.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/FightContainer.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/FightRole.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/RoleHPBar.ts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/Main.js" afterPath="$PROJECT_DIR$/client/bin-debug/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/Config.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/Config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/URLConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/URLConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cfg/InviteConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cfg/InviteConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cfg/PromotionConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cfg/PromotionConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cfg/SignConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cfg/SignConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetAcieveCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetAcieveCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetActivityCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetActivityCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetCircleCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetCircleCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetDrawHeroCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetDrawHeroCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetEnterCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetEnterCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetFightCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetFightCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetHeroUpCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetHeroUpCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetKeepLiveCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetKeepLiveCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetMailCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetMailCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetMakeMoneyCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetMakeMoneyCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetMonsterInfoCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetMonsterInfoCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetOreCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetOreCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetPropCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetPropCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetShareCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetShareCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetWeaponShopCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/cmd/NetWeaponShopCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/controller/BattleController.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/controller/BattleController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/controller/BonusList.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/controller/BonusList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/controller/BonusType.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/controller/BonusType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/ModelDict.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/ModelDict.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/artifact/Artifact.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/artifact/Artifact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/artifact/ArtifactConfigGroupItem.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/artifact/ArtifactConfigGroupItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/artifact/ArtifactConfigItem.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/artifact/ArtifactConfigItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/buff/BuffConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/buff/BuffConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightDataModel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightDataModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightDropConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightDropConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightReportItem.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightReportItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightRoleVO.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/fight/FightRoleVO.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/fight/StageConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/fight/StageConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/role/HeroModel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/role/HeroModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/role/HeroVO.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/role/HeroVO.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/role/MonsterVO.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/role/MonsterVO.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/role/RoleConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/role/RoleConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/skill/SkillConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/skill/SkillConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/model/test/StageData.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/model/test/StageData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/BattleView.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/BattleView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/CoinShowPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/CoinShowPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/DropGold.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/DropGold.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/GreenButton.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/GreenButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/GreenCoinButton.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/GreenCoinButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/Hero.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/Hero.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/HeroBase.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/HeroBase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/LifeBar.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/LifeBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/Monster.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/Monster.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/ProgressBar.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/ProgressBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/RoleIcon.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/RoleIcon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/SevenDayButton.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/SevenDayButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/StarButton.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/StarButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/StarCountComp.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/StarCountComp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/ToggleBtn.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/ToggleBtn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/WeaponIcon.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/WeaponIcon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/YellowBigBtn.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/YellowBigBtn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/YellowCoinButton.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/YellowCoinButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/component/YellowTwoCoinBtn.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/component/YellowTwoCoinBtn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEBackGround.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEBackGround.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEForeground.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEForeground.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEMiddleGround.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEMiddleGround.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEProspect.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVEProspect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVETransitionEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVETransitionEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVPBackGround.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/background/PVPBackGround.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/BattleCheck.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/BattleCheck.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightConst.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightConst.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightProcessGenerator.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightProcessGenerator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightResStrategy.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightResStrategy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightRoleFactory.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightRoleFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightUtils.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/FightUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/PriorityImage.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/core/PriorityImage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BattleStartEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BattleStartEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BloodWarnEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BloodWarnEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BossIncomingEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/BossIncomingEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/FightWarnEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/FightWarnEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/FontEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/FontEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/MCEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/MCEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/MoveDustEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/MoveDustEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/NewChapterEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/NewChapterEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/PVEFailEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/PVEFailEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/RoleDieEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/RoleDieEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/RoleSkillEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/RoleSkillEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/ShakeScreenEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/ShakeScreenEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/SkillNameEff.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/effect/SkillNameEff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/BossStageProgress.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/BossStageProgress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/DropItem.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/DropItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/PlayerHead.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/PlayerHead.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/FightRole.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/FightRole.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/RoleBody.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/RoleBody.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/RoleHPBar.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/RoleHPBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/SkillAction.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/fight/view/role/SkillAction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveDayInvite.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveDayInvite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveFruit.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveFruit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveFund.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveFund.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveGift.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveGift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitCost.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitCost.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitDraw.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitDraw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitFestival.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitFestival.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitInvite.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitInvite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitOnePay.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitOnePay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitPVP.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitPVP.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitRecharge.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitRecharge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitWord.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveLimitWord.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActivePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActivePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActivePrivilege.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActivePrivilege.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveRichSign.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveRichSign.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveSign.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveSign.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveTree.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ActiveTree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/AlertApplyPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/AlertApplyPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ArtifactPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ArtifactPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/BonusPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/BonusPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CircleGoPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CircleGoPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CircleGoSuccessPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CircleGoSuccessPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CirclePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CirclePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CircleSuccessPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CircleSuccessPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CoinPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/CoinPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DailyAchievePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DailyAchievePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DeblockPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DeblockPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DeleteFriendPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DeleteFriendPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DialPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/DialPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FeedBackPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FeedBackPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FightResultPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FightResultPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FirstRechargePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FirstRechargePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendAddUID.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendAddUID.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendApply.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendApply.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendFindInfo.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendFindInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendGetGift.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendGetGift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendGiftPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendGiftPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendInvite.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendInvite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendMainPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendMainPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendSendTogether.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendSendTogether.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendShare.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/FriendShare.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/GuidePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/GuidePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/HelpPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/HelpPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/LoadExtraPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/LoadExtraPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/LoginPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/LoginPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MailInfoPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MailInfoPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MailPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MailPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MenuPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MenuPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineCaveUpPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineCaveUpPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineFormationPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineFormationPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineInPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineInPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineMainPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MineMainPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MoneyUnitPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/MoneyUnitPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/NoticePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/NoticePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/OfflinePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/OfflinePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPBeforePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPBeforePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPFormation.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPFormation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPHonor.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPHonor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPRank.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPRank.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPReport.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPRule.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPRule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPShop.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PVPShop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PrivilegePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/PrivilegePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RankPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RankPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleChangePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleChangePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleDetailsPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleDetailsPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleDrawInfoPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleDrawInfoPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleDrawPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleDrawPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleFormationPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleFormationPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RolePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RolePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleStarRise.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleStarRise.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleStrengthRestart.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/RoleStrengthRestart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ScencePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ScencePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SecretAreaPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SecretAreaPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SecretPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SecretPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SettingHeadPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SettingHeadPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SettingPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SettingPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SevenDayPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SevenDayPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ShopPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ShopPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ShowItemTipPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/ShowItemTipPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SmallMonsterCatch.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SmallMonsterCatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SmallMonsterInfo.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SmallMonsterInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SmallMonsterPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/SmallMonsterPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/TargetPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/TargetPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/TopPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/TopPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/WeaponBuyPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/WeaponBuyPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/WeaponInfoPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/WeaponInfoPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/WeaponPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/WeaponPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/panel/XunShanPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/panel/XunShanPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActDayInviteRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActDayInviteRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActFundRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActFundRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActLimitDrawRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActLimitDrawRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActLimitRechargeRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActLimitRechargeRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActLimitWordRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ActLimitWordRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/DailyAchieveRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/DailyAchieveRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendApplyRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendApplyRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendGetGiftRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendGetGiftRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendInviteRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendInviteRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendSendTogetherRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/FriendSendTogetherRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MailRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MailRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MineInRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MineInRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MineInRoleRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MineInRoleRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MoneyUnitRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MoneyUnitRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MonsterCatchRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MonsterCatchRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MonsterRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/MonsterRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/PVPHonorRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/PVPHonorRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/PVPRankRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/PVPRankRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/PVPShopRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/PVPShopRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RankRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RankRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleBuffRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleBuffRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleChangeRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleChangeRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleFormationRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleFormationRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleShipRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleShipRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleSkillRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/RoleSkillRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SecretAreaRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SecretAreaRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SecretRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SecretRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SettingHeadRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SettingHeadRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SevenDayRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/SevenDayRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ShopItemRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/ShopItemRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/WeaponBuyRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/WeaponBuyRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/WeaponRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/WeaponRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/WeaponSuitRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/WeaponSuitRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/XunShanRenderer.js" afterPath="$PROJECT_DIR$/client/bin-debug/game/view/renderer/XunShanRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/CmdID.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/CmdID.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/ContextEvent.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/ContextEvent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/Global.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/Global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/UserMethod.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/UserMethod.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/UserProxy.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/UserProxy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/engine/AssetAdapter.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/engine/AssetAdapter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/engine/ThemeAdapter.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/engine/ThemeAdapter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/manager/EventManager.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/manager/EventManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/manager/PanelManager.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/manager/PanelManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/net/BaseCmd.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/net/BaseCmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/net/Http.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/net/Http.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/sound/BaseSound.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/sound/BaseSound.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/sound/SoundManager.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/sound/SoundManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/ArrayUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/ArrayUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/AutoBitmap.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/AutoBitmap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/BaseTicker.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/BaseTicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/BigNum.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/BigNum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/BitUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/BitUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/ColorFilter.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/ColorFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/DataConfig.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/DataConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/Dictionary.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/Dictionary.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/DisplayUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/DisplayUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/EffectUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/EffectUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/ExternalUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/ExternalUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/GeomUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/GeomUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/ImageLoader.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/ImageLoader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/LoaderUtils.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/LoaderUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/MathUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/MathUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/McUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/McUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/MovieClipUtils.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/MovieClipUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/ObjectPool.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/ObjectPool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/ShareUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/ShareUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/SoundUils.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/SoundUils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/StringUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/StringUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/TDGAUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/TDGAUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/TickerUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/TickerUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/TimeUtil.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/TimeUtil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/TipsUtils.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/TipsUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/share/BaseShareType.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/share/BaseShareType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/share/ShareUtils.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/share/ShareUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/share/imples/ShareFKType.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/share/imples/ShareFKType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/util/share/imples/ShareType.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/util/share/imples/ShareType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/Alert.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/Alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/BasePanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/BasePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/Broadcast.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/Broadcast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/CheckBox.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/CheckBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/LoadPanel.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/LoadPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/LoadingUI.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/LoadingUI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/Notice.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/Notice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/PagePoint.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/PagePoint.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/Processing.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/Processing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/QuickAlert.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/QuickAlert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/RedPoint.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/RedPoint.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/SimpleButton.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/SimpleButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/SimpleGroup.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/SimpleGroup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/TabButton.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/TabButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bin-debug/lib/view/Tips.js" afterPath="$PROJECT_DIR$/client/bin-debug/lib/view/Tips.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/egretProperties.json" afterPath="$PROJECT_DIR$/client/egretProperties.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/resource/config/data.json" afterPath="$PROJECT_DIR$/client/resource/config/data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/resource/default.res.json" afterPath="$PROJECT_DIR$/client/resource/default.res.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/game/model/fight/FightReportItem.ts" afterPath="$PROJECT_DIR$/client/src/game/model/fight/FightReportItem.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/game/model/fight/FightRoleVO.ts" afterPath="$PROJECT_DIR$/client/src/game/model/fight/FightRoleVO.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/game/view/panel/ScencePanel.ts" afterPath="$PROJECT_DIR$/client/src/game/view/panel/ScencePanel.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/tables/n2_hero.json" afterPath="$PROJECT_DIR$/client/tables/n2_hero.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/runtime/native_require.js" afterPath="$PROJECT_DIR$/client/template/runtime/native_require.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/background/PVEBackGround.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/background/PVEBackGround.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/background/PVEForeground.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/background/PVEForeground.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/background/PVEMiddleGround.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/background/PVEMiddleGround.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/background/PVEProspect.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/background/PVEProspect.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/background/PVETransitionEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/background/PVETransitionEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/background/PVPBackGround.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/background/PVPBackGround.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/core/BattleCheck.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/core/BattleCheck.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/core/FightConst.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/core/FightConst.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/core/FightProcessGenerator.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/core/FightProcessGenerator.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/core/FightResStrategy.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/core/FightResStrategy.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/core/FightRoleFactory.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/core/FightRoleFactory.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/core/FightUtils.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/core/FightUtils.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/core/PriorityImage.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/core/PriorityImage.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/BattleStartEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/BattleStartEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/BloodWarnEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/BloodWarnEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/BossIncomingEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/BossIncomingEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/FightWarnEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/FightWarnEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/FontEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/FontEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/MCEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/MCEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/MoveDustEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/MoveDustEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/NewChapterEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/NewChapterEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/PVEFailEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/PVEFailEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/RoleDieEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/RoleDieEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/RoleSkillEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/RoleSkillEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/ShakeScreenEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/ShakeScreenEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/effect/SkillNameEff.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/effect/SkillNameEff.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/BossStageProgress.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/BossStageProgress.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/DropItem.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/DropItem.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/PlayerHead.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/PlayerHead.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/RoleBody.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/role/RoleBody.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/RoundProgress.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/container/pve/RoundProgress.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/game/view/panel/scene/view/StageProgress.ts" afterPath="$PROJECT_DIR$/client/src/game/view/fight/view/container/pve/StageProgress.ts" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="league_git" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="RoleBody.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/role/RoleBody.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1980">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FightRole.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/role/FightRole.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="283" column="28" lean-forward="false" selection-start-line="283" selection-start-column="28" selection-end-line="283" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuffAction.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/role/BuffAction.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="59" column="78" lean-forward="false" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScencePanel.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/panel/ScencePanel.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FightContainer.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/container/FightContainer.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3762">
+              <caret line="171" column="45" lean-forward="false" selection-start-line="171" selection-start-column="45" selection-end-line="171" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PVEFightContainer.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/container/pve/PVEFightContainer.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FightRoleFactory.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/core/FightRoleFactory.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding>
+                <marker date="1488879484487" expanded="true" signature="70:860" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FightUtils.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/core/FightUtils.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="374" column="42" lean-forward="false" selection-start-line="374" selection-start-column="42" selection-end-line="374" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MCEff.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/effect/MCEff.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dragonBo</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/client/src/game/model/fight/FightReportItem.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/model/fight/FightRoleVO.ts" />
+        <option value="$PROJECT_DIR$/client/egretProperties.json" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/core/FightRoleFactory.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/effect/MCEff.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/view/container/FightContainer.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/view/role/FightRole.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/view/role/BuffAction.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/panel/ScencePanel.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/core/FightResStrategy.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/core/FightUtils.ts" />
+        <option value="$PROJECT_DIR$/client/src/game/view/fight/view/container/pve/PVEFightContainer.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/client/scripts/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fight" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fight" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="container" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fight" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="container" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pve" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fight" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="league_git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\league_git\client\src\game\view\fight\core" />
+      <recent name="E:\league_git\client\src\game\view\fight\view" />
+      <recent name="E:\league_git\client\src\game\view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\league_git\client\src\game\view\fight\view\container\pve" />
+      <recent name="E:\league_git\client\src\game\view" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7d40077-a094-4d23-928e-594c623d433c" name="Default" comment="" />
+      <created>1488869104710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1488869104710</updated>
+      <workItem from="1488869106172" duration="9162000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9162000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19196428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/panel/ActiveDayInvite.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/core/FightConst.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/PlayerHead.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="52" column="45" lean-forward="false" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/model/fight/FightReportItem.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="73" column="10" lean-forward="false" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/model/fight/FightRoleVO.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="411" column="26" lean-forward="false" selection-start-line="411" selection-start-column="26" selection-end-line="411" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/egretProperties.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/wingProperties.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/core/FightProcessGenerator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3236">
+          <caret line="450" column="0" lean-forward="false" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/role/RoleBody.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1980">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/core/FightRoleFactory.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <marker date="1488879484487" expanded="true" signature="70:860" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/BossFightPanel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2706">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/PVEFightContainer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/effect/MCEff.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/role/FightRole.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="283" column="28" lean-forward="false" selection-start-line="283" selection-start-column="28" selection-end-line="283" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/role/BuffAction.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="59" column="78" lean-forward="false" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/libs/lib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="9" column="24780" lean-forward="false" selection-start-line="9" selection-start-column="24780" selection-end-line="9" selection-end-column="24780" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/panel/ScencePanel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/core/FightUtils.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="374" column="42" lean-forward="false" selection-start-line="374" selection-start-column="42" selection-end-line="374" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/core/FightResStrategy.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/container/FightContainer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3762">
+          <caret line="171" column="45" lean-forward="false" selection-start-line="171" selection-start-column="45" selection-end-line="171" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/game/view/fight/view/container/pve/PVEFightContainer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

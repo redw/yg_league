@@ -4,6 +4,8 @@
  */
 var fight;
 (function (fight) {
+    var dragonFactory = new dragonBones.EgretFactory();
+    var mcFactory = new egret.MovieClipDataFactory();
     var curSoundPath = "";
     var TEST_UID_ARR = ["300667664", "309782584", "292758853", "287057268", "307276412", "296705951", "287127041"];
     /**
@@ -325,6 +327,11 @@ var fight;
         };
     }
     fight.bulletEase = bulletEase;
+    /**
+     * 是否是超过20轮,挑战失败
+     * @param steps
+     * @returns {boolean}
+     */
     function isOverRound(steps) {
         var result = false;
         var len = steps ? steps.length : 0;
@@ -349,17 +356,48 @@ var fight;
         return getSideByPos(pos) == FightSideEnum.LEFT_SIDE;
     }
     fight.needFlipped = needFlipped;
+    /**
+     * 获取角色的高度
+     * @param id
+     * @returns {number}
+     */
     function getRoleHeight(id) {
         return (Config.HeroData[id] || Config.EnemyData).modle_height;
     }
     fight.getRoleHeight = getRoleHeight;
-    function checkFrameEquip(curFrame, triggerFrame, range) {
+    /**
+     * 检测帧是否相等或接近相等
+     * @param curFrame
+     * @param targetFrame
+     * @param range
+     * @returns {boolean}
+     */
+    function checkFrameEquip(curFrame, targetFrame, range) {
         if (range === void 0) { range = 0; }
-        var off = curFrame - triggerFrame;
+        var off = curFrame - targetFrame;
         return off >= 0 && off <= range;
     }
     fight.checkFrameEquip = checkFrameEquip;
-    var mcFactory = new egret.MovieClipDataFactory();
+    /**
+     * 创建骨格动画
+     * @param name
+     * @returns {Armature}
+     */
+    function createArmature(name) {
+        var boneData = RES.getRes(name + "_ske_json");
+        dragonFactory.addDragonBonesData(dragonBones.DataParser.parseDragonBonesData(boneData));
+        var texture = RES.getRes(name + "_tex_png");
+        var textureData = RES.getRes(name + "_tex_json");
+        dragonFactory.addTextureAtlas(new dragonBones.EgretTextureAtlas(texture, textureData));
+        var armature = dragonFactory.buildArmature(name);
+        return armature;
+    }
+    fight.createArmature = createArmature;
+    /**
+     * 创建普通的mc
+     * @param name
+     * @returns {egret.MovieClip}
+     */
     function createMovieClip(name) {
         var dataRes = RES.getRes(name + "_json");
         var textureRes = RES.getRes(name + "_png");
@@ -369,3 +407,4 @@ var fight;
     }
     fight.createMovieClip = createMovieClip;
 })(fight || (fight = {}));
+//# sourceMappingURL=FightUtils.js.map

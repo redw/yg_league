@@ -110,3 +110,4 @@ var DropItem = (function (_super) {
     return DropItem;
 }(egret.DisplayObjectContainer));
 egret.registerClass(DropItem,'DropItem');
+//# sourceMappingURL=DropItem.js.map

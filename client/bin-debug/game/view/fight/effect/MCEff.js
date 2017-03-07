@@ -41,7 +41,7 @@ var MCEff = (function (_super) {
                 this._source = value;
                 var hasRes = fight.isMCResourceLoaded(value);
                 if (hasRes) {
-                    this.mc = FightRole.createMovieClip(value);
+                    this.mc = fight.createMovieClip(value);
                     var totalFrame = this.mc.totalFrames;
                     if (totalFrame < 1) {
                         // fight.recordLog(`资源${value}出错`, fight.LOG_FIGHT_WARN);
@@ -152,3 +152,4 @@ var MCEff = (function (_super) {
     return MCEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(MCEff,'MCEff');
+//# sourceMappingURL=MCEff.js.map

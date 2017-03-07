@@ -11,3 +11,4 @@ var RoleDieEff = (function (_super) {
     return RoleDieEff;
 }(MCEff));
 egret.registerClass(RoleDieEff,'RoleDieEff');
+//# sourceMappingURL=RoleDieEff.js.map

@@ -60,3 +60,4 @@ var BitUtil;
     }
     BitUtil.isBitTrueByString = isBitTrueByString;
 })(BitUtil || (BitUtil = {}));
+//# sourceMappingURL=BitUtil.js.map

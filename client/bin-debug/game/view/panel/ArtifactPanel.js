@@ -286,3 +286,4 @@ var ArtifactShowContainer = (function () {
     return ArtifactShowContainer;
 }());
 egret.registerClass(ArtifactShowContainer,'ArtifactShowContainer');
+//# sourceMappingURL=ArtifactPanel.js.map

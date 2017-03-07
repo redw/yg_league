@@ -96,3 +96,4 @@ var NetWeaponPosBuyCmd = (function (_super) {
     return NetWeaponPosBuyCmd;
 }(BaseCmd));
 egret.registerClass(NetWeaponPosBuyCmd,'NetWeaponPosBuyCmd');
+//# sourceMappingURL=NetWeaponShopCmd.js.map

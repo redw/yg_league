@@ -46,3 +46,4 @@ var BossStageProgress = (function (_super) {
     return BossStageProgress;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BossStageProgress,'BossStageProgress');
+//# sourceMappingURL=BossStageProgress.js.map

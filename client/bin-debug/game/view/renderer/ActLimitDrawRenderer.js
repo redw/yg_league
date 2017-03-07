@@ -82,3 +82,4 @@ var ActLimitDrawRenderer = (function (_super) {
     return ActLimitDrawRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(ActLimitDrawRenderer,'ActLimitDrawRenderer');
+//# sourceMappingURL=ActLimitDrawRenderer.js.map

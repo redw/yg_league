@@ -20,7 +20,6 @@ var FightRoleVO = (function () {
         if (value) {
             this.id = value.id;
             this.pos = value.pos;
-            this.side = value.side;
             if (fight.isHero(this.id)) {
                 this.config = Config.HeroData[this.id];
             }
@@ -400,7 +399,7 @@ var FightRoleVO = (function () {
         obj.magAtk = this.magAtk;
         obj.magDef = this.magDef;
         obj.id = this.config.id;
-        obj.pos = fight.getRolePosDes(this);
+        obj.pos = this.pos;
         obj.dcri = this.critChance;
         obj.dcirDom = this.critDamage;
         obj.ddodge = this.dodgeChance;
@@ -445,3 +444,4 @@ var FightRoleVO = (function () {
     return FightRoleVO;
 }());
 egret.registerClass(FightRoleVO,'FightRoleVO');
+//# sourceMappingURL=FightRoleVO.js.map

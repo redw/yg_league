@@ -76,3 +76,4 @@ var NetTaskCmd = (function (_super) {
     return NetTaskCmd;
 }(BaseCmd));
 egret.registerClass(NetTaskCmd,'NetTaskCmd');
+//# sourceMappingURL=NetActivityCmd.js.map

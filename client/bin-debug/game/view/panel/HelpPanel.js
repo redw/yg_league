@@ -44,3 +44,4 @@ var HelpPanel = (function (_super) {
     return HelpPanel;
 }(BasePanel));
 egret.registerClass(HelpPanel,'HelpPanel');
+//# sourceMappingURL=HelpPanel.js.map

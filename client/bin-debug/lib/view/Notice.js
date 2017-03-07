@@ -43,3 +43,4 @@ var Notice = (function (_super) {
     return Notice;
 }(egret.TextField));
 egret.registerClass(Notice,'Notice');
+//# sourceMappingURL=Notice.js.map
