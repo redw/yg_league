@@ -1,5 +1,5 @@
 /**
- * 处理技能攻击行为,包括被眩晕和没有target等
+ * 处理角色的攻击行为,包括被眩晕和没有target等
  * Created by hh on 17/2/20.
  */
 class SkillAction {
@@ -26,8 +26,13 @@ class SkillAction {
     /**
      * 构造函数
      */
-    public constructor(fightRole:FightRole) {
-        this.fightRole = fightRole;
+    public constructor(fightRole?:FightRole) {
+        this.setFightRole(fightRole);
+    }
+
+    public setFightRole(value:FightRole) {
+        this.reset();
+        this.fightRole = value;
     }
 
     /**
@@ -42,10 +47,12 @@ class SkillAction {
             this._isActionComplete = false;
             console.error("攻击时,ActionComplete应该为false");
         }
+
         this.curSkill = skill;
         this.targets = targets;
         this.buffs = buffs;
         this.damage = damage;
+
         fight.verifyActiveSkill(this.curSkill);
 
         let vertigo = false;
@@ -60,51 +67,43 @@ class SkillAction {
 
         if (vertigo) {
             this.postAttackComplete();
+        } else if (this.targets.length == 0) {
+            this.actionComplete();
         } else {
+            // if (this.curSkill.skill_name) {
+            //     this.fightContainer.showSkillFlyTxt(`skillname_${this.curSkill.skill_name}`);
+            // }
+            //
+            // let showInfo = (this.curSkill.skill_free_effect || "").split(",");
+            // let needMode = !!showInfo[1];
+            // let source = showInfo[0];
+            // if (source && source != "0") {
+            //     let eff = new MCEff(source);
+            //     eff.registerBack(0, this.doAction, this, null);
+            //     eff.y = (this.config.modle_height) * -0.5;
+            //     this.fightContainer.showFreeSkillEff(this, eff, needMode);
+            // } else {
+            //     this.doAction();
+            // }
+            let action = skill.action_type;
             if (fight.needMoveAttack(action)) {
                 this.moveAndAttack();
             } else {
-                this.startAttackAction();
+                this.attack();
             }
         }
     }
 
-    /**
-     * 攻击目标
-     * @param skill     技能信息
-     * @param targets   攻击目标
-     * @param buffs     所有buff
-     * @param damage    自身所受伤害
-     */
-    public attack(skill:SkillConfig, targets:{id:number, pos:number}[], buffs:number[], damage:string) {
-        if (this._isActionComplete) {
-            this._isActionComplete = false;
-            console.error("攻击时,ActionComplete应该为false");
-        }
-
-        this.curSkill = skill;
-        this.targets = targets;
-        this.buffs = buffs;
-        this.damage = damage;
-
-        let action = this.curSkill.action_type;
-
-    }
-
-
-
     // 移动和攻击
     private moveAndAttack() {
-        this.fightRole.dispatchEventWith("start_move", true, {x:this.fightRole.x, y:this.fightRole.y});
+        this.fightRole.dispatchEventWith("start_move", true, {x:this.fightRole.x, y:this.fightRole.y, scaleX:this.fightRole.getScaleX()});
         let point = fight.getNearFightPoint(this.fightRole.pos, this.targets, this.curSkill);
         let tween = egret.Tween.get(this.fightRole);
         tween.to({x: point.x, y: point.y}, fight.MOVE_TIME);
-        tween.call(this.startAttackAction, this);
+        tween.call(this.attack, this);
     }
 
-    // 开始攻击
-    private startAttackAction() {
-        this.isAttackComplete = false;
+    private attack() {
         this.fightRole.addEventListener("attack_complete", this.onComplete, this, true);
         this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
         this.fightRole.attack(this.curSkill);
@@ -141,7 +140,7 @@ class SkillAction {
     }
 
     // 攻击完成
-    private onComplete(e:egret.Event) {
+    private onComplete() {
         this.isAttackComplete = true;
         this.fightRole.removeEventListener("attack_complete", this.onComplete, this, true);
         this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
@@ -150,17 +149,18 @@ class SkillAction {
             let point = fight.getRoleInitPoint(this.fightRole.pos);
             tween.to({x: point.x, y: point.y}, fight.RETREAT_TIME);
             tween.call(() => {
-                this.actionComplete()
+                this.postAttackComplete()
             }, this);
-        } else if (!this.curSkill.scource_effect) {
-            this.actionComplete();
-        } else if (!this.extraEffCount) {
-            this.actionComplete();
+        } else {
+            this.postAttackComplete();
         }
     }
 
     private postAttackComplete(){
-
+        if (BigNum.greater(this.damage || 0, 1)) {
+            this.fightRole.hit();
+        }
+        this.checkComplete();
     }
 
     // 触发跳跃
@@ -238,7 +238,7 @@ class SkillAction {
                     break;
                 }
             }
-            if (!this.isTriggerExtraEff && fight.checkFrameEquip(frame, +frames[len - 1]), 1) {
+            if (!this.isTriggerExtraEff && fight.checkFrameEquip(frame, +frames[len - 1], 1)) {
                 this.isTriggerExtraEff = true;
                 this.fightRole.startDamage(len, len);
             }
@@ -263,16 +263,6 @@ class SkillAction {
         }
     }
 
-    private skillAttackComplete(){
-        if (BigNum.greater(this.reportItem.damage || 0, 0)) {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.hit();
-        } else {
-            this.updateRoleHP(this.reportItem.hp, this.reportItem.maxhp);
-            this.idle();
-        }
-    }
-
     private actionComplete(){
         this._isActionComplete = true;
         this.fightRole.dispatchEventWith("skill_action_complete", true);
@@ -281,13 +271,17 @@ class SkillAction {
     public reset(){
         this.isTriggerDamage = false;
         this.isTriggerJump = false;
+        this.isTriggerExtraEff = false;
         this._isActionComplete = false;
-        this.isAttackComplete = false;
         this.targets = null;
         this.curSkill = null;
+        this.buffs = null;
+        this.damage = "0";
+        this.extraEffCount = 0;
     }
 
     public dispose(){
+        this.reset();
         this.fightRole = null;
     }
 }
