@@ -26,13 +26,8 @@ class SkillAction {
     /**
      * 构造函数
      */
-    public constructor(fightRole?:FightRole) {
-        this.setFightRole(fightRole);
-    }
-
-    public setFightRole(value:FightRole) {
-        this.reset();
-        this.fightRole = value;
+    public constructor(fightRole:FightRole) {
+        this.fightRole = fightRole;
     }
 
     /**
@@ -70,27 +65,26 @@ class SkillAction {
         } else if (this.targets.length == 0) {
             this.actionComplete();
         } else {
-            // if (this.curSkill.skill_name) {
-            //     this.fightContainer.showSkillFlyTxt(`skillname_${this.curSkill.skill_name}`);
-            // }
-            //
-            // let showInfo = (this.curSkill.skill_free_effect || "").split(",");
-            // let needMode = !!showInfo[1];
-            // let source = showInfo[0];
-            // if (source && source != "0") {
-            //     let eff = new MCEff(source);
-            //     eff.registerBack(0, this.doAction, this, null);
-            //     eff.y = (this.config.modle_height) * -0.5;
-            //     this.fightContainer.showFreeSkillEff(this, eff, needMode);
-            // } else {
-            //     this.doAction();
-            // }
-            let action = skill.action_type;
-            if (fight.needMoveAttack(action)) {
-                this.moveAndAttack();
+            this.fightRole.showSkillName(this.curSkill.skill_name);
+            let showInfo = (this.curSkill.skill_free_effect || "").split(",");
+            let needMode = !!showInfo[1];
+            let source = showInfo[0];
+            if (source && source != "0") {
+                let eff = new MCEff(source);
+                eff.registerBack(0, this.doAction, this, null);
+                this.fightRole.showFreeSkillEff(eff, needMode);
             } else {
-                this.attack();
+                this.doAction();
             }
+        }
+    }
+
+    private doAction(){
+        let action = this.curSkill.action_type;
+        if (fight.needMoveAttack(action)) {
+            this.moveAndAttack();
+        } else {
+            this.attack();
         }
     }
 

@@ -27,8 +27,12 @@ class RoleBody extends egret.DisplayObjectContainer {
         this.idle();
     }
 
+    public disActive(){
+        dragonBones.WorldClock.clock.remove(this.armature);
+    }
+
     public idle() {
-        this.armature.animation.gotoAndPlayByTime("idle", -1);
+        this.armature.animation.play("idle");
         this.waiting = true;
     }
 
@@ -37,7 +41,7 @@ class RoleBody extends egret.DisplayObjectContainer {
         this._isTriggerAtk = true;
         this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
         this.armatureDis.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
-        this.armature.animation.gotoAndPlayByTime(skill.action, -1);
+        this.armature.animation.play(skill.action, 1);
     }
 
     private onEnterFrame(e:egret.MovieClipEvent) {
@@ -67,7 +71,7 @@ class RoleBody extends egret.DisplayObjectContainer {
     }
 
     public block() {
-        this.armature.animation.gotoAndPlayByTime("block", -1);
+        this.armature.animation.play("block", -1);
         this.waiting = false;
     }
 
@@ -78,7 +82,7 @@ class RoleBody extends egret.DisplayObjectContainer {
     }
 
     public hit() {
-        this.armature.animation.gotoAndPlayByTime("attacked", 1);
+        this.armature.animation.play("attacked", 1);
         this.waiting = false;
     }
 
@@ -91,6 +95,7 @@ class RoleBody extends egret.DisplayObjectContainer {
     /** 翻转 */
     public set flipped(value:boolean) {
         let scaleX = value ? -1 : 1;
+        this.armatureDis.scaleX = scaleX;
     }
 
     public get isTriggerAtk(){

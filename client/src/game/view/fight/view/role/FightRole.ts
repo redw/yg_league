@@ -285,6 +285,16 @@ class FightRole extends egret.DisplayObjectContainer {
 
     }
 
+    public showSkillName(id:number) {
+        // (`skillname_${this.curSkill.skill_name}`);
+    }
+
+    public showFreeSkillEff(eff:egret.DisplayObject, mode:Boolean){
+        eff.y = (this.config.modle_height) * -0.5;
+        // this.fightContainer.showFreeSkillEff(this, eff, needMode);
+    }
+
+
     public startDamage(index:number = 1, total:number = 1, role:any = null, ratio:number = 1) {
         if (this.targets.length > 0) {
             fight.playSound(this.curSkill.target_sound);
@@ -470,6 +480,7 @@ class FightRole extends egret.DisplayObjectContainer {
             }
         }
         this.lifeBar.reset();
+        this.body.reset();
         if (this.haloEff) {
             this.haloEff.stop();
         }
