@@ -219,4 +219,3 @@ var Http = (function (_super) {
     return Http;
 }(egret.EventDispatcher));
 egret.registerClass(Http,'Http');
-//# sourceMappingURL=Http.js.map

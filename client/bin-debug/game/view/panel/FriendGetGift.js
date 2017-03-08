@@ -23,4 +23,3 @@ var FriendGetGift = (function (_super) {
     return FriendGetGift;
 }(eui.Component));
 egret.registerClass(FriendGetGift,'FriendGetGift');
-//# sourceMappingURL=FriendGetGift.js.map

@@ -48,4 +48,3 @@ var YellowBigBtn = (function (_super) {
     return YellowBigBtn;
 }(eui.Button));
 egret.registerClass(YellowBigBtn,'YellowBigBtn');
-//# sourceMappingURL=YellowBigBtn.js.map

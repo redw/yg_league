@@ -72,4 +72,3 @@ var Broadcast = (function (_super) {
     return Broadcast;
 }(egret.HashObject));
 egret.registerClass(Broadcast,'Broadcast');
-//# sourceMappingURL=Broadcast.js.map

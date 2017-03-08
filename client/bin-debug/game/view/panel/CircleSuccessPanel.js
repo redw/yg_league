@@ -90,4 +90,3 @@ var CircleSuccessPanel = (function (_super) {
     return CircleSuccessPanel;
 }(BasePanel));
 egret.registerClass(CircleSuccessPanel,'CircleSuccessPanel');
-//# sourceMappingURL=CircleSuccessPanel.js.map

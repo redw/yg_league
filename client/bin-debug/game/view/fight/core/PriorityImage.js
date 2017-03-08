@@ -43,4 +43,3 @@ var PriorityImage = (function (_super) {
     return PriorityImage;
 }(egret.Bitmap));
 egret.registerClass(PriorityImage,'PriorityImage');
-//# sourceMappingURL=PriorityImage.js.map

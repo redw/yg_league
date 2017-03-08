@@ -90,4 +90,3 @@ var RoleStarRise = (function (_super) {
     return RoleStarRise;
 }(BasePanel));
 egret.registerClass(RoleStarRise,'RoleStarRise');
-//# sourceMappingURL=RoleStarRise.js.map

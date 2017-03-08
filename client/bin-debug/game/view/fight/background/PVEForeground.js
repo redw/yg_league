@@ -105,4 +105,3 @@ var PVEForeground = (function (_super) {
     return PVEForeground;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PVEForeground,'PVEForeground');
-//# sourceMappingURL=PVEForeground.js.map

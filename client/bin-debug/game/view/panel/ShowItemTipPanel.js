@@ -71,4 +71,3 @@ var ShowItemTipPanel = (function (_super) {
     return ShowItemTipPanel;
 }(BasePanel));
 egret.registerClass(ShowItemTipPanel,'ShowItemTipPanel');
-//# sourceMappingURL=ShowItemTipPanel.js.map

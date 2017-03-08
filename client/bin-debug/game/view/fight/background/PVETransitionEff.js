@@ -32,4 +32,3 @@ var PVETransitionEff = (function (_super) {
     return PVETransitionEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PVETransitionEff,'PVETransitionEff');
-//# sourceMappingURL=PVETransitionEff.js.map

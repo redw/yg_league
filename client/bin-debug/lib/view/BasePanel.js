@@ -107,4 +107,3 @@ var BasePanel = (function (_super) {
     return BasePanel;
 }(eui.Component));
 egret.registerClass(BasePanel,'BasePanel');
-//# sourceMappingURL=BasePanel.js.map

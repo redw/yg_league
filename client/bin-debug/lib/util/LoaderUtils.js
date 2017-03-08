@@ -43,4 +43,3 @@ var LoaderUtils;
     }
     LoaderUtils.loadImage = loadImage;
 })(LoaderUtils || (LoaderUtils = {}));
-//# sourceMappingURL=LoaderUtils.js.map

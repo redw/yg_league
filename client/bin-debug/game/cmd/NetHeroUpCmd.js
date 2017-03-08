@@ -114,4 +114,3 @@ var NetExchangeCmd = (function (_super) {
     return NetExchangeCmd;
 }(BaseCmd));
 egret.registerClass(NetExchangeCmd,'NetExchangeCmd');
-//# sourceMappingURL=NetHeroUpCmd.js.map

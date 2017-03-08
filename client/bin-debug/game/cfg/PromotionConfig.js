@@ -97,4 +97,3 @@ var PromotionConfig = (function (_super) {
     return PromotionConfig;
 }(egret.HashObject));
 egret.registerClass(PromotionConfig,'PromotionConfig');
-//# sourceMappingURL=PromotionConfig.js.map

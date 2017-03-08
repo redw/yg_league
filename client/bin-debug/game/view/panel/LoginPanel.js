@@ -53,4 +53,3 @@ var LoginPanel = (function (_super) {
     return LoginPanel;
 }(BasePanel));
 egret.registerClass(LoginPanel,'LoginPanel');
-//# sourceMappingURL=LoginPanel.js.map

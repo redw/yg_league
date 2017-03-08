@@ -39,7 +39,23 @@ class PVEFightContainer extends FightContainer {
 
     // 同时出战的数量
     protected getPlayingCount() {
-        return 1;
+        let result = 1;
+        let len = this.fightSteps.length;
+        if (len > 1) {
+            let firstPos = this.fightSteps[0].pos;
+            let firstSide = fight.getSideByPos(firstPos);
+            for(let i = 1; i < this.fightSteps.length; i++) {
+                let curPos = this.fightSteps[i].pos;
+                let curSide = fight.getSideByPos(curPos);
+                if (firstSide == curSide && firstPos != curPos) {
+                    firstPos = curPos;
+                    result++;
+                } else {
+                    break;
+                }
+            }
+        }
+        return result;
     }
 
     public startLevel(level:number){

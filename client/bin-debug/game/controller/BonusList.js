@@ -53,4 +53,3 @@ var BonusList = (function (_super) {
     return BonusList;
 }(egret.HashObject));
 egret.registerClass(BonusList,'BonusList');
-//# sourceMappingURL=BonusList.js.map

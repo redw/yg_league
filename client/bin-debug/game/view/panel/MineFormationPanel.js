@@ -176,4 +176,3 @@ var MineFormationPanel = (function (_super) {
     return MineFormationPanel;
 }(BasePanel));
 egret.registerClass(MineFormationPanel,'MineFormationPanel');
-//# sourceMappingURL=MineFormationPanel.js.map

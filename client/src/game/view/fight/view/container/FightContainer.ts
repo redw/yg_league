@@ -9,8 +9,8 @@ class FightContainer extends egret.DisplayObjectContainer{
     private meanWhileStep:number = 1;                                           // 同时可出战的步数
     public leftTotalLife:string = "1";                                          // 左方总生命
     public rightTotalLife:string = "1";                                         // 右方总生命
-    private fightSteps:any[] = [];                                              // 战斗步骤
-    private fightStepsDup:any[] = [];                                           // 战斗步骤副本
+    protected fightSteps:any[] = [];                                              // 战斗步骤
+    protected fightStepsDup:any[] = [];                                           // 战斗步骤副本
     protected elements:{id:number, pos:number}[];                               // 角色数据
 
     private warnEff:FightWarnEff;                                               // 血量不足20%时的警告效果
@@ -288,12 +288,26 @@ class FightContainer extends egret.DisplayObjectContainer{
         this.damageEffLayer.addChild(eff);
     }
 
-    public flyTxt(content:any, fntname:string) {
-        let fontEff = new FontEff(fntname);
+    /**
+     * 显示文字效果
+     * @param content
+     * @param fontName
+     */
+    public flyTxt(content:any, fontName:string) {
+        let fontEff = new FontEff(fontName);
         fontEff.x = content.x || 0;
         fontEff.y = content.y || 0;
         fontEff.show(content);
         this.fontEffLayer.addChild(fontEff);
+    }
+
+    public showSkillName(path:string) {
+        if (this.type == FightTypeEnum.PVE) {
+            let skillEff = new SkillNameEff(path);
+            skillEff.x = 72;
+            skillEff.y = 50;
+            this.addChild(skillEff);
+        }
     }
 
     private onRoleHPChange() {

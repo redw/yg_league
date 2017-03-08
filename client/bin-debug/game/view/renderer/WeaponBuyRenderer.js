@@ -92,4 +92,3 @@ var WeaponBuyRenderer = (function (_super) {
     return WeaponBuyRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(WeaponBuyRenderer,'WeaponBuyRenderer');
-//# sourceMappingURL=WeaponBuyRenderer.js.map

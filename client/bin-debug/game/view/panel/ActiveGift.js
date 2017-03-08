@@ -27,4 +27,3 @@ var ActiveGift = (function (_super) {
     return ActiveGift;
 }(eui.Component));
 egret.registerClass(ActiveGift,'ActiveGift');
-//# sourceMappingURL=ActiveGift.js.map

@@ -104,4 +104,3 @@ var QuickAlert = (function (_super) {
     return QuickAlert;
 }(BasePanel));
 egret.registerClass(QuickAlert,'QuickAlert');
-//# sourceMappingURL=QuickAlert.js.map

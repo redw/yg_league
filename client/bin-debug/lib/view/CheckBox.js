@@ -55,4 +55,3 @@ var CheckBox = (function (_super) {
     return CheckBox;
 }(eui.Component));
 egret.registerClass(CheckBox,'CheckBox');
-//# sourceMappingURL=CheckBox.js.map

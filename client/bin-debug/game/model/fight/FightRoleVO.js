@@ -444,4 +444,3 @@ var FightRoleVO = (function () {
     return FightRoleVO;
 }());
 egret.registerClass(FightRoleVO,'FightRoleVO');
-//# sourceMappingURL=FightRoleVO.js.map

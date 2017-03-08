@@ -139,4 +139,3 @@ var WeaponInfoPanel = (function (_super) {
     return WeaponInfoPanel;
 }(BasePanel));
 egret.registerClass(WeaponInfoPanel,'WeaponInfoPanel');
-//# sourceMappingURL=WeaponInfoPanel.js.map

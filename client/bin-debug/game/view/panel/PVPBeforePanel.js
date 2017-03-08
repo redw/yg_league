@@ -66,4 +66,3 @@ var PVPBeforePanel = (function (_super) {
     return PVPBeforePanel;
 }(BasePanel));
 egret.registerClass(PVPBeforePanel,'PVPBeforePanel');
-//# sourceMappingURL=PVPBeforePanel.js.map

@@ -65,4 +65,3 @@ var MonsterCatchRenderer = (function (_super) {
     return MonsterCatchRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(MonsterCatchRenderer,'MonsterCatchRenderer');
-//# sourceMappingURL=MonsterCatchRenderer.js.map

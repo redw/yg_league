@@ -11,4 +11,3 @@ var PVPFightContainer = (function (_super) {
     return PVPFightContainer;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PVPFightContainer,'PVPFightContainer');
-//# sourceMappingURL=PVPFightContainer.js.map

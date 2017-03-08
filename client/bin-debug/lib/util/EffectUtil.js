@@ -54,4 +54,3 @@ var EffectUtil;
     }
     EffectUtil.playLabelColorEffect = playLabelColorEffect;
 })(EffectUtil || (EffectUtil = {}));
-//# sourceMappingURL=EffectUtil.js.map

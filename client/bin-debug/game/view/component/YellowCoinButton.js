@@ -42,4 +42,3 @@ var YellowCoinButton = (function (_super) {
     return YellowCoinButton;
 }(eui.Button));
 egret.registerClass(YellowCoinButton,'YellowCoinButton');
-//# sourceMappingURL=YellowCoinButton.js.map

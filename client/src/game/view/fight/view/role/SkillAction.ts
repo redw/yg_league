@@ -31,20 +31,18 @@ class SkillAction {
     }
 
     /**
-     * 预攻击目标
+     * 攻击目标
      * @param skill     技能信息
      * @param targets   攻击目标
      * @param buffs     所有buff
      * @param damage    自身所受伤害
      */
-    public preAttack(skill:SkillConfig, targets:{id:number, pos:number}[], buffs:number[], damage:string){
+    public attack(skill:SkillConfig, targets:{id:number, pos:number}[], buffs:number[], damage:string){
         this.reset();
-
         this.curSkill = skill;
         this.targets = targets;
         this.buffs = buffs;
         this.damage = damage;
-
         fight.verifyActiveSkill(this.curSkill);
 
         let vertigo = false;
@@ -58,8 +56,10 @@ class SkillAction {
         }
 
         if (vertigo) {
+            fight.recordLog(`id:${this.fightRole.id},pos:${this.fightRole.pos},action:${this.curSkill.action_type},state:vertigo`, fight.LOG_FIGHT_INFO);
             this.postAttackComplete();
         } else if (this.targets.length == 0) {
+            fight.recordLog(`id:${this.fightRole.id},pos:${this.fightRole.pos},action:${this.curSkill.action_type},state:no_target`, fight.LOG_FIGHT_INFO);
             this.actionComplete();
         } else {
             this.fightRole.showSkillName(this.curSkill.skill_name);
@@ -81,7 +81,7 @@ class SkillAction {
         if (fight.needMoveAttack(action)) {
             this.moveAndAttack();
         } else {
-            this.attack();
+            this.playAttackAction();
         }
     }
 
@@ -91,12 +91,13 @@ class SkillAction {
         let point = fight.getNearFightPoint(this.fightRole.pos, this.targets, this.curSkill);
         let tween = egret.Tween.get(this.fightRole);
         tween.to({x: point.x, y: point.y}, fight.MOVE_TIME);
-        tween.call(this.attack, this);
+        tween.call(this.playAttackAction, this);
     }
 
-    private attack() {
+    private playAttackAction() {
         this.fightRole.addEventListener("attack_complete", this.onComplete, this, true);
-        // this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
+        this.fightRole.addEventListener("attack_event", this.onAttackEvent, this, true);
+        this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
         this.fightRole.attack(this.curSkill);
     }
 
@@ -134,7 +135,8 @@ class SkillAction {
     private onComplete() {
         this.isAttackComplete = true;
         this.fightRole.removeEventListener("attack_complete", this.onComplete, this, true);
-        // this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
+        this.fightRole.removeEventListener("attack_event", this.onAttackEvent, this, true);
+        this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
         if (fight.needRetreat(this.curSkill.action_type)) {
             let tween = egret.Tween.get(this.fightRole);
             let point = fight.getRoleInitPoint(this.fightRole.pos);
@@ -144,6 +146,24 @@ class SkillAction {
             }, this);
         } else {
             this.postAttackComplete();
+        }
+    }
+
+    // 攻击事件
+    private onAttackEvent(e:egret.Event) {
+        let eventName:string = e.data;
+        if (eventName == "jump") {
+            this.triggerJump();
+        }
+        if (eventName == "damage") {
+            this.doDamageAction(1, 1);
+        } else if (eventName.indexOf("damage") >= 0) {
+            let total = eventName.substr(6, 1);
+            let cur = eventName.substr(8, 1);
+            this.doDamageAction(+cur, +total);
+        }
+        if (eventName == "weapon") {
+            // 处理weapon
         }
     }
 
@@ -176,39 +196,18 @@ class SkillAction {
     // 处理伤害行为
     private doDamageAction(cur:number, total:number) {
         if (this.curSkill.scource_effect) {
-            if (fight.isMCResourceLoaded(this.curSkill.scource_effect)) {
-                if (this.curSkill.action_type == fight.ATTACK_ACTION_MISSLE) {
-                    this.fightRole.fireTargets(this.targets, cur, total);
-                } else {
-                    this.extraEffCount++;
-                    let mc = fight.createMovieClip(this.curSkill.scource_effect);
-                    if (!this.curSkill.effect_damage_frame || this.curSkill.effect_damage_frame == 1) {
-                        this.fightRole.startDamage(1, 1);
-                    } else {
-                        mc.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame1, this);
-                    }
-                    mc.addEventListener(egret.MovieClipEvent.COMPLETE, this.onComplete1, this);
-                    mc.gotoAndPlay(1, 1);
-
-                    if (this.curSkill.action_type == fight.ATTACK_ACTION_BOMB) {
-                        this.fightRole.addEff(mc);
-                    }
-
-                    if (this.curSkill.action_type == fight.ATTACK_ACTION_AREA) {
-                        let offPoint:any = (!!this.curSkill.area_effect_point) ? this.curSkill.area_effect_point.split(","):[0, 0];
-                        let side = this.fightRole.side;
-                        mc.x = fight.AREA_POS[side - 1].x + (Number(offPoint[0]) || 0);
-                        mc.y = fight.AREA_POS[side - 1].y + (Number(offPoint[1]) || 0);
-                        this.fightRole.addAreaEff(mc, fight.needFlipped(this.fightRole.pos));
-                    }
-
-                    if (this.curSkill.action_type == fight.ATTACK_JUMP_ATTACK2) {
-                        mc.x = this.fightRole.x;
-                        mc.y = this.fightRole.y;
-                        this.fightRole.addContainerEff(mc, fight.needFlipped(this.fightRole.pos));
-                    }
-                }
-            }
+            // if (fight.isMCResourceLoaded(this.curSkill.scource_effect)) {
+            //     if (this.curSkill.action_type == fight.ATTACK_ACTION_MISSLE) {
+            //         this.fightRole.showBulletEff(this.targets, cur, total);
+            //     } else if (this.curSkill.action_type == fight.ATTACK_ACTION_BOMB) {
+            //         this.fightRole.showBombEff(this.targets, cur, total);
+            //     } else if (this.curSkill.action_type == fight.ATTACK_ACTION_AREA) {
+            //         this.fightRole.showAreaEff(this.targets, cur, total);
+            //     }
+            //     else {
+            //
+            //     }
+            // }
         } else {
             this.fightRole.startDamage(cur, total);
         }

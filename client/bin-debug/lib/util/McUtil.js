@@ -56,4 +56,3 @@ var McUtil;
     }
     McUtil.clear = clear;
 })(McUtil || (McUtil = {}));
-//# sourceMappingURL=McUtil.js.map

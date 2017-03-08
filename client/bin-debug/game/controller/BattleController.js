@@ -103,4 +103,3 @@ var BattleController = (function (_super) {
     return BattleController;
 }(egret.HashObject));
 egret.registerClass(BattleController,'BattleController');
-//# sourceMappingURL=BattleController.js.map

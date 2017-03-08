@@ -118,4 +118,3 @@ var BuffAction = (function () {
     return BuffAction;
 }());
 egret.registerClass(BuffAction,'BuffAction');
-//# sourceMappingURL=BuffAction.js.map

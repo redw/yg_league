@@ -51,4 +51,3 @@ var ActFundRenderer = (function (_super) {
     return ActFundRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(ActFundRenderer,'ActFundRenderer');
-//# sourceMappingURL=ActFundRenderer.js.map

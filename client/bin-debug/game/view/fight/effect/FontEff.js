@@ -53,4 +53,3 @@ var FontEff = (function (_super) {
     return FontEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FontEff,'FontEff');
-//# sourceMappingURL=FontEff.js.map

@@ -40,4 +40,3 @@ var FriendApplyRenderer = (function (_super) {
     return FriendApplyRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(FriendApplyRenderer,'FriendApplyRenderer');
-//# sourceMappingURL=FriendApplyRenderer.js.map

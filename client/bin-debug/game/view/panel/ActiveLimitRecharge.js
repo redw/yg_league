@@ -49,4 +49,3 @@ var ActiveLimitRecharge = (function (_super) {
     return ActiveLimitRecharge;
 }(eui.Component));
 egret.registerClass(ActiveLimitRecharge,'ActiveLimitRecharge');
-//# sourceMappingURL=ActiveLimitRecharge.js.map

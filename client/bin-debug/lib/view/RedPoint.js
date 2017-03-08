@@ -39,4 +39,3 @@ var RedPoint = (function (_super) {
     return RedPoint;
 }(egret.Sprite));
 egret.registerClass(RedPoint,'RedPoint');
-//# sourceMappingURL=RedPoint.js.map

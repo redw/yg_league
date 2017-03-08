@@ -32,8 +32,8 @@ var RoleBody = (function (_super) {
     p.attack = function (skill) {
         this.waiting = false;
         this._isTriggerAtk = true;
-        // this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
-        this.armature.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+        this.armatureDis.addEventListener(dragonBones.FrameEvent.FRAME_EVENT, this.onFrameEvent, this);
+        this.armature.addEventListener(dragonBones.AnimationEvent.COMPLETE, this.attackComplete, this);
         this.armature.animation.play(skill.action, 1);
     };
     p.onEnterFrame = function (e) {
@@ -55,11 +55,14 @@ var RoleBody = (function (_super) {
                 }
             }
             this.frameDisArr = [];
-            // e.target.removeEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
-            e.target.removeEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+            e.target.removeEventListener(dragonBones.FrameEvent.FRAME_EVENT, this.onFrameEvent, this);
+            e.target.removeEventListener(dragonBones.AnimationEvent.COMPLETE, this.attackComplete, this);
         }
         this.idle();
         this.dispatchEventWith("attack_complete", true);
+    };
+    p.onFrameEvent = function (e) {
+        this.dispatchEventWith("attack_event", true, e.frameLabel);
     };
     p.block = function () {
         this.armature.animation.play("block", -1);
@@ -81,13 +84,6 @@ var RoleBody = (function (_super) {
             e.target.removeEventListener(egret.MovieClipEvent.COMPLETE, this.hitComplete, this);
         this.idle();
     };
-    d(p, "flipped",undefined
-        /** 翻转 */
-        ,function (value) {
-            var scaleX = value ? -1 : 1;
-            this.armatureDis.scaleX = scaleX;
-        }
-    );
     d(p, "isTriggerAtk"
         ,function () {
             return this._isTriggerAtk;
@@ -106,12 +102,19 @@ var RoleBody = (function (_super) {
             this._waiting = value;
         }
     );
+    d(p, "flipped",undefined
+        /** 翻转 */
+        ,function (value) {
+            var scaleX = value ? -1 : 1;
+            this.armatureDis.scaleX = scaleX;
+        }
+    );
     p.reset = function () {
         this._waiting = true;
         this._isTriggerAtk = false;
         this.frameDisArr = [];
+        this.idle();
     };
     return RoleBody;
 }(egret.DisplayObjectContainer));
 egret.registerClass(RoleBody,'RoleBody');
-//# sourceMappingURL=RoleBody.js.map

@@ -35,4 +35,3 @@ var RoundProgress = (function (_super) {
     return RoundProgress;
 }(egret.DisplayObjectContainer));
 egret.registerClass(RoundProgress,'RoundProgress');
-//# sourceMappingURL=RoundProgress.js.map

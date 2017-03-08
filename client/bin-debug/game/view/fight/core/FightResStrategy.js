@@ -247,4 +247,3 @@ var fight;
     }
     fight.needAddRes = needAddRes;
 })(fight || (fight = {}));
-//# sourceMappingURL=FightResStrategy.js.map

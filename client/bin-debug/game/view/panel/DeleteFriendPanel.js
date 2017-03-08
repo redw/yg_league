@@ -42,4 +42,3 @@ var DeleteFriendPanel = (function (_super) {
     return DeleteFriendPanel;
 }(BasePanel));
 egret.registerClass(DeleteFriendPanel,'DeleteFriendPanel');
-//# sourceMappingURL=DeleteFriendPanel.js.map

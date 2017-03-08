@@ -328,4 +328,3 @@ var MineMainPanel = (function (_super) {
     return MineMainPanel;
 }(BasePanel));
 egret.registerClass(MineMainPanel,'MineMainPanel');
-//# sourceMappingURL=MineMainPanel.js.map

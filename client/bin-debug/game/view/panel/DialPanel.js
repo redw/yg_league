@@ -184,4 +184,3 @@ var DialPanel = (function (_super) {
     return DialPanel;
 }(BasePanel));
 egret.registerClass(DialPanel,'DialPanel');
-//# sourceMappingURL=DialPanel.js.map

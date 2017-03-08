@@ -100,4 +100,3 @@ var SecretRenderer = (function (_super) {
     return SecretRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(SecretRenderer,'SecretRenderer');
-//# sourceMappingURL=SecretRenderer.js.map

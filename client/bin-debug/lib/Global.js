@@ -109,4 +109,3 @@ var Global;
     }
     Global.getPVPHeadIcon = getPVPHeadIcon;
 })(Global || (Global = {}));
-//# sourceMappingURL=Global.js.map

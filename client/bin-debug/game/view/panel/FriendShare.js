@@ -79,4 +79,3 @@ var FriendShare = (function (_super) {
     return FriendShare;
 }(eui.Component));
 egret.registerClass(FriendShare,'FriendShare');
-//# sourceMappingURL=FriendShare.js.map

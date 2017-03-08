@@ -116,9 +116,9 @@ var FightProcessGenerator = (function () {
         var skillRepeat = skillInfo.repeat;
         for (var i = 0; i < skillRepeat; i++) {
             if (getTargetFunName in this) {
-                var pos = fight.getPosIndexByPos(role.pos);
+                var index = fight.getPosIndexByPos(role.pos);
                 var side = fight.getSideByPos(role.pos);
-                var targets = this[getTargetFunName]({ pos: pos, side: side });
+                var targets = this[getTargetFunName]({ index: index, side: side });
                 if (i == 0 && targets.length <= 0) {
                     fight.recordLog("方法" + getTargetFunName + "错误", fight.LOG_FIGHT_ERROR);
                 }
@@ -343,7 +343,7 @@ var FightProcessGenerator = (function () {
     // 得到正序单目标
     p.getTarget = function (obj) {
         var result = [];
-        var row = obj.pos % 3;
+        var row = obj.index % 3;
         var indexArr = [];
         var rows = fight.getCommonOrders(row);
         for (var i = 0; i < rows.length; i++) {
@@ -364,7 +364,7 @@ var FightProcessGenerator = (function () {
     // 得到倒序单目标
     p.getReverseTarget = function (obj) {
         var result = [];
-        var row = obj.pos % 3;
+        var row = obj.index % 3;
         var indexArr = [];
         var rows = fight.getCommonOrders(row);
         for (var i = 0; i < rows.length; i++) {
@@ -419,7 +419,7 @@ var FightProcessGenerator = (function () {
     // 得到一排目标
     p.getRowTargets = function (obj) {
         var result = [];
-        var rows = fight.getCommonOrders(obj.pos % 3);
+        var rows = fight.getCommonOrders(obj.index % 3);
         var indexArr = [];
         for (var i = 0; i < rows.length; i++) {
             indexArr.push([rows[i], rows[i] + 3, rows[i] + 6]);
@@ -583,7 +583,7 @@ var FightProcessGenerator = (function () {
     };
     // 得到自己目标
     p.getSelfTarget = function (obj) {
-        var result = this.allTeam[obj.side - 1][obj.pos];
+        var result = this.allTeam[obj.side - 1][obj.index];
         return [result];
     };
     // 重置
@@ -617,4 +617,3 @@ var FightProcessGenerator = (function () {
     return FightProcessGenerator;
 }());
 egret.registerClass(FightProcessGenerator,'FightProcessGenerator');
-//# sourceMappingURL=FightProcessGenerator.js.map

@@ -54,4 +54,3 @@ var HeroModel = (function (_super) {
     return HeroModel;
 }(ModelDict));
 egret.registerClass(HeroModel,'HeroModel');
-//# sourceMappingURL=HeroModel.js.map

@@ -36,4 +36,3 @@ var SoundUtils;
     }
     SoundUtils.setSwitch = setSwitch;
 })(SoundUtils || (SoundUtils = {}));
-//# sourceMappingURL=SoundUils.js.map

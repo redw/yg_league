@@ -217,4 +217,3 @@ var ActivePanel = (function (_super) {
     return ActivePanel;
 }(BasePanel));
 egret.registerClass(ActivePanel,'ActivePanel');
-//# sourceMappingURL=ActivePanel.js.map

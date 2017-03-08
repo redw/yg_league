@@ -50,4 +50,3 @@ var TickerUtil;
     }
     TickerUtil.unregister = unregister;
 })(TickerUtil || (TickerUtil = {}));
-//# sourceMappingURL=TickerUtil.js.map

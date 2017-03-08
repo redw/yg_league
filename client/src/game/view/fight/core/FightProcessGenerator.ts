@@ -140,9 +140,9 @@ class FightProcessGenerator {
         let skillRepeat = skillInfo.repeat;
         for (let i = 0; i < skillRepeat; i++) {
             if (getTargetFunName in this) {
-                let pos = fight.getPosIndexByPos(role.pos);
+                let index = fight.getPosIndexByPos(role.pos);
                 let side = fight.getSideByPos(role.pos);
-                let targets = this[getTargetFunName]({pos:pos, side:side});
+                let targets = this[getTargetFunName]({index:index, side:side});
                 if (i == 0 && targets.length <= 0) {
                     fight.recordLog("方法" + getTargetFunName + "错误", fight.LOG_FIGHT_ERROR);
                 }
@@ -372,9 +372,9 @@ class FightProcessGenerator {
     }
 
     // 得到正序单目标
-    private getTarget(obj: {pos: number, side: number}) {
+    private getTarget(obj: {index: number, side: number}) {
         let result = [];
-        let row = obj.pos % 3;
+        let row = obj.index % 3;
         let indexArr: number[] = [];
         let rows = fight.getCommonOrders(row);
         for (let i = 0; i < rows.length; i++) {
@@ -394,9 +394,9 @@ class FightProcessGenerator {
     }
 
     // 得到倒序单目标
-    private getReverseTarget(obj: {pos: number, side: number}) {
+    private getReverseTarget(obj: {index: number, side: number}) {
         let result = [];
-        let row = obj.pos % 3;
+        let row = obj.index % 3;
         let indexArr: number[] = [];
         let rows = fight.getCommonOrders(row);
         for (let i = 0; i < rows.length; i++) {
@@ -416,7 +416,7 @@ class FightProcessGenerator {
     }
 
     // 得到正序一列
-    private getColumnTargets(obj: {pos: number, side: number}) {
+    private getColumnTargets(obj: {index: number, side: number}) {
         let result = [];
         let team = this.allTeam[2 - obj.side];
         for (let i = 0; i < 3; i++) {
@@ -434,7 +434,7 @@ class FightProcessGenerator {
     }
 
     // 得到倒序一列
-    private getColumnReverseTargets(obj: {pos: number, side: number}) {
+    private getColumnReverseTargets(obj: {index: number, side: number}) {
         let result = [];
         let team = this.allTeam[2 - obj.side];
         for (let i = 2; i >= 0; i--) {
@@ -452,9 +452,9 @@ class FightProcessGenerator {
     }
 
     // 得到一排目标
-    private getRowTargets(obj: {pos: number, side: number}) {
+    private getRowTargets(obj: {index: number, side: number}) {
         let result = [];
-        let rows = fight.getCommonOrders(obj.pos % 3);
+        let rows = fight.getCommonOrders(obj.index % 3);
         let indexArr: number[][] = [];
         for (let i = 0; i < rows.length; i++) {
             indexArr.push([rows[i], rows[i] + 3, rows[i] + 6]);
@@ -475,7 +475,7 @@ class FightProcessGenerator {
     }
 
     // 得到本方所有目标
-    public getMySideTargets(obj: {pos: number, side: number}) {
+    public getMySideTargets(obj: {index: number, side: number}) {
         let result = [];
         let team = this.allTeam[obj.side - 1];
         for (let i = 0; i < 9; i++) {
@@ -487,7 +487,7 @@ class FightProcessGenerator {
     }
 
     // 得到对方所有目标
-    public getOtherSideTargets(obj: {pos: number, side: number}) {
+    public getOtherSideTargets(obj: {index: number, side: number}) {
         let result = [];
         let team = this.allTeam[2 - obj.side];
         for (let i = 0; i < 9; i++) {
@@ -499,7 +499,7 @@ class FightProcessGenerator {
     }
 
     // 得到血量最多的目标
-    public getMostHPTarget(obj: {pos: number, side: number}) {
+    public getMostHPTarget(obj: {index: number, side: number}) {
         let result:FightRoleVO = null;
         let team = this.allTeam[2 - obj.side];
         for (let i = 0; i < 9; i++) {
@@ -517,7 +517,7 @@ class FightProcessGenerator {
     }
 
     // 得到血量百分比最少的目标
-    public getLeaseHPTarget(obj: {pos: number, side: number}) {
+    public getLeaseHPTarget(obj: {index: number, side: number}) {
         let result:FightRoleVO = null;
         let team = this.allTeam[2 - obj.side];
         for (let i = 0; i < 9; i++) {
@@ -537,7 +537,7 @@ class FightProcessGenerator {
     }
 
     // 得到友方血最分比最少的目标
-    public getSelfSideLeaseHPTarget(obj:{pos: number, side: number}) {
+    public getSelfSideLeaseHPTarget(obj:{index: number, side: number}) {
         let result:FightRoleVO = null;
         let team = this.allTeam[obj.side - 1];
         for (let i = 0; i < 9; i++) {
@@ -557,7 +557,7 @@ class FightProcessGenerator {
     }
 
     // 得到最高物攻的目标
-    public getMostPhyAtkTarget(obj: {pos: number, side: number}) {
+    public getMostPhyAtkTarget(obj: {index: number, side: number}) {
         let result:FightRoleVO = null;
         let team = this.allTeam[2 - obj.side];
         for (let i = 0; i < 9; i++) {
@@ -575,7 +575,7 @@ class FightProcessGenerator {
     }
 
     // 得到最高法攻的目标
-    public getMostMagicAtkTarget(obj: {pos: number, side: number}) {
+    public getMostMagicAtkTarget(obj: {index: number, side: number}) {
         let result:FightRoleVO = null;
         let team = this.allTeam[2 - obj.side];
         for (let i = 0; i < 9; i++) {
@@ -593,7 +593,7 @@ class FightProcessGenerator {
     }
 
     // 得到最高攻击力
-    public getMostAtkTarget(obj: {pos: number, side: number}) {
+    public getMostAtkTarget(obj: {index: number, side: number}) {
         let result:FightRoleVO = null;
         let team = this.allTeam[2 - obj.side];
         for (let i = 0; i < 9; i++) {
@@ -611,7 +611,7 @@ class FightProcessGenerator {
     }
 
     // 随机一个对手目标
-    public getRandomTarget(obj: {pos: number, side: number}){
+    public getRandomTarget(obj: {index: number, side: number}){
         let result:FightRoleVO = null;
         let team = this.allTeam[2 - obj.side];
         let roles = team.filter((value)=> {return !!value});
@@ -621,8 +621,8 @@ class FightProcessGenerator {
     }
 
     // 得到自己目标
-    private getSelfTarget(obj: {pos: number, side: number}) {
-        let result:FightRoleVO = this.allTeam[obj.side - 1][obj.pos];
+    private getSelfTarget(obj: {index: number, side: number}) {
+        let result:FightRoleVO = this.allTeam[obj.side - 1][obj.index];
         return [result];
     }
 

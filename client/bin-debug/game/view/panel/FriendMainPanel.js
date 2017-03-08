@@ -132,4 +132,3 @@ var FriendMainPanel = (function (_super) {
     return FriendMainPanel;
 }(BasePanel));
 egret.registerClass(FriendMainPanel,'FriendMainPanel');
-//# sourceMappingURL=FriendMainPanel.js.map

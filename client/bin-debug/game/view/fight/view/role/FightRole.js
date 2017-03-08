@@ -6,6 +6,8 @@ var FightRole = (function (_super) {
     __extends(FightRole, _super);
     function FightRole(fightContainer, roleData) {
         _super.call(this);
+        // 角色所在的容器
+        this.fightContainer = null;
         // 攻击或伤害时使用的技能
         this.curSkill = null;
         // 战斗信息
@@ -16,8 +18,6 @@ var FightRole = (function (_super) {
         this.isPlayingDie = false;
         // 是否角色正在播放额外特效
         this.isPlayingExtraEff = false;
-        // 角色所在的容器
-        this.fightContainer = null;
         // 血条
         this.lifeBar = null;
         // 角色显示对象
@@ -68,6 +68,7 @@ var FightRole = (function (_super) {
         this.idle();
     };
     p.updateRoleUI = function () {
+        this.body.flipped = fight.needFlipped(this.pos);
         this.body.reset();
         this.skillAction.reset();
         this.buffAction.reset();
@@ -83,15 +84,14 @@ var FightRole = (function (_super) {
         if (this.haloEff) {
             this.haloEff.start();
         }
-        this.body.flipped = fight.needFlipped(this.pos);
-        this.body.active();
         this.buffContainer1.y = -0.5 * this.config.modle_height / 100;
         this.buffContainer2.y = -this.config.modle_height / 100;
         var hp_width = 62;
         var hp_height = 8;
         this.lifeBar.x = hp_width * -0.5;
         this.lifeBar.y = -(this.config.modle_height) - hp_height - 2;
-        this.lifeBar.active(fight.needFlipped(this.pos));
+        this.lifeBar.flipped = fight.needFlipped(this.pos);
+        this.lifeBar.reset();
     };
     /**
      * 攻击目标
@@ -105,11 +105,11 @@ var FightRole = (function (_super) {
             var items = data.target;
             _this.updateRoleHP(BigNum.add(data.hp, data.damage || 0), data.maxhp);
             _this.buffAction.addBuff(data);
-            _this.targets = [];
             _this.buffAction.checkBuff(data.buff);
             _this.body.reset();
+            _this.targets = [];
             for (var i = 0; i < items.length; i++) {
-                var role = _this.fightContainer.getRoleByPos(items[i].pos);
+                var role = _this.getRoleByPos(items[i].pos);
                 if (role)
                     role.buffAction.checkBuff(items[i].buff);
                 var id = items[i].id;
@@ -118,8 +118,8 @@ var FightRole = (function (_super) {
             }
             var skillId = _this.reportItem.skillId;
             _this.curSkill = Config.SkillData[skillId];
-            fight.recordLog("\u7B2C" + _this.reportItem.index + "\u6B65 \u89D2\u8272:" + _this.reportItem.id + " \u4F4D\u7F6E:" + _this.reportItem.pos + " \u5F00\u59CB" + _this.curSkill.action_type, fight.LOG_FIGHT_INFO);
-            _this.skillAction.preAttack(_this.curSkill, _this.targets, _this.reportItem.buff, _this.reportItem.damage);
+            fight.recordLog("step:" + _this.reportItem.index + ",id:" + _this.reportItem.id + ",pos:" + _this.reportItem.pos + ",action:" + _this.curSkill.action_type, fight.LOG_FIGHT_INFO);
+            _this.skillAction.attack(_this.curSkill, _this.targets, _this.reportItem.buff, _this.reportItem.damage);
         }, this, delay);
     };
     /**
@@ -183,17 +183,10 @@ var FightRole = (function (_super) {
                         eff.registerBack(0, function (index) {
                             current_1++;
                             _this.isPlayingExtraEff = current_1 < total_1;
-                            var target = _this.targets[index];
                             if (_this.reportItem) {
                                 var off = BigNum.sub(_this.reportItem.target[index].hp, fightRole.curHP);
                                 if (BigNum.greater(off, 0)) {
-                                    var point = fight.getRoleInitPoint(target.pos);
-                                    var model_height = fight.getRoleHeight(target.id);
-                                    _this.fightContainer.flyTxt({
-                                        str: MathUtil.easyNumber(off),
-                                        x: point.x,
-                                        y: point.y + model_height * -1
-                                    }, fight.FONT_ADD_HP);
+                                    fightRole.flyTxt(MathUtil.easyNumber(off), fight.FONT_ADD_HP);
                                 }
                                 fightRole.updateRoleHP(_this.reportItem.target[i].hp, _this.reportItem.target[i].maxhp);
                             }
@@ -256,7 +249,14 @@ var FightRole = (function (_super) {
     };
     p.addContainerEff = function (mc, flip) {
     };
-    p.flyTxt = function (str, name) {
+    p.flyTxt = function (content, fontName, scale) {
+        if (scale === void 0) { scale = 1; }
+        this.fightContainer.flyTxt({
+            str: content,
+            x: this.x,
+            y: this.y + this.config.modle_height * -1,
+            scale: scale
+        }, fontName);
     };
     p.showSkillName = function (id) {
         // (`skillname_${this.curSkill.skill_name}`);
@@ -298,11 +298,7 @@ var FightRole = (function (_super) {
                         this.fightContainer.showDamageEff(eff);
                     }
                     if (hitInfo.dodge) {
-                        this.fightContainer.flyTxt({
-                            str: "闪避",
-                            x: point.x,
-                            y: point.y + model_height * -1
-                        }, fight.FONT_SYSTEM);
+                        fightRole.flyTxt("闪避", fight.FONT_SYSTEM);
                     }
                     else {
                         if (hitInfo.block) {
@@ -313,64 +309,32 @@ var FightRole = (function (_super) {
                         }
                         if (parseFloat(damageNum) > 0) {
                             if (this.curSkill.damage_type == "physical") {
-                                this.fightContainer.flyTxt({
-                                    str: damageNum,
-                                    x: point.x,
-                                    y: point.y + model_height * -1,
-                                    scale: this.reportItem.cri ? 1.5 : 1
-                                }, fight.FONT_PHYSICAL_DAMAGE);
+                                fightRole.flyTxt(damageNum, fight.FONT_PHYSICAL_DAMAGE, this.reportItem.cri ? 1.5 : 1);
                             }
                             else {
-                                this.fightContainer.flyTxt({
-                                    str: damageNum,
-                                    x: point.x,
-                                    y: point.y + model_height * -1,
-                                    scale: this.reportItem.cri ? 1.5 : 1
-                                }, fight.FONT_MAGICAL_DAMAGE);
+                                fightRole.flyTxt(damageNum, fight.FONT_MAGICAL_DAMAGE, this.reportItem.cri ? 1.5 : 1);
                             }
                         }
                         else {
                             if (FightRoleVO.isInvincible(hitInfo.buff)) {
-                                this.fightContainer.flyTxt({
-                                    str: "免伤",
-                                    x: point.x,
-                                    y: point.y + model_height * -1
-                                }, fight.FONT_SYSTEM);
+                                fightRole.flyTxt("免伤", fight.FONT_SYSTEM);
                             }
                             else if (FightRoleVO.freeMacAtk(hitInfo.buff)) {
-                                this.fightContainer.flyTxt({
-                                    str: "魔免",
-                                    x: point.x,
-                                    y: point.y + model_height * -1
-                                }, fight.FONT_SYSTEM);
+                                fightRole.flyTxt("魔免", fight.FONT_SYSTEM);
                             }
                             else if (FightRoleVO.freePhyAtk(hitInfo.buff)) {
-                                this.fightContainer.flyTxt({
-                                    str: "物免",
-                                    x: point.x,
-                                    y: point.y + model_height * -1
-                                }, fight.FONT_SYSTEM);
+                                fightRole.flyTxt("物免", fight.FONT_SYSTEM);
                             }
                             else {
                                 if (this.curSkill.damage_type == "physical") {
                                     damage = BigNum.max(BigNum.div(this.reportItem.phyAtk, 1000), 1);
                                     damageNum = MathUtil.easyNumber(damage);
-                                    this.fightContainer.flyTxt({
-                                        str: damageNum,
-                                        x: point.x,
-                                        y: point.y + model_height * -1,
-                                        scale: this.reportItem.cri ? 1.5 : 1
-                                    }, fight.FONT_PHYSICAL_DAMAGE);
+                                    fightRole.flyTxt(damageNum, fight.FONT_PHYSICAL_DAMAGE, this.reportItem.cri ? 1.5 : 1);
                                 }
                                 else {
                                     damage = BigNum.max(BigNum.div(this.reportItem.magAtk, 1000), 1);
                                     damageNum = MathUtil.easyNumber(damage);
-                                    this.fightContainer.flyTxt({
-                                        str: damageNum,
-                                        x: point.x,
-                                        y: point.y + model_height * -1,
-                                        scale: this.reportItem.cri ? 1.5 : 1
-                                    }, fight.FONT_MAGICAL_DAMAGE);
+                                    fightRole.flyTxt(damageNum, fight.FONT_MAGICAL_DAMAGE, this.reportItem.cri ? 1.5 : 1);
                                 }
                             }
                         }
@@ -563,4 +527,3 @@ var FightRole = (function (_super) {
     return FightRole;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightRole,'FightRole');
-//# sourceMappingURL=FightRole.js.map

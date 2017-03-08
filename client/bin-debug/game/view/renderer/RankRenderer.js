@@ -90,4 +90,3 @@ var RankRenderer = (function (_super) {
     return RankRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(RankRenderer,'RankRenderer');
-//# sourceMappingURL=RankRenderer.js.map

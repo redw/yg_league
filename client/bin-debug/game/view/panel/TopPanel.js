@@ -552,4 +552,3 @@ var TopPanel = (function (_super) {
     return TopPanel;
 }(BasePanel));
 egret.registerClass(TopPanel,'TopPanel');
-//# sourceMappingURL=TopPanel.js.map

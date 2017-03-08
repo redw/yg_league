@@ -32,7 +32,24 @@ var PVEFightContainer = (function (_super) {
     };
     // 同时出战的数量
     p.getPlayingCount = function () {
-        return 1;
+        var result = 1;
+        var len = this.fightSteps.length;
+        if (len > 1) {
+            var firstPos = this.fightSteps[0].pos;
+            var firstSide = fight.getSideByPos(firstPos);
+            for (var i = 1; i < this.fightSteps.length; i++) {
+                var curPos = this.fightSteps[i].pos;
+                var curSide = fight.getSideByPos(curPos);
+                if (firstSide == curSide && firstPos != curPos) {
+                    firstPos = curPos;
+                    result++;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+        return result;
     };
     p.startLevel = function (level) {
         this.level = level;
@@ -154,4 +171,3 @@ var PVEFightContainer = (function (_super) {
     return PVEFightContainer;
 }(FightContainer));
 egret.registerClass(PVEFightContainer,'PVEFightContainer');
-//# sourceMappingURL=PVEFightContainer.js.map

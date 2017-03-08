@@ -273,4 +273,3 @@ var RoleRenderer = (function (_super) {
     return RoleRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(RoleRenderer,'RoleRenderer');
-//# sourceMappingURL=RoleRenderer.js.map

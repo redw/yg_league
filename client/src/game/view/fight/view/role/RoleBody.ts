@@ -24,7 +24,6 @@ class RoleBody extends egret.DisplayObjectContainer {
 
     public active() {
         this._isTriggerAtk = false;
-
         this.idle();
     }
 
@@ -40,8 +39,9 @@ class RoleBody extends egret.DisplayObjectContainer {
     public attack(skill:SkillConfig) {
         this.waiting = false;
         this._isTriggerAtk = true;
-        // this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
-        this.armature.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+        this.armatureDis.addEventListener(dragonBones.FrameEvent.FRAME_EVENT, this.onFrameEvent, this);
+        this.armature.addEventListener(dragonBones.AnimationEvent.COMPLETE, this.attackComplete, this);
+
         this.armature.animation.play(skill.action, 1);
     }
 
@@ -54,7 +54,7 @@ class RoleBody extends egret.DisplayObjectContainer {
         }
     }
 
-    private attackComplete(e:egret.MovieClipEvent = null) {
+    private attackComplete(e:dragonBones.AnimationEvent = null) {
         if (e) {
             let mc:egret.MovieClip = e.target;
             let total = mc.totalFrames;
@@ -64,11 +64,15 @@ class RoleBody extends egret.DisplayObjectContainer {
                 }
             }
             this.frameDisArr = [];
-            // e.target.removeEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
-            e.target.removeEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+            e.target.removeEventListener(dragonBones.FrameEvent.FRAME_EVENT, this.onFrameEvent, this);
+            e.target.removeEventListener(dragonBones.AnimationEvent.COMPLETE, this.attackComplete, this);
         }
         this.idle();
         this.dispatchEventWith("attack_complete", true);
+    }
+
+    private onFrameEvent(e:dragonBones.FrameEvent) {
+        this.dispatchEventWith("attack_event", true, e.frameLabel);
     }
 
     public block() {
@@ -93,12 +97,6 @@ class RoleBody extends egret.DisplayObjectContainer {
         this.idle();
     }
 
-    /** 翻转 */
-    public set flipped(value:boolean) {
-        let scaleX = value ? -1 : 1;
-        this.armatureDis.scaleX = scaleX;
-    }
-
     public get isTriggerAtk(){
         return this._isTriggerAtk;
     }
@@ -115,9 +113,16 @@ class RoleBody extends egret.DisplayObjectContainer {
         this._waiting = value;
     }
 
+    /** 翻转 */
+    public set flipped(value:boolean) {
+        let scaleX = value ? -1 : 1;
+        this.armatureDis.scaleX = scaleX;
+    }
+
     public reset(){
         this._waiting = true;
         this._isTriggerAtk = false;
         this.frameDisArr = [];
+        this.idle();
     }
 }

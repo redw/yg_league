@@ -128,4 +128,3 @@ var RoleFormationRenderer = (function (_super) {
     return RoleFormationRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(RoleFormationRenderer,'RoleFormationRenderer');
-//# sourceMappingURL=RoleFormationRenderer.js.map

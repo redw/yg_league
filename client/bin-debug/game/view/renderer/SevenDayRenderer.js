@@ -99,4 +99,3 @@ var SevenDayRenderer = (function (_super) {
     return SevenDayRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(SevenDayRenderer,'SevenDayRenderer');
-//# sourceMappingURL=SevenDayRenderer.js.map

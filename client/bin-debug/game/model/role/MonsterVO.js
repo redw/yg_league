@@ -64,4 +64,3 @@ var MonsterVO = (function () {
     return MonsterVO;
 }());
 egret.registerClass(MonsterVO,'MonsterVO');
-//# sourceMappingURL=MonsterVO.js.map

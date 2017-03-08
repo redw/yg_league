@@ -162,4 +162,3 @@ var DailyAchievePanel = (function (_super) {
     return DailyAchievePanel;
 }(BasePanel));
 egret.registerClass(DailyAchievePanel,'DailyAchievePanel');
-//# sourceMappingURL=DailyAchievePanel.js.map

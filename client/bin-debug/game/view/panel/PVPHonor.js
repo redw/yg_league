@@ -46,4 +46,3 @@ var PVPHonor = (function (_super) {
     return PVPHonor;
 }(eui.Component));
 egret.registerClass(PVPHonor,'PVPHonor');
-//# sourceMappingURL=PVPHonor.js.map

@@ -144,4 +144,3 @@ var MovieClipUtils;
     }
     MovieClipUtils.createMovieClipFromSpriteSheet = createMovieClipFromSpriteSheet;
 })(MovieClipUtils || (MovieClipUtils = {}));
-//# sourceMappingURL=MovieClipUtils.js.map

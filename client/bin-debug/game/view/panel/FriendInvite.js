@@ -54,4 +54,3 @@ var FriendInvite = (function (_super) {
     return FriendInvite;
 }(eui.Component));
 egret.registerClass(FriendInvite,'FriendInvite');
-//# sourceMappingURL=FriendInvite.js.map

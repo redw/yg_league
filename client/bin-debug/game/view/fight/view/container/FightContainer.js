@@ -290,4 +290,3 @@ var FightContainer = (function (_super) {
     return FightContainer;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightContainer,'FightContainer');
-//# sourceMappingURL=FightContainer.js.map

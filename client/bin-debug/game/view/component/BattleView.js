@@ -235,4 +235,3 @@ var BattleView = (function (_super) {
     return BattleView;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BattleView,'BattleView');
-//# sourceMappingURL=BattleView.js.map

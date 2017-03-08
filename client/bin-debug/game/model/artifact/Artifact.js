@@ -123,4 +123,3 @@ var artifact;
     }
     artifact.getRoleArtifactRatio = getRoleArtifactRatio;
 })(artifact || (artifact = {}));
-//# sourceMappingURL=Artifact.js.map

@@ -36,4 +36,3 @@ var DataConfig = (function (_super) {
     return DataConfig;
 }(egret.HashObject));
 egret.registerClass(DataConfig,'DataConfig');
-//# sourceMappingURL=DataConfig.js.map

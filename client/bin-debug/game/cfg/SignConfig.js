@@ -46,4 +46,3 @@ var SignConfig = (function (_super) {
     return SignConfig;
 }(egret.HashObject));
 egret.registerClass(SignConfig,'SignConfig');
-//# sourceMappingURL=SignConfig.js.map

@@ -46,4 +46,3 @@ var ActiveLimitOnePay = (function (_super) {
     return ActiveLimitOnePay;
 }(eui.Component));
 egret.registerClass(ActiveLimitOnePay,'ActiveLimitOnePay');
-//# sourceMappingURL=ActiveLimitOnePay.js.map

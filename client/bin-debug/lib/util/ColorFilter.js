@@ -36,4 +36,3 @@ var ColorFilter;
     }
     ColorFilter.getHueFilter = getHueFilter;
 })(ColorFilter || (ColorFilter = {}));
-//# sourceMappingURL=ColorFilter.js.map

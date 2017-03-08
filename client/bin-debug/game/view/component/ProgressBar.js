@@ -31,4 +31,3 @@ var ProgressBar = (function (_super) {
     return ProgressBar;
 }(eui.Component));
 egret.registerClass(ProgressBar,'ProgressBar');
-//# sourceMappingURL=ProgressBar.js.map

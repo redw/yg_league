@@ -19,7 +19,7 @@ var RoleHPBar = (function (_super) {
                 this.setWidth(newWidth);
             }
         };
-        this.flipped = flipped;
+        this._flipped = flipped;
         this.drawBackground();
         this.drawHealthBar();
     }
@@ -31,7 +31,7 @@ var RoleHPBar = (function (_super) {
     };
     p.drawHealthBar = function () {
         this.hpBitmap = new AutoBitmap();
-        if (this.flipped) {
+        if (this._flipped) {
             this.hpBitmap.source = "pvp_blood_enemy_png";
         }
         else {
@@ -46,18 +46,6 @@ var RoleHPBar = (function (_super) {
         this.hpBitmap.y = this.pad;
         this.hitBitmap.y = this.pad;
         this.effBitmap.y = this.pad;
-    };
-    p.active = function (flipped) {
-        this.flipped = flipped;
-        this.isCanRemove = false;
-        this.effBitmap.visible = true;
-        if (this.flipped) {
-            this.hpBitmap.source = "pvp_blood_png";
-        }
-        else {
-            this.hpBitmap.source = "pvp_blood_enemy_png";
-        }
-        this.setWidth(this.max_width - this.pad * 2);
     };
     p.update = function (cur, max) {
         var ratio = +(BigNum.div(cur, max)) || 0;
@@ -96,7 +84,7 @@ var RoleHPBar = (function (_super) {
         this.hpBitmap.width = width;
         this.hitBitmap.width = width;
         this.effBitmap.visible = true;
-        if (this.flipped) {
+        if (this._flipped) {
             this.hpBitmap.x = this.pad;
             this.hitBitmap.x = this.pad;
             this.effBitmap.scaleX = 1;
@@ -123,11 +111,23 @@ var RoleHPBar = (function (_super) {
             this.effBitmap.x = position;
         }
     };
-    ;
+    d(p, "flipped",undefined
+        ,function (value) {
+            this._flipped = value;
+            if (this._flipped) {
+                this.hpBitmap.source = "pvp_blood_png";
+            }
+            else {
+                this.hpBitmap.source = "pvp_blood_enemy_png";
+            }
+            this.setWidth(this.max_width - this.pad * 2);
+        }
+    );
     p.reset = function () {
+        this.isCanRemove = false;
         this.oldPercent = -1;
+        this.effBitmap.visible = true;
     };
     return RoleHPBar;
 }(egret.DisplayObjectContainer));
 egret.registerClass(RoleHPBar,'RoleHPBar');
-//# sourceMappingURL=RoleHPBar.js.map

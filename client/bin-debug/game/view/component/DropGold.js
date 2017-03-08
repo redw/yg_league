@@ -94,4 +94,3 @@ var DropGold = (function (_super) {
     return DropGold;
 }(egret.DisplayObjectContainer));
 egret.registerClass(DropGold,'DropGold');
-//# sourceMappingURL=DropGold.js.map

@@ -49,4 +49,3 @@ var ActiveLimitCost = (function (_super) {
     return ActiveLimitCost;
 }(eui.Component));
 egret.registerClass(ActiveLimitCost,'ActiveLimitCost');
-//# sourceMappingURL=ActiveLimitCost.js.map

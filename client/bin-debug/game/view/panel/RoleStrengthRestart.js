@@ -56,4 +56,3 @@ var RoleStrengthRestart = (function (_super) {
     return RoleStrengthRestart;
 }(BasePanel));
 egret.registerClass(RoleStrengthRestart,'RoleStrengthRestart');
-//# sourceMappingURL=RoleStrengthRestart.js.map

@@ -51,4 +51,3 @@ var NetMineUp = (function (_super) {
     return NetMineUp;
 }(BaseCmd));
 egret.registerClass(NetMineUp,'NetMineUp');
-//# sourceMappingURL=NetOreCmd.js.map

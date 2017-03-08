@@ -115,4 +115,3 @@ var RoleDrawInfoPanel = (function (_super) {
     return RoleDrawInfoPanel;
 }(BasePanel));
 egret.registerClass(RoleDrawInfoPanel,'RoleDrawInfoPanel');
-//# sourceMappingURL=RoleDrawInfoPanel.js.map

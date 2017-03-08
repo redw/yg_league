@@ -64,4 +64,3 @@ var BaseTicker = (function (_super) {
     return BaseTicker;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BaseTicker,'BaseTicker');
-//# sourceMappingURL=BaseTicker.js.map

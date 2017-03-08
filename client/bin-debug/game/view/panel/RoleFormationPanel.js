@@ -330,4 +330,3 @@ var RoleFormationPanel = (function (_super) {
     return RoleFormationPanel;
 }(BasePanel));
 egret.registerClass(RoleFormationPanel,'RoleFormationPanel');
-//# sourceMappingURL=RoleFormationPanel.js.map

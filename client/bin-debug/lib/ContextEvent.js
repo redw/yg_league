@@ -74,4 +74,3 @@ var ContextEvent = (function (_super) {
     return ContextEvent;
 }(egret.HashObject));
 egret.registerClass(ContextEvent,'ContextEvent');
-//# sourceMappingURL=ContextEvent.js.map

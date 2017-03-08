@@ -240,4 +240,3 @@ var Dictionary = (function (_super) {
     return Dictionary;
 }(egret.HashObject));
 egret.registerClass(Dictionary,'Dictionary');
-//# sourceMappingURL=Dictionary.js.map

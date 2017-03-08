@@ -32,4 +32,3 @@ var SecretAreaRenderer = (function (_super) {
     return SecretAreaRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(SecretAreaRenderer,'SecretAreaRenderer');
-//# sourceMappingURL=SecretAreaRenderer.js.map

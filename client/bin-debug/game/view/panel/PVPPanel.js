@@ -571,4 +571,3 @@ var PVPPanel = (function (_super) {
     return PVPPanel;
 }(BasePanel));
 egret.registerClass(PVPPanel,'PVPPanel');
-//# sourceMappingURL=PVPPanel.js.map

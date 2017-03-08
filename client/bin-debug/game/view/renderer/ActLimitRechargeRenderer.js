@@ -153,4 +153,3 @@ var ActLimitRechargeRenderer = (function (_super) {
     return ActLimitRechargeRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(ActLimitRechargeRenderer,'ActLimitRechargeRenderer');
-//# sourceMappingURL=ActLimitRechargeRenderer.js.map

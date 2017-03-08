@@ -53,4 +53,3 @@ var Processing = (function (_super) {
     return Processing;
 }(egret.Sprite));
 egret.registerClass(Processing,'Processing');
-//# sourceMappingURL=Processing.js.map

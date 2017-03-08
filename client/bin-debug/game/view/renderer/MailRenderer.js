@@ -40,4 +40,3 @@ var MailRenderer = (function (_super) {
     return MailRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(MailRenderer,'MailRenderer');
-//# sourceMappingURL=MailRenderer.js.map

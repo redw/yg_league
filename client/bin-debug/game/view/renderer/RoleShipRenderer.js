@@ -120,4 +120,3 @@ var RoleShipRenderer = (function (_super) {
     return RoleShipRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(RoleShipRenderer,'RoleShipRenderer');
-//# sourceMappingURL=RoleShipRenderer.js.map

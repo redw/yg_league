@@ -22,13 +22,13 @@ var SkillAction = (function () {
     }
     var d = __define,c=SkillAction,p=c.prototype;
     /**
-     * 预攻击目标
+     * 攻击目标
      * @param skill     技能信息
      * @param targets   攻击目标
      * @param buffs     所有buff
      * @param damage    自身所受伤害
      */
-    p.preAttack = function (skill, targets, buffs, damage) {
+    p.attack = function (skill, targets, buffs, damage) {
         this.reset();
         this.curSkill = skill;
         this.targets = targets;
@@ -45,9 +45,11 @@ var SkillAction = (function () {
             }
         }
         if (vertigo) {
+            fight.recordLog("id:" + this.fightRole.id + ",pos:" + this.fightRole.pos + ",action:" + this.curSkill.action_type + ",state:vertigo", fight.LOG_FIGHT_INFO);
             this.postAttackComplete();
         }
         else if (this.targets.length == 0) {
+            fight.recordLog("id:" + this.fightRole.id + ",pos:" + this.fightRole.pos + ",action:" + this.curSkill.action_type + ",state:no_target", fight.LOG_FIGHT_INFO);
             this.actionComplete();
         }
         else {
@@ -71,7 +73,7 @@ var SkillAction = (function () {
             this.moveAndAttack();
         }
         else {
-            this.attack();
+            this.playAttackAction();
         }
     };
     // 移动和攻击
@@ -80,11 +82,12 @@ var SkillAction = (function () {
         var point = fight.getNearFightPoint(this.fightRole.pos, this.targets, this.curSkill);
         var tween = egret.Tween.get(this.fightRole);
         tween.to({ x: point.x, y: point.y }, fight.MOVE_TIME);
-        tween.call(this.attack, this);
+        tween.call(this.playAttackAction, this);
     };
-    p.attack = function () {
+    p.playAttackAction = function () {
         this.fightRole.addEventListener("attack_complete", this.onComplete, this, true);
-        // this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
+        this.fightRole.addEventListener("attack_event", this.onAttackEvent, this, true);
+        this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
         this.fightRole.attack(this.curSkill);
     };
     // 检测jump和伤害触发帧
@@ -119,7 +122,8 @@ var SkillAction = (function () {
         var _this = this;
         this.isAttackComplete = true;
         this.fightRole.removeEventListener("attack_complete", this.onComplete, this, true);
-        // this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
+        this.fightRole.removeEventListener("attack_event", this.onAttackEvent, this, true);
+        this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
         if (fight.needRetreat(this.curSkill.action_type)) {
             var tween = egret.Tween.get(this.fightRole);
             var point = fight.getRoleInitPoint(this.fightRole.pos);
@@ -130,6 +134,23 @@ var SkillAction = (function () {
         }
         else {
             this.postAttackComplete();
+        }
+    };
+    // 攻击事件
+    p.onAttackEvent = function (e) {
+        var eventName = e.data;
+        if (eventName == "jump") {
+            this.triggerJump();
+        }
+        if (eventName == "damage") {
+            this.doDamageAction(1, 1);
+        }
+        else if (eventName.indexOf("damage") >= 0) {
+            var total = eventName.substr(6, 1);
+            var cur = eventName.substr(8, 1);
+            this.doDamageAction(+cur, +total);
+        }
+        if (eventName == "weapon") {
         }
     };
     p.postAttackComplete = function () {
@@ -257,4 +278,3 @@ var SkillAction = (function () {
     return SkillAction;
 }());
 egret.registerClass(SkillAction,'SkillAction');
-//# sourceMappingURL=SkillAction.js.map

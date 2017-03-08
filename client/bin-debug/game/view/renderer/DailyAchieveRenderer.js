@@ -202,4 +202,3 @@ var DailyAchieveRenderer = (function (_super) {
     return DailyAchieveRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(DailyAchieveRenderer,'DailyAchieveRenderer');
-//# sourceMappingURL=DailyAchieveRenderer.js.map

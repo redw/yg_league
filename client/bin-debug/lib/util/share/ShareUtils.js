@@ -34,4 +34,3 @@ var ShareUtils;
     }
     ShareUtils.share = share;
 })(ShareUtils || (ShareUtils = {}));
-//# sourceMappingURL=ShareUtils.js.map

@@ -103,4 +103,3 @@ var FriendSendTogetherRenderer = (function (_super) {
     return FriendSendTogetherRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(FriendSendTogetherRenderer,'FriendSendTogetherRenderer');
-//# sourceMappingURL=FriendSendTogetherRenderer.js.map

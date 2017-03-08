@@ -92,4 +92,3 @@ var NoticePanel = (function (_super) {
     return NoticePanel;
 }(BasePanel));
 egret.registerClass(NoticePanel,'NoticePanel');
-//# sourceMappingURL=NoticePanel.js.map

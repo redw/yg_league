@@ -95,4 +95,3 @@ var fight;
         }
     }
 })(fight || (fight = {}));
-//# sourceMappingURL=BattleCheck.js.map

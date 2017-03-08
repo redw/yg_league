@@ -44,4 +44,3 @@ var MineInPanel = (function (_super) {
     return MineInPanel;
 }(BasePanel));
 egret.registerClass(MineInPanel,'MineInPanel');
-//# sourceMappingURL=MineInPanel.js.map

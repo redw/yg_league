@@ -1613,4 +1613,3 @@ var UserMethod = (function (_super) {
     return UserMethod;
 }(egret.HashObject));
 egret.registerClass(UserMethod,'UserMethod');
-//# sourceMappingURL=UserMethod.js.map

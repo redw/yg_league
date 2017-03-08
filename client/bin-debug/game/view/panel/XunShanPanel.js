@@ -194,4 +194,3 @@ var XunShanPanel = (function (_super) {
     return XunShanPanel;
 }(BasePanel));
 egret.registerClass(XunShanPanel,'XunShanPanel');
-//# sourceMappingURL=XunShanPanel.js.map

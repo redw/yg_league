@@ -17,4 +17,3 @@ var ActivePrivilege = (function (_super) {
     return ActivePrivilege;
 }(eui.Component));
 egret.registerClass(ActivePrivilege,'ActivePrivilege');
-//# sourceMappingURL=ActivePrivilege.js.map

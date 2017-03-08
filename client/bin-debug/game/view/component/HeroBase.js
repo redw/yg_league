@@ -138,4 +138,3 @@ var HeroBase = (function (_super) {
     return HeroBase;
 }(egret.DisplayObjectContainer));
 egret.registerClass(HeroBase,'HeroBase');
-//# sourceMappingURL=HeroBase.js.map

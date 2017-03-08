@@ -28,4 +28,3 @@ var StarCountComp = (function (_super) {
     return StarCountComp;
 }(egret.DisplayObjectContainer));
 egret.registerClass(StarCountComp,'StarCountComp');
-//# sourceMappingURL=StarCountComp.js.map

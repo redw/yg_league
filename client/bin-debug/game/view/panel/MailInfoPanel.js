@@ -111,4 +111,3 @@ var MailInfoPanel = (function (_super) {
     return MailInfoPanel;
 }(BasePanel));
 egret.registerClass(MailInfoPanel,'MailInfoPanel');
-//# sourceMappingURL=MailInfoPanel.js.map

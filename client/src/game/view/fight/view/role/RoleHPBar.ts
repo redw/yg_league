@@ -8,7 +8,7 @@ class RoleHPBar extends egret.DisplayObjectContainer {
     private hpBitmap:AutoBitmap;
     private effBitmap:AutoBitmap;
 
-    private flipped:boolean;
+    private _flipped:boolean;
     private pad:number = 1;
     private barW:number = 10;
     private max_width:number = 62;
@@ -18,7 +18,7 @@ class RoleHPBar extends egret.DisplayObjectContainer {
 
     public constructor(flipped:boolean) {
         super();
-        this.flipped = flipped;
+        this._flipped = flipped;
         this.drawBackground();
         this.drawHealthBar();
     }
@@ -31,7 +31,7 @@ class RoleHPBar extends egret.DisplayObjectContainer {
 
     private drawHealthBar(){
         this.hpBitmap = new AutoBitmap();
-        if (this.flipped) {
+        if (this._flipped) {
             this.hpBitmap.source = "pvp_blood_enemy_png";
         } else {
             this.hpBitmap.source = "pvp_blood_png";
@@ -48,18 +48,6 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         this.hpBitmap.y = this.pad;
         this.hitBitmap.y = this.pad;
         this.effBitmap.y = this.pad;
-    }
-
-    public active(flipped:boolean){
-        this.flipped = flipped;
-        this.isCanRemove = false;
-        this.effBitmap.visible = true;
-        if (this.flipped) {
-            this.hpBitmap.source = "pvp_blood_png";
-        } else {
-            this.hpBitmap.source = "pvp_blood_enemy_png";
-        }
-        this.setWidth(this.max_width - this.pad * 2);
     }
 
     public update(cur:string, max:string) {
@@ -98,7 +86,7 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         if (this.oldPercent != value) {
             value = Math.max(0, value);
             value = Math.min(value, 100);
-            var newWidth =  (value * (this.max_width - 2 * this.pad)) / 100;
+            let newWidth =  (value * (this.max_width - 2 * this.pad)) / 100;
             this.setWidth(newWidth);
         }
     };
@@ -108,7 +96,7 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         this.hpBitmap.width = width;
         this.hitBitmap.width = width;
         this.effBitmap.visible = true;
-        if (this.flipped) {
+        if (this._flipped) {
             this.hpBitmap.x = this.pad;
             this.hitBitmap.x = this.pad;
             this.effBitmap.scaleX = 1;
@@ -131,9 +119,21 @@ class RoleHPBar extends egret.DisplayObjectContainer {
             }
             this.effBitmap.x = position;
         }
-    };
+    }
+
+    public set flipped(value:boolean) {
+        this._flipped = value;
+        if (this._flipped) {
+            this.hpBitmap.source = "pvp_blood_png";
+        } else {
+            this.hpBitmap.source = "pvp_blood_enemy_png";
+        }
+        this.setWidth(this.max_width - this.pad * 2);
+    }
 
     public reset(){
+        this.isCanRemove = false;
         this.oldPercent = -1;
+        this.effBitmap.visible = true;
     }
 }

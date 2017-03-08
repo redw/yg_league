@@ -68,4 +68,3 @@ var FriendApply = (function (_super) {
     return FriendApply;
 }(eui.Component));
 egret.registerClass(FriendApply,'FriendApply');
-//# sourceMappingURL=FriendApply.js.map

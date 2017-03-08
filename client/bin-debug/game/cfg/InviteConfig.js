@@ -46,4 +46,3 @@ var InviteConfig = (function (_super) {
     return InviteConfig;
 }(egret.HashObject));
 egret.registerClass(InviteConfig,'InviteConfig');
-//# sourceMappingURL=InviteConfig.js.map

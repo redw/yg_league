@@ -121,4 +121,3 @@ var PVPFormation = (function (_super) {
     return PVPFormation;
 }(eui.Component));
 egret.registerClass(PVPFormation,'PVPFormation');
-//# sourceMappingURL=PVPFormation.js.map

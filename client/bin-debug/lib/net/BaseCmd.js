@@ -23,4 +23,3 @@ var BaseCmd = (function (_super) {
     return BaseCmd;
 }(egret.HashObject));
 egret.registerClass(BaseCmd,'BaseCmd');
-//# sourceMappingURL=BaseCmd.js.map

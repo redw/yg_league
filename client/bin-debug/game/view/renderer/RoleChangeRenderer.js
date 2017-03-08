@@ -105,4 +105,3 @@ var RoleChangeRenderer = (function (_super) {
     return RoleChangeRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(RoleChangeRenderer,'RoleChangeRenderer');
-//# sourceMappingURL=RoleChangeRenderer.js.map

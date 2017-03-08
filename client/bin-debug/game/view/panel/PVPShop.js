@@ -90,4 +90,3 @@ var PVPShop = (function (_super) {
     return PVPShop;
 }(eui.Component));
 egret.registerClass(PVPShop,'PVPShop');
-//# sourceMappingURL=PVPShop.js.map

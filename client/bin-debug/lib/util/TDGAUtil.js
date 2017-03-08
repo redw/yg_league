@@ -59,4 +59,3 @@ var TDGAUtil;
     }
     TDGAUtil.onReward = onReward;
 })(TDGAUtil || (TDGAUtil = {}));
-//# sourceMappingURL=TDGAUtil.js.map

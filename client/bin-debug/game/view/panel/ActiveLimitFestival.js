@@ -175,4 +175,3 @@ var ActiveLimitFestival = (function (_super) {
     return ActiveLimitFestival;
 }(eui.Component));
 egret.registerClass(ActiveLimitFestival,'ActiveLimitFestival');
-//# sourceMappingURL=ActiveLimitFestival.js.map

@@ -88,4 +88,3 @@ var ActDayInviteRenderer = (function (_super) {
     return ActDayInviteRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(ActDayInviteRenderer,'ActDayInviteRenderer');
-//# sourceMappingURL=ActDayInviteRenderer.js.map

@@ -26,4 +26,3 @@ var PVEFailEff = (function (_super) {
     return PVEFailEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PVEFailEff,'PVEFailEff');
-//# sourceMappingURL=PVEFailEff.js.map

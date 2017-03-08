@@ -37,4 +37,3 @@ var ActiveLimitInvite = (function (_super) {
     return ActiveLimitInvite;
 }(eui.Component));
 egret.registerClass(ActiveLimitInvite,'ActiveLimitInvite');
-//# sourceMappingURL=ActiveLimitInvite.js.map

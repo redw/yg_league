@@ -94,4 +94,3 @@ var PVPBackGround = (function (_super) {
     return PVPBackGround;
 }(egret.DisplayObjectContainer));
 egret.registerClass(PVPBackGround,'PVPBackGround');
-//# sourceMappingURL=PVPBackGround.js.map

@@ -118,4 +118,3 @@ var ShareUtil;
     }
     ShareUtil.showTopImg = showTopImg;
 })(ShareUtil || (ShareUtil = {}));
-//# sourceMappingURL=ShareUtil.js.map

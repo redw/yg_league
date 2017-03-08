@@ -419,4 +419,3 @@ var fight;
     }
     fight.createMovieClip = createMovieClip;
 })(fight || (fight = {}));
-//# sourceMappingURL=FightUtils.js.map

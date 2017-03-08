@@ -50,4 +50,3 @@ var PagePoint = (function (_super) {
     return PagePoint;
 }(egret.Sprite));
 egret.registerClass(PagePoint,'PagePoint');
-//# sourceMappingURL=PagePoint.js.map

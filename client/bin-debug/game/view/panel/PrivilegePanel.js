@@ -124,4 +124,3 @@ var PrivilegePanel = (function (_super) {
     return PrivilegePanel;
 }(BasePanel));
 egret.registerClass(PrivilegePanel,'PrivilegePanel');
-//# sourceMappingURL=PrivilegePanel.js.map

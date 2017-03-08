@@ -53,4 +53,3 @@ var WeaponIcon = (function (_super) {
     return WeaponIcon;
 }(eui.Component));
 egret.registerClass(WeaponIcon,'WeaponIcon');
-//# sourceMappingURL=WeaponIcon.js.map

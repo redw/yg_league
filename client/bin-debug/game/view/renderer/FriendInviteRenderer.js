@@ -109,4 +109,3 @@ var FriendInviteRenderer = (function (_super) {
     return FriendInviteRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(FriendInviteRenderer,'FriendInviteRenderer');
-//# sourceMappingURL=FriendInviteRenderer.js.map

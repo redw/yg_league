@@ -167,4 +167,3 @@ var ShopItemRenderer = (function (_super) {
     return ShopItemRenderer;
 }(eui.ItemRenderer));
 egret.registerClass(ShopItemRenderer,'ShopItemRenderer');
-//# sourceMappingURL=ShopItemRenderer.js.map

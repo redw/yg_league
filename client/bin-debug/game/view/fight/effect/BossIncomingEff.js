@@ -30,4 +30,3 @@ var BossIncomingEff = (function (_super) {
     return BossIncomingEff;
 }(egret.DisplayObjectContainer));
 egret.registerClass(BossIncomingEff,'BossIncomingEff');
-//# sourceMappingURL=BossIncomingEff.js.map
