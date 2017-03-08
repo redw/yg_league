@@ -12,6 +12,7 @@ var NetEnterCmd = (function (_super) {
     var d = __define,c=NetEnterCmd,p=c.prototype;
     p.execute = function () {
         Config.init();
+        fight.init();
         UserProxy.inst.server_time = this.data["serverTime"];
         UserProxy.inst.gold = this.data["gold"];
         UserProxy.inst.diamond = this.data["diamond"];

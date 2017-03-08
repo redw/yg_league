@@ -55,9 +55,9 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         this.isCanRemove = false;
         this.effBitmap.visible = true;
         if (this.flipped) {
-            this.hpBitmap.source = "pvp_blood_enemy_png";
-        } else {
             this.hpBitmap.source = "pvp_blood_png";
+        } else {
+            this.hpBitmap.source = "pvp_blood_enemy_png";
         }
         this.setWidth(this.max_width - this.pad * 2);
     }
@@ -109,17 +109,6 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         this.hitBitmap.width = width;
         this.effBitmap.visible = true;
         if (this.flipped) {
-            this.hpBitmap.x = this.max_width - width - this.pad;
-            this.hitBitmap.x = this.max_width - width - this.pad;
-            this.effBitmap.scaleX = -1;
-            let position = this.max_width + this.barW - width - this.pad;
-            if (position > this.max_width + this.barW - this.pad ) {
-                position = this.max_width + this.barW - this.pad;
-            } else if (position < this.barW + this.pad) {
-                position = this.barW + this.pad;
-            }
-            this.effBitmap.x = position;
-        } else {
             this.hpBitmap.x = this.pad;
             this.hitBitmap.x = this.pad;
             this.effBitmap.scaleX = 1;
@@ -128,6 +117,17 @@ class RoleHPBar extends egret.DisplayObjectContainer {
                 position = this.max_width - this.barW - this.pad;
             } else if (position < this.pad) {
                 position = this.pad;
+            }
+            this.effBitmap.x = position;
+        } else {
+            this.hpBitmap.x = this.max_width - width - this.pad;
+            this.hitBitmap.x = this.max_width - width - this.pad;
+            this.effBitmap.scaleX = -1;
+            let position = this.max_width + this.barW - width - this.pad;
+            if (position > this.max_width + this.barW - this.pad ) {
+                position = this.max_width + this.barW - this.pad;
+            } else if (position < this.barW + this.pad) {
+                position = this.barW + this.pad;
             }
             this.effBitmap.x = position;
         }

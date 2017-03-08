@@ -10,6 +10,7 @@ class NetEnterCmd extends BaseCmd
     public execute()
     {
         Config.init();
+        fight.init();
 
         UserProxy.inst.server_time = this.data["serverTime"];
         UserProxy.inst.gold = this.data["gold"];

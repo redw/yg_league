@@ -27,7 +27,6 @@ class PVEFightContainer extends FightContainer {
     protected addBackGround(){
         this.background = new PVEProspect();
         this.addChild(this.background);
-
         this.ground = new PVEMiddleGround();
         this.addChild(this.ground);
     }
@@ -45,17 +44,17 @@ class PVEFightContainer extends FightContainer {
 
     public startLevel(level:number){
         this.level = level;
+        this.prospect.level = level;
+        this.background.level = level;
+        this.ground.level = level;
         let heroArr = [{id:102, pos:10}, {id:102, pos:11}, {id:102, pos:12}, {id:102, pos:13}, {id:102, pos:14}, {id:102, pos:15},
             {id:102, pos:20}, {id:102, pos:21}, {id:102, pos:22}, {id:102, pos:23}, {id:102, pos:24}, {id:102, pos:25}];
-        console.log("加载角色");
-        console.log("资源", fight.getRolePathArr(heroArr));
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadRoleComplete, this);
         RES.createGroup("bone_role", fight.getRolePathArr(heroArr), true);
         RES.loadGroup("bone_role", 1);
     }
 
     private loadRoleComplete(event:RES.ResourceEvent):void {
-        console.log("显示角色");
         if (event.groupName == "bone_role") {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadRoleComplete, this);
             let heroArr = [{id:102, pos:10}, {id:102, pos:11}, {id:102, pos:12}, {id:102, pos:13}, {id:102, pos:14}, {id:102, pos:15},
@@ -81,9 +80,9 @@ class PVEFightContainer extends FightContainer {
     private tweenRoles(elements:{id:number, pos:number}[]){
         let len = elements ? elements.length : 0;
         for (let i = 0; i < len; i++) {
-            let side = fight.getSideByPos(elements[i].pos) - 1;
+            let side = fight.getSideByPos(elements[i].pos);
             let index = fight.getPosIndexByPos(elements[i].pos);
-            let role = this.roles[side][index];
+            let role = this.roles[side - 1][index];
             let tox = role.x;
             if (side == FightSideEnum.LEFT_SIDE) {
                 role.x = fight.WIDTH * -0.5 + role.x;

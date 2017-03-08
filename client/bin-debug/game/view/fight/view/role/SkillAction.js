@@ -18,13 +18,9 @@ var SkillAction = (function () {
         this.isTriggerDamage = false;
         // 是否触发过额外效果(用于校证)
         this.isTriggerExtraEff = false;
-        this.setFightRole(fightRole);
+        this.fightRole = fightRole;
     }
     var d = __define,c=SkillAction,p=c.prototype;
-    p.setFightRole = function (value) {
-        this.reset();
-        this.fightRole = value;
-    };
     /**
      * 预攻击目标
      * @param skill     技能信息
@@ -33,10 +29,7 @@ var SkillAction = (function () {
      * @param damage    自身所受伤害
      */
     p.preAttack = function (skill, targets, buffs, damage) {
-        if (this._isActionComplete) {
-            this._isActionComplete = false;
-            console.error("攻击时,ActionComplete应该为false");
-        }
+        this.reset();
         this.curSkill = skill;
         this.targets = targets;
         this.buffs = buffs;
@@ -58,28 +51,27 @@ var SkillAction = (function () {
             this.actionComplete();
         }
         else {
-            // if (this.curSkill.skill_name) {
-            //     this.fightContainer.showSkillFlyTxt(`skillname_${this.curSkill.skill_name}`);
-            // }
-            //
-            // let showInfo = (this.curSkill.skill_free_effect || "").split(",");
-            // let needMode = !!showInfo[1];
-            // let source = showInfo[0];
-            // if (source && source != "0") {
-            //     let eff = new MCEff(source);
-            //     eff.registerBack(0, this.doAction, this, null);
-            //     eff.y = (this.config.modle_height) * -0.5;
-            //     this.fightContainer.showFreeSkillEff(this, eff, needMode);
-            // } else {
-            //     this.doAction();
-            // }
-            var action = skill.action_type;
-            if (fight.needMoveAttack(action)) {
-                this.moveAndAttack();
+            this.fightRole.showSkillName(this.curSkill.skill_name);
+            var showInfo = (this.curSkill.skill_free_effect || "").split(",");
+            var needMode = !!showInfo[1];
+            var source = showInfo[0];
+            if (source && source != "0") {
+                var eff = new MCEff(source);
+                eff.registerBack(0, this.doAction, this, null);
+                this.fightRole.showFreeSkillEff(eff, needMode);
             }
             else {
-                this.attack();
+                this.doAction();
             }
+        }
+    };
+    p.doAction = function () {
+        var action = this.curSkill.action_type;
+        if (fight.needMoveAttack(action)) {
+            this.moveAndAttack();
+        }
+        else {
+            this.attack();
         }
     };
     // 移动和攻击
@@ -92,7 +84,7 @@ var SkillAction = (function () {
     };
     p.attack = function () {
         this.fightRole.addEventListener("attack_complete", this.onComplete, this, true);
-        this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
+        // this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
         this.fightRole.attack(this.curSkill);
     };
     // 检测jump和伤害触发帧
@@ -127,7 +119,7 @@ var SkillAction = (function () {
         var _this = this;
         this.isAttackComplete = true;
         this.fightRole.removeEventListener("attack_complete", this.onComplete, this, true);
-        this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
+        // this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
         if (fight.needRetreat(this.curSkill.action_type)) {
             var tween = egret.Tween.get(this.fightRole);
             var point = fight.getRoleInitPoint(this.fightRole.pos);

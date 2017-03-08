@@ -4,10 +4,17 @@
  */
 var fight;
 (function (fight) {
+    var bonesDataMap = {};
     var dragonFactory = new dragonBones.EgretFactory();
     var mcFactory = new egret.MovieClipDataFactory();
     var curSoundPath = "";
     var TEST_UID_ARR = ["300667664", "309782584", "292758853", "287057268", "307276412", "296705951", "287127041"];
+    function init() {
+        egret.Ticker.getInstance().register(function () {
+            dragonBones.WorldClock.clock.advanceTime(0.02);
+        }, this);
+    }
+    fight.init = init;
     /**
      * 选取目标通用规则
      * @param value 排或列
@@ -384,12 +391,17 @@ var fight;
      * @returns {Armature}
      */
     function createArmature(name) {
-        var boneData = RES.getRes(name + "_ske_json");
-        dragonFactory.addDragonBonesData(dragonBones.DataParser.parseDragonBonesData(boneData));
-        var texture = RES.getRes(name + "_tex_png");
-        var textureData = RES.getRes(name + "_tex_json");
-        dragonFactory.addTextureAtlas(new dragonBones.EgretTextureAtlas(texture, textureData));
-        var armature = dragonFactory.buildArmature(name);
+        if (!bonesDataMap[name]) {
+            bonesDataMap[name] = true;
+            var boneJson = RES.getRes(name + "_ske_json");
+            var dragonBonesData = dragonBones.DataParser.parseDragonBonesData(boneJson);
+            dragonFactory.addDragonBonesData(dragonBonesData);
+            var texture = RES.getRes(name + "_tex_png");
+            var textureData = RES.getRes(name + "_tex_json");
+            dragonFactory.addTextureAtlas(new dragonBones.EgretTextureAtlas(texture, textureData));
+        }
+        var armature = dragonFactory.buildFastArmature(name);
+        armature.enableAnimationCache(30);
         return armature;
     }
     fight.createArmature = createArmature;

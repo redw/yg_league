@@ -14,24 +14,27 @@ var RoleBody = (function (_super) {
         this.armature = fight.createArmature(resourceArr[0]);
         this.armatureDis = this.armature.display;
         this.addChild(this.armatureDis);
+        dragonBones.WorldClock.clock.add(this.armature);
         this.active();
     }
     var d = __define,c=RoleBody,p=c.prototype;
     p.active = function () {
         this._isTriggerAtk = false;
-        dragonBones.WorldClock.clock.add(this.armature);
         this.idle();
     };
+    p.disActive = function () {
+        dragonBones.WorldClock.clock.remove(this.armature);
+    };
     p.idle = function () {
-        this.armature.animation.gotoAndPlayByTime("idle", -1);
+        this.armature.animation.gotoAndPlay("idle", 0, 0, 0);
         this.waiting = true;
     };
     p.attack = function (skill) {
         this.waiting = false;
         this._isTriggerAtk = true;
-        this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
-        this.armatureDis.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
-        this.armature.animation.gotoAndPlayByTime(skill.action, -1);
+        // this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
+        this.armature.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+        this.armature.animation.play(skill.action, 1);
     };
     p.onEnterFrame = function (e) {
         var mc = e.target;
@@ -52,14 +55,14 @@ var RoleBody = (function (_super) {
                 }
             }
             this.frameDisArr = [];
-            e.target.removeEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
+            // e.target.removeEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
             e.target.removeEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
         }
         this.idle();
-        this.dispatchEventWith("attack_complete");
+        this.dispatchEventWith("attack_complete", true);
     };
     p.block = function () {
-        this.armature.animation.gotoAndPlayByTime("block", -1);
+        this.armature.animation.play("block", -1);
         this.waiting = false;
     };
     p.blockComplete = function (e) {
@@ -69,7 +72,7 @@ var RoleBody = (function (_super) {
         this.idle();
     };
     p.hit = function () {
-        this.armature.animation.gotoAndPlayByTime("attacked", 1);
+        this.armature.animation.play("attacked", 1);
         this.waiting = false;
     };
     p.hitComplete = function (e) {
@@ -82,6 +85,7 @@ var RoleBody = (function (_super) {
         /** 翻转 */
         ,function (value) {
             var scaleX = value ? -1 : 1;
+            this.armatureDis.scaleX = scaleX;
         }
     );
     d(p, "isTriggerAtk"

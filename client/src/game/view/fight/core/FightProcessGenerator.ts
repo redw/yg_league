@@ -140,7 +140,9 @@ class FightProcessGenerator {
         let skillRepeat = skillInfo.repeat;
         for (let i = 0; i < skillRepeat; i++) {
             if (getTargetFunName in this) {
-                let targets = this[getTargetFunName](role);
+                let pos = fight.getPosIndexByPos(role.pos);
+                let side = fight.getSideByPos(role.pos);
+                let targets = this[getTargetFunName]({pos:pos, side:side});
                 if (i == 0 && targets.length <= 0) {
                     fight.recordLog("方法" + getTargetFunName + "错误", fight.LOG_FIGHT_ERROR);
                 }
@@ -332,7 +334,7 @@ class FightProcessGenerator {
     // 角色战败后，移除角色
     private removeRole(role: FightRoleVO) {
         let side = fight.getSideByPos(role.pos) - 1;
-        let pos = role.pos;
+        let index = fight.getPosIndexByPos(role.pos);
         for (let i = 0; i < this.roles.length; i++) {
             if (this.roles[i] == role) {
                 this.roles.splice(i, 1);
@@ -345,10 +347,10 @@ class FightProcessGenerator {
                 break;
             }
         }
-        if (this.allTeam[side][pos] == null) {
+        if (this.allTeam[side][index] == null) {
             fight.recordLog("角色不应该为空,移除角色或发生错误", 1);
         }
-        this.allTeam[side][pos] = null;
+        this.allTeam[side][index] = null;
     }
 
     // 检查是否结束

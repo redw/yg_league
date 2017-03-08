@@ -17,13 +17,14 @@ class RoleBody extends egret.DisplayObjectContainer {
         this.armature = fight.createArmature(resourceArr[0]);
         this.armatureDis = <egret.DisplayObject>this.armature.display;
         this.addChild(this.armatureDis);
+        dragonBones.WorldClock.clock.add(this.armature);
 
         this.active();
     }
 
     public active() {
         this._isTriggerAtk = false;
-        dragonBones.WorldClock.clock.add(this.armature);
+
         this.idle();
     }
 
@@ -32,15 +33,15 @@ class RoleBody extends egret.DisplayObjectContainer {
     }
 
     public idle() {
-        this.armature.animation.play("idle");
+        this.armature.animation.gotoAndPlay("idle", 0, 0, 0);
         this.waiting = true;
     }
 
     public attack(skill:SkillConfig) {
         this.waiting = false;
         this._isTriggerAtk = true;
-        this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
-        this.armatureDis.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
+        // this.armatureDis.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
+        this.armature.addEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
         this.armature.animation.play(skill.action, 1);
     }
 
@@ -63,11 +64,11 @@ class RoleBody extends egret.DisplayObjectContainer {
                 }
             }
             this.frameDisArr = [];
-            e.target.removeEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
+            // e.target.removeEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame, this);
             e.target.removeEventListener(egret.MovieClipEvent.COMPLETE, this.attackComplete, this);
         }
         this.idle();
-        this.dispatchEventWith("attack_complete");
+        this.dispatchEventWith("attack_complete", true);
     }
 
     public block() {

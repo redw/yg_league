@@ -36,16 +36,16 @@ var PVEFightContainer = (function (_super) {
     };
     p.startLevel = function (level) {
         this.level = level;
+        this.prospect.level = level;
+        this.background.level = level;
+        this.ground.level = level;
         var heroArr = [{ id: 102, pos: 10 }, { id: 102, pos: 11 }, { id: 102, pos: 12 }, { id: 102, pos: 13 }, { id: 102, pos: 14 }, { id: 102, pos: 15 },
             { id: 102, pos: 20 }, { id: 102, pos: 21 }, { id: 102, pos: 22 }, { id: 102, pos: 23 }, { id: 102, pos: 24 }, { id: 102, pos: 25 }];
-        console.log("加载角色");
-        console.log("资源", fight.getRolePathArr(heroArr));
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadRoleComplete, this);
         RES.createGroup("bone_role", fight.getRolePathArr(heroArr), true);
         RES.loadGroup("bone_role", 1);
     };
     p.loadRoleComplete = function (event) {
-        console.log("显示角色");
         if (event.groupName == "bone_role") {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadRoleComplete, this);
             var heroArr = [{ id: 102, pos: 10 }, { id: 102, pos: 11 }, { id: 102, pos: 12 }, { id: 102, pos: 13 }, { id: 102, pos: 14 }, { id: 102, pos: 15 },
@@ -70,9 +70,9 @@ var PVEFightContainer = (function (_super) {
         var _this = this;
         var len = elements ? elements.length : 0;
         for (var i = 0; i < len; i++) {
-            var side = fight.getSideByPos(elements[i].pos) - 1;
+            var side = fight.getSideByPos(elements[i].pos);
             var index = fight.getPosIndexByPos(elements[i].pos);
-            var role = this.roles[side][index];
+            var role = this.roles[side - 1][index];
             var tox = role.x;
             if (side == FightSideEnum.LEFT_SIDE) {
                 role.x = fight.WIDTH * -0.5 + role.x;

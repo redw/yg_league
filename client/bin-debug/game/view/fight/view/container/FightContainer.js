@@ -59,6 +59,17 @@ var FightContainer = (function (_super) {
         this.addEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
         this.addEventListener("role_die", this.onRoleDie, this, true);
         this.addEventListener("role_hp_change", this.onRoleHPChange, this, true);
+        egret.startTick(this.onTick, this);
+    };
+    p.onTick = function () {
+        for (var i = 0; i < this.roles.length; i++) {
+            for (var j = 0; j < this.roles[i].length; j++) {
+                if (this.roles[i][j]) {
+                    this.roles[i][j].onTick();
+                }
+            }
+        }
+        return false;
     };
     p.fightStart = function (steps) {
         if (!this.elements || this.elements.length <= 0) {
@@ -71,8 +82,9 @@ var FightContainer = (function (_super) {
                     for (var i = 0; i < steps.length; i++) {
                         steps[i].index = i;
                         var pos = steps[i].pos;
-                        var newPos = 0;
+                        var newPos = pos;
                         if ((typeof pos == "string") && pos.indexOf("_") > 0) {
+                            newPos = 0;
                             var posArr = pos.split("_");
                             newPos = Number(10 * posArr[0]) + Number(posArr[1]);
                         }
@@ -80,6 +92,7 @@ var FightContainer = (function (_super) {
                     }
                     this.fightStepsDup = steps.concat();
                     this.fightSteps = steps;
+                    this.updateHP();
                     this.startStep();
                 }
             }
@@ -128,15 +141,43 @@ var FightContainer = (function (_super) {
         this.roleDie(role);
     };
     p.roleDie = function (role) {
-        var side = role.side - 1;
-        var pos = role.pos;
-        delete this.roles[side][pos];
+        var side = fight.getSideByPos(role.pos) - 1;
+        var index = fight.getPosIndexByPos(role.pos);
+        delete this.roles[side][index];
         role.dispose();
     };
     p.getRoleByPos = function (pos) {
         var side = fight.getSideByPos(pos) - 1;
         var index = fight.getPosIndexByPos(pos);
         return this.roles[side][index];
+    };
+    p.updateHP = function () {
+        var roleMap = {};
+        for (var i = 0; i < this.roles.length; i++) {
+            for (var j = 0; j < this.roles[i].length; j++) {
+                if (this.roles[i][j]) {
+                    roleMap[this.roles[i][j].pos] = this.roles[i][j];
+                }
+            }
+        }
+        for (var i = 0; i < this.fightSteps.length; i++) {
+            var pos = this.fightSteps[i].pos;
+            if (roleMap[pos]) {
+                var hero = roleMap[pos];
+                hero.curHP = this.fightSteps[i].hp;
+                hero.maxHP = this.fightSteps[i].maxhp;
+                roleMap[pos] = null;
+            }
+            for (var j = 0; j < this.fightSteps[i].target.length; j++) {
+                var pos1 = this.fightSteps[i].target[j].pos;
+                if (roleMap[pos1]) {
+                    var hero = roleMap[pos1];
+                    hero.curHP = this.fightSteps[i].target[j].hp;
+                    hero.maxHP = this.fightSteps[i].target[j].maxhp;
+                    roleMap[pos] = null;
+                }
+            }
+        }
     };
     p.getCurTotalLife = function (side) {
         var curLife = "0";
@@ -145,7 +186,10 @@ var FightContainer = (function (_super) {
         for (var i = 0; i < len; i++) {
             var role = roleArr[i];
             if (role) {
-                curLife = BigNum.add(curLife, role.curHP);
+                curLife = BigNum.add(curLife, role.curHP || "0");
+                if (role.curHP === undefined) {
+                    fight.recordLog("\u89D2\u8272" + role.pos + "\u5F53\u524D\u8840\u91CF\u672A\u5B9A\u4E49", fight.LOG_FIGHT_WARN);
+                }
             }
         }
         return curLife;
@@ -157,7 +201,10 @@ var FightContainer = (function (_super) {
         for (var i = 0; i < len; i++) {
             var role = roleArr[i];
             if (role) {
-                totalLife = BigNum.add(totalLife, role.maxHP);
+                totalLife = BigNum.add(totalLife, role.maxHP || "0");
+                if (role.maxHP === undefined) {
+                    fight.recordLog("\u89D2\u8272" + role.pos + "\u8840\u91CF\u672A\u5B9A\u4E49", fight.LOG_FIGHT_WARN);
+                }
             }
         }
         return totalLife;

@@ -45,7 +45,6 @@ var game_file_list = [
 	"bin-debug/game/model/role/MonsterVO.js",
 	"bin-debug/game/model/role/RoleConfig.js",
 	"bin-debug/game/model/skill/SkillConfig.js",
-	"bin-debug/game/model/test/StageData.js",
 	"bin-debug/game/URLConfig.js",
 	"bin-debug/game/view/component/BattleView.js",
 	"bin-debug/game/view/component/CoinShowPanel.js",

@@ -258,6 +258,13 @@ var FightRole = (function (_super) {
     };
     p.flyTxt = function (str, name) {
     };
+    p.showSkillName = function (id) {
+        // (`skillname_${this.curSkill.skill_name}`);
+    };
+    p.showFreeSkillEff = function (eff, mode) {
+        eff.y = (this.config.modle_height) * -0.5;
+        // this.fightContainer.showFreeSkillEff(this, eff, needMode);
+    };
     p.startDamage = function (index, total, role, ratio) {
         if (index === void 0) { index = 1; }
         if (total === void 0) { total = 1; }
@@ -452,6 +459,7 @@ var FightRole = (function (_super) {
             }
         }
         this.lifeBar.reset();
+        this.body.reset();
         if (this.haloEff) {
             this.haloEff.stop();
         }

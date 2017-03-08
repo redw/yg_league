@@ -38,10 +38,7 @@ class SkillAction {
      * @param damage    自身所受伤害
      */
     public preAttack(skill:SkillConfig, targets:{id:number, pos:number}[], buffs:number[], damage:string){
-        if (this._isActionComplete) {
-            this._isActionComplete = false;
-            console.error("攻击时,ActionComplete应该为false");
-        }
+        this.reset();
 
         this.curSkill = skill;
         this.targets = targets;
@@ -99,7 +96,7 @@ class SkillAction {
 
     private attack() {
         this.fightRole.addEventListener("attack_complete", this.onComplete, this, true);
-        this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
+        // this.fightRole.addEventListener("enter_frame", this.onEnterFrame, this, true);
         this.fightRole.attack(this.curSkill);
     }
 
@@ -137,7 +134,7 @@ class SkillAction {
     private onComplete() {
         this.isAttackComplete = true;
         this.fightRole.removeEventListener("attack_complete", this.onComplete, this, true);
-        this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
+        // this.fightRole.removeEventListener("enter_frame", this.onEnterFrame, this, true);
         if (fight.needRetreat(this.curSkill.action_type)) {
             let tween = egret.Tween.get(this.fightRole);
             let point = fight.getRoleInitPoint(this.fightRole.pos);

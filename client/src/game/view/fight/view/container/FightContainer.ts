@@ -82,6 +82,18 @@ class FightContainer extends egret.DisplayObjectContainer{
         this.addEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
         this.addEventListener("role_die", this.onRoleDie, this, true);
         this.addEventListener("role_hp_change", this.onRoleHPChange, this, true);
+        egret.startTick(this.onTick, this);
+    }
+
+    protected onTick(){
+        for (let i = 0; i < this.roles.length; i++) {
+            for (let j = 0; j < this.roles[i].length; j++) {
+                if (this.roles[i][j]) {
+                    this.roles[i][j].onTick();
+                }
+            }
+        }
+        return false;
     }
 
     public fightStart(steps:any[]){
@@ -94,8 +106,9 @@ class FightContainer extends egret.DisplayObjectContainer{
                     for (let i = 0; i < steps.length; i++) {
                         steps[i].index = i;
                         let pos = steps[i].pos;
-                        let newPos:number = 0;
+                        let newPos:number = pos;
                         if ((typeof pos == "string") && pos.indexOf("_") > 0) {
+                            newPos = 0;
                             let posArr = pos.split("_");
                             newPos = Number(10 * posArr[0]) + Number(posArr[1]);
                         }
@@ -103,6 +116,7 @@ class FightContainer extends egret.DisplayObjectContainer{
                     }
                     this.fightStepsDup = steps.concat();
                     this.fightSteps = steps;
+                    this.updateHP();
                     this.startStep();
                 }
             }
@@ -154,9 +168,9 @@ class FightContainer extends egret.DisplayObjectContainer{
     }
 
     public roleDie(role:FightRole) {
-        let side = role.side - 1;
-        let pos = role.pos;
-        delete this.roles[side][pos];
+        let side = fight.getSideByPos(role.pos) - 1;
+        let index = fight.getPosIndexByPos(role.pos);
+        delete this.roles[side][index];
         role.dispose();
     }
 
@@ -166,6 +180,36 @@ class FightContainer extends egret.DisplayObjectContainer{
         return this.roles[side][index];
     }
 
+    public updateHP(){
+        let roleMap = {};
+        for (let i = 0; i < this.roles.length; i++) {
+            for (let j = 0; j < this.roles[i].length; j++) {
+                if (this.roles[i][j]) {
+                    roleMap[this.roles[i][j].pos] = this.roles[i][j];
+                }
+            }
+        }
+        for (let i = 0; i < this.fightSteps.length; i++) {
+            let pos = this.fightSteps[i].pos;
+            if (roleMap[pos]) {
+                let hero:FightRole = roleMap[pos];
+                hero.curHP = this.fightSteps[i].hp;
+                hero.maxHP = this.fightSteps[i].maxhp;
+                roleMap[pos] = null;
+            }
+
+            for (let j = 0; j < this.fightSteps[i].target.length; j++) {
+                let pos1 = this.fightSteps[i].target[j].pos;
+                if (roleMap[pos1]) {
+                    let hero:FightRole = roleMap[pos1];
+                    hero.curHP = this.fightSteps[i].target[j].hp;
+                    hero.maxHP = this.fightSteps[i].target[j].maxhp;
+                    roleMap[pos] = null;
+                }
+            }
+        }
+    }
+
     public getCurTotalLife(side:number) {
         let curLife:string = "0";
         let roleArr = this.roles[side - 1];
@@ -173,7 +217,10 @@ class FightContainer extends egret.DisplayObjectContainer{
         for (let i = 0; i < len; i++) {
             let role = roleArr[i];
             if (role) {
-                curLife = BigNum.add(curLife, role.curHP);
+                curLife = BigNum.add(curLife, role.curHP || "0");
+                if (role.curHP === undefined) {
+                    fight.recordLog(`角色${role.pos}当前血量未定义`, fight.LOG_FIGHT_WARN);
+                }
             }
         }
         return curLife;
@@ -186,7 +233,10 @@ class FightContainer extends egret.DisplayObjectContainer{
         for (let i = 0; i < len; i++) {
             let role = roleArr[i];
             if (role) {
-                totalLife = BigNum.add(totalLife, role.maxHP);
+                totalLife = BigNum.add(totalLife, role.maxHP || "0");
+                if (role.maxHP === undefined) {
+                    fight.recordLog(`角色${role.pos}血量未定义`, fight.LOG_FIGHT_WARN);
+                }
             }
         }
         return totalLife;
