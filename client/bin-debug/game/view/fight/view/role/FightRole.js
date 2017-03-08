@@ -259,7 +259,8 @@ var FightRole = (function (_super) {
         }, fontName);
     };
     p.showSkillName = function (id) {
-        // (`skillname_${this.curSkill.skill_name}`);
+        var path = "skillname_" + id;
+        this.fightContainer.showSkillName(path);
     };
     p.showFreeSkillEff = function (eff, mode) {
         eff.y = (this.config.modle_height) * -0.5;

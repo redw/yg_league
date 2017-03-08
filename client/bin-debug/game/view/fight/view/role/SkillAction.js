@@ -181,38 +181,6 @@ var SkillAction = (function () {
     // 处理伤害行为
     p.doDamageAction = function (cur, total) {
         if (this.curSkill.scource_effect) {
-            if (fight.isMCResourceLoaded(this.curSkill.scource_effect)) {
-                if (this.curSkill.action_type == fight.ATTACK_ACTION_MISSLE) {
-                    this.fightRole.fireTargets(this.targets, cur, total);
-                }
-                else {
-                    this.extraEffCount++;
-                    var mc = fight.createMovieClip(this.curSkill.scource_effect);
-                    if (!this.curSkill.effect_damage_frame || this.curSkill.effect_damage_frame == 1) {
-                        this.fightRole.startDamage(1, 1);
-                    }
-                    else {
-                        mc.addEventListener(egret.MovieClipEvent.ENTER_FRAME, this.onEnterFrame1, this);
-                    }
-                    mc.addEventListener(egret.MovieClipEvent.COMPLETE, this.onComplete1, this);
-                    mc.gotoAndPlay(1, 1);
-                    if (this.curSkill.action_type == fight.ATTACK_ACTION_BOMB) {
-                        this.fightRole.addEff(mc);
-                    }
-                    if (this.curSkill.action_type == fight.ATTACK_ACTION_AREA) {
-                        var offPoint = (!!this.curSkill.area_effect_point) ? this.curSkill.area_effect_point.split(",") : [0, 0];
-                        var side = this.fightRole.side;
-                        mc.x = fight.AREA_POS[side - 1].x + (Number(offPoint[0]) || 0);
-                        mc.y = fight.AREA_POS[side - 1].y + (Number(offPoint[1]) || 0);
-                        this.fightRole.addAreaEff(mc, fight.needFlipped(this.fightRole.pos));
-                    }
-                    if (this.curSkill.action_type == fight.ATTACK_JUMP_ATTACK2) {
-                        mc.x = this.fightRole.x;
-                        mc.y = this.fightRole.y;
-                        this.fightRole.addContainerEff(mc, fight.needFlipped(this.fightRole.pos));
-                    }
-                }
-            }
         }
         else {
             this.fightRole.startDamage(cur, total);

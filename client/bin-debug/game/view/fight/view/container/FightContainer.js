@@ -251,12 +251,25 @@ var FightContainer = (function (_super) {
     p.showDamageEff = function (eff) {
         this.damageEffLayer.addChild(eff);
     };
-    p.flyTxt = function (content, fntname) {
-        var fontEff = new FontEff(fntname);
+    /**
+     * 显示文字效果
+     * @param content
+     * @param fontName
+     */
+    p.flyTxt = function (content, fontName) {
+        var fontEff = new FontEff(fontName);
         fontEff.x = content.x || 0;
         fontEff.y = content.y || 0;
         fontEff.show(content);
         this.fontEffLayer.addChild(fontEff);
+    };
+    p.showSkillName = function (path) {
+        if (this.type == FightTypeEnum.PVE) {
+            var skillEff = new SkillNameEff(path);
+            skillEff.x = 72;
+            skillEff.y = 50;
+            this.addChild(skillEff);
+        }
     };
     p.onRoleHPChange = function () {
         var curTotalLife = this.getCurTotalLife(FightSideEnum.LEFT_SIDE);
